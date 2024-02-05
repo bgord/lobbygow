@@ -9,7 +9,7 @@ const EnvironmentSchema = z.object({
   SMTP_USER: bg.Schema.SmtpUser,
   SMTP_PASS: bg.Schema.SmtpPass,
   EMAIL_FROM: bg.Schema.Email,
-  EMAIL_TO: bg.Schema.Email,
+  EMAIL_TO: bg.Schema.EmailTo,
   TZ: bg.Schema.TimezoneUTC,
   BASIC_AUTH_USERNAME: bg.Schema.BasicAuthUsername,
   BASIC_AUTH_PASSWORD: bg.Schema.BasicAuthPassword,

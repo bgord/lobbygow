@@ -3,6 +3,7 @@ import * as bg from "@bgord/node";
 
 import * as App from "./app";
 import * as infra from "./infra";
+import * as Mailer from "./modules/mailer";
 
 const app = express();
 
@@ -17,6 +18,16 @@ app.get(
   bg.Timeout.build(bg.Time.Seconds(15)),
   infra.BasicAuthShield.verify,
   bg.Healthcheck.build(infra.healthcheck)
+);
+// =============================
+
+// Mailer =================
+app.get(
+  "/notification-send",
+  bg.RateLimitShield.build(bg.Time.Seconds(5)),
+  bg.Timeout.build(bg.Time.Seconds(15)),
+  infra.BasicAuthShield.verify,
+  bg.Route(Mailer.Routes.NotificationSend)
 );
 // =============================
 

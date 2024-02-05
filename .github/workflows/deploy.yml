@@ -1,0 +1,80 @@
+name: Deploy
+on:
+  push:
+    branches: [master]
+  workflow_dispatch:
+concurrency:
+  group: ci-deploy-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  deploy:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Skip workflow for dependabot branches
+        if: startsWith(github.event.pull_request.head.ref, 'dependabot/') && github.event_name == 'pull_request' && github.event.action == 'closed'
+        run: echo "This workflow is skipped for branches starting with 'dependabot/'"
+
+      - name: Clone repositories
+        uses: actions/checkout@v3
+        with:
+          submodules: recursive
+
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v2
+        with:
+          node-version: 20.x
+          cache: "npm"
+
+      - name: Cache node modules
+        id: cache-npm
+        uses: actions/cache@v3
+        env:
+          cache-name: node-cache-bundle
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-build-${{ env.cache-name }}-
+            ${{ runner.os }}-build-
+            ${{ runner.os }}-
+
+      - if: ${{ steps.cache-npm.outputs.cache-hit != 'true' }}
+        name: List the state of node modules
+        continue-on-error: true
+        run: npm list
+
+      - name: NPM Install
+        if: ${{ steps.cache-npm.outputs.cache-hit != 'true' }}
+        run: npm install
+
+      - name: Create .env.staging file
+        run: echo "${{ secrets.ENV_STAGING }}" > .env.staging
+
+      - name: Build the app
+        run: ./scripts/staging-server-build.sh
+
+      - name: Configure SSH
+        run: |
+          mkdir -p ~/.ssh/
+          echo "$SSH_KEY" > ~/.ssh/staging.key
+          chmod 600 ~/.ssh/staging.key
+          cat >>~/.ssh/config <<END
+          Host staging
+            HostName $SSH_HOST
+            User $SSH_USER
+            IdentityFile ~/.ssh/staging.key
+            StrictHostKeyChecking no
+          END
+        env:
+          SSH_USER: ${{ secrets.USER }}
+          SSH_KEY: ${{ secrets.PRIVATE_KEY }}
+          SSH_HOST: ${{ secrets.HOSTNAME }}
+
+      - name: Sync source code
+        run: rsync -azP build/ staging:/var/www/${{ secrets.PROJECT_NAME }}
+
+      - name: Install sharp
+        run: ssh staging "cd /var/www/${{ secrets.PROJECT_NAME }} && npm install --platform=linux --arch=x64 sharp"
+
+      - name: Restart server
+        run: ssh staging sudo systemctl restart ${{ secrets.PROJECT_NAME }}.service

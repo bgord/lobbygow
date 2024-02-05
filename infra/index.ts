@@ -38,11 +38,11 @@ export const healthcheck = [
   new bg.PrerequisiteOutsideConnectivity({ label: "outside-connectivity" }),
   new bg.PrerequisiteSSLCertificateExpiry({
     label: "ssl-certificate-expiry",
-    host: "trackers.bgord.me",
+    host: "lobbygow.bgord.me",
     validDaysMinimum: 7,
   }),
   new bg.PrerequisiteMailer({ label: "nodemailer", mailer: Mailer }),
   ...prerequisites.filter(
-    (prerequisite) => prerequisite.config.label !== "port"
+    (prerequisite) => prerequisite.config.label !== "port",
   ),
 ];

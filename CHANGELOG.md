@@ -1,12 +1,15 @@
 # Changelog
+- 2024-02-06 13:06 8a8bbd5 **feature: add notification composer**
+## 2024-02-06 13:06 
+- 2024-02-06 12:53 81060d0 **step: add notification kind enum**
 - 2024-02-06 12:38 8b14787 **feature: setup api key shield**
-## 2024-02-06 12:38 
 - 2024-02-06 12:24 9dda224 **step: handle invalid payload error gracefully**
 - 2024-02-06 12:07 faf9838 **Merge pull request #3 from bgord/dependabot/npm_and_yarn/typescript-eslint/parser-6.21.0**
 - 2024-02-06 12:06 87c2421 **Merge pull request #5 from bgord/dependabot/npm_and_yarn/typescript-eslint/eslint-plugin-6.21.0**
 - 2024-02-06 12:06 5da7cd8 **Merge pull request #4 from bgord/dependabot/npm_and_yarn/oxlint-0.2.8**
 - 2024-02-06 11:46 f19213d **Merge pull request #1 from bgord/dependabot/npm_and_yarn/husky-9.0.10**
 - 2024-02-06 11:45 b3d8abe **Merge pull request #2 from bgord/dependabot/npm_and_yarn/oxlint-0.2.7**
+- 2024-02-06 11:40 eb87ba9 **docs: generate CHANGELOG**
 - 2024-02-06 11:07 f59c2f7 **docs: generate CHANGELOG**
 - 2024-02-06 11:07 9564d3c **docs: generate CHANGELOG**
 - 2024-02-06 11:07 8f891b2 **build(deps-dev): bump @typescript-eslint/parser from 6.20.0 to 6.21.0**

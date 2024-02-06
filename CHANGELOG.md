@@ -1,6 +1,8 @@
 # Changelog
+- 2024-02-06 22:16 2a96216 **fix: staging server build script**
+## 2024-02-06 22:16 
+- 2024-02-06 21:11 0faffa9 **docs: generate CHANGELOG**
 - 2024-02-06 16:58 986735a **step: bump bgord/scripts**
-## 2024-02-06 16:58 
 - 2024-02-06 13:06 8a8bbd5 **feature: add notification composer**
 - 2024-02-06 12:53 81060d0 **step: add notification kind enum**
 - 2024-02-06 12:38 8b14787 **feature: setup api key shield**

@@ -11,6 +11,8 @@ export const BasicAuthShield = new bg.BasicAuthShield({
   password: Env.BASIC_AUTH_PASSWORD,
 });
 
+export const ApiKeyShield = new bg.ApiKeyShield({ API_KEY: Env.API_KEY });
+
 export const prerequisites = [
   new bg.PrerequisitePort({ label: "port", port: Env.PORT }),
   new bg.PrerequisiteTimezoneUTC({ label: "timezone", timezone: Env.TZ }),
@@ -43,6 +45,6 @@ export const healthcheck = [
   }),
   new bg.PrerequisiteMailer({ label: "nodemailer", mailer: Mailer }),
   ...prerequisites.filter(
-    (prerequisite) => prerequisite.config.label !== "port",
+    (prerequisite) => prerequisite.config.label !== "port"
   ),
 ];

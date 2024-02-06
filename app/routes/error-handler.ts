@@ -10,7 +10,7 @@ export class ErrorHandler {
     error,
     request,
     response,
-    next,
+    next
   ) => {
     if (error instanceof bg.Errors.InvalidCredentialsError) {
       infra.logger.error({
@@ -18,7 +18,9 @@ export class ErrorHandler {
         operation: "invalid_credentials_error",
         correlationId: request.requestId,
       });
-      return response.redirect("/");
+      return response
+        .status(429)
+        .send({ message: "app.credentials.invalid.error", _known: true });
     }
 
     if (error instanceof bg.Errors.AccessDeniedError) {
@@ -27,17 +29,9 @@ export class ErrorHandler {
         operation: "access_denied_error",
         correlationId: request.requestId,
       });
-      return response.redirect("/");
-    }
-
-    if (error instanceof bg.Errors.FileNotFoundError) {
-      infra.logger.error({
-        message: "File not found",
-        operation: "file_not_found_error",
-        correlationId: request.requestId,
-      });
-
-      return response.status(404).send("File not found");
+      return response
+        .status(403)
+        .send({ message: "app.access.denied.error", _known: true });
     }
 
     if (error instanceof bg.Errors.TooManyRequestsError) {
@@ -64,32 +58,6 @@ export class ErrorHandler {
       return response
         .status(408)
         .send({ message: "request_timeout_error", _known: true });
-    }
-
-    if (error instanceof bg.Errors.InvalidRevisionError) {
-      infra.logger.error({
-        message: "Invalid revision",
-        operation: "revision_invalid_error",
-        correlationId: request.requestId,
-        metadata: { url: request.url },
-      });
-
-      return response
-        .status(400)
-        .send({ message: "revision.invalid.error", _known: true });
-    }
-
-    if (error instanceof bg.Errors.RevisionMismatchError) {
-      infra.logger.error({
-        message: "Revision mismatch",
-        operation: "revision_mismatch_error",
-        correlationId: request.requestId,
-        metadata: { url: request.url },
-      });
-
-      return response
-        .status(412)
-        .send({ message: "revision.mismatch.error", _known: true });
     }
 
     if (error instanceof z.ZodError) {

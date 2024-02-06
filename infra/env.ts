@@ -13,6 +13,7 @@ const EnvironmentSchema = z.object({
   TZ: bg.Schema.TimezoneUTC,
   BASIC_AUTH_USERNAME: bg.Schema.BasicAuthUsername,
   BASIC_AUTH_PASSWORD: bg.Schema.BasicAuthPassword,
+  API_KEY: bg.Schema.ApiKey,
 });
 type EnvironmentSchemaType = z.infer<typeof EnvironmentSchema>;
 

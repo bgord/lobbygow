@@ -1,8 +1,9 @@
 import * as bg from "@bgord/node";
 
 import * as infra from "../../../infra";
+import { NotificationComposerStrategy } from "./notification-composer";
 
-type MessageType = {
+export type MessageType = {
   subject: bg.Schema.EmailSubjectType;
   content: bg.Schema.EmailContentHtmlType;
 };
@@ -13,11 +14,11 @@ export class Notification {
     private readonly content: bg.Schema.EmailContentHtmlType,
   ) {}
 
-  async compose(): Promise<MessageType> {
-    return { subject: this.subject, content: this.content };
+  async compose(strategy: NotificationComposerStrategy): Promise<MessageType> {
+    return strategy.compose(this.subject, this.content);
   }
 
-  async send(message: MessageType, to: bg.Schema.EmailToType): Promise<void> {
-    await infra.Mailer.send({ from: infra.Env.EMAIL_FROM, to, ...message });
+  async send(message: MessageType, to: bg.Schema.EmailToType) {
+    return infra.Mailer.send({ from: infra.Env.EMAIL_FROM, to, ...message });
   }
 }

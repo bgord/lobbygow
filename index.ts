@@ -17,17 +17,17 @@ app.get(
   bg.RateLimitShield.build(bg.Time.Seconds(15)),
   bg.Timeout.build(bg.Time.Seconds(15)),
   infra.BasicAuthShield.verify,
-  bg.Healthcheck.build(infra.healthcheck)
+  bg.Healthcheck.build(infra.healthcheck),
 );
 // =============================
 
 // Mailer =================
-app.get(
+app.post(
   "/notification-send",
   bg.RateLimitShield.build(bg.Time.Seconds(5)),
   bg.Timeout.build(bg.Time.Seconds(15)),
   infra.BasicAuthShield.verify,
-  bg.Route(Mailer.Routes.NotificationSend)
+  bg.Route(Mailer.Routes.NotificationSend),
 );
 // =============================
 
@@ -41,7 +41,7 @@ app.use(App.Routes.ErrorHandler.handle);
       message: "Server has started",
       operation: "server_startup",
       metadata: { port: infra.Env.PORT },
-    })
+    }),
   );
 
   bg.GracefulShutdown.applyTo(server);

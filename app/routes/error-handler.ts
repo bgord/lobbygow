@@ -1,5 +1,6 @@
-import express from "express";
 import * as bg from "@bgord/node";
+import express from "express";
+import z from "zod";
 
 import * as infra from "../../infra";
 
@@ -9,7 +10,7 @@ export class ErrorHandler {
     error,
     request,
     response,
-    next
+    next,
   ) => {
     if (error instanceof bg.Errors.InvalidCredentialsError) {
       infra.logger.error({
@@ -89,6 +90,19 @@ export class ErrorHandler {
       return response
         .status(412)
         .send({ message: "revision.mismatch.error", _known: true });
+    }
+
+    if (error instanceof z.ZodError) {
+      infra.logger.error({
+        message: "Invalid payload",
+        operation: "invalid_payload",
+        correlationId: request.requestId,
+        metadata: { url: request.url, body: request.body },
+      });
+
+      return response
+        .status(400)
+        .send({ message: "payload.invalid.error", _known: true });
     }
 
     infra.logger.error({

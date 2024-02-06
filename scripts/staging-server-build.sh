@@ -11,7 +11,6 @@ export NODE_ENV="staging"
 check_if_file_exists .env.staging
 check_if_directory_exists node_modules
 check_if_file_exists scripts/staging-server-start.sh
-check_if_file_exists scripts/staging-server-backup.sh
 validate_environment_file
 
 ./bgord-scripts/build-prechecks.sh

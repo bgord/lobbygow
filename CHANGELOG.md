@@ -1,6 +1,11 @@
 # Changelog
+- 2024-02-12 11:54 ed7c1e4 **Merge pull request #6 from bgord/dependabot/npm_and_yarn/eslint-plugin-sonarjs-0.24.0**
+- 2024-02-12 11:54 c627644 **Merge pull request #7 from bgord/dependabot/npm_and_yarn/tsx-4.7.1**
+## 2024-02-12 11:54 
+- 2024-02-12 10:41 d377eb6 **build(deps-dev): bump tsx from 4.7.0 to 4.7.1**
+- 2024-02-12 10:41 b549807 **build(deps-dev): bump eslint-plugin-sonarjs from 0.23.0 to 0.24.0**
 - 2024-02-06 22:16 2a96216 **fix: staging server build script**
-## 2024-02-06 22:16 
+- 2024-02-06 21:17 cea6f7e **docs: generate CHANGELOG**
 - 2024-02-06 21:11 0faffa9 **docs: generate CHANGELOG**
 - 2024-02-06 16:58 986735a **step: bump bgord/scripts**
 - 2024-02-06 13:06 8a8bbd5 **feature: add notification composer**

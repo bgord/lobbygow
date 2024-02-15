@@ -1,7 +1,12 @@
 # Changelog
 - 2024-02-15 08:35 e8a55fe **Merge pull request #13 from bgord/dependabot/npm_and_yarn/emittery-1.0.3**
+- 2024-02-15 08:35 1414e00 **Merge pull request #15 from bgord/dependabot/npm_and_yarn/commitlint/config-conventional-18.6.2**
+- 2024-02-15 08:35 0c1f407 **Merge pull request #14 from bgord/dependabot/npm_and_yarn/husky-9.0.11**
 ## 2024-02-15 08:35 
+- 2024-02-15 07:35 2895e30 **docs: generate CHANGELOG**
+- 2024-02-14 10:17 92629b3 **build(deps-dev): bump @commitlint/config-conventional**
 - 2024-02-14 10:17 0e9c6a8 **build(deps): bump emittery from 1.0.2 to 1.0.3**
+- 2024-02-14 10:17 0c5ece4 **build(deps-dev): bump husky from 9.0.10 to 9.0.11**
 - 2024-02-13 12:16 ba1450f **Merge pull request #8 from bgord/dependabot/npm_and_yarn/commitlint/cli-18.6.1**
 - 2024-02-13 12:12 a1ce7e1 **Merge pull request #12 from bgord/dependabot/npm_and_yarn/typescript-eslint/eslint-plugin-7.0.1**
 - 2024-02-13 12:12 6cc1923 **Merge pull request #10 from bgord/dependabot/npm_and_yarn/typescript-eslint/parser-7.0.1**

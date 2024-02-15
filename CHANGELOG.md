@@ -1,9 +1,12 @@
 # Changelog
+- 2024-02-15 08:35 e8a55fe **Merge pull request #13 from bgord/dependabot/npm_and_yarn/emittery-1.0.3**
+## 2024-02-15 08:35 
+- 2024-02-14 10:17 0e9c6a8 **build(deps): bump emittery from 1.0.2 to 1.0.3**
 - 2024-02-13 12:16 ba1450f **Merge pull request #8 from bgord/dependabot/npm_and_yarn/commitlint/cli-18.6.1**
-## 2024-02-13 12:16 
 - 2024-02-13 12:12 a1ce7e1 **Merge pull request #12 from bgord/dependabot/npm_and_yarn/typescript-eslint/eslint-plugin-7.0.1**
 - 2024-02-13 12:12 6cc1923 **Merge pull request #10 from bgord/dependabot/npm_and_yarn/typescript-eslint/parser-7.0.1**
 - 2024-02-13 12:11 e1c8ad7 **Merge pull request #11 from bgord/dependabot/npm_and_yarn/commitlint/config-conventional-18.6.1**
+- 2024-02-13 11:16 706bcfd **docs: generate CHANGELOG**
 - 2024-02-13 11:14 c2ce0b7 **build(deps-dev): bump @commitlint/cli from 18.6.0 to 18.6.1**
 - 2024-02-13 11:13 3fe46e8 **docs: generate CHANGELOG**
 - 2024-02-13 11:12 c6f6535 **build(deps-dev): bump @typescript-eslint/eslint-plugin**

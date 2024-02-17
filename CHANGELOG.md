@@ -1,8 +1,11 @@
 # Changelog
+- 2024-02-17 08:55 d8a846f **Merge pull request #16 from bgord/dependabot/npm_and_yarn/eslint-plugin-security-2.1.1**
+## 2024-02-17 08:55 
+- 2024-02-15 10:48 2835ba6 **build(deps-dev): bump eslint-plugin-security from 2.1.0 to 2.1.1**
 - 2024-02-15 08:35 e8a55fe **Merge pull request #13 from bgord/dependabot/npm_and_yarn/emittery-1.0.3**
 - 2024-02-15 08:35 1414e00 **Merge pull request #15 from bgord/dependabot/npm_and_yarn/commitlint/config-conventional-18.6.2**
 - 2024-02-15 08:35 0c1f407 **Merge pull request #14 from bgord/dependabot/npm_and_yarn/husky-9.0.11**
-## 2024-02-15 08:35 
+- 2024-02-15 07:36 7303643 **docs: generate CHANGELOG**
 - 2024-02-15 07:35 2895e30 **docs: generate CHANGELOG**
 - 2024-02-14 10:17 92629b3 **build(deps-dev): bump @commitlint/config-conventional**
 - 2024-02-14 10:17 0e9c6a8 **build(deps): bump emittery from 1.0.2 to 1.0.3**

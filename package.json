@@ -37,7 +37,7 @@
     "oxlint": "0.2.8",
     "standard-version": "9.5.0",
     "tsx": "4.7.1",
-    "vitest": "1.2.2"
+    "vitest": "1.3.0"
   },
   "dependencies": {
     "@bgord/node": "0.58.271",

@@ -1,6 +1,11 @@
 # Changelog
+- 2024-02-21 08:26 4d19a03 **Merge pull request #21 from bgord/dependabot/npm_and_yarn/typescript-eslint/eslint-plugin-7.0.2**
+- 2024-02-21 08:26 4106713 **Merge pull request #17 from bgord/dependabot/npm_and_yarn/esbuild-0.20.1**
+## 2024-02-21 08:26 
+- 2024-02-20 10:11 7d73ef6 **build(deps-dev): bump @typescript-eslint/eslint-plugin**
+- 2024-02-19 10:24 f3836fa **build(deps-dev): bump esbuild from 0.20.0 to 0.20.1**
 - 2024-02-17 08:55 d8a846f **Merge pull request #16 from bgord/dependabot/npm_and_yarn/eslint-plugin-security-2.1.1**
-## 2024-02-17 08:55 
+- 2024-02-17 07:55 3c577d0 **docs: generate CHANGELOG**
 - 2024-02-15 10:48 2835ba6 **build(deps-dev): bump eslint-plugin-security from 2.1.0 to 2.1.1**
 - 2024-02-15 08:35 e8a55fe **Merge pull request #13 from bgord/dependabot/npm_and_yarn/emittery-1.0.3**
 - 2024-02-15 08:35 1414e00 **Merge pull request #15 from bgord/dependabot/npm_and_yarn/commitlint/config-conventional-18.6.2**

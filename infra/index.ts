@@ -18,7 +18,7 @@ export const prerequisites = [
   new bg.PrerequisiteTimezoneUTC({ label: "timezone", timezone: Env.TZ }),
   new bg.PrerequisiteNode({
     label: "node version",
-    version: bg.PackageVersion.fromStringWithV("v20.5.1"),
+    version: bg.PackageVersion.fromStringWithV("v21.6.2"),
   }),
   new bg.PrerequisiteRAM({
     label: "RAM",
@@ -45,6 +45,6 @@ export const healthcheck = [
   }),
   new bg.PrerequisiteMailer({ label: "nodemailer", mailer: Mailer }),
   ...prerequisites.filter(
-    (prerequisite) => prerequisite.config.label !== "port"
+    (prerequisite) => prerequisite.config.label !== "port",
   ),
 ];

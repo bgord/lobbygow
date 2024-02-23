@@ -1,10 +1,15 @@
 # Changelog
+- 2024-02-23 08:36 91cf31b **Merge pull request #23 from bgord/dependabot/npm_and_yarn/oxlint-0.2.10**
+- 2024-02-23 08:36 376a879 **Merge pull request #22 from bgord/dependabot/npm_and_yarn/vitest-1.3.1**
+## 2024-02-23 08:36 
+- 2024-02-21 10:39 d23d2d9 **build(deps-dev): bump vitest from 1.3.0 to 1.3.1**
+- 2024-02-21 10:39 1451fca **build(deps-dev): bump oxlint from 0.2.9 to 0.2.10**
 - 2024-02-21 08:27 f711a5a **Merge pull request #18 from bgord/dependabot/npm_and_yarn/oxlint-0.2.9**
 - 2024-02-21 08:27 b5e2aac **Merge pull request #19 from bgord/dependabot/npm_and_yarn/vitest-1.3.0**
 - 2024-02-21 08:27 9a23fce **Merge pull request #20 from bgord/dependabot/npm_and_yarn/typescript-eslint/parser-7.0.2**
-## 2024-02-21 08:27 
 - 2024-02-21 08:26 4d19a03 **Merge pull request #21 from bgord/dependabot/npm_and_yarn/typescript-eslint/eslint-plugin-7.0.2**
 - 2024-02-21 08:26 4106713 **Merge pull request #17 from bgord/dependabot/npm_and_yarn/esbuild-0.20.1**
+- 2024-02-21 07:28 febca97 **docs: generate CHANGELOG**
 - 2024-02-21 07:27 c0e7fdb **build(deps-dev): bump @typescript-eslint/parser from 7.0.1 to 7.0.2**
 - 2024-02-21 07:26 5afc919 **docs: generate CHANGELOG**
 - 2024-02-20 10:11 7d73ef6 **build(deps-dev): bump @typescript-eslint/eslint-plugin**

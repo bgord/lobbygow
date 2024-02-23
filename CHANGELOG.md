@@ -1,7 +1,10 @@
 # Changelog
+- 2024-02-23 12:08 f717d6e **step: bump bgord/scripts**
+- 2024-02-23 12:08 59cc077 **fix: add missing knip install**
+## 2024-02-23 12:08 
 - 2024-02-23 08:36 91cf31b **Merge pull request #23 from bgord/dependabot/npm_and_yarn/oxlint-0.2.10**
 - 2024-02-23 08:36 376a879 **Merge pull request #22 from bgord/dependabot/npm_and_yarn/vitest-1.3.1**
-## 2024-02-23 08:36 
+- 2024-02-23 07:36 9b8d529 **docs: generate CHANGELOG**
 - 2024-02-21 10:39 d23d2d9 **build(deps-dev): bump vitest from 1.3.0 to 1.3.1**
 - 2024-02-21 10:39 1451fca **build(deps-dev): bump oxlint from 0.2.9 to 0.2.10**
 - 2024-02-21 08:27 f711a5a **Merge pull request #18 from bgord/dependabot/npm_and_yarn/oxlint-0.2.9**

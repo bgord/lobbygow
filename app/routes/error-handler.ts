@@ -10,7 +10,7 @@ export class ErrorHandler {
     error,
     request,
     response,
-    next
+    next,
   ) => {
     if (error instanceof bg.Errors.InvalidCredentialsError) {
       infra.logger.error({
@@ -28,6 +28,7 @@ export class ErrorHandler {
         message: "Access denied",
         operation: "access_denied_error",
         correlationId: request.requestId,
+        metadata: { reason: error.reason, message: error.message },
       });
       return response
         .status(403)

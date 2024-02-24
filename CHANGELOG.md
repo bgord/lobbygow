@@ -1,10 +1,13 @@
 # Changelog
+- 2024-02-24 20:00 837b484 **Merge pull request #24 from bgord/dependabot/npm_and_yarn/bgord/node-0.58.272**
+## 2024-02-24 20:00 
 - 2024-02-24 13:40 7572c0f **fix: add missing access denied error reason**
-## 2024-02-24 13:40 
+- 2024-02-24 12:40 4fee5b4 **docs: generate CHANGELOG**
 - 2024-02-23 12:36 1a4a30a **refactor: bump node version**
 - 2024-02-23 12:08 f717d6e **step: bump bgord/scripts**
 - 2024-02-23 12:08 59cc077 **fix: add missing knip install**
 - 2024-02-23 11:39 3ad2ee6 **docs: generate CHANGELOG**
+- 2024-02-23 11:15 2730709 **build(deps): bump @bgord/node from 0.58.271 to 0.58.272**
 - 2024-02-23 11:14 4d911e2 **docs: generate CHANGELOG**
 - 2024-02-23 08:36 91cf31b **Merge pull request #23 from bgord/dependabot/npm_and_yarn/oxlint-0.2.10**
 - 2024-02-23 08:36 376a879 **Merge pull request #22 from bgord/dependabot/npm_and_yarn/vitest-1.3.1**

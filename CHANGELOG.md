@@ -1,6 +1,8 @@
 # Changelog
+- 2024-02-26 13:20 15a89ca **step: bump bgord/node**
+## 2024-02-26 13:20 
 - 2024-02-24 20:00 837b484 **Merge pull request #24 from bgord/dependabot/npm_and_yarn/bgord/node-0.58.272**
-## 2024-02-24 20:00 
+- 2024-02-24 19:00 639bce3 **docs: generate CHANGELOG**
 - 2024-02-24 13:40 7572c0f **fix: add missing access denied error reason**
 - 2024-02-24 12:40 4fee5b4 **docs: generate CHANGELOG**
 - 2024-02-23 12:36 1a4a30a **refactor: bump node version**

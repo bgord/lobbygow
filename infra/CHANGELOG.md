@@ -1,0 +1,92 @@
+# Changelog
+- 2024-02-26 21:20 0465ce7 **step: bump bgord/scripts**
+## 2024-02-26 21:20 
+- 2024-02-26 14:28 819a606 **step: bump bgord/scripts [skip ci]**
+- 2024-02-26 14:26 e78d46b **refactor: remove .versionrc.json**
+- 2024-02-26 13:20 15a89ca **step: bump bgord/node**
+- 2024-02-26 12:22 8664ca6 **docs: generate CHANGELOG**
+- 2024-02-24 20:00 837b484 **Merge pull request #24 from bgord/dependabot/npm_and_yarn/bgord/node-0.58.272**
+- 2024-02-24 19:00 639bce3 **docs: generate CHANGELOG**
+- 2024-02-24 13:40 7572c0f **fix: add missing access denied error reason**
+- 2024-02-24 12:40 4fee5b4 **docs: generate CHANGELOG**
+- 2024-02-23 12:36 1a4a30a **refactor: bump node version**
+- 2024-02-23 12:08 f717d6e **step: bump bgord/scripts**
+- 2024-02-23 12:08 59cc077 **fix: add missing knip install**
+- 2024-02-23 11:39 3ad2ee6 **docs: generate CHANGELOG**
+- 2024-02-23 11:15 2730709 **build(deps): bump @bgord/node from 0.58.271 to 0.58.272**
+- 2024-02-23 11:14 4d911e2 **docs: generate CHANGELOG**
+- 2024-02-23 08:36 91cf31b **Merge pull request #23 from bgord/dependabot/npm_and_yarn/oxlint-0.2.10**
+- 2024-02-23 08:36 376a879 **Merge pull request #22 from bgord/dependabot/npm_and_yarn/vitest-1.3.1**
+- 2024-02-23 07:36 9b8d529 **docs: generate CHANGELOG**
+- 2024-02-21 10:39 d23d2d9 **build(deps-dev): bump vitest from 1.3.0 to 1.3.1**
+- 2024-02-21 10:39 1451fca **build(deps-dev): bump oxlint from 0.2.9 to 0.2.10**
+- 2024-02-21 08:27 f711a5a **Merge pull request #18 from bgord/dependabot/npm_and_yarn/oxlint-0.2.9**
+- 2024-02-21 08:27 b5e2aac **Merge pull request #19 from bgord/dependabot/npm_and_yarn/vitest-1.3.0**
+- 2024-02-21 08:27 9a23fce **Merge pull request #20 from bgord/dependabot/npm_and_yarn/typescript-eslint/parser-7.0.2**
+- 2024-02-21 08:26 4d19a03 **Merge pull request #21 from bgord/dependabot/npm_and_yarn/typescript-eslint/eslint-plugin-7.0.2**
+- 2024-02-21 08:26 4106713 **Merge pull request #17 from bgord/dependabot/npm_and_yarn/esbuild-0.20.1**
+- 2024-02-21 07:28 febca97 **docs: generate CHANGELOG**
+- 2024-02-21 07:27 c0e7fdb **build(deps-dev): bump @typescript-eslint/parser from 7.0.1 to 7.0.2**
+- 2024-02-21 07:26 5afc919 **docs: generate CHANGELOG**
+- 2024-02-20 10:11 7d73ef6 **build(deps-dev): bump @typescript-eslint/eslint-plugin**
+- 2024-02-19 10:25 e997ae6 **build(deps-dev): bump oxlint from 0.2.8 to 0.2.9**
+- 2024-02-19 10:25 6029fce **build(deps-dev): bump vitest from 1.2.2 to 1.3.0**
+- 2024-02-19 10:24 f3836fa **build(deps-dev): bump esbuild from 0.20.0 to 0.20.1**
+- 2024-02-17 08:55 d8a846f **Merge pull request #16 from bgord/dependabot/npm_and_yarn/eslint-plugin-security-2.1.1**
+- 2024-02-17 07:55 3c577d0 **docs: generate CHANGELOG**
+- 2024-02-15 10:48 2835ba6 **build(deps-dev): bump eslint-plugin-security from 2.1.0 to 2.1.1**
+- 2024-02-15 08:35 e8a55fe **Merge pull request #13 from bgord/dependabot/npm_and_yarn/emittery-1.0.3**
+- 2024-02-15 08:35 1414e00 **Merge pull request #15 from bgord/dependabot/npm_and_yarn/commitlint/config-conventional-18.6.2**
+- 2024-02-15 08:35 0c1f407 **Merge pull request #14 from bgord/dependabot/npm_and_yarn/husky-9.0.11**
+- 2024-02-15 07:36 7303643 **docs: generate CHANGELOG**
+- 2024-02-15 07:35 2895e30 **docs: generate CHANGELOG**
+- 2024-02-14 10:17 92629b3 **build(deps-dev): bump @commitlint/config-conventional**
+- 2024-02-14 10:17 0e9c6a8 **build(deps): bump emittery from 1.0.2 to 1.0.3**
+- 2024-02-14 10:17 0c5ece4 **build(deps-dev): bump husky from 9.0.10 to 9.0.11**
+- 2024-02-13 12:16 ba1450f **Merge pull request #8 from bgord/dependabot/npm_and_yarn/commitlint/cli-18.6.1**
+- 2024-02-13 12:12 a1ce7e1 **Merge pull request #12 from bgord/dependabot/npm_and_yarn/typescript-eslint/eslint-plugin-7.0.1**
+- 2024-02-13 12:12 6cc1923 **Merge pull request #10 from bgord/dependabot/npm_and_yarn/typescript-eslint/parser-7.0.1**
+- 2024-02-13 12:11 e1c8ad7 **Merge pull request #11 from bgord/dependabot/npm_and_yarn/commitlint/config-conventional-18.6.1**
+- 2024-02-13 11:16 706bcfd **docs: generate CHANGELOG**
+- 2024-02-13 11:14 c2ce0b7 **build(deps-dev): bump @commitlint/cli from 18.6.0 to 18.6.1**
+- 2024-02-13 11:13 3fe46e8 **docs: generate CHANGELOG**
+- 2024-02-13 11:12 c6f6535 **build(deps-dev): bump @typescript-eslint/eslint-plugin**
+- 2024-02-13 11:12 865b201 **docs: generate CHANGELOG**
+- 2024-02-13 11:06 991af6b **build(deps-dev): bump @typescript-eslint/parser from 6.21.0 to 7.0.1**
+- 2024-02-13 11:06 8d18c58 **build(deps-dev): bump @commitlint/config-conventional**
+- 2024-02-12 11:54 ed7c1e4 **Merge pull request #6 from bgord/dependabot/npm_and_yarn/eslint-plugin-sonarjs-0.24.0**
+- 2024-02-12 11:54 c627644 **Merge pull request #7 from bgord/dependabot/npm_and_yarn/tsx-4.7.1**
+- 2024-02-12 10:54 22bccc4 **docs: generate CHANGELOG**
+- 2024-02-12 10:41 d377eb6 **build(deps-dev): bump tsx from 4.7.0 to 4.7.1**
+- 2024-02-12 10:41 b549807 **build(deps-dev): bump eslint-plugin-sonarjs from 0.23.0 to 0.24.0**
+- 2024-02-06 22:16 2a96216 **fix: staging server build script**
+- 2024-02-06 21:17 cea6f7e **docs: generate CHANGELOG**
+- 2024-02-06 21:11 0faffa9 **docs: generate CHANGELOG**
+- 2024-02-06 16:58 986735a **step: bump bgord/scripts**
+- 2024-02-06 13:06 8a8bbd5 **feature: add notification composer**
+- 2024-02-06 12:53 81060d0 **step: add notification kind enum**
+- 2024-02-06 12:38 8b14787 **feature: setup api key shield**
+- 2024-02-06 12:24 9dda224 **step: handle invalid payload error gracefully**
+- 2024-02-06 12:08 63450b9 **docs: generate CHANGELOG**
+- 2024-02-06 12:07 faf9838 **Merge pull request #3 from bgord/dependabot/npm_and_yarn/typescript-eslint/parser-6.21.0**
+- 2024-02-06 12:06 87c2421 **Merge pull request #5 from bgord/dependabot/npm_and_yarn/typescript-eslint/eslint-plugin-6.21.0**
+- 2024-02-06 12:06 5da7cd8 **Merge pull request #4 from bgord/dependabot/npm_and_yarn/oxlint-0.2.8**
+- 2024-02-06 11:46 f19213d **Merge pull request #1 from bgord/dependabot/npm_and_yarn/husky-9.0.10**
+- 2024-02-06 11:45 b3d8abe **Merge pull request #2 from bgord/dependabot/npm_and_yarn/oxlint-0.2.7**
+- 2024-02-06 11:40 eb87ba9 **docs: generate CHANGELOG**
+- 2024-02-06 11:07 f59c2f7 **docs: generate CHANGELOG**
+- 2024-02-06 11:07 9564d3c **docs: generate CHANGELOG**
+- 2024-02-06 11:07 8f891b2 **build(deps-dev): bump @typescript-eslint/parser from 6.20.0 to 6.21.0**
+- 2024-02-06 10:58 84a7879 **build(deps-dev): bump @typescript-eslint/eslint-plugin**
+- 2024-02-06 10:57 2735165 **build(deps-dev): bump oxlint from 0.2.7 to 0.2.8**
+- 2024-02-06 10:47 b2b2e44 **docs: generate CHANGELOG**
+- 2024-02-06 10:46 74af39d **build(deps-dev): bump husky from 9.0.7 to 9.0.10**
+- 2024-02-06 10:45 32852e9 **docs: generate CHANGELOG**
+- 2024-02-05 13:00 c3dd1aa **feature: add notification send route**
+- 2024-02-05 13:00 66db7ad **step: bump bgord/scripts**
+- 2024-02-05 12:41 b4ac1eb **fix: staging server start script**
+- 2024-02-05 12:20 d6cbd2d **feature: setup project**
+- 2024-02-05 11:41 4649a0d **docs: generate CHANGELOG**
+- 2024-02-05 11:26 057fa8a **build(deps-dev): bump oxlint from 0.2.6 to 0.2.7**
+- 2024-02-05 11:25 cad135c **docs: generate CHANGELOG**
+- 2024-02-03 15:37 0b7dd94 **step: add lobbygow**

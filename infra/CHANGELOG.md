@@ -1,10 +1,13 @@
 # Changelog
+- 2024-02-26 22:04 2432f0e **Merge pull request #25 from bgord/dependabot/npm_and_yarn/eslint-8.57.0**
+## 2024-02-26 22:04 
 - 2024-02-26 21:20 0465ce7 **step: bump bgord/scripts**
-## 2024-02-26 21:20 
+- 2024-02-26 20:21 7703ace **docs: generate CHANGELOG**
 - 2024-02-26 14:28 819a606 **step: bump bgord/scripts [skip ci]**
 - 2024-02-26 14:26 e78d46b **refactor: remove .versionrc.json**
 - 2024-02-26 13:20 15a89ca **step: bump bgord/node**
 - 2024-02-26 12:22 8664ca6 **docs: generate CHANGELOG**
+- 2024-02-26 10:32 f4d9e1d **build(deps-dev): bump eslint from 8.56.0 to 8.57.0**
 - 2024-02-24 20:00 837b484 **Merge pull request #24 from bgord/dependabot/npm_and_yarn/bgord/node-0.58.272**
 - 2024-02-24 19:00 639bce3 **docs: generate CHANGELOG**
 - 2024-02-24 13:40 7572c0f **fix: add missing access denied error reason**

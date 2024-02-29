@@ -1,7 +1,10 @@
 # Changelog
+- 2024-02-29 07:46 e28f822 **Merge pull request #30 from bgord/dependabot/npm_and_yarn/commitlint/cli-19.0.2**
+## 2024-02-29 07:46 
+- 2024-02-28 10:30 4edb88d **build(deps-dev): bump @commitlint/cli from 18.6.1 to 19.0.2**
 - 2024-02-26 22:04 2432f0e **Merge pull request #25 from bgord/dependabot/npm_and_yarn/eslint-8.57.0**
-## 2024-02-26 22:04 
 - 2024-02-26 21:20 0465ce7 **step: bump bgord/scripts**
+- 2024-02-26 21:04 ae27a79 **docs: generate CHANGELOG**
 - 2024-02-26 20:21 7703ace **docs: generate CHANGELOG**
 - 2024-02-26 14:28 819a606 **step: bump bgord/scripts [skip ci]**
 - 2024-02-26 14:26 e78d46b **refactor: remove .versionrc.json**

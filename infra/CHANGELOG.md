@@ -1,6 +1,9 @@
 # Changelog
+- 2024-03-05 10:29 8eea8cd **Merge pull request #35 from bgord/dependabot/npm_and_yarn/eslint-plugin-react-7.34.0**
 - 2024-03-05 10:29 8e059df **Merge pull request #36 from bgord/dependabot/npm_and_yarn/knip-5.0.3**
 ## 2024-03-05 10:29 
+- 2024-03-05 09:29 b327757 **docs: generate CHANGELOG**
+- 2024-03-04 10:13 5dfc6f8 **build(deps-dev): bump eslint-plugin-react from 7.33.2 to 7.34.0**
 - 2024-03-04 10:13 161dcff **build(deps-dev): bump knip from 5.0.2 to 5.0.3**
 - 2024-03-02 11:43 b37c7cf **Merge pull request #32 from bgord/dependabot/npm_and_yarn/oxlint-0.2.12**
 - 2024-03-02 11:42 fde5296 **Merge pull request #34 from bgord/dependabot/npm_and_yarn/express-4.18.3**

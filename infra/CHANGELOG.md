@@ -1,8 +1,11 @@
 # Changelog
+- 2024-03-05 10:29 8e059df **Merge pull request #36 from bgord/dependabot/npm_and_yarn/knip-5.0.3**
+## 2024-03-05 10:29 
+- 2024-03-04 10:13 161dcff **build(deps-dev): bump knip from 5.0.2 to 5.0.3**
 - 2024-03-02 11:43 b37c7cf **Merge pull request #32 from bgord/dependabot/npm_and_yarn/oxlint-0.2.12**
-## 2024-03-02 11:43 
 - 2024-03-02 11:42 fde5296 **Merge pull request #34 from bgord/dependabot/npm_and_yarn/express-4.18.3**
 - 2024-03-02 11:42 8464a40 **Merge pull request #33 from bgord/dependabot/npm_and_yarn/commitlint/cli-19.0.3**
+- 2024-03-02 10:43 0660c05 **docs: generate CHANGELOG**
 - 2024-03-01 10:53 0e89502 **build(deps): bump express from 4.18.2 to 4.18.3**
 - 2024-02-29 10:19 3894fa6 **build(deps-dev): bump @commitlint/cli from 19.0.2 to 19.0.3**
 - 2024-02-29 07:50 0daebe0 **Merge pull request #26 from bgord/dependabot/npm_and_yarn/typescript-eslint/parser-7.1.0**

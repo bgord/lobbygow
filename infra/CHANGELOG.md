@@ -1,7 +1,10 @@
 # Changelog
+- 2024-03-08 08:43 583142d **Merge pull request #41 from bgord/dependabot/npm_and_yarn/typescript-5.4.2**
+## 2024-03-08 08:43 
+- 2024-03-07 10:23 3b8ae1b **build(deps): bump typescript from 5.3.3 to 5.4.2**
 - 2024-03-05 10:29 8eea8cd **Merge pull request #35 from bgord/dependabot/npm_and_yarn/eslint-plugin-react-7.34.0**
 - 2024-03-05 10:29 8e059df **Merge pull request #36 from bgord/dependabot/npm_and_yarn/knip-5.0.3**
-## 2024-03-05 10:29 
+- 2024-03-05 09:29 f4462e5 **docs: generate CHANGELOG**
 - 2024-03-05 09:29 b327757 **docs: generate CHANGELOG**
 - 2024-03-04 10:13 5dfc6f8 **build(deps-dev): bump eslint-plugin-react from 7.33.2 to 7.34.0**
 - 2024-03-04 10:13 161dcff **build(deps-dev): bump knip from 5.0.2 to 5.0.3**

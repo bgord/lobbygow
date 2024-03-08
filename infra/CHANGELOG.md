@@ -1,9 +1,12 @@
 # Changelog
+- 2024-03-08 08:46 06464f4 **Merge pull request #37 from bgord/dependabot/npm_and_yarn/typescript-eslint/eslint-plugin-7.1.1**
+## 2024-03-08 08:46 
 - 2024-03-08 08:45 f290677 **Merge pull request #39 from bgord/dependabot/npm_and_yarn/bgord/node-0.58.274**
 - 2024-03-08 08:45 3dddac9 **Merge pull request #40 from bgord/dependabot/npm_and_yarn/typescript-eslint/parser-7.1.1**
 - 2024-03-08 08:45 2d9c9ce **Merge pull request #38 from bgord/dependabot/npm_and_yarn/oxlint-0.2.13**
-## 2024-03-08 08:45 
 - 2024-03-08 08:43 583142d **Merge pull request #41 from bgord/dependabot/npm_and_yarn/typescript-5.4.2**
+- 2024-03-08 07:45 94da97c **build(deps-dev): bump @typescript-eslint/eslint-plugin**
+- 2024-03-08 07:45 584584d **docs: generate CHANGELOG**
 - 2024-03-08 07:44 8a91b55 **build(deps): bump @bgord/node from 0.58.273 to 0.58.274**
 - 2024-03-08 07:43 207e9c4 **docs: generate CHANGELOG**
 - 2024-03-07 10:23 3b8ae1b **build(deps): bump typescript from 5.3.3 to 5.4.2**

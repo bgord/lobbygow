@@ -1,13 +1,16 @@
 # Changelog
+- 2024-03-14 08:29 6cda73f **Merge pull request #44 from bgord/dependabot/npm_and_yarn/typescript-eslint/eslint-plugin-7.2.0**
 - 2024-03-14 08:29 15bd7e1 **Merge pull request #45 from bgord/dependabot/npm_and_yarn/commitlint/cli-19.1.0**
 ## 2024-03-14 08:29 
 - 2024-03-14 08:28 7425a2b **Merge pull request #46 from bgord/dependabot/npm_and_yarn/commitlint/config-conventional-19.1.0**
 - 2024-03-14 08:27 68d46e3 **Merge pull request #47 from bgord/dependabot/npm_and_yarn/knip-5.0.4**
+- 2024-03-14 07:29 0874e6c **docs: generate CHANGELOG**
 - 2024-03-14 07:29 04e3624 **build(deps-dev): bump @commitlint/cli from 19.0.3 to 19.1.0**
 - 2024-03-14 07:28 f85821a **docs: generate CHANGELOG**
 - 2024-03-14 07:27 66af32a **docs: generate CHANGELOG**
 - 2024-03-12 10:35 d8d5604 **build(deps-dev): bump knip from 5.0.3 to 5.0.4**
 - 2024-03-12 10:35 1afcbee **build(deps-dev): bump @commitlint/config-conventional**
+- 2024-03-12 10:35 04043b8 **build(deps-dev): bump @typescript-eslint/eslint-plugin**
 - 2024-03-11 21:43 bd28ea6 **Merge pull request #42 from bgord/dependabot/npm_and_yarn/bgord/node-0.58.277**
 - 2024-03-11 20:43 4488af0 **docs: generate CHANGELOG**
 - 2024-03-11 10:44 6ae2c3e **build(deps): bump @bgord/node from 0.58.274 to 0.58.277**

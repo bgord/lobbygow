@@ -1,6 +1,9 @@
 # Changelog
+- 2024-03-14 08:27 68d46e3 **Merge pull request #47 from bgord/dependabot/npm_and_yarn/knip-5.0.4**
+## 2024-03-14 08:27 
+- 2024-03-12 10:35 d8d5604 **build(deps-dev): bump knip from 5.0.3 to 5.0.4**
 - 2024-03-11 21:43 bd28ea6 **Merge pull request #42 from bgord/dependabot/npm_and_yarn/bgord/node-0.58.277**
-## 2024-03-11 21:43 
+- 2024-03-11 20:43 4488af0 **docs: generate CHANGELOG**
 - 2024-03-11 10:44 6ae2c3e **build(deps): bump @bgord/node from 0.58.274 to 0.58.277**
 - 2024-03-08 08:46 06464f4 **Merge pull request #37 from bgord/dependabot/npm_and_yarn/typescript-eslint/eslint-plugin-7.1.1**
 - 2024-03-08 08:45 f290677 **Merge pull request #39 from bgord/dependabot/npm_and_yarn/bgord/node-0.58.274**

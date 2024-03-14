@@ -1,7 +1,10 @@
 # Changelog
+- 2024-03-14 08:29 15bd7e1 **Merge pull request #45 from bgord/dependabot/npm_and_yarn/commitlint/cli-19.1.0**
+## 2024-03-14 08:29 
 - 2024-03-14 08:28 7425a2b **Merge pull request #46 from bgord/dependabot/npm_and_yarn/commitlint/config-conventional-19.1.0**
-## 2024-03-14 08:28 
 - 2024-03-14 08:27 68d46e3 **Merge pull request #47 from bgord/dependabot/npm_and_yarn/knip-5.0.4**
+- 2024-03-14 07:29 04e3624 **build(deps-dev): bump @commitlint/cli from 19.0.3 to 19.1.0**
+- 2024-03-14 07:28 f85821a **docs: generate CHANGELOG**
 - 2024-03-14 07:27 66af32a **docs: generate CHANGELOG**
 - 2024-03-12 10:35 d8d5604 **build(deps-dev): bump knip from 5.0.3 to 5.0.4**
 - 2024-03-12 10:35 1afcbee **build(deps-dev): bump @commitlint/config-conventional**

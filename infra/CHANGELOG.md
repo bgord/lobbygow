@@ -1,8 +1,13 @@
 # Changelog
+- 2024-03-18 08:23 adda779 **Merge pull request #53 from bgord/dependabot/npm_and_yarn/knip-5.1.1**
+- 2024-03-18 08:23 866cfbd **Merge pull request #49 from bgord/dependabot/npm_and_yarn/bgord/node-0.58.278**
+## 2024-03-18 08:23 
 - 2024-03-16 08:01 f8e6c62 **Merge pull request #50 from bgord/dependabot/npm_and_yarn/commitlint/cli-19.2.0**
-## 2024-03-16 08:01 
 - 2024-03-16 08:00 eba3d63 **Merge pull request #51 from bgord/dependabot/npm_and_yarn/vitest-1.4.0**
 - 2024-03-16 07:58 581c6d8 **Merge pull request #52 from bgord/dependabot/npm_and_yarn/esbuild-0.20.2**
+- 2024-03-16 07:11 d2809e4 **build(deps-dev): bump knip from 5.0.4 to 5.1.1**
+- 2024-03-16 07:11 cc83803 **build(deps): bump @bgord/node from 0.58.277 to 0.58.278**
+- 2024-03-16 07:01 2ea433c **docs: generate CHANGELOG**
 - 2024-03-16 07:00 fadc72e **docs: generate CHANGELOG**
 - 2024-03-16 07:00 f1e0d72 **build(deps-dev): bump vitest from 1.3.1 to 1.4.0**
 - 2024-03-16 06:58 a9dcae1 **docs: generate CHANGELOG**

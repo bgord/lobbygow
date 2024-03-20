@@ -1,10 +1,13 @@
 # Changelog
+- 2024-03-20 08:26 37ca897 **Merge pull request #54 from bgord/dependabot/npm_and_yarn/oxlint-0.2.14**
+## 2024-03-20 08:26 
 - 2024-03-20 08:25 1090aff **Merge pull request #55 from bgord/dependabot/npm_and_yarn/knip-5.1.2**
-## 2024-03-20 08:25 
 - 2024-03-20 08:24 2aa8ffc **Merge pull request #56 from bgord/dependabot/npm_and_yarn/eslint-plugin-react-7.34.1**
 - 2024-03-20 08:23 c4d83c3 **Merge pull request #57 from bgord/dependabot/npm_and_yarn/typescript-eslint/eslint-plugin-7.3.1**
 - 2024-03-20 08:23 a28b57d **Merge pull request #58 from bgord/dependabot/npm_and_yarn/commitlint/cli-19.2.1**
 - 2024-03-20 08:22 34ce9c0 **Merge pull request #59 from bgord/dependabot/npm_and_yarn/typescript-eslint/parser-7.3.1**
+- 2024-03-20 07:26 4852e88 **build(deps-dev): bump oxlint from 0.2.13 to 0.2.14**
+- 2024-03-20 07:25 e088bb5 **docs: generate CHANGELOG**
 - 2024-03-20 07:24 6bb423f **docs: generate CHANGELOG**
 - 2024-03-20 07:24 02f1a5f **docs: generate CHANGELOG**
 - 2024-03-20 07:23 cbcc908 **build(deps-dev): bump @typescript-eslint/eslint-plugin**

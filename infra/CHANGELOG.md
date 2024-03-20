@@ -1,7 +1,10 @@
 # Changelog
+- 2024-03-20 08:23 c4d83c3 **Merge pull request #57 from bgord/dependabot/npm_and_yarn/typescript-eslint/eslint-plugin-7.3.1**
 - 2024-03-20 08:23 a28b57d **Merge pull request #58 from bgord/dependabot/npm_and_yarn/commitlint/cli-19.2.1**
 ## 2024-03-20 08:23 
 - 2024-03-20 08:22 34ce9c0 **Merge pull request #59 from bgord/dependabot/npm_and_yarn/typescript-eslint/parser-7.3.1**
+- 2024-03-20 07:23 cbcc908 **build(deps-dev): bump @typescript-eslint/eslint-plugin**
+- 2024-03-20 07:23 2195e91 **docs: generate CHANGELOG**
 - 2024-03-20 07:22 e8ab5fa **docs: generate CHANGELOG**
 - 2024-03-19 10:12 c2a79b3 **build(deps-dev): bump @typescript-eslint/parser from 7.2.0 to 7.3.1**
 - 2024-03-19 10:11 dba4eff **build(deps-dev): bump @commitlint/cli from 19.2.0 to 19.2.1**

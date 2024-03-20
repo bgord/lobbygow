@@ -33,7 +33,7 @@
     "eslint-plugin-sonarjs": "0.24.0",
     "gzip-cli": "1.2.0",
     "husky": "9.0.11",
-    "oxlint": "0.2.13",
+    "oxlint": "0.2.14",
     "knip": "5.1.2",
     "standard-version": "9.5.0",
     "tsx": "4.7.1",

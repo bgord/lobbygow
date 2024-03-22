@@ -42,7 +42,7 @@
   "dependencies": {
     "@bgord/node": "0.58.279",
     "express": "4.19.1",
-    "typescript": "5.4.2",
+    "typescript": "5.4.3",
     "zod": "3.22.4"
   }
 }

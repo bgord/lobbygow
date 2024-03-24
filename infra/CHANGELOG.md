@@ -1,9 +1,12 @@
 # Changelog
+- 2024-03-24 08:47 415a9da **Merge pull request #65 from bgord/dependabot/npm_and_yarn/knip-5.2.2**
+## 2024-03-24 08:47 
+- 2024-03-22 10:26 3bb1c0f **build(deps-dev): bump knip from 5.2.0 to 5.2.2**
 - 2024-03-22 08:15 7af0883 **Merge pull request #62 from bgord/dependabot/npm_and_yarn/knip-5.2.0**
 - 2024-03-22 08:15 05151e6 **Merge pull request #61 from bgord/dependabot/npm_and_yarn/typescript-5.4.3**
-## 2024-03-22 08:15 
 - 2024-03-22 08:14 708484b **Merge pull request #63 from bgord/dependabot/npm_and_yarn/bgord/node-0.58.279**
 - 2024-03-22 08:13 34b6117 **Merge pull request #64 from bgord/dependabot/npm_and_yarn/express-4.19.1**
+- 2024-03-22 07:16 e8ba730 **docs: generate CHANGELOG**
 - 2024-03-22 07:15 e16fb88 **docs: generate CHANGELOG**
 - 2024-03-22 07:15 3a1e88c **docs: generate CHANGELOG**
 - 2024-03-22 07:14 98b9155 **build(deps): bump @bgord/node from 0.58.278 to 0.58.279**

@@ -1,8 +1,11 @@
 # Changelog
+- 2024-03-28 09:18 9e0ac22 **Merge pull request #67 from bgord/dependabot/npm_and_yarn/typescript-eslint/parser-7.4.0**
+## 2024-03-28 09:18 
 - 2024-03-28 09:17 5f2df05 **Merge pull request #68 from bgord/dependabot/npm_and_yarn/typescript-eslint/eslint-plugin-7.4.0**
-## 2024-03-28 09:17 
 - 2024-03-28 09:16 f6fcb48 **Merge pull request #70 from bgord/dependabot/npm_and_yarn/knip-5.6.0**
 - 2024-03-28 09:16 a4a6f7b **Merge pull request #69 from bgord/dependabot/npm_and_yarn/express-4.19.2**
+- 2024-03-28 08:17 94345ce **build(deps-dev): bump @typescript-eslint/parser from 7.3.1 to 7.4.0**
+- 2024-03-28 08:17 50d975d **docs: generate CHANGELOG**
 - 2024-03-26 10:18 defcd76 **build(deps-dev): bump knip from 5.5.0 to 5.6.0**
 - 2024-03-26 10:17 e737d0a **build(deps-dev): bump @typescript-eslint/eslint-plugin**
 - 2024-03-26 10:17 26733ed **build(deps): bump express from 4.19.1 to 4.19.2**

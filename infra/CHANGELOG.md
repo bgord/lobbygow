@@ -1,7 +1,10 @@
 # Changelog
+- 2024-04-03 08:38 5006e7e **Merge pull request #76 from bgord/dependabot/npm_and_yarn/typescript-eslint/parser-7.5.0**
+## 2024-04-03 08:38 
+- 2024-04-02 10:51 ef4d726 **build(deps-dev): bump @typescript-eslint/parser from 7.4.0 to 7.5.0**
 - 2024-03-30 15:16 16ee982 **Merge pull request #73 from bgord/dependabot/npm_and_yarn/knip-5.7.0**
 - 2024-03-30 15:16 153572f **Merge pull request #72 from bgord/dependabot/npm_and_yarn/eslint-plugin-sonarjs-0.25.0**
-## 2024-03-30 15:16 
+- 2024-03-30 14:17 4a7ccc3 **docs: generate CHANGELOG**
 - 2024-03-30 14:16 de5ba23 **docs: generate CHANGELOG**
 - 2024-03-29 10:15 4fb7f0e **build(deps-dev): bump knip from 5.6.0 to 5.7.0**
 - 2024-03-28 10:56 69718d1 **build(deps-dev): bump eslint-plugin-sonarjs from 0.24.0 to 0.25.0**

@@ -1,8 +1,15 @@
 # Changelog
+- 2024-04-05 08:15 ee88d88 **Merge pull request #77 from bgord/dependabot/npm_and_yarn/tsx-4.7.2**
+- 2024-04-05 08:15 e930797 **Merge pull request #79 from bgord/dependabot/npm_and_yarn/eslint-plugin-sonarjs-0.25.1**
+- 2024-04-05 08:15 b1d34eb **Merge pull request #78 from bgord/dependabot/npm_and_yarn/knip-5.7.2**
+## 2024-04-05 08:15 
+- 2024-04-04 10:21 769c329 **build(deps-dev): bump tsx from 4.7.1 to 4.7.2**
+- 2024-04-04 10:21 4cd2caa **build(deps-dev): bump eslint-plugin-sonarjs from 0.25.0 to 0.25.1**
+- 2024-04-04 10:21 1c0e274 **build(deps-dev): bump knip from 5.7.0 to 5.7.2**
 - 2024-04-03 08:39 ddbfc57 **Merge pull request #75 from bgord/dependabot/npm_and_yarn/typescript-eslint/eslint-plugin-7.5.0**
 - 2024-04-03 08:39 2bd680e **Merge pull request #74 from bgord/dependabot/npm_and_yarn/oxlint-0.2.15**
-## 2024-04-03 08:39 
 - 2024-04-03 08:38 5006e7e **Merge pull request #76 from bgord/dependabot/npm_and_yarn/typescript-eslint/parser-7.5.0**
+- 2024-04-03 06:39 810eb51 **docs: generate CHANGELOG**
 - 2024-04-03 06:39 397b862 **build(deps-dev): bump @typescript-eslint/eslint-plugin**
 - 2024-04-03 06:38 ec215ec **docs: generate CHANGELOG**
 - 2024-04-02 10:51 ef4d726 **build(deps-dev): bump @typescript-eslint/parser from 7.4.0 to 7.5.0**

@@ -1,8 +1,13 @@
 # Changelog
+- 2024-04-07 09:02 a18a506 **Merge pull request #81 from bgord/dependabot/npm_and_yarn/knip-5.8.0**
+- 2024-04-07 09:02 a124331 **Merge pull request #80 from bgord/dependabot/npm_and_yarn/typescript-5.4.4**
+## 2024-04-07 09:02 
+- 2024-04-05 10:51 81184b2 **build(deps-dev): bump knip from 5.7.2 to 5.8.0**
+- 2024-04-05 10:51 246269b **build(deps): bump typescript from 5.4.3 to 5.4.4**
 - 2024-04-05 08:15 ee88d88 **Merge pull request #77 from bgord/dependabot/npm_and_yarn/tsx-4.7.2**
 - 2024-04-05 08:15 e930797 **Merge pull request #79 from bgord/dependabot/npm_and_yarn/eslint-plugin-sonarjs-0.25.1**
 - 2024-04-05 08:15 b1d34eb **Merge pull request #78 from bgord/dependabot/npm_and_yarn/knip-5.7.2**
-## 2024-04-05 08:15 
+- 2024-04-05 06:15 402c2ff **docs: generate CHANGELOG**
 - 2024-04-04 10:21 769c329 **build(deps-dev): bump tsx from 4.7.1 to 4.7.2**
 - 2024-04-04 10:21 4cd2caa **build(deps-dev): bump eslint-plugin-sonarjs from 0.25.0 to 0.25.1**
 - 2024-04-04 10:21 1c0e274 **build(deps-dev): bump knip from 5.7.0 to 5.7.2**

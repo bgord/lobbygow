@@ -1,6 +1,9 @@
 # Changelog
+- 2024-04-09 08:16 fa72f4e **Merge pull request #84 from bgord/dependabot/npm_and_yarn/knip-5.9.2**
+## 2024-04-09 08:16 
 - 2024-04-09 08:15 1e39783 **Merge pull request #83 from bgord/dependabot/npm_and_yarn/oxlint-0.2.16**
-## 2024-04-09 08:15 
+- 2024-04-09 06:16 a33ec70 **build(deps-dev): bump knip from 5.8.0 to 5.9.2**
+- 2024-04-09 06:15 84af156 **docs: generate CHANGELOG**
 - 2024-04-08 10:53 2203ccc **build(deps-dev): bump oxlint from 0.2.15 to 0.2.16**
 - 2024-04-07 09:02 a18a506 **Merge pull request #81 from bgord/dependabot/npm_and_yarn/knip-5.8.0**
 - 2024-04-07 09:02 a124331 **Merge pull request #80 from bgord/dependabot/npm_and_yarn/typescript-5.4.4**

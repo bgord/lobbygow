@@ -1,7 +1,10 @@
 # Changelog
+- 2024-04-09 08:15 1e39783 **Merge pull request #83 from bgord/dependabot/npm_and_yarn/oxlint-0.2.16**
+## 2024-04-09 08:15 
+- 2024-04-08 10:53 2203ccc **build(deps-dev): bump oxlint from 0.2.15 to 0.2.16**
 - 2024-04-07 09:02 a18a506 **Merge pull request #81 from bgord/dependabot/npm_and_yarn/knip-5.8.0**
 - 2024-04-07 09:02 a124331 **Merge pull request #80 from bgord/dependabot/npm_and_yarn/typescript-5.4.4**
-## 2024-04-07 09:02 
+- 2024-04-07 07:03 9ccf06d **docs: generate CHANGELOG**
 - 2024-04-05 10:51 81184b2 **build(deps-dev): bump knip from 5.7.2 to 5.8.0**
 - 2024-04-05 10:51 246269b **build(deps): bump typescript from 5.4.3 to 5.4.4**
 - 2024-04-05 08:15 ee88d88 **Merge pull request #77 from bgord/dependabot/npm_and_yarn/tsx-4.7.2**

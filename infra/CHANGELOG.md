@@ -1,7 +1,12 @@
 # Changelog
+- 2024-04-11 08:06 7d28caa **Merge pull request #86 from bgord/dependabot/npm_and_yarn/typescript-eslint/parser-7.6.0**
+- 2024-04-11 08:06 55d463d **Merge pull request #87 from bgord/dependabot/npm_and_yarn/knip-5.9.3**
+## 2024-04-11 08:06 
+- 2024-04-10 11:01 1dfff37 **build(deps-dev): bump knip from 5.9.2 to 5.9.3**
+- 2024-04-09 10:11 f7f5876 **build(deps-dev): bump @typescript-eslint/parser from 7.5.0 to 7.6.0**
 - 2024-04-09 08:16 fa72f4e **Merge pull request #84 from bgord/dependabot/npm_and_yarn/knip-5.9.2**
-## 2024-04-09 08:16 
 - 2024-04-09 08:15 1e39783 **Merge pull request #83 from bgord/dependabot/npm_and_yarn/oxlint-0.2.16**
+- 2024-04-09 06:17 c224003 **docs: generate CHANGELOG**
 - 2024-04-09 06:16 a33ec70 **build(deps-dev): bump knip from 5.8.0 to 5.9.2**
 - 2024-04-09 06:15 84af156 **docs: generate CHANGELOG**
 - 2024-04-08 10:53 2203ccc **build(deps-dev): bump oxlint from 0.2.15 to 0.2.16**

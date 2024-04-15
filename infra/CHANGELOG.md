@@ -1,8 +1,11 @@
 # Changelog
+- 2024-04-15 08:27 21b9b97 **Merge pull request #92 from bgord/dependabot/npm_and_yarn/vitest-1.5.0**
+## 2024-04-15 08:27 
+- 2024-04-12 10:59 621e42e **build(deps-dev): bump vitest from 1.4.0 to 1.5.0**
 - 2024-04-11 08:07 092fda5 **Merge pull request #85 from bgord/dependabot/npm_and_yarn/typescript-eslint/eslint-plugin-7.6.0**
-## 2024-04-11 08:07 
 - 2024-04-11 08:06 7d28caa **Merge pull request #86 from bgord/dependabot/npm_and_yarn/typescript-eslint/parser-7.6.0**
 - 2024-04-11 08:06 55d463d **Merge pull request #87 from bgord/dependabot/npm_and_yarn/knip-5.9.3**
+- 2024-04-11 06:08 84bc645 **docs: generate CHANGELOG**
 - 2024-04-11 06:07 847edad **docs: generate CHANGELOG**
 - 2024-04-11 06:07 2521792 **build(deps-dev): bump @typescript-eslint/eslint-plugin**
 - 2024-04-10 11:01 1dfff37 **build(deps-dev): bump knip from 5.9.2 to 5.9.3**

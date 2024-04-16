@@ -1,10 +1,13 @@
 # Changelog
+- 2024-04-16 13:15 b2db919 **Merge pull request #94 from bgord/dependabot/npm_and_yarn/commitlint/config-conventional-19.2.2**
 - 2024-04-16 13:15 6cab674 **Merge pull request #95 from bgord/dependabot/npm_and_yarn/typescript-eslint/parser-7.7.0**
 ## 2024-04-16 13:15 
 - 2024-04-16 13:13 ae7b8fa **Merge pull request #96 from bgord/dependabot/npm_and_yarn/typescript-eslint/eslint-plugin-7.7.0**
+- 2024-04-16 11:15 f7377a7 **docs: generate CHANGELOG**
 - 2024-04-16 11:14 8f34ab9 **build(deps-dev): bump @typescript-eslint/parser from 7.6.0 to 7.7.0**
 - 2024-04-16 11:13 809d85c **docs: generate CHANGELOG**
 - 2024-04-16 10:52 5290066 **build(deps-dev): bump @typescript-eslint/eslint-plugin**
+- 2024-04-15 10:41 801ed20 **build(deps-dev): bump @commitlint/config-conventional**
 - 2024-04-15 08:29 b9475c3 **Merge pull request #88 from bgord/dependabot/npm_and_yarn/knip-5.9.4**
 - 2024-04-15 08:29 5b31a30 **Merge pull request #89 from bgord/dependabot/npm_and_yarn/oxlint-0.2.17**
 - 2024-04-15 08:28 cd334cc **Merge pull request #90 from bgord/dependabot/npm_and_yarn/eslint-plugin-security-3.0.0**

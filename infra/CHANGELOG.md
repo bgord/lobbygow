@@ -1,10 +1,13 @@
 # Changelog
+- 2024-04-21 18:13 f9fc3a5 **Merge pull request #98 from bgord/dependabot/npm_and_yarn/oxlint-0.2.18**
+## 2024-04-21 18:13 
+- 2024-04-19 10:52 55e54ba **build(deps-dev): bump oxlint from 0.2.17 to 0.2.18**
 - 2024-04-16 13:16 a7a4b15 **Merge pull request #93 from bgord/dependabot/npm_and_yarn/commitlint/cli-19.2.2**
-## 2024-04-16 13:16 
 - 2024-04-16 13:15 b2db919 **Merge pull request #94 from bgord/dependabot/npm_and_yarn/commitlint/config-conventional-19.2.2**
 - 2024-04-16 13:15 6cab674 **Merge pull request #95 from bgord/dependabot/npm_and_yarn/typescript-eslint/parser-7.7.0**
 - 2024-04-16 13:13 ae7b8fa **Merge pull request #96 from bgord/dependabot/npm_and_yarn/typescript-eslint/eslint-plugin-7.7.0**
 - 2024-04-16 11:16 8759713 **build(deps-dev): bump @commitlint/cli from 19.2.1 to 19.2.2**
+- 2024-04-16 11:16 1e96e27 **docs: generate CHANGELOG**
 - 2024-04-16 11:15 f7377a7 **docs: generate CHANGELOG**
 - 2024-04-16 11:15 1cee65f **docs: generate CHANGELOG**
 - 2024-04-16 11:14 8f34ab9 **build(deps-dev): bump @typescript-eslint/parser from 7.6.0 to 7.7.0**

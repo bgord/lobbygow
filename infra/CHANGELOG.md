@@ -1,7 +1,12 @@
 # Changelog
+- 2024-04-23 08:11 e454f82 **Merge pull request #99 from bgord/dependabot/npm_and_yarn/oxlint-0.3.1**
+- 2024-04-23 08:11 567bfa6 **Merge pull request #100 from bgord/dependabot/npm_and_yarn/zod-3.23.0**
+## 2024-04-23 08:11 
+- 2024-04-22 10:11 b9a8dcf **build(deps): bump zod from 3.22.5 to 3.23.0**
+- 2024-04-22 10:11 76c3a33 **build(deps-dev): bump oxlint from 0.2.18 to 0.3.1**
 - 2024-04-21 18:13 f9fc3a5 **Merge pull request #98 from bgord/dependabot/npm_and_yarn/oxlint-0.2.18**
 - 2024-04-21 18:13 124a327 **Merge pull request #97 from bgord/dependabot/npm_and_yarn/zod-3.22.5**
-## 2024-04-21 18:13 
+- 2024-04-21 16:14 b7c06d5 **docs: generate CHANGELOG**
 - 2024-04-21 16:13 17316cf **docs: generate CHANGELOG**
 - 2024-04-19 10:52 55e54ba **build(deps-dev): bump oxlint from 0.2.17 to 0.2.18**
 - 2024-04-19 10:51 3865bc6 **build(deps): bump zod from 3.22.4 to 3.22.5**

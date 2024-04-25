@@ -1,6 +1,9 @@
 # Changelog
+- 2024-04-25 08:13 9570131 **Merge pull request #105 from bgord/dependabot/npm_and_yarn/typescript-eslint/parser-7.7.1**
+## 2024-04-25 08:13 
 - 2024-04-23 11:05 743d960 **fix: zod version**
-## 2024-04-23 11:05 
+- 2024-04-23 10:26 8144d7e **build(deps-dev): bump @typescript-eslint/parser from 7.7.0 to 7.7.1**
+- 2024-04-23 09:05 787a225 **docs: generate CHANGELOG**
 - 2024-04-23 08:11 e454f82 **Merge pull request #99 from bgord/dependabot/npm_and_yarn/oxlint-0.3.1**
 - 2024-04-23 08:11 567bfa6 **Merge pull request #100 from bgord/dependabot/npm_and_yarn/zod-3.23.0**
 - 2024-04-23 06:11 496e10b **docs: generate CHANGELOG**

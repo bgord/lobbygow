@@ -1,9 +1,12 @@
 # Changelog
+- 2024-04-25 08:15 8042a5f **Merge pull request #101 from bgord/dependabot/npm_and_yarn/typescript-eslint/eslint-plugin-7.7.1**
 - 2024-04-25 08:15 2c60ac5 **Merge pull request #102 from bgord/dependabot/npm_and_yarn/knip-5.10.0**
 ## 2024-04-25 08:15 
 - 2024-04-25 08:14 221db6e **Merge pull request #104 from bgord/dependabot/npm_and_yarn/commitlint/cli-19.3.0**
 - 2024-04-25 08:13 9570131 **Merge pull request #105 from bgord/dependabot/npm_and_yarn/typescript-eslint/parser-7.7.1**
+- 2024-04-25 06:15 57572a5 **docs: generate CHANGELOG**
 - 2024-04-25 06:14 8a08c61 **docs: generate CHANGELOG**
+- 2024-04-25 06:14 28a960a **build(deps-dev): bump @typescript-eslint/eslint-plugin**
 - 2024-04-25 06:13 32477d6 **docs: generate CHANGELOG**
 - 2024-04-23 11:05 743d960 **fix: zod version**
 - 2024-04-23 10:26 8144d7e **build(deps-dev): bump @typescript-eslint/parser from 7.7.0 to 7.7.1**

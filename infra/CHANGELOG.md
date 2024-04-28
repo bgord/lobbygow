@@ -1,9 +1,12 @@
 # Changelog
 - 2024-04-28 09:12 d2751fc **Merge pull request #108 from bgord/dependabot/npm_and_yarn/tsx-4.7.3**
+- 2024-04-28 09:12 15b915c **Merge pull request #107 from bgord/dependabot/npm_and_yarn/vitest-1.5.2**
 ## 2024-04-28 09:12 
 - 2024-04-28 09:11 ba10ebb **Merge pull request #110 from bgord/dependabot/npm_and_yarn/knip-5.11.0**
 - 2024-04-28 09:11 507b042 **Merge pull request #109 from bgord/dependabot/npm_and_yarn/eslint-plugin-react-hooks-4.6.1**
 - 2024-04-28 07:12 9c50ffe **docs: generate CHANGELOG**
+- 2024-04-28 07:12 4de70f4 **build(deps-dev): bump vitest from 1.5.0 to 1.5.2**
+- 2024-04-28 07:12 43cf3b6 **docs: generate CHANGELOG**
 - 2024-04-28 07:12 2e8a05e **build(deps-dev): bump tsx from 4.7.2 to 4.7.3**
 - 2024-04-28 07:11 1d90a9a **docs: generate CHANGELOG**
 - 2024-04-26 10:22 f5bdeb8 **build(deps-dev): bump eslint-plugin-react-hooks from 4.6.0 to 4.6.1**

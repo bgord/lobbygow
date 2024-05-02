@@ -1,8 +1,11 @@
 # Changelog
+- 2024-05-02 12:53 2d8ac2c **Merge pull request #112 from bgord/dependabot/npm_and_yarn/vitest-1.5.3**
+## 2024-05-02 12:53 
 - 2024-05-02 12:52 e94ff74 **Merge pull request #113 from bgord/dependabot/npm_and_yarn/typescript-eslint/parser-7.8.0**
 - 2024-05-02 12:52 3ece1ac **Merge pull request #114 from bgord/dependabot/npm_and_yarn/typescript-eslint/eslint-plugin-7.8.0**
-## 2024-05-02 12:52 
 - 2024-05-02 12:51 05fbbac **Merge pull request #116 from bgord/dependabot/npm_and_yarn/tsx-4.8.2**
+- 2024-05-02 10:53 a7635af **build(deps-dev): bump vitest from 1.5.2 to 1.5.3**
+- 2024-05-02 10:53 22c847a **docs: generate CHANGELOG**
 - 2024-05-02 10:52 8af2378 **docs: generate CHANGELOG**
 - 2024-05-02 10:52 4d04135 **build(deps-dev): bump @typescript-eslint/parser from 7.7.1 to 7.8.0**
 - 2024-05-02 10:51 7487ede **docs: generate CHANGELOG**

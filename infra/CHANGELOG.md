@@ -1,7 +1,10 @@
 # Changelog
+- 2024-05-02 12:52 e94ff74 **Merge pull request #113 from bgord/dependabot/npm_and_yarn/typescript-eslint/parser-7.8.0**
 - 2024-05-02 12:52 3ece1ac **Merge pull request #114 from bgord/dependabot/npm_and_yarn/typescript-eslint/eslint-plugin-7.8.0**
 ## 2024-05-02 12:52 
 - 2024-05-02 12:51 05fbbac **Merge pull request #116 from bgord/dependabot/npm_and_yarn/tsx-4.8.2**
+- 2024-05-02 10:52 8af2378 **docs: generate CHANGELOG**
+- 2024-05-02 10:52 4d04135 **build(deps-dev): bump @typescript-eslint/parser from 7.7.1 to 7.8.0**
 - 2024-05-02 10:51 7487ede **docs: generate CHANGELOG**
 - 2024-05-01 11:04 2a3347c **build(deps-dev): bump tsx from 4.7.3 to 4.8.2**
 - 2024-04-30 10:52 334eabb **build(deps-dev): bump @typescript-eslint/eslint-plugin**

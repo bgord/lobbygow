@@ -1,6 +1,9 @@
 # Changelog
+- 2024-05-02 12:51 05fbbac **Merge pull request #116 from bgord/dependabot/npm_and_yarn/tsx-4.8.2**
+## 2024-05-02 12:51 
+- 2024-05-01 11:04 2a3347c **build(deps-dev): bump tsx from 4.7.3 to 4.8.2**
 - 2024-04-30 08:18 cda67e5 **Merge pull request #111 from bgord/dependabot/npm_and_yarn/eslint-plugin-react-hooks-4.6.2**
-## 2024-04-30 08:18 
+- 2024-04-30 06:19 c72c92d **docs: generate CHANGELOG**
 - 2024-04-29 10:10 ab5aab1 **build(deps-dev): bump eslint-plugin-react-hooks from 4.6.1 to 4.6.2**
 - 2024-04-28 09:12 d2751fc **Merge pull request #108 from bgord/dependabot/npm_and_yarn/tsx-4.7.3**
 - 2024-04-28 09:12 15b915c **Merge pull request #107 from bgord/dependabot/npm_and_yarn/vitest-1.5.2**

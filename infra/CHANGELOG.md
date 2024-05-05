@@ -1,9 +1,16 @@
 # Changelog
+- 2024-05-05 10:19 ccea933 **Merge pull request #120 from bgord/dependabot/npm_and_yarn/types/nodemailer-6.4.15**
+- 2024-05-05 10:19 5fa1dfc **Merge pull request #119 from bgord/dependabot/npm_and_yarn/knip-5.12.0**
+- 2024-05-05 10:19 1836759 **Merge pull request #117 from bgord/dependabot/npm_and_yarn/tsx-4.9.0**
+## 2024-05-05 10:19 
+- 2024-05-03 11:07 dfb6328 **build(deps-dev): bump knip from 5.11.0 to 5.12.0**
+- 2024-05-03 11:07 8898bbe **build(deps-dev): bump tsx from 4.8.2 to 4.9.0**
+- 2024-05-03 11:07 7dfe0ce **build(deps-dev): bump @types/nodemailer from 6.4.14 to 6.4.15**
 - 2024-05-02 12:53 2d8ac2c **Merge pull request #112 from bgord/dependabot/npm_and_yarn/vitest-1.5.3**
-## 2024-05-02 12:53 
 - 2024-05-02 12:52 e94ff74 **Merge pull request #113 from bgord/dependabot/npm_and_yarn/typescript-eslint/parser-7.8.0**
 - 2024-05-02 12:52 3ece1ac **Merge pull request #114 from bgord/dependabot/npm_and_yarn/typescript-eslint/eslint-plugin-7.8.0**
 - 2024-05-02 12:51 05fbbac **Merge pull request #116 from bgord/dependabot/npm_and_yarn/tsx-4.8.2**
+- 2024-05-02 10:53 f8197fb **docs: generate CHANGELOG**
 - 2024-05-02 10:53 a7635af **build(deps-dev): bump vitest from 1.5.2 to 1.5.3**
 - 2024-05-02 10:53 22c847a **docs: generate CHANGELOG**
 - 2024-05-02 10:52 8af2378 **docs: generate CHANGELOG**

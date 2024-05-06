@@ -37,7 +37,7 @@
     "knip": "5.12.0",
     "standard-version": "9.5.0",
     "tsx": "4.9.0",
-    "vitest": "1.5.3"
+    "vitest": "1.6.0"
   },
   "dependencies": {
     "@bgord/node": "0.58.279",

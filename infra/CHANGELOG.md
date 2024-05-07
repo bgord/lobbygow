@@ -1,9 +1,12 @@
 # Changelog
+- 2024-05-07 08:17 ca3829e **Merge pull request #121 from bgord/dependabot/npm_and_yarn/oxlint-0.3.2**
+## 2024-05-07 08:17 
 - 2024-05-07 08:16 e03b365 **Merge pull request #124 from bgord/dependabot/npm_and_yarn/eslint-plugin-sonarjs-1.0.2**
 - 2024-05-07 08:16 a1c7e94 **Merge pull request #122 from bgord/dependabot/npm_and_yarn/tsx-4.9.3**
 - 2024-05-07 08:16 210c7e2 **Merge pull request #123 from bgord/dependabot/npm_and_yarn/knip-5.12.3**
-## 2024-05-07 08:16 
 - 2024-05-07 08:14 8d0d83a **Merge pull request #125 from bgord/dependabot/npm_and_yarn/vitest-1.6.0**
+- 2024-05-07 06:17 e3c577b **docs: generate CHANGELOG**
+- 2024-05-07 06:17 9e16080 **build(deps-dev): bump oxlint from 0.3.1 to 0.3.2**
 - 2024-05-07 06:15 a81daf9 **docs: generate CHANGELOG**
 - 2024-05-07 06:15 7e8e45d **build(deps-dev): bump knip from 5.12.0 to 5.12.3**
 - 2024-05-07 06:15 3e75906 **build(deps-dev): bump tsx from 4.9.0 to 4.9.3**

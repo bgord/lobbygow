@@ -1,8 +1,11 @@
 # Changelog
+- 2024-05-07 08:14 8d0d83a **Merge pull request #125 from bgord/dependabot/npm_and_yarn/vitest-1.6.0**
+## 2024-05-07 08:14 
+- 2024-05-06 10:34 0dbbd34 **build(deps-dev): bump vitest from 1.5.3 to 1.6.0**
 - 2024-05-05 10:19 ccea933 **Merge pull request #120 from bgord/dependabot/npm_and_yarn/types/nodemailer-6.4.15**
 - 2024-05-05 10:19 5fa1dfc **Merge pull request #119 from bgord/dependabot/npm_and_yarn/knip-5.12.0**
 - 2024-05-05 10:19 1836759 **Merge pull request #117 from bgord/dependabot/npm_and_yarn/tsx-4.9.0**
-## 2024-05-05 10:19 
+- 2024-05-05 08:19 9021307 **docs: generate CHANGELOG**
 - 2024-05-03 11:07 dfb6328 **build(deps-dev): bump knip from 5.11.0 to 5.12.0**
 - 2024-05-03 11:07 8898bbe **build(deps-dev): bump tsx from 4.8.2 to 4.9.0**
 - 2024-05-03 11:07 7dfe0ce **build(deps-dev): bump @types/nodemailer from 6.4.14 to 6.4.15**

@@ -1,8 +1,16 @@
 # Changelog
+- 2024-05-11 11:29 4a39849 **step: bump bgord/scripts**
+## 2024-05-11 11:29 
+- 2024-05-10 20:19 6621825 **refactor: migrate to biome as linter**
+- 2024-05-10 20:19 367e460 **step: bump bgord/scripts**
+- 2024-05-10 20:17 07f4c93 **refactor: migrate to biome as linter**
+- 2024-05-10 19:29 f48a691 **step: bump bgord/scripts**
+- 2024-05-10 19:23 f9bff4b **step: bump bgord/scripts**
+- 2024-05-10 19:03 5b42108 **step: bump bgord/node**
 - 2024-05-09 08:54 ac39117 **Merge pull request #128 from bgord/dependabot/npm_and_yarn/knip-5.13.0**
-## 2024-05-09 08:54 
 - 2024-05-09 08:53 a71adec **Merge pull request #126 from bgord/dependabot/npm_and_yarn/eslint-plugin-sonarjs-1.0.3**
 - 2024-05-09 08:53 0229cc0 **Merge pull request #130 from bgord/dependabot/npm_and_yarn/esbuild-0.21.1**
+- 2024-05-09 06:54 2d3436f **docs: generate CHANGELOG**
 - 2024-05-08 10:15 ad88901 **build(deps-dev): bump esbuild from 0.20.2 to 0.21.1**
 - 2024-05-08 10:14 7ac5982 **build(deps-dev): bump knip from 5.12.3 to 5.13.0**
 - 2024-05-07 10:31 da8ddc0 **build(deps-dev): bump eslint-plugin-sonarjs from 1.0.2 to 1.0.3**

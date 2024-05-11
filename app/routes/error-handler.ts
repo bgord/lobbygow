@@ -5,7 +5,6 @@ import z from "zod";
 import * as infra from "../../infra";
 
 export class ErrorHandler {
-  /* eslint-disable max-params */
   static handle: express.ErrorRequestHandler = async (
     error,
     request,

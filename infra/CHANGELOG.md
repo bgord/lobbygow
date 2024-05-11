@@ -1,6 +1,8 @@
 # Changelog
+- 2024-05-11 11:39 6a0cd26 **refactor: disable eslint-disable**
+## 2024-05-11 11:39 
 - 2024-05-11 11:29 4a39849 **step: bump bgord/scripts**
-## 2024-05-11 11:29 
+- 2024-05-11 09:29 ecab89a **docs: generate CHANGELOG**
 - 2024-05-10 20:19 6621825 **refactor: migrate to biome as linter**
 - 2024-05-10 20:19 367e460 **step: bump bgord/scripts**
 - 2024-05-10 20:17 07f4c93 **refactor: migrate to biome as linter**

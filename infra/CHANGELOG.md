@@ -1,8 +1,11 @@
 # Changelog
+- 2024-05-13 20:01 dd7788d **step: cache playwright binaries**
+## 2024-05-13 20:01 
 - 2024-05-11 12:41 5920b7a **Merge pull request #133 from bgord/dependabot/npm_and_yarn/knip-5.15.0**
-## 2024-05-11 12:41 
+- 2024-05-11 12:35 8a65d48 **step: bump bgord/scripts**
 - 2024-05-11 11:39 6a0cd26 **refactor: disable eslint-disable**
 - 2024-05-11 11:29 4a39849 **step: bump bgord/scripts**
+- 2024-05-11 10:42 37acb50 **docs: generate CHANGELOG**
 - 2024-05-11 09:39 8a15c5e **docs: generate CHANGELOG**
 - 2024-05-11 09:30 ffce86b **build(deps-dev): bump knip from 5.13.0 to 5.15.0**
 - 2024-05-11 09:29 ecab89a **docs: generate CHANGELOG**

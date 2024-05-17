@@ -1,8 +1,11 @@
 # Changelog
+- 2024-05-17 18:34 f5b05f9 **Merge pull request #140 from bgord/dependabot/npm_and_yarn/tsx-4.10.4**
+## 2024-05-17 18:34 
+- 2024-05-17 10:25 ae2f4f7 **build(deps-dev): bump tsx from 4.10.2 to 4.10.4**
 - 2024-05-15 08:51 e3cfe7d **Merge pull request #134 from bgord/dependabot/npm_and_yarn/tsx-4.10.2**
 - 2024-05-15 08:51 1287403 **Merge pull request #135 from bgord/dependabot/npm_and_yarn/esbuild-0.21.2**
-## 2024-05-15 08:51 
 - 2024-05-15 08:50 da7c04f **Merge pull request #137 from bgord/dependabot/npm_and_yarn/knip-5.16.0**
+- 2024-05-15 06:51 884a4ef **docs: generate CHANGELOG**
 - 2024-05-15 06:51 2769c30 **docs: generate CHANGELOG**
 - 2024-05-15 06:50 f320a52 **docs: generate CHANGELOG**
 - 2024-05-14 19:34 1791cc4 **build(deps-dev): bump knip from 5.15.0 to 5.16.0**

@@ -1,8 +1,10 @@
 # Changelog
+- 2024-05-17 19:48 04c9b68 **step: bump bgord/node**
+## 2024-05-17 19:48 
 - 2024-05-17 18:35 b69e884 **Merge pull request #139 from bgord/dependabot/npm_and_yarn/esbuild-0.21.3**
-## 2024-05-17 18:35 
 - 2024-05-17 18:34 f5b05f9 **Merge pull request #140 from bgord/dependabot/npm_and_yarn/tsx-4.10.4**
 - 2024-05-17 16:35 d7c74d0 **docs: generate CHANGELOG**
+- 2024-05-17 16:35 239ea76 **docs: generate CHANGELOG**
 - 2024-05-17 10:25 ae2f4f7 **build(deps-dev): bump tsx from 4.10.2 to 4.10.4**
 - 2024-05-16 10:11 74fa63c **build(deps-dev): bump esbuild from 0.21.2 to 0.21.3**
 - 2024-05-15 08:51 e3cfe7d **Merge pull request #134 from bgord/dependabot/npm_and_yarn/tsx-4.10.2**

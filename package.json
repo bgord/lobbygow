@@ -26,10 +26,12 @@
     "knip": "5.16.0",
     "standard-version": "9.5.0",
     "tsx": "4.10.4",
-    "vitest": "1.6.0"
+    "vitest": "1.6.0",
+    "cspell": "8.8.1",
+    "shellcheck": "2.2.0"
   },
   "dependencies": {
-    "@bgord/node": "0.58.285",
+    "@bgord/node": "0.58.286",
     "express": "4.19.2",
     "typescript": "5.4.5",
     "zod": "3.22.4"

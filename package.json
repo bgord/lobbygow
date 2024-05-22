@@ -25,7 +25,7 @@
     "husky": "9.0.11",
     "knip": "5.16.0",
     "standard-version": "9.5.0",
-    "tsx": "4.10.4",
+    "tsx": "4.10.5",
     "vitest": "1.6.0",
     "cspell": "8.8.1",
     "shellcheck": "2.2.0"

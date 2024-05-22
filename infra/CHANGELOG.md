@@ -1,6 +1,9 @@
 # Changelog
+- 2024-05-22 12:23 45bef0e **Merge pull request #141 from bgord/dependabot/npm_and_yarn/tsx-4.10.5**
+## 2024-05-22 12:23 
+- 2024-05-20 10:49 991cddb **build(deps-dev): bump tsx from 4.10.4 to 4.10.5**
 - 2024-05-18 13:55 0527883 **step: install linters**
-## 2024-05-18 13:55 
+- 2024-05-18 11:55 d86fb8a **docs: generate CHANGELOG**
 - 2024-05-17 19:48 04c9b68 **step: bump bgord/node**
 - 2024-05-17 18:35 b69e884 **Merge pull request #139 from bgord/dependabot/npm_and_yarn/esbuild-0.21.3**
 - 2024-05-17 18:34 f5b05f9 **Merge pull request #140 from bgord/dependabot/npm_and_yarn/tsx-4.10.4**

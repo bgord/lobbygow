@@ -1,6 +1,11 @@
 # Changelog
+- 2024-05-27 09:29 4ee7df3 **Merge pull request #144 from bgord/dependabot/npm_and_yarn/cspell-8.8.3**
+- 2024-05-27 09:29 36270e9 **Merge pull request #143 from bgord/dependabot/npm_and_yarn/tsx-4.11.0**
+## 2024-05-27 09:29 
+- 2024-05-24 10:12 3c588b6 **build(deps-dev): bump cspell from 8.8.1 to 8.8.3**
+- 2024-05-23 10:48 5ed439c **build(deps-dev): bump tsx from 4.10.5 to 4.11.0**
 - 2024-05-22 12:23 45bef0e **Merge pull request #141 from bgord/dependabot/npm_and_yarn/tsx-4.10.5**
-## 2024-05-22 12:23 
+- 2024-05-22 10:23 b79a449 **docs: generate CHANGELOG**
 - 2024-05-20 10:49 991cddb **build(deps-dev): bump tsx from 4.10.4 to 4.10.5**
 - 2024-05-18 13:55 0527883 **step: install linters**
 - 2024-05-18 11:55 d86fb8a **docs: generate CHANGELOG**

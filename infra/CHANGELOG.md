@@ -1,7 +1,10 @@
 # Changelog
+- 2024-05-30 15:32 ae26c60 **Merge pull request #148 from bgord/dependabot/npm_and_yarn/knip-5.17.3**
+## 2024-05-30 15:32 
+- 2024-05-29 10:56 5b13603 **build(deps-dev): bump knip from 5.16.0 to 5.17.3**
 - 2024-05-27 09:29 4ee7df3 **Merge pull request #144 from bgord/dependabot/npm_and_yarn/cspell-8.8.3**
 - 2024-05-27 09:29 36270e9 **Merge pull request #143 from bgord/dependabot/npm_and_yarn/tsx-4.11.0**
-## 2024-05-27 09:29 
+- 2024-05-27 07:29 1612c00 **docs: generate CHANGELOG**
 - 2024-05-24 10:12 3c588b6 **build(deps-dev): bump cspell from 8.8.1 to 8.8.3**
 - 2024-05-23 10:48 5ed439c **build(deps-dev): bump tsx from 4.10.5 to 4.11.0**
 - 2024-05-22 12:23 45bef0e **Merge pull request #141 from bgord/dependabot/npm_and_yarn/tsx-4.10.5**

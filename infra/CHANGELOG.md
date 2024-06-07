@@ -1,8 +1,13 @@
 # Changelog
+- 2024-06-07 16:26 fd22db7 **Merge pull request #155 from bgord/dependabot/npm_and_yarn/knip-5.18.0**
+- 2024-06-07 16:26 8935521 **Merge pull request #152 from bgord/dependabot/npm_and_yarn/biomejs/biome-1.8.0**
+## 2024-06-07 16:26 
+- 2024-06-07 10:17 987b3b1 **build(deps-dev): bump knip from 5.17.4 to 5.18.0**
+- 2024-06-05 10:37 9eed46e **build(deps-dev): bump @biomejs/biome from 1.7.3 to 1.8.0**
 - 2024-06-04 21:44 f86df85 **Merge pull request #149 from bgord/dependabot/npm_and_yarn/knip-5.17.4**
 - 2024-06-04 21:44 c8fb5b7 **Merge pull request #150 from bgord/dependabot/npm_and_yarn/tsx-4.11.2**
 - 2024-06-04 21:44 8ac2e9d **Merge pull request #151 from bgord/dependabot/npm_and_yarn/cspell-8.8.4**
-## 2024-06-04 21:44 
+- 2024-06-04 19:44 72ea2f7 **docs: generate CHANGELOG**
 - 2024-06-04 10:39 55c1bb2 **build(deps-dev): bump cspell from 8.8.3 to 8.8.4**
 - 2024-06-03 10:28 e2158e7 **build(deps-dev): bump knip from 5.17.3 to 5.17.4**
 - 2024-06-03 10:28 8f16a2d **build(deps-dev): bump tsx from 4.11.0 to 4.11.2**

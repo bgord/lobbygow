@@ -1,7 +1,10 @@
 # Changelog
+- 2024-06-07 16:51 da5975d **step: bump bgord/scripts**
+- 2024-06-07 16:51 91b7c45 **feature: make env schema stricter**
+## 2024-06-07 16:51 
 - 2024-06-07 16:26 fd22db7 **Merge pull request #155 from bgord/dependabot/npm_and_yarn/knip-5.18.0**
 - 2024-06-07 16:26 8935521 **Merge pull request #152 from bgord/dependabot/npm_and_yarn/biomejs/biome-1.8.0**
-## 2024-06-07 16:26 
+- 2024-06-07 14:26 856039f **docs: generate CHANGELOG**
 - 2024-06-07 10:17 987b3b1 **build(deps-dev): bump knip from 5.17.4 to 5.18.0**
 - 2024-06-05 10:37 9eed46e **build(deps-dev): bump @biomejs/biome from 1.7.3 to 1.8.0**
 - 2024-06-04 21:44 f86df85 **Merge pull request #149 from bgord/dependabot/npm_and_yarn/knip-5.17.4**

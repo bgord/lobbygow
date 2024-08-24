@@ -11,11 +11,14 @@ export class ErrorHandler {
     response,
     next,
   ) => {
+    const url = request.url;
+
     if (error instanceof bg.Errors.InvalidCredentialsError) {
       infra.logger.error({
         message: "Invalid credentials",
         operation: "invalid_credentials_error",
         correlationId: request.requestId,
+        metadata: { url },
       });
       return response
         .status(429)
@@ -27,7 +30,7 @@ export class ErrorHandler {
         message: "Access denied",
         operation: "access_denied_error",
         correlationId: request.requestId,
-        metadata: { reason: error.reason, message: error.message },
+        metadata: { reason: error.reason, message: error.message, url },
       });
       return response
         .status(403)
@@ -39,7 +42,7 @@ export class ErrorHandler {
         message: "Too many requests",
         operation: "too_many_requests",
         correlationId: request.requestId,
-        metadata: { remainingMs: error.remainingMs },
+        metadata: { remainingMs: error.remainingMs, url },
       });
 
       return response
@@ -52,7 +55,7 @@ export class ErrorHandler {
         message: "Request timeout error",
         operation: "request_timeout_error",
         correlationId: request.requestId,
-        metadata: { timeoutMs: error.ms },
+        metadata: { timeoutMs: error.ms, url },
       });
 
       return response
@@ -65,7 +68,7 @@ export class ErrorHandler {
         message: "Invalid payload",
         operation: "invalid_payload",
         correlationId: request.requestId,
-        metadata: { url: request.url, body: request.body },
+        metadata: { url, body: request.body },
       });
 
       return response

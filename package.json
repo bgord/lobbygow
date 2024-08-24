@@ -31,7 +31,7 @@
     "shellcheck": "3.0.0"
   },
   "dependencies": {
-    "@bgord/node": "0.58.286",
+    "@bgord/node": "0.58.293",
     "express": "4.19.2",
     "typescript": "5.5.4",
     "zod": "3.22.4"

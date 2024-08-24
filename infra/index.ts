@@ -18,7 +18,7 @@ export const prerequisites = [
   new bg.PrerequisiteTimezoneUTC({ label: "timezone", timezone: Env.TZ }),
   new bg.PrerequisiteNode({
     label: "node version",
-    version: bg.PackageVersion.fromStringWithV("v21.6.2"),
+    version: bg.PackageVersion.fromStringWithV("v22.6.0"),
   }),
   new bg.PrerequisiteRAM({
     label: "RAM",

@@ -1,9 +1,14 @@
 # Changelog
+- 2024-08-24 15:57 fd3901a **Merge pull request #216 from bgord/dependabot/npm_and_yarn/tsx-4.17.0**
+- 2024-08-24 15:57 0449ff0 **Merge pull request #220 from bgord/dependabot/npm_and_yarn/esbuild-0.23.1**
+## 2024-08-24 15:57 
 - 2024-08-24 15:56 413b63a **Merge pull request #211 from bgord/dependabot/npm_and_yarn/vitest-2.0.5**
 - 2024-08-24 15:56 2f86835 **Merge pull request #202 from bgord/dependabot/npm_and_yarn/typescript-5.5.4**
 - 2024-08-24 15:56 081259a **Merge pull request #178 from bgord/dependabot/npm_and_yarn/biomejs/biome-1.8.3**
-## 2024-08-24 15:56 
 - 2024-08-24 15:55 70c5c45 **Merge pull request #157 from bgord/dependabot/npm_and_yarn/shellcheck-3.0.0**
+- 2024-08-24 13:57 c3b5e53 **build(deps-dev): bump esbuild from 0.21.4 to 0.23.1**
+- 2024-08-24 13:57 0c0d32a **build(deps-dev): bump tsx from 4.11.2 to 4.17.0**
+- 2024-08-24 13:56 3e81f20 **docs: generate CHANGELOG**
 - 2024-08-01 11:02 9cf0aa7 **build(deps-dev): bump vitest from 1.6.0 to 2.0.5**
 - 2024-07-23 10:18 3e6c8f8 **build(deps): bump typescript from 5.4.5 to 5.5.4**
 - 2024-06-28 10:45 4d3a220 **build(deps-dev): bump @biomejs/biome from 1.8.0 to 1.8.3**

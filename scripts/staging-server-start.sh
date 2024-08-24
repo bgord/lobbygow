@@ -6,4 +6,7 @@ echo "Starting project..."
 export NODE_ENV="staging"
 
 cd /var/www/lobbygow || exit
-node --require tsx/cjs index.js
+node \
+  --require tsx/cjs \
+  --env-file=".env.$NODE_ENV" \
+  index.js

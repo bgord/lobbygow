@@ -17,9 +17,10 @@ const EnvironmentSchema = z
     API_KEY: bg.Schema.ApiKey,
   })
   .strip();
-type EnvironmentSchemaType = z.infer<typeof EnvironmentSchema>;
 
-export const Env = new bg.EnvironmentValidator<EnvironmentSchemaType>({
+export const Env = new bg.EnvironmentValidator<
+  z.infer<typeof EnvironmentSchema>
+>({
   type: process.env.NODE_ENV,
   schema: EnvironmentSchema,
 }).load();

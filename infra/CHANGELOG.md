@@ -1,7 +1,10 @@
 # Changelog
+- 2024-08-24 16:05 66a938b **step: bump node version to 22.6**
+## 2024-08-24 16:05 
+- 2024-08-24 16:01 d0d48b0 **refactor: update husky git hooks**
+- 2024-08-24 16:00 19f6622 **refactor: update env validator due to bgord/node change**
 - 2024-08-24 15:59 a27bbb0 **Merge pull request #225 from bgord/dependabot/npm_and_yarn/bgord/node-0.58.293**
 - 2024-08-24 15:59 20cfd4e **Merge pull request #223 from bgord/dependabot/npm_and_yarn/knip-5.27.3**
-## 2024-08-24 15:59 
 - 2024-08-24 15:58 f615751 **Merge pull request #221 from bgord/dependabot/npm_and_yarn/cspell-8.14.2**
 - 2024-08-24 15:58 f56077c **Merge pull request #222 from bgord/dependabot/npm_and_yarn/husky-9.1.5**
 - 2024-08-24 15:57 fd3901a **Merge pull request #216 from bgord/dependabot/npm_and_yarn/tsx-4.17.0**
@@ -9,8 +12,11 @@
 - 2024-08-24 15:56 413b63a **Merge pull request #211 from bgord/dependabot/npm_and_yarn/vitest-2.0.5**
 - 2024-08-24 15:56 2f86835 **Merge pull request #202 from bgord/dependabot/npm_and_yarn/typescript-5.5.4**
 - 2024-08-24 15:56 081259a **Merge pull request #178 from bgord/dependabot/npm_and_yarn/biomejs/biome-1.8.3**
+- 2024-08-24 15:55 f845507 **step: bump bgord/scripts**
 - 2024-08-24 15:55 70c5c45 **Merge pull request #157 from bgord/dependabot/npm_and_yarn/shellcheck-3.0.0**
+- 2024-08-24 15:54 cc75313 **step: add url to metadata**
 - 2024-08-24 13:59 499e489 **docs: generate CHANGELOG**
+- 2024-08-24 13:59 3f141c5 **docs: generate CHANGELOG**
 - 2024-08-24 13:59 25ed4da **build(deps-dev): bump knip from 5.18.0 to 5.27.3**
 - 2024-08-24 13:58 91733c2 **build(deps-dev): bump husky from 9.0.11 to 9.1.5**
 - 2024-08-24 13:58 40ec810 **build(deps-dev): bump cspell from 8.8.4 to 8.14.2**

@@ -1,6 +1,7 @@
 # Changelog
+- 2024-08-24 16:09 cc1b8c5 **refactor: staging server script**
+## 2024-08-24 16:09 
 - 2024-08-24 16:05 66a938b **step: bump node version to 22.6**
-## 2024-08-24 16:05 
 - 2024-08-24 16:01 d0d48b0 **refactor: update husky git hooks**
 - 2024-08-24 16:00 19f6622 **refactor: update env validator due to bgord/node change**
 - 2024-08-24 15:59 a27bbb0 **Merge pull request #225 from bgord/dependabot/npm_and_yarn/bgord/node-0.58.293**
@@ -15,6 +16,7 @@
 - 2024-08-24 15:55 f845507 **step: bump bgord/scripts**
 - 2024-08-24 15:55 70c5c45 **Merge pull request #157 from bgord/dependabot/npm_and_yarn/shellcheck-3.0.0**
 - 2024-08-24 15:54 cc75313 **step: add url to metadata**
+- 2024-08-24 14:06 9163caf **docs: generate CHANGELOG**
 - 2024-08-24 13:59 499e489 **docs: generate CHANGELOG**
 - 2024-08-24 13:59 3f141c5 **docs: generate CHANGELOG**
 - 2024-08-24 13:59 25ed4da **build(deps-dev): bump knip from 5.18.0 to 5.27.3**

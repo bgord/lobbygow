@@ -16,7 +16,7 @@ const EnvironmentSchema = z
     BASIC_AUTH_PASSWORD: bg.Schema.BasicAuthPassword,
     API_KEY: bg.Schema.ApiKey,
   })
-  .strict();
+  .strip();
 type EnvironmentSchemaType = z.infer<typeof EnvironmentSchema>;
 
 export const Env = new bg.EnvironmentValidator<EnvironmentSchemaType>({

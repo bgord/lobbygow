@@ -1,9 +1,18 @@
 # Changelog
+- 2024-08-24 15:56 413b63a **Merge pull request #211 from bgord/dependabot/npm_and_yarn/vitest-2.0.5**
+- 2024-08-24 15:56 2f86835 **Merge pull request #202 from bgord/dependabot/npm_and_yarn/typescript-5.5.4**
+- 2024-08-24 15:56 081259a **Merge pull request #178 from bgord/dependabot/npm_and_yarn/biomejs/biome-1.8.3**
+## 2024-08-24 15:56 
+- 2024-08-24 15:55 70c5c45 **Merge pull request #157 from bgord/dependabot/npm_and_yarn/shellcheck-3.0.0**
+- 2024-08-01 11:02 9cf0aa7 **build(deps-dev): bump vitest from 1.6.0 to 2.0.5**
+- 2024-07-23 10:18 3e6c8f8 **build(deps): bump typescript from 5.4.5 to 5.5.4**
+- 2024-06-28 10:45 4d3a220 **build(deps-dev): bump @biomejs/biome from 1.8.0 to 1.8.3**
+- 2024-06-10 10:21 1e9a5ea **build(deps-dev): bump shellcheck from 2.2.0 to 3.0.0**
 - 2024-06-07 16:51 da5975d **step: bump bgord/scripts**
 - 2024-06-07 16:51 91b7c45 **feature: make env schema stricter**
-## 2024-06-07 16:51 
 - 2024-06-07 16:26 fd22db7 **Merge pull request #155 from bgord/dependabot/npm_and_yarn/knip-5.18.0**
 - 2024-06-07 16:26 8935521 **Merge pull request #152 from bgord/dependabot/npm_and_yarn/biomejs/biome-1.8.0**
+- 2024-06-07 14:51 dfa2d9a **docs: generate CHANGELOG**
 - 2024-06-07 14:26 856039f **docs: generate CHANGELOG**
 - 2024-06-07 10:17 987b3b1 **build(deps-dev): bump knip from 5.17.4 to 5.18.0**
 - 2024-06-05 10:37 9eed46e **build(deps-dev): bump @biomejs/biome from 1.7.3 to 1.8.0**

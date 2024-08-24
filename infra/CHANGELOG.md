@@ -1,6 +1,7 @@
 # Changelog
+- 2024-08-24 17:03 e28bf1f **step: fix prepare script**
+## 2024-08-24 17:03 
 - 2024-08-24 17:00 7bd9189 **step: bump bgord/scripts**
-## 2024-08-24 17:00 
 - 2024-08-24 16:09 cc1b8c5 **refactor: staging server script**
 - 2024-08-24 16:05 66a938b **step: bump node version to 22.6**
 - 2024-08-24 16:01 d0d48b0 **refactor: update husky git hooks**
@@ -17,6 +18,7 @@
 - 2024-08-24 15:55 f845507 **step: bump bgord/scripts**
 - 2024-08-24 15:55 70c5c45 **Merge pull request #157 from bgord/dependabot/npm_and_yarn/shellcheck-3.0.0**
 - 2024-08-24 15:54 cc75313 **step: add url to metadata**
+- 2024-08-24 15:01 57ad78d **docs: generate CHANGELOG**
 - 2024-08-24 14:10 3d0a065 **docs: generate CHANGELOG**
 - 2024-08-24 14:06 9163caf **docs: generate CHANGELOG**
 - 2024-08-24 13:59 499e489 **docs: generate CHANGELOG**

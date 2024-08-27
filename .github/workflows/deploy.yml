@@ -61,11 +61,11 @@ jobs:
         if: ${{ steps.cache-npm.outputs.cache-hit != 'true' }}
         run: npm install
 
-      - name: Create .env.staging file
-        run: echo "${{ secrets.ENV_STAGING }}" > .env.staging
+      - name: Create .env.production file
+        run: echo "${{ secrets.ENV_PRODUCTION }}" > .env.production
 
       - name: Build the app
-        run: ./scripts/staging-server-build.sh
+        run: ./scripts/production-server-build.sh
 
       - name: Configure SSH
         run: |

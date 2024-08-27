@@ -1,8 +1,11 @@
 # Changelog
+- 2024-08-27 10:52 e7960f3 **refactor: change production alias**
+- 2024-08-27 10:52 060de62 **step: bump bgord/scripts**
+## 2024-08-27 10:52 
 - 2024-08-27 08:26 d171aa3 **Merge pull request #227 from bgord/dependabot/npm_and_yarn/commitlint/cli-19.4.0**
 - 2024-08-27 08:26 ab38207 **Merge pull request #228 from bgord/dependabot/npm_and_yarn/knip-5.27.4**
 - 2024-08-27 08:26 08ad12c **Merge pull request #226 from bgord/dependabot/npm_and_yarn/tsx-4.18.0**
-## 2024-08-27 08:26 
+- 2024-08-27 06:26 39c24fc **docs: generate CHANGELOG**
 - 2024-08-26 10:31 c30dd34 **build(deps-dev): bump @commitlint/cli from 19.3.0 to 19.4.0**
 - 2024-08-26 10:31 0476b98 **build(deps-dev): bump knip from 5.27.3 to 5.27.4**
 - 2024-08-26 10:30 492c21e **build(deps-dev): bump tsx from 4.17.0 to 4.18.0**

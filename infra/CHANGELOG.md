@@ -1,7 +1,10 @@
 # Changelog
+- 2024-08-27 11:37 c8e1cd0 **refactor: production migration**
+- 2024-08-27 11:37 3086c13 **step: bump bgord/scripts**
+## 2024-08-27 11:37 
 - 2024-08-27 10:52 e7960f3 **refactor: change production alias**
 - 2024-08-27 10:52 060de62 **step: bump bgord/scripts**
-## 2024-08-27 10:52 
+- 2024-08-27 08:52 8c6b478 **docs: generate CHANGELOG**
 - 2024-08-27 08:26 d171aa3 **Merge pull request #227 from bgord/dependabot/npm_and_yarn/commitlint/cli-19.4.0**
 - 2024-08-27 08:26 ab38207 **Merge pull request #228 from bgord/dependabot/npm_and_yarn/knip-5.27.4**
 - 2024-08-27 08:26 08ad12c **Merge pull request #226 from bgord/dependabot/npm_and_yarn/tsx-4.18.0**

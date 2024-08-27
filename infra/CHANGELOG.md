@@ -1,6 +1,12 @@
 # Changelog
+- 2024-08-27 08:26 d171aa3 **Merge pull request #227 from bgord/dependabot/npm_and_yarn/commitlint/cli-19.4.0**
+- 2024-08-27 08:26 ab38207 **Merge pull request #228 from bgord/dependabot/npm_and_yarn/knip-5.27.4**
+- 2024-08-27 08:26 08ad12c **Merge pull request #226 from bgord/dependabot/npm_and_yarn/tsx-4.18.0**
+## 2024-08-27 08:26 
+- 2024-08-26 10:31 c30dd34 **build(deps-dev): bump @commitlint/cli from 19.3.0 to 19.4.0**
+- 2024-08-26 10:31 0476b98 **build(deps-dev): bump knip from 5.27.3 to 5.27.4**
+- 2024-08-26 10:30 492c21e **build(deps-dev): bump tsx from 4.17.0 to 4.18.0**
 - 2024-08-24 17:03 e28bf1f **step: fix prepare script**
-## 2024-08-24 17:03 
 - 2024-08-24 17:00 7bd9189 **step: bump bgord/scripts**
 - 2024-08-24 16:09 cc1b8c5 **refactor: staging server script**
 - 2024-08-24 16:05 66a938b **step: bump node version to 22.6**
@@ -18,6 +24,7 @@
 - 2024-08-24 15:55 f845507 **step: bump bgord/scripts**
 - 2024-08-24 15:55 70c5c45 **Merge pull request #157 from bgord/dependabot/npm_and_yarn/shellcheck-3.0.0**
 - 2024-08-24 15:54 cc75313 **step: add url to metadata**
+- 2024-08-24 15:04 268142f **docs: generate CHANGELOG**
 - 2024-08-24 15:01 57ad78d **docs: generate CHANGELOG**
 - 2024-08-24 14:10 3d0a065 **docs: generate CHANGELOG**
 - 2024-08-24 14:06 9163caf **docs: generate CHANGELOG**

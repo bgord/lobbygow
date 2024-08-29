@@ -1,7 +1,10 @@
 # Changelog
+- 2024-08-29 09:01 6a6dcee **Merge pull request #231 from bgord/dependabot/npm_and_yarn/commitlint/cli-19.4.1**
+## 2024-08-29 09:01 
 - 2024-08-29 08:59 b80397c **Merge pull request #229 from bgord/dependabot/npm_and_yarn/tsx-4.19.0**
 - 2024-08-29 08:59 4a02a24 **Merge pull request #230 from bgord/dependabot/npm_and_yarn/commitlint/config-conventional-19.4.1**
-## 2024-08-29 08:59 
+- 2024-08-29 07:00 faa32e8 **docs: generate CHANGELOG**
+- 2024-08-29 07:00 1927b20 **build(deps-dev): bump @commitlint/cli from 19.4.0 to 19.4.1**
 - 2024-08-28 11:04 c4fe051 **build(deps-dev): bump @commitlint/config-conventional**
 - 2024-08-27 11:37 c8e1cd0 **refactor: production migration**
 - 2024-08-27 11:37 3086c13 **step: bump bgord/scripts**

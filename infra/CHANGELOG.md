@@ -1,6 +1,9 @@
 # Changelog
+- 2024-09-11 08:33 8203044 **Merge pull request #235 from bgord/dependabot/npm_and_yarn/express-4.20.0**
+## 2024-09-11 08:33 
+- 2024-09-10 10:37 704e9b9 **build(deps): bump express from 4.19.2 to 4.20.0**
 - 2024-09-05 11:24 8fca863 **Merge pull request #233 from bgord/dependabot/npm_and_yarn/knip-5.29.2**
-## 2024-09-05 11:24 
+- 2024-09-05 09:25 a1524f3 **docs: generate CHANGELOG**
 - 2024-09-04 11:06 16acb09 **build(deps-dev): bump knip from 5.27.4 to 5.29.2**
 - 2024-08-29 09:01 6a6dcee **Merge pull request #231 from bgord/dependabot/npm_and_yarn/commitlint/cli-19.4.1**
 - 2024-08-29 08:59 b80397c **Merge pull request #229 from bgord/dependabot/npm_and_yarn/tsx-4.19.0**

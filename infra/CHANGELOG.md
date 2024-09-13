@@ -1,6 +1,15 @@
 # Changelog
+- 2024-09-13 11:38 e653d52 **Merge pull request #239 from bgord/dependabot/npm_and_yarn/commitlint/cli-19.5.0**
+- 2024-09-13 11:38 3d8413a **Merge pull request #240 from bgord/dependabot/npm_and_yarn/tsx-4.19.1**
+- 2024-09-13 11:38 1fdd31b **Merge pull request #241 from bgord/dependabot/npm_and_yarn/husky-9.1.6**
+- 2024-09-13 11:38 1710bf5 **Merge pull request #242 from bgord/dependabot/npm_and_yarn/express-4.21.0**
+## 2024-09-13 11:38 
 - 2024-09-13 11:35 85a1230 **Merge pull request #238 from bgord/dependabot/npm_and_yarn/commitlint/config-conventional-19.5.0**
-## 2024-09-13 11:35 
+- 2024-09-13 09:38 346aa38 **build(deps): bump express from 4.20.0 to 4.21.0**
+- 2024-09-13 09:37 285225f **build(deps-dev): bump @commitlint/cli from 19.4.1 to 19.5.0**
+- 2024-09-13 09:35 6ea5e12 **docs: generate CHANGELOG**
+- 2024-09-12 10:17 a1b5e55 **build(deps-dev): bump tsx from 4.19.0 to 4.19.1**
+- 2024-09-12 10:17 61da062 **build(deps-dev): bump husky from 9.1.5 to 9.1.6**
 - 2024-09-11 10:42 5a2da33 **build(deps-dev): bump @commitlint/config-conventional**
 - 2024-09-11 08:35 1fc98e0 **Merge pull request #236 from bgord/dependabot/npm_and_yarn/typescript-5.6.2**
 - 2024-09-11 08:34 73bc89b **Merge pull request #237 from bgord/dependabot/npm_and_yarn/knip-5.30.1**

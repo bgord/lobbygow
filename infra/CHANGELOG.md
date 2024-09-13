@@ -1,8 +1,11 @@
 # Changelog
+- 2024-09-13 11:35 85a1230 **Merge pull request #238 from bgord/dependabot/npm_and_yarn/commitlint/config-conventional-19.5.0**
+## 2024-09-13 11:35 
+- 2024-09-11 10:42 5a2da33 **build(deps-dev): bump @commitlint/config-conventional**
 - 2024-09-11 08:35 1fc98e0 **Merge pull request #236 from bgord/dependabot/npm_and_yarn/typescript-5.6.2**
-## 2024-09-11 08:35 
 - 2024-09-11 08:34 73bc89b **Merge pull request #237 from bgord/dependabot/npm_and_yarn/knip-5.30.1**
 - 2024-09-11 08:33 8203044 **Merge pull request #235 from bgord/dependabot/npm_and_yarn/express-4.20.0**
+- 2024-09-11 06:35 20e1550 **docs: generate CHANGELOG**
 - 2024-09-11 06:35 0c3bb67 **build(deps): bump typescript from 5.5.4 to 5.6.2**
 - 2024-09-11 06:34 fa5a1f8 **docs: generate CHANGELOG**
 - 2024-09-11 06:34 5569716 **docs: generate CHANGELOG**

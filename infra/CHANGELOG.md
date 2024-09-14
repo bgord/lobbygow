@@ -1,9 +1,12 @@
 # Changelog
+- 2024-09-14 17:08 e18a204 **step: bump bgord/scripts**
+- 2024-09-14 17:08 6b8fdc4 **step: update gh actions workflow versions**
+## 2024-09-14 17:08 
 - 2024-09-14 17:01 97639d6 **step: update gh actions workflow versions**
 - 2024-09-14 17:01 0076fe0 **step: bump bgord/scripts**
-## 2024-09-14 17:01 
 - 2024-09-14 16:31 5895bf0 **step: bump bgord/scripts**
 - 2024-09-14 15:32 fe4137a **step: remove standard version**
+- 2024-09-14 15:02 25c2479 **docs: generate CHANGELOG**
 - 2024-09-14 14:34 fe5172b **Merge pull request #245 from bgord/dependabot/npm_and_yarn/biomejs/biome-1.9.0**
 - 2024-09-14 14:34 d6e5790 **Merge pull request #243 from bgord/dependabot/npm_and_yarn/knip-5.30.2**
 - 2024-09-14 14:34 c8f8e6f **Merge pull request #244 from bgord/dependabot/npm_and_yarn/vitest-2.1.0**

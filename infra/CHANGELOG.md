@@ -1,10 +1,12 @@
 # Changelog
+- 2024-09-14 14:13 87e69ec **step: bump bgord/scripts**
+## 2024-09-14 14:13 
 - 2024-09-13 11:38 e653d52 **Merge pull request #239 from bgord/dependabot/npm_and_yarn/commitlint/cli-19.5.0**
 - 2024-09-13 11:38 3d8413a **Merge pull request #240 from bgord/dependabot/npm_and_yarn/tsx-4.19.1**
 - 2024-09-13 11:38 1fdd31b **Merge pull request #241 from bgord/dependabot/npm_and_yarn/husky-9.1.6**
 - 2024-09-13 11:38 1710bf5 **Merge pull request #242 from bgord/dependabot/npm_and_yarn/express-4.21.0**
-## 2024-09-13 11:38 
 - 2024-09-13 11:35 85a1230 **Merge pull request #238 from bgord/dependabot/npm_and_yarn/commitlint/config-conventional-19.5.0**
+- 2024-09-13 09:39 9339a6c **docs: generate CHANGELOG**
 - 2024-09-13 09:38 346aa38 **build(deps): bump express from 4.20.0 to 4.21.0**
 - 2024-09-13 09:37 285225f **build(deps-dev): bump @commitlint/cli from 19.4.1 to 19.5.0**
 - 2024-09-13 09:35 6ea5e12 **docs: generate CHANGELOG**

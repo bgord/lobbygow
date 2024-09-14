@@ -10,17 +10,13 @@ jobs:
   deploy:
     runs-on: ubuntu-20.04
     steps:
-      - name: Skip workflow for dependabot branches
-        if: startsWith(github.event.pull_request.head.ref, 'dependabot/') && github.event_name == 'pull_request' && github.event.action == 'closed'
-        run: echo "This workflow is skipped for branches starting with 'dependabot/'"
-
       - name: Clone repositories
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           submodules: recursive
 
       - name: Setup Node.js environment
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v4
         with:
           node-version: 22.6
           cache: "npm"
@@ -32,7 +28,7 @@ jobs:
         run: echo "PLAYWRIGHT_VERSION=$(jq '.devDependencies."@playwright/test"' package.json)" >> $GITHUB_ENV
 
       - name: Cache playwright binaries
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         id: playwright-cache
         with:
           path: |
@@ -41,7 +37,7 @@ jobs:
 
       - name: Cache node modules
         id: cache-npm
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         env:
           cache-name: node-cache-bundle
         with:
@@ -61,8 +57,14 @@ jobs:
         if: ${{ steps.cache-npm.outputs.cache-hit != 'true' }}
         run: npm install
 
+      - name: Create .env.test file
+        run: echo "${{ secrets.ENV_TEST }}" > .env.test
+
       - name: Create .env.production file
         run: echo "${{ secrets.ENV_PRODUCTION }}" > .env.production
+
+      - name: Run build prechecks
+        run: ./bgord-scripts/build-prechecks.sh
 
       - name: Build the app
         run: ./scripts/production-server-build.sh

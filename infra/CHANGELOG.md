@@ -1,13 +1,20 @@
 # Changelog
+- 2024-09-14 14:34 fe5172b **Merge pull request #245 from bgord/dependabot/npm_and_yarn/biomejs/biome-1.9.0**
+- 2024-09-14 14:34 d6e5790 **Merge pull request #243 from bgord/dependabot/npm_and_yarn/knip-5.30.2**
+- 2024-09-14 14:34 c8f8e6f **Merge pull request #244 from bgord/dependabot/npm_and_yarn/vitest-2.1.0**
 - 2024-09-14 14:34 4f1ea14 **step: bump bgord/scripts**
 ## 2024-09-14 14:34 
 - 2024-09-14 14:13 87e69ec **step: bump bgord/scripts**
+- 2024-09-14 12:34 9431d90 **docs: generate CHANGELOG**
 - 2024-09-14 12:14 1d91ad5 **docs: generate CHANGELOG**
 - 2024-09-13 11:38 e653d52 **Merge pull request #239 from bgord/dependabot/npm_and_yarn/commitlint/cli-19.5.0**
 - 2024-09-13 11:38 3d8413a **Merge pull request #240 from bgord/dependabot/npm_and_yarn/tsx-4.19.1**
 - 2024-09-13 11:38 1fdd31b **Merge pull request #241 from bgord/dependabot/npm_and_yarn/husky-9.1.6**
 - 2024-09-13 11:38 1710bf5 **Merge pull request #242 from bgord/dependabot/npm_and_yarn/express-4.21.0**
 - 2024-09-13 11:35 85a1230 **Merge pull request #238 from bgord/dependabot/npm_and_yarn/commitlint/config-conventional-19.5.0**
+- 2024-09-13 10:59 2e3c858 **build(deps-dev): bump vitest from 2.0.5 to 2.1.0**
+- 2024-09-13 10:59 2b3fcea **build(deps-dev): bump knip from 5.30.1 to 5.30.2**
+- 2024-09-13 10:59 1ebdb58 **build(deps-dev): bump @biomejs/biome from 1.8.3 to 1.9.0**
 - 2024-09-13 09:39 9339a6c **docs: generate CHANGELOG**
 - 2024-09-13 09:38 346aa38 **build(deps): bump express from 4.20.0 to 4.21.0**
 - 2024-09-13 09:37 285225f **build(deps-dev): bump @commitlint/cli from 19.4.1 to 19.5.0**

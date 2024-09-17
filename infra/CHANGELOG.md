@@ -1,12 +1,19 @@
 # Changelog
+- 2024-09-17 10:42 df8a3e5 **Merge pull request #247 from bgord/dependabot/npm_and_yarn/bgord/node-0.58.294**
+- 2024-09-17 10:42 6dbc4a4 **Merge pull request #248 from bgord/dependabot/npm_and_yarn/biomejs/biome-1.9.1**
+- 2024-09-17 10:42 669dbd8 **Merge pull request #246 from bgord/dependabot/npm_and_yarn/vitest-2.1.1**
+## 2024-09-17 10:42 
+- 2024-09-16 11:00 bcb9af1 **build(deps-dev): bump @biomejs/biome from 1.9.0 to 1.9.1**
+- 2024-09-16 11:00 328e108 **build(deps): bump @bgord/node from 0.58.293 to 0.58.294**
+- 2024-09-16 11:00 0996345 **build(deps-dev): bump vitest from 2.1.0 to 2.1.1**
 - 2024-09-14 17:28 22df88f **step: bump bgord/scripts**
-## 2024-09-14 17:28 
 - 2024-09-14 17:08 e18a204 **step: bump bgord/scripts**
 - 2024-09-14 17:08 6b8fdc4 **step: update gh actions workflow versions**
 - 2024-09-14 17:01 97639d6 **step: update gh actions workflow versions**
 - 2024-09-14 17:01 0076fe0 **step: bump bgord/scripts**
 - 2024-09-14 16:31 5895bf0 **step: bump bgord/scripts**
 - 2024-09-14 15:32 fe4137a **step: remove standard version**
+- 2024-09-14 15:29 cca91bf **docs: generate CHANGELOG**
 - 2024-09-14 15:08 3e2674c **docs: generate CHANGELOG**
 - 2024-09-14 15:02 25c2479 **docs: generate CHANGELOG**
 - 2024-09-14 14:34 fe5172b **Merge pull request #245 from bgord/dependabot/npm_and_yarn/biomejs/biome-1.9.0**

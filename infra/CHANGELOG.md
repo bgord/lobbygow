@@ -1,8 +1,10 @@
 # Changelog
+- 2024-09-18 11:24 b1efa7f **fix: codedql workflow**
+## 2024-09-18 11:24 
 - 2024-09-17 10:42 df8a3e5 **Merge pull request #247 from bgord/dependabot/npm_and_yarn/bgord/node-0.58.294**
 - 2024-09-17 10:42 6dbc4a4 **Merge pull request #248 from bgord/dependabot/npm_and_yarn/biomejs/biome-1.9.1**
 - 2024-09-17 10:42 669dbd8 **Merge pull request #246 from bgord/dependabot/npm_and_yarn/vitest-2.1.1**
-## 2024-09-17 10:42 
+- 2024-09-17 08:43 c80a97c **docs: generate CHANGELOG**
 - 2024-09-16 11:00 bcb9af1 **build(deps-dev): bump @biomejs/biome from 1.9.0 to 1.9.1**
 - 2024-09-16 11:00 328e108 **build(deps): bump @bgord/node from 0.58.293 to 0.58.294**
 - 2024-09-16 11:00 0996345 **build(deps-dev): bump vitest from 2.1.0 to 2.1.1**

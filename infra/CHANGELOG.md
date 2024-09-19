@@ -1,6 +1,11 @@
 # Changelog
+- 2024-09-19 11:20 4bf94a2 **Merge pull request #251 from bgord/dependabot/npm_and_yarn/types/nodemailer-6.4.16**
+- 2024-09-19 11:20 147b270 **Merge pull request #250 from bgord/dependabot/npm_and_yarn/bgord/node-0.59.0**
+## 2024-09-19 11:20 
 - 2024-09-19 11:17 e2aeb4d **Merge pull request #249 from bgord/dependabot/npm_and_yarn/cspell-8.14.4**
-## 2024-09-19 11:17 
+- 2024-09-19 09:19 b3b4a0c **build(deps): bump @bgord/node from 0.58.294 to 0.59.0**
+- 2024-09-19 09:19 38e477b **build(deps-dev): bump @types/nodemailer from 6.4.15 to 6.4.16**
+- 2024-09-19 09:17 7d90969 **docs: generate CHANGELOG**
 - 2024-09-18 11:24 b1efa7f **fix: codedql workflow**
 - 2024-09-18 10:46 1f66e00 **build(deps-dev): bump cspell from 8.14.2 to 8.14.4**
 - 2024-09-18 09:25 aa44522 **docs: generate CHANGELOG**

@@ -1,6 +1,9 @@
 # Changelog
+- 2024-09-19 11:17 e2aeb4d **Merge pull request #249 from bgord/dependabot/npm_and_yarn/cspell-8.14.4**
+## 2024-09-19 11:17 
 - 2024-09-18 11:24 b1efa7f **fix: codedql workflow**
-## 2024-09-18 11:24 
+- 2024-09-18 10:46 1f66e00 **build(deps-dev): bump cspell from 8.14.2 to 8.14.4**
+- 2024-09-18 09:25 aa44522 **docs: generate CHANGELOG**
 - 2024-09-17 10:42 df8a3e5 **Merge pull request #247 from bgord/dependabot/npm_and_yarn/bgord/node-0.58.294**
 - 2024-09-17 10:42 6dbc4a4 **Merge pull request #248 from bgord/dependabot/npm_and_yarn/biomejs/biome-1.9.1**
 - 2024-09-17 10:42 669dbd8 **Merge pull request #246 from bgord/dependabot/npm_and_yarn/vitest-2.1.1**

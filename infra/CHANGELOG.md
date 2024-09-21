@@ -1,6 +1,9 @@
 # Changelog
+- 2024-09-21 17:18 99dc7c4 **step: bump bgord/node**
+- 2024-09-21 17:18 8ca0043 **step: bump bgord/scripts**
+## 2024-09-21 17:18 
 - 2024-09-21 16:16 0b75f2b **Merge pull request #252 from bgord/dependabot/npm_and_yarn/biomejs/biome-1.9.2**
-## 2024-09-21 16:16 
+- 2024-09-21 14:16 60b64f2 **docs: generate CHANGELOG**
 - 2024-09-20 10:26 794ef36 **build(deps-dev): bump @biomejs/biome from 1.9.1 to 1.9.2**
 - 2024-09-19 11:20 4bf94a2 **Merge pull request #251 from bgord/dependabot/npm_and_yarn/types/nodemailer-6.4.16**
 - 2024-09-19 11:20 147b270 **Merge pull request #250 from bgord/dependabot/npm_and_yarn/bgord/node-0.59.0**

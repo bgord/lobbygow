@@ -1,8 +1,13 @@
 # Changelog
+- 2024-09-25 09:56 9505050 **Merge pull request #253 from bgord/dependabot/npm_and_yarn/esbuild-0.24.0**
+- 2024-09-25 09:56 30c7bad **Merge pull request #254 from bgord/dependabot/npm_and_yarn/knip-5.30.5**
+## 2024-09-25 09:56 
+- 2024-09-23 10:57 14cc4c0 **build(deps-dev): bump esbuild from 0.23.1 to 0.24.0**
+- 2024-09-23 10:57 04917dc **build(deps-dev): bump knip from 5.30.2 to 5.30.5**
 - 2024-09-21 17:18 99dc7c4 **step: bump bgord/node**
 - 2024-09-21 17:18 8ca0043 **step: bump bgord/scripts**
-## 2024-09-21 17:18 
 - 2024-09-21 16:16 0b75f2b **Merge pull request #252 from bgord/dependabot/npm_and_yarn/biomejs/biome-1.9.2**
+- 2024-09-21 15:18 afbc62b **docs: generate CHANGELOG**
 - 2024-09-21 14:16 60b64f2 **docs: generate CHANGELOG**
 - 2024-09-20 10:26 794ef36 **build(deps-dev): bump @biomejs/biome from 1.9.1 to 1.9.2**
 - 2024-09-19 11:20 4bf94a2 **Merge pull request #251 from bgord/dependabot/npm_and_yarn/types/nodemailer-6.4.16**

@@ -1,7 +1,10 @@
 # Changelog
+- 2024-09-28 16:37 da81129 **Merge pull request #256 from bgord/dependabot/npm_and_yarn/knip-5.30.6**
+## 2024-09-28 16:37 
+- 2024-09-27 11:05 23500d1 **build(deps-dev): bump knip from 5.30.5 to 5.30.6**
 - 2024-09-25 09:56 9505050 **Merge pull request #253 from bgord/dependabot/npm_and_yarn/esbuild-0.24.0**
 - 2024-09-25 09:56 30c7bad **Merge pull request #254 from bgord/dependabot/npm_and_yarn/knip-5.30.5**
-## 2024-09-25 09:56 
+- 2024-09-25 07:56 789d86c **docs: generate CHANGELOG**
 - 2024-09-23 10:57 14cc4c0 **build(deps-dev): bump esbuild from 0.23.1 to 0.24.0**
 - 2024-09-23 10:57 04917dc **build(deps-dev): bump knip from 5.30.2 to 5.30.5**
 - 2024-09-21 17:18 99dc7c4 **step: bump bgord/node**

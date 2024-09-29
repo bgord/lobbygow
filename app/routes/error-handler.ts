@@ -20,9 +20,10 @@ export class ErrorHandler {
         correlationId: request.requestId,
         metadata: { url },
       });
-      return response
+      response
         .status(429)
         .send({ message: "app.credentials.invalid.error", _known: true });
+      return;
     }
 
     if (error instanceof bg.Errors.AccessDeniedError) {
@@ -32,9 +33,10 @@ export class ErrorHandler {
         correlationId: request.requestId,
         metadata: { reason: error.reason, message: error.message, url },
       });
-      return response
+      response
         .status(403)
         .send({ message: "app.access.denied.error", _known: true });
+      return;
     }
 
     if (error instanceof bg.Errors.TooManyRequestsError) {
@@ -45,9 +47,10 @@ export class ErrorHandler {
         metadata: { remainingMs: error.remainingMs, url },
       });
 
-      return response
+      response
         .status(429)
         .send({ message: "app.too_many_requests", _known: true });
+      return;
     }
 
     if (error instanceof bg.Errors.RequestTimeoutError) {
@@ -58,9 +61,10 @@ export class ErrorHandler {
         metadata: { timeoutMs: error.ms, url },
       });
 
-      return response
+      response
         .status(408)
         .send({ message: "request_timeout_error", _known: true });
+      return;
     }
 
     if (error instanceof z.ZodError) {
@@ -71,9 +75,10 @@ export class ErrorHandler {
         metadata: { url, body: request.body },
       });
 
-      return response
+      response
         .status(400)
         .send({ message: "payload.invalid.error", _known: true });
+      return;
     }
 
     infra.logger.error({

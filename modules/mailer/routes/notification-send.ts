@@ -39,5 +39,5 @@ export async function NotificationSend(
     metadata: { result },
   });
 
-  return response.status(200).send();
+  response.status(200).send();
 }

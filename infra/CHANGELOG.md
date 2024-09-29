@@ -1,6 +1,8 @@
 # Changelog
+- 2024-09-29 13:34 990e7ab **refactor: express 5 migration**
+## 2024-09-29 13:34 
 - 2024-09-28 16:37 da81129 **Merge pull request #256 from bgord/dependabot/npm_and_yarn/knip-5.30.6**
-## 2024-09-28 16:37 
+- 2024-09-28 14:37 814a90a **docs: generate CHANGELOG**
 - 2024-09-27 11:05 23500d1 **build(deps-dev): bump knip from 5.30.5 to 5.30.6**
 - 2024-09-25 09:56 9505050 **Merge pull request #253 from bgord/dependabot/npm_and_yarn/esbuild-0.24.0**
 - 2024-09-25 09:56 30c7bad **Merge pull request #254 from bgord/dependabot/npm_and_yarn/knip-5.30.5**

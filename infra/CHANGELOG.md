@@ -1,6 +1,9 @@
 # Changelog
+- 2024-10-03 00:01 1295088 **Merge pull request #258 from bgord/dependabot/npm_and_yarn/biomejs/biome-1.9.3**
+## 2024-10-03 00:01 
+- 2024-10-02 10:48 8e8bc77 **build(deps-dev): bump @biomejs/biome from 1.9.2 to 1.9.3**
 - 2024-10-01 11:03 ef69dd6 **Merge pull request #257 from bgord/dependabot/npm_and_yarn/bgord/node-0.70.0**
-## 2024-10-01 11:03 
+- 2024-10-01 09:03 23d8197 **docs: generate CHANGELOG**
 - 2024-09-30 10:41 355ac54 **build(deps): bump @bgord/node from 0.69.0 to 0.70.0**
 - 2024-09-29 13:34 990e7ab **refactor: express 5 migration**
 - 2024-09-29 11:35 00115ab **docs: generate CHANGELOG**

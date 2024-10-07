@@ -1,6 +1,13 @@
 # Changelog
+- 2024-10-07 08:52 f206914 **Merge pull request #261 from bgord/dependabot/npm_and_yarn/knip-5.31.0**
+- 2024-10-07 08:52 9123ca0 **Merge pull request #260 from bgord/dependabot/npm_and_yarn/bgord/node-0.73.0**
+## 2024-10-07 08:52 
+- 2024-10-07 08:51 d01a9ab **Merge pull request #259 from bgord/dependabot/npm_and_yarn/vitest-2.1.2**
+- 2024-10-03 10:45 82e23be **build(deps-dev): bump vitest from 2.1.1 to 2.1.2**
+- 2024-10-03 10:45 34debe2 **build(deps-dev): bump knip from 5.30.6 to 5.31.0**
+- 2024-10-03 10:45 2122655 **build(deps): bump @bgord/node from 0.70.0 to 0.73.0**
 - 2024-10-03 00:01 1295088 **Merge pull request #258 from bgord/dependabot/npm_and_yarn/biomejs/biome-1.9.3**
-## 2024-10-03 00:01 
+- 2024-10-02 22:01 3584b9f **docs: generate CHANGELOG**
 - 2024-10-02 10:48 8e8bc77 **build(deps-dev): bump @biomejs/biome from 1.9.2 to 1.9.3**
 - 2024-10-01 11:03 ef69dd6 **Merge pull request #257 from bgord/dependabot/npm_and_yarn/bgord/node-0.70.0**
 - 2024-10-01 09:03 23d8197 **docs: generate CHANGELOG**

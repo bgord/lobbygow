@@ -1,8 +1,10 @@
 # Changelog
+- 2024-10-09 19:00 1cae37e **step: bump bgord/scripts**
+## 2024-10-09 19:00 
 - 2024-10-09 00:01 f551955 **step: bump bgord/node**
-## 2024-10-09 00:01 
 - 2024-10-08 23:51 835bb6f **Merge pull request #264 from bgord/dependabot/npm_and_yarn/npm_and_yarn-99150a289a**
 - 2024-10-08 23:46 6460ed8 **Merge pull request #263 from bgord/dependabot/npm_and_yarn/knip-5.33.1**
+- 2024-10-08 22:02 a137de3 **docs: generate CHANGELOG**
 - 2024-10-08 21:51 e3df42d **docs: generate CHANGELOG**
 - 2024-10-08 21:50 83408ca **build(deps-dev): bump ws from 8.16.0 to 8.18.0 in the npm_and_yarn group**
 - 2024-10-08 21:46 8ec3cfe **docs: generate CHANGELOG**

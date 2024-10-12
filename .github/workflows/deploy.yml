@@ -55,6 +55,9 @@ jobs:
       - name: Sync source code
         run: rsync -azP build/ production:/var/www/${{ secrets.PROJECT_NAME }}
 
+      - name: Remove package.json
+        run: ssh production "cd /var/www/${{ secrets.PROJECT_NAME }} && rm package.json"
+
       - name: Install sharp
         run: ssh production "cd /var/www/${{ secrets.PROJECT_NAME }} && /home/bgord/.bun/bin/bun install --platform=linux --arch=x64 sharp"
 

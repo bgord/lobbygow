@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env bun
 
 echo "Environment: production"
 echo "Starting project..."

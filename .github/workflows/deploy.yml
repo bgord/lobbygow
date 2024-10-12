@@ -15,11 +15,10 @@ jobs:
         with:
           submodules: recursive
 
-      - name: Setup Node.js environment
-        uses: actions/setup-node@v4
+      - name: Setup Bun environment
+        uses: oven-sh/setup-bun@v2
         with:
-          node-version: 22.6
-          cache: "npm"
+          bun-version: 1.1.30
 
       - name: Get installed Playwright version
         shell: bash
@@ -35,8 +34,8 @@ jobs:
             ~/.cache/ms-playwright
           key: ${{ runner.os }}-playwright-${{ env.PLAYWRIGHT_VERSION }}
 
-      - name: NPM Install
-        run: npm install
+      - name: Bun install
+        run: bun install --exact --frozen-lockfile --no-summary
 
       - name: Create .env.test file
         run: echo "${{ secrets.ENV_TEST }}" > .env.test
@@ -45,7 +44,7 @@ jobs:
         run: echo "${{ secrets.ENV_PRODUCTION }}" > .env.production
 
       - name: Run build prechecks
-        run: ./bgord-scripts/build-prechecks.sh
+        run: ./bgord-scripts/bun-build-prechecks.sh
 
       - name: Build the app
         run: ./scripts/production-server-build.sh
@@ -69,9 +68,6 @@ jobs:
 
       - name: Sync source code
         run: rsync -azP build/ production:/var/www/${{ secrets.PROJECT_NAME }}
-
-      - name: Install sharp
-        run: ssh production "cd /var/www/${{ secrets.PROJECT_NAME }} && npm install --platform=linux --arch=x64 sharp"
 
       - name: Restart server
         run: ssh production sudo systemctl restart ${{ secrets.PROJECT_NAME }}.service

@@ -1,6 +1,20 @@
 # Changelog
+- 2024-10-12 21:28 b5fcb20 **step: bump bgord/scripts**
+## 2024-10-12 21:28 
+- 2024-10-12 21:21 7f79dbf **step: bump bgord/scripts**
+- 2024-10-12 21:19 d06c34d **Revert "refactor: remove lodash"**
+- 2024-10-12 21:17 ba24584 **step: bump bgord/scripts**
+- 2024-10-12 21:15 ad1dc38 **refactor: remove lodash**
+- 2024-10-12 21:14 3df474b **step: bump bgord/scripts**
+- 2024-10-12 21:13 594de6d **refactor: adjust healthcheck**
+- 2024-10-12 21:12 d10dc40 **step: adjust deploy workflow**
+- 2024-10-12 21:12 aee8078 **step: bump bgord/scripts**
+- 2024-10-12 20:42 9eef8eb **refactor: switch to bun**
+- 2024-10-12 20:40 636ff8a **refactor: switch to bun**
+- 2024-10-12 20:36 d4ed80b **step: bump bgord/scripts**
+- 2024-10-12 13:37 aec2c26 **step: bump bgord/scripts**
 - 2024-10-09 19:00 1cae37e **step: bump bgord/scripts**
-## 2024-10-09 19:00 
+- 2024-10-09 17:39 92079ef **docs: generate CHANGELOG**
 - 2024-10-09 00:01 f551955 **step: bump bgord/node**
 - 2024-10-08 23:51 835bb6f **Merge pull request #264 from bgord/dependabot/npm_and_yarn/npm_and_yarn-99150a289a**
 - 2024-10-08 23:46 6460ed8 **Merge pull request #263 from bgord/dependabot/npm_and_yarn/knip-5.33.1**

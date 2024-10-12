@@ -49,7 +49,7 @@ export const prerequisites = [
   }),
   new bg.PrerequisiteBun({
     label: "bun",
-    version: bg.PackageVersion.fromStringWithV("1.1.30"),
+    version: bg.PackageVersion.fromString("1.1.30"),
   }),
   new bg.PrerequisiteMemory({
     label: "memory-consumption",

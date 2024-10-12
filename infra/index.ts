@@ -34,10 +34,6 @@ export const ApiKeyShield = new bg.Bun.ApiKeyShield({ API_KEY: Env.API_KEY });
 export const prerequisites = [
   new bg.PrerequisitePort({ label: "port", port: Env.PORT }),
   new bg.PrerequisiteTimezoneUTC({ label: "timezone", timezone: Env.TZ }),
-  new bg.PrerequisiteNode({
-    label: "node version",
-    version: bg.PackageVersion.fromStringWithV("v22.6.0"),
-  }),
   new bg.PrerequisiteRAM({
     label: "RAM",
     enabled: Env.type !== bg.Schema.NodeEnvironmentEnum.local,

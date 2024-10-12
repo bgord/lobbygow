@@ -40,7 +40,7 @@ export const prerequisites = [
     minimum: new bg.Size({ unit: bg.SizeUnit.MB, value: 128 }),
   }),
   new bg.PrerequisiteSpace({
-    label: "dis- space",
+    label: "disk-space",
     minimum: new bg.Size({ unit: bg.SizeUnit.MB, value: 512 }),
   }),
   new bg.PrerequisiteMemory({

@@ -1,6 +1,7 @@
 # Changelog
+- 2024-10-13 00:39 e5950d9 **step: bump bgord/node**
+## 2024-10-13 00:39 
 - 2024-10-13 00:29 50f5808 **step: test node prereq**
-## 2024-10-13 00:29 
 - 2024-10-13 00:17 6ad2652 **step: add execa**
 - 2024-10-13 00:13 c0b1e30 **refactor: reorder prereqs**
 - 2024-10-13 00:07 c222e4c **fix: disk space**
@@ -9,6 +10,7 @@
 - 2024-10-12 23:00 159dcb1 **refactor: remove package.json before installing sharp**
 - 2024-10-12 22:53 cad545f **step: sync package.json in deploy script**
 - 2024-10-12 22:34 4f941ff **fix: add absolute bun path**
+- 2024-10-12 22:30 912ecda **docs: generate CHANGELOG**
 - 2024-10-12 22:18 b713ca6 **docs: generate CHANGELOG**
 - 2024-10-12 22:17 772803b **fix: add install sharp step**
 - 2024-10-12 22:14 e99fc06 **docs: generate CHANGELOG**

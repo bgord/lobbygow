@@ -56,7 +56,7 @@ jobs:
         run: rsync -azP build/ production:/var/www/${{ secrets.PROJECT_NAME }}
 
       - name: Install sharp
-        run: ssh production "cd /var/www/${{ secrets.PROJECT_NAME }} && bun install --platform=linux --arch=x64 sharp"
+        run: ssh production "cd /var/www/${{ secrets.PROJECT_NAME }} && /home/bgord/.bun/bin/bun install --platform=linux --arch=x64 sharp"
 
       - name: Restart server
         run: ssh production sudo systemctl restart ${{ secrets.PROJECT_NAME }}.service

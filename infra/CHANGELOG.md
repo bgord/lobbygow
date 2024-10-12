@@ -1,6 +1,7 @@
 # Changelog
+- 2024-10-13 00:52 b5340c0 **refactor: disable bun prereq**
+## 2024-10-13 00:52 
 - 2024-10-13 00:44 1d6bfdb **fix: remove with v**
-## 2024-10-13 00:44 
 - 2024-10-13 00:41 3595e70 **step: restore bun prereq**
 - 2024-10-13 00:39 e5950d9 **step: bump bgord/node**
 - 2024-10-13 00:29 50f5808 **step: test node prereq**
@@ -11,6 +12,7 @@
 - 2024-10-12 23:04 d4c9a0f **fix: force package.json removal**
 - 2024-10-12 23:00 159dcb1 **refactor: remove package.json before installing sharp**
 - 2024-10-12 22:53 cad545f **step: sync package.json in deploy script**
+- 2024-10-12 22:44 110ab63 **docs: generate CHANGELOG**
 - 2024-10-12 22:43 6d4511d **docs: generate CHANGELOG**
 - 2024-10-12 22:39 cab57b7 **docs: generate CHANGELOG**
 - 2024-10-12 22:34 4f941ff **fix: add absolute bun path**

@@ -1,18 +1,16 @@
+import hono from "hono";
 import * as bg from "@bgord/node";
-import express from "express";
 
 import * as infra from "../../../infra";
 import * as VO from "../value-objects";
 import * as Services from "../services";
 
-export async function NotificationSend(
-  request: express.Request,
-  response: express.Response,
-  _next: express.NextFunction,
-) {
-  const subject = bg.Schema.EmailSubject.parse(request.body.subject);
-  const content = bg.Schema.EmailContentHtml.parse(request.body.content);
-  const kind = VO.NotificationKind.parse(request.body.kind);
+export async function NotificationSend(c: hono.Context, _next: hono.Next) {
+  const body = await c.req.json();
+
+  const subject = bg.Schema.EmailSubject.parse(body.subject);
+  const content = bg.Schema.EmailContentHtml.parse(body.content);
+  const kind = VO.NotificationKind.parse(body.kind);
 
   const notification = new Services.Notification(subject, content);
   const composer = Services.NotificationComposerChooser.choose(kind);
@@ -31,13 +29,15 @@ export async function NotificationSend(
     metadata: { message },
   });
 
-  const result = await notification.send(message, infra.Env.EMAIL_TO);
+  if (infra.Env.type !== bg.Schema.NodeEnvironmentEnum.local) {
+    const result = await notification.send(message, infra.Env.EMAIL_TO);
 
-  infra.logger.info({
-    message: "Notification sent",
-    operation: "notification_sent_result",
-    metadata: { result },
-  });
+    infra.logger.info({
+      message: "Notification sent",
+      operation: "notification_sent_result",
+      metadata: { result },
+    });
+  }
 
-  response.status(200).send();
+  return new Response();
 }

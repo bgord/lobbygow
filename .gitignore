@@ -1,6 +1,7 @@
 .contributor
 .cspellcache
 .env.local
+.env.test
 .env.production
 .env.staging
 .eslintcache

@@ -1,17 +1,35 @@
+import * as bg from "@bgord/node";
+import { basicAuth } from "hono/basic-auth";
+import { HTTPException } from "hono/http-exception";
+
+import { Env } from "./env";
+import { Mailer } from "./mailer";
+import type { TimingVariables } from "hono/timing";
+
 export * from "./env";
 export * from "./mailer";
 export * from "./logger";
 
-import * as bg from "@bgord/node";
-import { Env } from "./env";
-import { Mailer } from "./mailer";
+export const requestTimeoutError = new HTTPException(408, {
+  message: "request_timeout_error",
+});
 
-export const BasicAuthShield = new bg.BasicAuthShield({
+export type Variables = TimingVariables &
+  bg.Bun.TimeZoneOffsetVariables &
+  bg.Bun.ContextVariables &
+  bg.Bun.EtagVariables;
+
+export const BODY_LIMIT_MAX_SIZE = new bg.Size({
+  value: 128,
+  unit: bg.SizeUnit.kB,
+}).toBytes();
+
+export const BasicAuthShield = basicAuth({
   username: Env.BASIC_AUTH_USERNAME,
   password: Env.BASIC_AUTH_PASSWORD,
 });
 
-export const ApiKeyShield = new bg.ApiKeyShield({ API_KEY: Env.API_KEY });
+export const ApiKeyShield = new bg.Bun.ApiKeyShield({ API_KEY: Env.API_KEY });
 
 export const prerequisites = [
   new bg.PrerequisitePort({ label: "port", port: Env.PORT }),
@@ -38,11 +56,6 @@ export const prerequisites = [
 export const healthcheck = [
   new bg.PrerequisiteSelf({ label: "self" }),
   new bg.PrerequisiteOutsideConnectivity({ label: "outside-connectivity" }),
-  new bg.PrerequisiteSSLCertificateExpiry({
-    label: "ssl-certificate-expiry",
-    host: "lobbygow.bgord.me",
-    validDaysMinimum: 7,
-  }),
   new bg.PrerequisiteMailer({ label: "nodemailer", mailer: Mailer }),
   ...prerequisites.filter(
     (prerequisite) => prerequisite.config.label !== "port",

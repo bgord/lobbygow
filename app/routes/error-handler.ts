@@ -1,93 +1,55 @@
 import * as bg from "@bgord/node";
-import express from "express";
+import hono from "hono";
 import z from "zod";
+import { HTTPException } from "hono/http-exception";
 
 import * as infra from "../../infra";
 
 export class ErrorHandler {
-  static handle: express.ErrorRequestHandler = async (
-    error,
-    request,
-    response,
-    next,
-  ) => {
-    const url = request.url;
+  static handle: hono.ErrorHandler = async (error, c) => {
+    const url = c.req.url;
+    const correlationId = c.get("requestId") as bg.Schema.CorrelationIdType;
 
-    if (error instanceof bg.Errors.InvalidCredentialsError) {
-      infra.logger.error({
-        message: "Invalid credentials",
-        operation: "invalid_credentials_error",
-        correlationId: request.requestId,
-        metadata: { url },
-      });
-      response
-        .status(429)
-        .send({ message: "app.credentials.invalid.error", _known: true });
-      return;
-    }
+    if (error instanceof HTTPException) {
+      if (error.message === "request_timeout_error") {
+        return c.json({ message: "request_timeout_error", _known: true }, 408);
+      }
 
-    if (error instanceof bg.Errors.AccessDeniedError) {
-      infra.logger.error({
-        message: "Access denied",
-        operation: "access_denied_error",
-        correlationId: request.requestId,
-        metadata: { reason: error.reason, message: error.message, url },
-      });
-      response
-        .status(403)
-        .send({ message: "app.access.denied.error", _known: true });
-      return;
-    }
+      if (error.message === bg.Bun.AccessDeniedApiKeyError.message) {
+        return c.json(
+          { message: bg.Bun.AccessDeniedApiKeyError.message, _known: true },
+          bg.Bun.AccessDeniedApiKeyError.status,
+        );
+      }
 
-    if (error instanceof bg.Errors.TooManyRequestsError) {
-      infra.logger.error({
-        message: "Too many requests",
-        operation: "too_many_requests",
-        correlationId: request.requestId,
-        metadata: { remainingMs: error.remainingMs, url },
-      });
+      if (error.message === bg.Bun.TooManyRequestsError.message) {
+        return c.json(
+          { message: bg.Bun.TooManyRequestsError.message, _known: true },
+          bg.Bun.TooManyRequestsError.status,
+        );
+      }
 
-      response
-        .status(429)
-        .send({ message: "app.too_many_requests", _known: true });
-      return;
-    }
-
-    if (error instanceof bg.Errors.RequestTimeoutError) {
-      infra.logger.error({
-        message: "Request timeout error",
-        operation: "request_timeout_error",
-        correlationId: request.requestId,
-        metadata: { timeoutMs: error.ms, url },
-      });
-
-      response
-        .status(408)
-        .send({ message: "request_timeout_error", _known: true });
-      return;
+      return error.getResponse();
     }
 
     if (error instanceof z.ZodError) {
       infra.logger.error({
         message: "Invalid payload",
         operation: "invalid_payload",
-        correlationId: request.requestId,
-        metadata: { url, body: request.body },
+        correlationId,
+        metadata: { url, body: await c.req.json() },
       });
 
-      response
-        .status(400)
-        .send({ message: "payload.invalid.error", _known: true });
-      return;
+      return c.json({ message: "payload.invalid.error", _known: true }, 400);
     }
 
     infra.logger.error({
       message: "Unknown error",
       operation: "unknown_error",
-      correlationId: request.requestId,
+      correlationId,
       metadata: infra.logger.formatError(error),
     });
 
-    return next(error);
+    return c.json({ message: "general.unknown" }, 500);
   };
 }

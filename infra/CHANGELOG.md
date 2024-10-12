@@ -1,6 +1,7 @@
 # Changelog
+- 2024-10-12 22:53 cad545f **step: sync package.json in deploy script**
+## 2024-10-12 22:53 
 - 2024-10-12 22:34 4f941ff **fix: add absolute bun path**
-## 2024-10-12 22:34 
 - 2024-10-12 22:17 772803b **fix: add install sharp step**
 - 2024-10-12 22:07 a968431 **fix: try fixing sharp issue**
 - 2024-10-12 22:03 430bf02 **fix: sfe execution**
@@ -20,6 +21,7 @@
 - 2024-10-12 20:42 9eef8eb **refactor: switch to bun**
 - 2024-10-12 20:40 636ff8a **refactor: switch to bun**
 - 2024-10-12 20:36 d4ed80b **step: bump bgord/scripts**
+- 2024-10-12 20:34 fbaec39 **docs: generate CHANGELOG**
 - 2024-10-12 20:18 7118d1c **docs: generate CHANGELOG**
 - 2024-10-12 20:08 16ed783 **docs: generate CHANGELOG**
 - 2024-10-12 20:03 52979f8 **docs: generate CHANGELOG**

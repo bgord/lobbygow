@@ -1,6 +1,7 @@
 # Changelog
+- 2024-10-12 22:07 a968431 **fix: try fixing sharp issue**
+## 2024-10-12 22:07 
 - 2024-10-12 22:03 430bf02 **fix: sfe execution**
-## 2024-10-12 22:03 
 - 2024-10-12 21:55 a2fed3e **refactor: remove playwright steps**
 - 2024-10-12 21:54 014064c **fix: binary name**
 - 2024-10-12 21:44 041b908 **step: bump bgord/node**
@@ -17,6 +18,7 @@
 - 2024-10-12 20:42 9eef8eb **refactor: switch to bun**
 - 2024-10-12 20:40 636ff8a **refactor: switch to bun**
 - 2024-10-12 20:36 d4ed80b **step: bump bgord/scripts**
+- 2024-10-12 20:03 52979f8 **docs: generate CHANGELOG**
 - 2024-10-12 19:55 4c24ed4 **docs: generate CHANGELOG**
 - 2024-10-12 19:54 dd11221 **docs: generate CHANGELOG**
 - 2024-10-12 19:51 bea58f8 **docs: generate CHANGELOG**

@@ -47,6 +47,10 @@ export const prerequisites = [
     label: "node",
     version: bg.PackageVersion.fromStringWithV("v22.6.0"),
   }),
+  new bg.PrerequisiteBun({
+    label: "bun",
+    version: bg.PackageVersion.fromStringWithV("1.1.30"),
+  }),
   new bg.PrerequisiteMemory({
     label: "memory-consumption",
     maximum: new bg.Size({ value: 300, unit: bg.SizeUnit.MB }),

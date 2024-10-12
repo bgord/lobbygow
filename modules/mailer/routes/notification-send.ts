@@ -29,7 +29,7 @@ export async function NotificationSend(c: hono.Context, _next: hono.Next) {
     metadata: { message },
   });
 
-  if (infra.Env.type !== bg.Schema.NodeEnvironmentEnum.local) {
+  if (infra.Env.type === bg.Schema.NodeEnvironmentEnum.production) {
     const result = await notification.send(message, infra.Env.EMAIL_TO);
 
     infra.logger.info({

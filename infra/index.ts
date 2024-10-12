@@ -43,9 +43,9 @@ export const prerequisites = [
     label: "disk-space",
     minimum: new bg.Size({ unit: bg.SizeUnit.MB, value: 512 }),
   }),
-  new bg.PrerequisiteBun({
-    label: "bun-version",
-    version: bg.PackageVersion.fromString("1.1.30"),
+  new bg.PrerequisiteNode({
+    label: "node",
+    version: bg.PackageVersion.fromStringWithV("v22.6.0"),
   }),
   new bg.PrerequisiteMemory({
     label: "memory-consumption",

@@ -43,13 +43,13 @@ export const prerequisites = [
     label: "disk-space",
     minimum: new bg.Size({ unit: bg.SizeUnit.MB, value: 512 }),
   }),
-  new bg.PrerequisiteMemory({
-    label: "memory-consumption",
-    maximum: new bg.Size({ value: 300, unit: bg.SizeUnit.MB }),
-  }),
   new bg.PrerequisiteBun({
     label: "bun-version",
     version: bg.PackageVersion.fromString("1.1.30"),
+  }),
+  new bg.PrerequisiteMemory({
+    label: "memory-consumption",
+    maximum: new bg.Size({ value: 300, unit: bg.SizeUnit.MB }),
   }),
 ];
 

@@ -1,6 +1,8 @@
 # Changelog
+- 2024-10-12 21:44 041b908 **step: bump bgord/node**
+## 2024-10-12 21:44 
+- 2024-10-12 21:36 3d75d79 **step: bump bgord/scripts**
 - 2024-10-12 21:28 b5fcb20 **step: bump bgord/scripts**
-## 2024-10-12 21:28 
 - 2024-10-12 21:21 7f79dbf **step: bump bgord/scripts**
 - 2024-10-12 21:19 d06c34d **Revert "refactor: remove lodash"**
 - 2024-10-12 21:17 ba24584 **step: bump bgord/scripts**
@@ -12,6 +14,7 @@
 - 2024-10-12 20:42 9eef8eb **refactor: switch to bun**
 - 2024-10-12 20:40 636ff8a **refactor: switch to bun**
 - 2024-10-12 20:36 d4ed80b **step: bump bgord/scripts**
+- 2024-10-12 19:29 e8d48c8 **docs: generate CHANGELOG**
 - 2024-10-12 13:37 aec2c26 **step: bump bgord/scripts**
 - 2024-10-09 19:00 1cae37e **step: bump bgord/scripts**
 - 2024-10-09 17:39 92079ef **docs: generate CHANGELOG**

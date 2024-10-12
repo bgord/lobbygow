@@ -1,6 +1,7 @@
 # Changelog
+- 2024-10-13 00:05 4b99214 **step: add bun prereq**
+## 2024-10-13 00:05 
 - 2024-10-12 23:04 d4c9a0f **fix: force package.json removal**
-## 2024-10-12 23:04 
 - 2024-10-12 23:00 159dcb1 **refactor: remove package.json before installing sharp**
 - 2024-10-12 22:53 cad545f **step: sync package.json in deploy script**
 - 2024-10-12 22:34 4f941ff **fix: add absolute bun path**
@@ -20,6 +21,7 @@
 - 2024-10-12 21:13 594de6d **refactor: adjust healthcheck**
 - 2024-10-12 21:12 d10dc40 **step: adjust deploy workflow**
 - 2024-10-12 21:12 aee8078 **step: bump bgord/scripts**
+- 2024-10-12 21:06 469eed6 **docs: generate CHANGELOG**
 - 2024-10-12 21:01 6774561 **docs: generate CHANGELOG**
 - 2024-10-12 20:53 3add09d **docs: generate CHANGELOG**
 - 2024-10-12 20:42 9eef8eb **refactor: switch to bun**

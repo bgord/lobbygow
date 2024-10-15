@@ -1,10 +1,11 @@
-import * as bg from "@bgord/node";
+import * as bgn from "@bgord/node";
+import * as bgb from "@bgord/bun";
 
 import * as infra from "./infra";
 import { server, startup } from "./server";
 
 (async function main() {
-  await bg.Prerequisites.check(infra.prerequisites);
+  await bgn.Prerequisites.check(infra.prerequisites);
 
   const app = Bun.serve({
     fetch: server.fetch,
@@ -20,5 +21,5 @@ import { server, startup } from "./server";
     },
   });
 
-  bg.Bun.GracefulShutdown.applyTo(app);
+  bgb.GracefulShutdown.applyTo(app);
 })();

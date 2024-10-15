@@ -1,4 +1,5 @@
-import * as bg from "@bgord/node";
+import * as bgn from "@bgord/node";
+import * as bgb from "@bgord/bun";
 import { Hono } from "hono";
 import { serveStatic } from "hono/bun";
 import { bodyLimit } from "hono/body-limit";
@@ -14,42 +15,42 @@ import * as Mailer from "./modules/mailer";
 
 type Env = {
   Variables: infra.Variables;
-  startup: bg.Stopwatch;
+  startup: bgn.Stopwatch;
 };
 
 const server = new Hono<Env>();
 
 server.use(secureHeaders());
 server.use(bodyLimit({ maxSize: infra.BODY_LIMIT_MAX_SIZE }));
-server.use(bg.Bun.ApiVersion.attach);
+server.use(bgb.ApiVersion.attach);
 server.use(cors({ origin: "*" }));
 server.use(requestId());
-server.use(bg.Bun.TimeZoneOffset.attach);
-server.use(bg.Bun.Context.attach);
-server.use(bg.Bun.WeakETagExtractor.attach);
-server.use(bg.Bun.ETagExtractor.attach);
-server.use(bg.Bun.HttpLogger.build(infra.logger));
+server.use(bgb.TimeZoneOffset.attach);
+server.use(bgb.Context.attach);
+server.use(bgb.WeakETagExtractor.attach);
+server.use(bgb.ETagExtractor.attach);
+server.use(bgb.HttpLogger.build(infra.logger));
 server.use(timing());
 
 server.use("*", serveStatic({ root: "./static/" }));
 
-const startup = new bg.Stopwatch();
+const startup = new bgn.Stopwatch();
 
 // Healthcheck =================
 server.get(
   "/healthcheck",
-  bg.Bun.rateLimitShield(bg.Time.Seconds(5)),
-  timeout(bg.Time.Seconds(15).ms, infra.requestTimeoutError),
+  bgb.rateLimitShield(bgn.Time.Seconds(5)),
+  timeout(bgn.Time.Seconds(15).ms, infra.requestTimeoutError),
   infra.BasicAuthShield,
-  ...bg.Bun.Healthcheck.build(infra.healthcheck),
+  ...bgb.Healthcheck.build(infra.healthcheck),
 );
 // =============================
 
 // Mailer =================
 server.post(
   "/notification-send",
-  bg.Bun.rateLimitShield(bg.Time.Seconds(5)),
-  timeout(bg.Time.Seconds(15).ms, infra.requestTimeoutError),
+  bgb.rateLimitShield(bgn.Time.Seconds(5)),
+  timeout(bgn.Time.Seconds(15).ms, infra.requestTimeoutError),
   infra.ApiKeyShield.verify,
   Mailer.Routes.NotificationSend,
 );

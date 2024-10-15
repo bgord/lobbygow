@@ -1,4 +1,5 @@
-import * as bg from "@bgord/node";
+import * as bgn from "@bgord/node";
+import * as bgb from "@bgord/bun";
 import { basicAuth } from "hono/basic-auth";
 import { HTTPException } from "hono/http-exception";
 
@@ -15,13 +16,13 @@ export const requestTimeoutError = new HTTPException(408, {
 });
 
 export type Variables = TimingVariables &
-  bg.Bun.TimeZoneOffsetVariables &
-  bg.Bun.ContextVariables &
-  bg.Bun.EtagVariables;
+  bgb.TimeZoneOffsetVariables &
+  bgb.ContextVariables &
+  bgb.EtagVariables;
 
-export const BODY_LIMIT_MAX_SIZE = new bg.Size({
+export const BODY_LIMIT_MAX_SIZE = new bgn.Size({
   value: 128,
-  unit: bg.SizeUnit.kB,
+  unit: bgn.SizeUnit.kB,
 }).toBytes();
 
 export const BasicAuthShield = basicAuth({
@@ -29,38 +30,39 @@ export const BasicAuthShield = basicAuth({
   password: Env.BASIC_AUTH_PASSWORD,
 });
 
-export const ApiKeyShield = new bg.Bun.ApiKeyShield({ API_KEY: Env.API_KEY });
+export const ApiKeyShield = new bgb.ApiKeyShield({ API_KEY: Env.API_KEY });
 
 export const prerequisites = [
-  new bg.PrerequisitePort({ label: "port", port: Env.PORT }),
-  new bg.PrerequisiteTimezoneUTC({ label: "timezone", timezone: Env.TZ }),
-  new bg.PrerequisiteRAM({
+  new bgn.PrerequisitePort({ label: "port", port: Env.PORT }),
+  new bgn.PrerequisiteTimezoneUTC({ label: "timezone", timezone: Env.TZ }),
+  new bgn.PrerequisiteRAM({
     label: "RAM",
-    enabled: Env.type !== bg.Schema.NodeEnvironmentEnum.local,
-    minimum: new bg.Size({ unit: bg.SizeUnit.MB, value: 128 }),
+    enabled: Env.type !== bgn.Schema.NodeEnvironmentEnum.local,
+    minimum: new bgn.Size({ unit: bgn.SizeUnit.MB, value: 128 }),
   }),
-  new bg.PrerequisiteSpace({
+  new bgn.PrerequisiteSpace({
     label: "disk-space",
-    minimum: new bg.Size({ unit: bg.SizeUnit.MB, value: 512 }),
+    minimum: new bgn.Size({ unit: bgn.SizeUnit.MB, value: 512 }),
   }),
-  new bg.PrerequisiteNode({
+  new bgn.PrerequisiteNode({
     label: "node",
-    version: bg.PackageVersion.fromStringWithV("v22.6.0"),
+    version: bgn.PackageVersion.fromStringWithV("v22.6.0"),
   }),
-  new bg.PrerequisiteBun({
+  new bgn.PrerequisiteBun({
     label: "bun",
-    version: bg.PackageVersion.fromString("1.1.30"),
+    version: bgn.PackageVersion.fromString("1.1.30"),
+    current: Bun.version,
   }),
-  new bg.PrerequisiteMemory({
+  new bgn.PrerequisiteMemory({
     label: "memory-consumption",
-    maximum: new bg.Size({ value: 300, unit: bg.SizeUnit.MB }),
+    maximum: new bgn.Size({ value: 300, unit: bgn.SizeUnit.MB }),
   }),
 ];
 
 export const healthcheck = [
-  new bg.PrerequisiteSelf({ label: "self" }),
-  new bg.PrerequisiteOutsideConnectivity({ label: "outside-connectivity" }),
-  new bg.PrerequisiteMailer({ label: "nodemailer", mailer: Mailer }),
+  new bgn.PrerequisiteSelf({ label: "self" }),
+  new bgn.PrerequisiteOutsideConnectivity({ label: "outside-connectivity" }),
+  new bgn.PrerequisiteMailer({ label: "nodemailer", mailer: Mailer }),
   ...prerequisites.filter(
     (prerequisite) => prerequisite.config.label !== "port",
   ),

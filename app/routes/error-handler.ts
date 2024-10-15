@@ -1,4 +1,5 @@
-import * as bg from "@bgord/node";
+import * as bgn from "@bgord/node";
+import * as bgb from "@bgord/bun";
 import hono from "hono";
 import z from "zod";
 import { HTTPException } from "hono/http-exception";
@@ -8,24 +9,24 @@ import * as infra from "../../infra";
 export class ErrorHandler {
   static handle: hono.ErrorHandler = async (error, c) => {
     const url = c.req.url;
-    const correlationId = c.get("requestId") as bg.Schema.CorrelationIdType;
+    const correlationId = c.get("requestId") as bgn.Schema.CorrelationIdType;
 
     if (error instanceof HTTPException) {
       if (error.message === "request_timeout_error") {
         return c.json({ message: "request_timeout_error", _known: true }, 408);
       }
 
-      if (error.message === bg.Bun.AccessDeniedApiKeyError.message) {
+      if (error.message === bgb.AccessDeniedApiKeyError.message) {
         return c.json(
-          { message: bg.Bun.AccessDeniedApiKeyError.message, _known: true },
-          bg.Bun.AccessDeniedApiKeyError.status,
+          { message: bgb.AccessDeniedApiKeyError.message, _known: true },
+          bgb.AccessDeniedApiKeyError.status,
         );
       }
 
-      if (error.message === bg.Bun.TooManyRequestsError.message) {
+      if (error.message === bgb.TooManyRequestsError.message) {
         return c.json(
-          { message: bg.Bun.TooManyRequestsError.message, _known: true },
-          bg.Bun.TooManyRequestsError.status,
+          { message: bgb.TooManyRequestsError.message, _known: true },
+          bgb.TooManyRequestsError.status,
         );
       }
 

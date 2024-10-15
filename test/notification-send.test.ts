@@ -1,4 +1,4 @@
-import * as bg from "@bgord/node";
+import * as bgb from "@bgord/bun";
 import { describe, test, expect } from "bun:test";
 
 import * as infra from "../infra";
@@ -24,10 +24,10 @@ describe("POST /notification-send", () => {
           kind: Mailer.VO.NotificationKindEnum.info,
         }),
         headers: new Headers({
-          [bg.Bun.ApiKeyShield.HEADER_NAME]: infra.Env.API_KEY,
+          [bgb.ApiKeyShield.HEADER_NAME]: infra.Env.API_KEY,
         }),
       },
-      ip,
+      ip
     );
 
     expect(res.status).toBe(200);

@@ -1,6 +1,8 @@
 # Changelog
+- 2024-10-15 17:30 942dbcd **refactor: adjust to bgord/bun**
+## 2024-10-15 17:30 
+- 2024-10-15 17:26 d77656f **step: update packages**
 - 2024-10-13 01:12 4ea2444 **refactor: remove execa**
-## 2024-10-13 01:12 
 - 2024-10-13 01:02 f20f91b **step: bump bgord/node**
 - 2024-10-13 00:52 b5340c0 **refactor: disable bun prereq**
 - 2024-10-13 00:44 1d6bfdb **fix: remove with v**
@@ -11,6 +13,7 @@
 - 2024-10-13 00:13 c0b1e30 **refactor: reorder prereqs**
 - 2024-10-13 00:07 c222e4c **fix: disk space**
 - 2024-10-13 00:05 4b99214 **step: add bun prereq**
+- 2024-10-12 23:12 b0602ef **docs: generate CHANGELOG**
 - 2024-10-12 23:04 d4c9a0f **fix: force package.json removal**
 - 2024-10-12 23:03 8124612 **docs: generate CHANGELOG**
 - 2024-10-12 23:00 159dcb1 **refactor: remove package.json before installing sharp**

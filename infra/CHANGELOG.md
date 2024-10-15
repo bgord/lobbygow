@@ -1,12 +1,13 @@
 # Changelog
 - 2024-10-15 17:42 6bfc8fa **refactor: remove unused packages**
-## 2024-10-15 17:42 
 - 2024-10-15 17:40 ff18320 **Merge pull request #271 from bgord/dependabot/npm_and_yarn/cspell-8.15.2**
 - 2024-10-15 17:40 d97535f **Merge pull request #272 from bgord/dependabot/npm_and_yarn/vitest-2.1.3**
 - 2024-10-15 17:39 576106a **Merge pull request #265 from bgord/dependabot/npm_and_yarn/typescript-5.6.3**
 - 2024-10-15 17:39 3fef357 **Merge pull request #268 from bgord/dependabot/npm_and_yarn/knip-5.33.3**
 - 2024-10-15 17:30 942dbcd **refactor: adjust to bgord/bun**
 - 2024-10-15 17:26 d77656f **step: update packages**
+- 2024-10-15 15:43 61de152 **docs: generate CHANGELOG**
+## 2024-10-15 15:43 
 - 2024-10-15 15:40 9637bf4 **docs: generate CHANGELOG**
 - 2024-10-15 15:33 94b5343 **build(deps-dev): bump vitest from 2.1.2 to 2.1.3**
 - 2024-10-15 15:33 487c077 **build(deps): bump typescript from 5.6.2 to 5.6.3**

@@ -1,7 +1,15 @@
 # Changelog
+- 2024-10-15 17:40 ff18320 **Merge pull request #271 from bgord/dependabot/npm_and_yarn/cspell-8.15.2**
+- 2024-10-15 17:40 d97535f **Merge pull request #272 from bgord/dependabot/npm_and_yarn/vitest-2.1.3**
+## 2024-10-15 17:40 
+- 2024-10-15 17:39 576106a **Merge pull request #265 from bgord/dependabot/npm_and_yarn/typescript-5.6.3**
+- 2024-10-15 17:39 3fef357 **Merge pull request #268 from bgord/dependabot/npm_and_yarn/knip-5.33.3**
 - 2024-10-15 17:30 942dbcd **refactor: adjust to bgord/bun**
-## 2024-10-15 17:30 
 - 2024-10-15 17:26 d77656f **step: update packages**
+- 2024-10-15 15:33 94b5343 **build(deps-dev): bump vitest from 2.1.2 to 2.1.3**
+- 2024-10-15 15:33 487c077 **build(deps): bump typescript from 5.6.2 to 5.6.3**
+- 2024-10-15 15:31 d0da436 **docs: generate CHANGELOG**
+- 2024-10-14 10:55 f9c5984 **build(deps-dev): bump cspell from 8.14.4 to 8.15.2**
 - 2024-10-13 01:12 4ea2444 **refactor: remove execa**
 - 2024-10-13 01:02 f20f91b **step: bump bgord/node**
 - 2024-10-13 00:52 b5340c0 **refactor: disable bun prereq**
@@ -57,6 +65,7 @@
 - 2024-10-12 19:55 4c24ed4 **docs: generate CHANGELOG**
 - 2024-10-12 19:54 dd11221 **docs: generate CHANGELOG**
 - 2024-10-12 19:51 bea58f8 **docs: generate CHANGELOG**
+- 2024-10-12 19:30 064b81d **build(deps-dev): bump knip from 5.33.1 to 5.33.3**
 - 2024-10-12 19:29 e8d48c8 **docs: generate CHANGELOG**
 - 2024-10-12 13:37 aec2c26 **step: bump bgord/scripts**
 - 2024-10-09 19:00 1cae37e **step: bump bgord/scripts**

@@ -24,8 +24,8 @@
     "tsx": "4.19.1"
   },
   "dependencies": {
-    "@bgord/node": "0.82.0",
-    "@bgord/bun": "0.1.0",
+    "@bgord/node": "0.83.0",
+    "@bgord/bun": "0.3.0",
     "lodash": "^4.17.21",
     "typescript": "5.6.3",
     "zod": "3.22.4"

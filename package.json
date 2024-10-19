@@ -25,7 +25,7 @@
   },
   "dependencies": {
     "@bgord/node": "0.83.0",
-    "@bgord/bun": "0.3.0",
+    "@bgord/bun": "0.3.1",
     "lodash": "^4.17.21",
     "typescript": "5.6.3",
     "zod": "3.22.4"

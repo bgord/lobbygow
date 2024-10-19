@@ -1,6 +1,9 @@
 # Changelog
+- 2024-10-19 15:44 3aed0b1 **Merge pull request #275 from bgord/dependabot/npm_and_yarn/biomejs/biome-1.9.4**
+## 2024-10-19 15:44 
 - 2024-10-19 15:41 6f82ba5 **Merge pull request #274 from bgord/dependabot/npm_and_yarn/cspell-8.15.4**
-## 2024-10-19 15:41 
+- 2024-10-19 13:41 8bb86b1 **docs: generate CHANGELOG**
+- 2024-10-18 10:19 a535c85 **build(deps-dev): bump @biomejs/biome from 1.9.3 to 1.9.4**
 - 2024-10-18 10:18 24f178d **build(deps-dev): bump cspell from 8.15.2 to 8.15.4**
 - 2024-10-15 17:42 6bfc8fa **refactor: remove unused packages**
 - 2024-10-15 17:40 ff18320 **Merge pull request #271 from bgord/dependabot/npm_and_yarn/cspell-8.15.2**

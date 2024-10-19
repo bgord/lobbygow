@@ -24,7 +24,6 @@
   },
   "dependencies": {
     "@bgord/bun": "0.3.1",
-    "@bgord/node": "0.83.0",
-    "zod": "3.22.4"
+    "@bgord/node": "0.83.0"
   }
 }

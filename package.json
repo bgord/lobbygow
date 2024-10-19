@@ -16,18 +16,15 @@
     "@commitlint/cli": "19.5.0",
     "@commitlint/config-conventional": "19.5.0",
     "@types/bun": "1.1.11",
-    "@types/lodash": "^4.17.10",
     "cspell": "8.15.4",
     "husky": "9.1.6",
     "knip": "5.33.3",
     "shellcheck": "3.0.0",
-    "tsx": "4.19.1"
+    "typescript": "5.6.3"
   },
   "dependencies": {
-    "@bgord/node": "0.83.0",
     "@bgord/bun": "0.3.1",
-    "lodash": "^4.17.21",
-    "typescript": "5.6.3",
+    "@bgord/node": "0.83.0",
     "zod": "3.22.4"
   }
 }

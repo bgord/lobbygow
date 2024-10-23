@@ -23,7 +23,7 @@
     "typescript": "5.6.3"
   },
   "dependencies": {
-    "@bgord/bun": "0.3.1",
-    "@bgord/node": "0.83.0"
+    "@bgord/bun": "0.3.2",
+    "@bgord/node": "0.83.1"
   }
 }

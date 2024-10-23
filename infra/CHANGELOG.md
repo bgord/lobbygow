@@ -1,6 +1,9 @@
 # Changelog
+- 2024-10-23 20:53 2d9a8a1 **step: bump bgord/node**
+## 2024-10-23 20:53 
+- 2024-10-23 08:49 732c6ba **step: bump bgord/bun**
 - 2024-10-23 08:43 0fb0761 **step: bump packages**
-## 2024-10-23 08:43 
+- 2024-10-23 06:44 83639f3 **docs: generate CHANGELOG**
 - 2024-10-19 19:56 05714e2 **refactor: remove unused packages**
 - 2024-10-19 17:57 d14ecbc **docs: generate CHANGELOG**
 - 2024-10-19 16:09 814b4e7 **refactor: remove unused deps**

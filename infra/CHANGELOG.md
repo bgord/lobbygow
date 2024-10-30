@@ -1,7 +1,9 @@
 # Changelog
+- 2024-10-30 10:36 53da9fd **step: bump packages**
+## 2024-10-30 10:36 
 - 2024-10-29 08:01 af1901f **Merge pull request #282 from bgord/dependabot/npm_and_yarn/bgord/node-0.83.3**
-## 2024-10-29 08:01 
 - 2024-10-29 07:59 083587b **Merge pull request #281 from bgord/dependabot/npm_and_yarn/bgord/bun-0.3.4**
+- 2024-10-29 07:01 1647c62 **docs: generate CHANGELOG**
 - 2024-10-29 07:00 b69d205 **build(deps): bump @bgord/node from 0.83.2 to 0.83.3**
 - 2024-10-29 06:59 650711d **docs: generate CHANGELOG**
 - 2024-10-28 10:32 b1a211c **build(deps): bump @bgord/bun from 0.3.3 to 0.3.4**

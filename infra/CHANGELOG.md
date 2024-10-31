@@ -1,6 +1,9 @@
 # Changelog
+- 2024-10-31 08:54 44539f2 **Merge pull request #285 from bgord/dependabot/npm_and_yarn/knip-5.34.3**
+## 2024-10-31 08:54 
+- 2024-10-30 11:03 56f9bfb **build(deps-dev): bump knip from 5.34.0 to 5.34.3**
 - 2024-10-30 10:36 53da9fd **step: bump packages**
-## 2024-10-30 10:36 
+- 2024-10-30 09:36 63f70c0 **docs: generate CHANGELOG**
 - 2024-10-29 08:01 af1901f **Merge pull request #282 from bgord/dependabot/npm_and_yarn/bgord/node-0.83.3**
 - 2024-10-29 07:59 083587b **Merge pull request #281 from bgord/dependabot/npm_and_yarn/bgord/bun-0.3.4**
 - 2024-10-29 07:01 1647c62 **docs: generate CHANGELOG**

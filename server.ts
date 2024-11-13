@@ -1,16 +1,15 @@
-import * as bgn from "@bgord/node";
 import * as bgb from "@bgord/bun";
+import * as bgn from "@bgord/node";
 import { Hono } from "hono";
-import { serveStatic } from "hono/bun";
 import { bodyLimit } from "hono/body-limit";
+import { serveStatic } from "hono/bun";
 import { cors } from "hono/cors";
-import { secureHeaders } from "hono/secure-headers";
 import { requestId } from "hono/request-id";
-import { timing } from "hono/timing";
+import { secureHeaders } from "hono/secure-headers";
 import { timeout } from "hono/timeout";
-
-import * as infra from "./infra";
+import { timing } from "hono/timing";
 import * as App from "./app";
+import * as infra from "./infra";
 import * as Mailer from "./modules/mailer";
 
 type Env = {

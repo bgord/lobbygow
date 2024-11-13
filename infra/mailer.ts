@@ -1,5 +1,4 @@
 import * as bg from "@bgord/node";
-
 import * as infra from "../infra";
 
 export const Mailer = new bg.Mailer({

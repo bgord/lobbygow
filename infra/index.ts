@@ -1,11 +1,10 @@
-import * as bgn from "@bgord/node";
 import * as bgb from "@bgord/bun";
+import * as bgn from "@bgord/node";
 import { basicAuth } from "hono/basic-auth";
 import { HTTPException } from "hono/http-exception";
-
+import type { TimingVariables } from "hono/timing";
 import { Env } from "./env";
 import { Mailer } from "./mailer";
-import type { TimingVariables } from "hono/timing";
 
 export * from "./env";
 export * from "./mailer";
@@ -63,7 +62,5 @@ export const healthcheck = [
   new bgn.PrerequisiteSelf({ label: "self" }),
   new bgn.PrerequisiteOutsideConnectivity({ label: "outside-connectivity" }),
   new bgn.PrerequisiteMailer({ label: "nodemailer", mailer: Mailer }),
-  ...prerequisites.filter(
-    (prerequisite) => prerequisite.config.label !== "port",
-  ),
+  ...prerequisites.filter((prerequisite) => prerequisite.config.label !== "port"),
 ];

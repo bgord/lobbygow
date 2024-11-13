@@ -1,6 +1,5 @@
-import * as bgn from "@bgord/node";
 import * as bgb from "@bgord/bun";
-
+import * as bgn from "@bgord/node";
 import * as infra from "./infra";
 import { server, startup } from "./server";
 

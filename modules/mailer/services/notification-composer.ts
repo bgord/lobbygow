@@ -1,5 +1,4 @@
 import * as bg from "@bgord/node";
-
 import * as VO from "../value-objects";
 import type { MessageType } from "./notification";
 
@@ -22,8 +21,7 @@ export class NotificationComposerChooser {
     ];
 
     const NotificationComposerStrategy =
-      strategies.find((strategy) => strategy.isApplicable(kind)) ??
-      NotificationComposerDefault;
+      strategies.find((strategy) => strategy.isApplicable(kind)) ?? NotificationComposerDefault;
 
     return new NotificationComposerStrategy();
   }
@@ -36,10 +34,7 @@ class NotificationComposerDefault implements NotificationComposerStrategy {
     return true;
   }
 
-  async compose(
-    subject: bg.Schema.EmailSubjectType,
-    content: bg.Schema.EmailContentHtmlType,
-  ) {
+  async compose(subject: bg.Schema.EmailSubjectType, content: bg.Schema.EmailContentHtmlType) {
     return { subject, content };
   }
 }
@@ -51,10 +46,7 @@ class NotificationComposerError implements NotificationComposerStrategy {
     return kind === VO.NotificationKindEnum.error;
   }
 
-  async compose(
-    subject: bg.Schema.EmailSubjectType,
-    content: bg.Schema.EmailContentHtmlType,
-  ) {
+  async compose(subject: bg.Schema.EmailSubjectType, content: bg.Schema.EmailContentHtmlType) {
     return {
       subject: bg.Schema.EmailSubject.parse(`❌ [ERROR] ${subject}`),
       content,
@@ -69,10 +61,7 @@ class NotificationComposerInfo implements NotificationComposerStrategy {
     return kind === VO.NotificationKindEnum.info;
   }
 
-  async compose(
-    subject: bg.Schema.EmailSubjectType,
-    content: bg.Schema.EmailContentHtmlType,
-  ) {
+  async compose(subject: bg.Schema.EmailSubjectType, content: bg.Schema.EmailContentHtmlType) {
     return {
       subject: bg.Schema.EmailSubject.parse(`ℹ️  [INFO] ${subject}`),
       content,
@@ -87,10 +76,7 @@ class NotificationComposerSuccess implements NotificationComposerStrategy {
     return kind === VO.NotificationKindEnum.success;
   }
 
-  async compose(
-    subject: bg.Schema.EmailSubjectType,
-    content: bg.Schema.EmailContentHtmlType,
-  ) {
+  async compose(subject: bg.Schema.EmailSubjectType, content: bg.Schema.EmailContentHtmlType) {
     return {
       subject: bg.Schema.EmailSubject.parse(`✅ [SUCCESS] ${subject}`),
       content,

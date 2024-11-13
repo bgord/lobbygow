@@ -1,5 +1,4 @@
 import z from "zod";
-
 import { NotificationKindEnum } from "./notification-kind-enum";
 
 export const NotificationKind = z

@@ -1,5 +1,5 @@
 import * as bg from "@bgord/node";
-import { z } from "zod";
+import z from "zod";
 
 const EnvironmentSchema = z
   .object({
@@ -18,9 +18,7 @@ const EnvironmentSchema = z
   })
   .strip();
 
-export const Env = new bg.EnvironmentValidator<
-  z.infer<typeof EnvironmentSchema>
->({
+export const Env = new bg.EnvironmentValidator<z.infer<typeof EnvironmentSchema>>({
   type: process.env.NODE_ENV,
   schema: EnvironmentSchema,
 }).load();

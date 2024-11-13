@@ -1,9 +1,7 @@
+import { describe, expect, test } from "bun:test";
 import * as bgb from "@bgord/bun";
-import { describe, test, expect } from "bun:test";
-
 import * as infra from "../infra";
 import * as Mailer from "../modules/mailer";
-
 import { server } from "../server";
 
 const ip = {
@@ -27,7 +25,7 @@ describe("POST /notification-send", () => {
           [bgb.ApiKeyShield.HEADER_NAME]: infra.Env.API_KEY,
         }),
       },
-      ip
+      ip,
     );
 
     expect(res.status).toBe(200);

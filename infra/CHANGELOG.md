@@ -1,12 +1,14 @@
 # Changelog
+- 2024-11-13 15:17 88cf1bc **step: update knip**
+## 2024-11-13 15:17 
 - 2024-11-13 15:12 b98ae33 **step: update packages**
 - 2024-11-13 15:12 7062053 **Merge branch 'master' of github.com:bgord/lobbygow**
-## 2024-11-13 15:12 
 - 2024-11-13 15:09 d2b1ac0 **refactor: remove empty import lines**
 - 2024-11-13 15:08 609592e **step: setup lefthook**
 - 2024-11-13 15:05 e779694 **step: bump bgord/scripts**
 - 2024-11-13 14:57 efb7f70 **refactor: remove husky**
 - 2024-11-13 14:56 0e46011 **step: bump bgord/scripts**
+- 2024-11-13 14:13 dbd2100 **docs: generate CHANGELOG**
 - 2024-11-08 08:23 3be8254 **Merge pull request #292 from bgord/dependabot/npm_and_yarn/knip-5.36.3**
 - 2024-11-08 08:23 34ee260 **Merge pull request #291 from bgord/dependabot/npm_and_yarn/types/bun-1.1.13**
 - 2024-11-08 07:23 a749271 **docs: generate CHANGELOG**

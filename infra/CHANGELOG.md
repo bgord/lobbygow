@@ -1,6 +1,9 @@
 # Changelog
+- 2024-11-22 23:40 efd4363 **Merge pull request #300 from bgord/dependabot/npm_and_yarn/commitlint/config-conventional-19.6.0**
+## 2024-11-22 23:40 
 - 2024-11-22 23:38 55a2d57 **Merge pull request #301 from bgord/dependabot/npm_and_yarn/knip-5.37.2**
-## 2024-11-22 23:38 
+- 2024-11-22 22:39 ae84a4b **build(deps-dev): bump @commitlint/config-conventional**
+- 2024-11-22 22:38 8ba389c **docs: generate CHANGELOG**
 - 2024-11-22 10:13 daaa8fb **build(deps-dev): bump knip from 5.36.7 to 5.37.2**
 - 2024-11-13 18:12 572c131 **step: bump bgord/bun**
 - 2024-11-13 17:12 c2aebc1 **docs: generate CHANGELOG**

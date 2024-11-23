@@ -1,10 +1,13 @@
 # Changelog
+- 2024-11-23 13:45 8e98fc8 **refactor: improve workflows**
+## 2024-11-23 13:45 
+- 2024-11-23 01:21 16117f6 **refactor: migrate test naming convention**
 - 2024-11-22 23:42 8fe4a9b **Merge pull request #299 from bgord/dependabot/npm_and_yarn/commitlint/cli-19.6.0**
-## 2024-11-22 23:42 
 - 2024-11-22 23:41 128666b **Merge pull request #297 from bgord/dependabot/npm_and_yarn/lefthook-1.8.4**
 - 2024-11-22 23:40 efd4363 **Merge pull request #300 from bgord/dependabot/npm_and_yarn/commitlint/config-conventional-19.6.0**
 - 2024-11-22 23:38 55a2d57 **Merge pull request #301 from bgord/dependabot/npm_and_yarn/knip-5.37.2**
 - 2024-11-22 22:42 baa885a **build(deps-dev): bump @commitlint/cli from 19.5.0 to 19.6.0**
+- 2024-11-22 22:42 0f4e4b8 **docs: generate CHANGELOG**
 - 2024-11-22 22:40 d15e332 **build(deps-dev): bump lefthook from 1.8.2 to 1.8.4**
 - 2024-11-22 22:40 8917733 **docs: generate CHANGELOG**
 - 2024-11-22 22:39 ae84a4b **build(deps-dev): bump @commitlint/config-conventional**

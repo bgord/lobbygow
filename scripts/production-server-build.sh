@@ -30,7 +30,7 @@ info "Created output directory"
 
 # ==========================================================
 
-HUSKY=0 bun install --production --no-save --frozen-lockfile --exact
+bun install --production --no-save --exact
 info "Installed packages"
 
 # ==========================================================

@@ -16,7 +16,7 @@
     "@commitlint/config-conventional": "19.6.0",
     "knip": "5.37.2",
     "lefthook": "1.8.4",
-    "@types/bun": "1.1.13",
+    "@types/bun": "1.1.16",
     "cspell": "8.15.5",
     "shellcheck": "3.0.0",
     "typescript": "5.6.3"

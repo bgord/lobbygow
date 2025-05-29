@@ -1,6 +1,12 @@
 # Changelog
+- 2025-05-29 14:26 caf4649 **step: adjust ubuntu in changelog workflow**
+- 2025-05-29 14:26 6319598 **step: adjust ubuntu 24.04**
+- 2025-05-29 14:26 1029219 **step: adjust bun-version**
+## 2025-05-29 14:26 
+- 2025-05-29 14:08 83873a0 **step: update node and bun versions**
+- 2025-05-29 14:03 de7fc53 **step: update bun lock**
 - 2024-11-23 13:45 8e98fc8 **refactor: improve workflows**
-## 2024-11-23 13:45 
+- 2024-11-23 12:45 7ea9232 **docs: generate CHANGELOG**
 - 2024-11-23 01:21 16117f6 **refactor: migrate test naming convention**
 - 2024-11-22 23:42 8fe4a9b **Merge pull request #299 from bgord/dependabot/npm_and_yarn/commitlint/cli-19.6.0**
 - 2024-11-22 23:41 128666b **Merge pull request #297 from bgord/dependabot/npm_and_yarn/lefthook-1.8.4**

@@ -45,11 +45,11 @@ export const prerequisites = [
   }),
   new bgn.PrerequisiteNode({
     label: "node",
-    version: bgn.PackageVersion.fromStringWithV("v22.6.0"),
+    version: bgn.PackageVersion.fromStringWithV("v24.1.0"),
   }),
   new bgn.PrerequisiteBun({
     label: "bun",
-    version: bgn.PackageVersion.fromString("1.1.30"),
+    version: bgn.PackageVersion.fromString("1.2.15"),
     current: Bun.version,
   }),
   new bgn.PrerequisiteMemory({

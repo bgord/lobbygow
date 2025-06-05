@@ -1,20 +1,21 @@
-import * as bg from "@bgord/node";
-import z from "zod";
+import * as bg from "@bgord/bun";
+import * as tools from "@bgord/tools";
+import { z } from "zod/v4";
 
 const EnvironmentSchema = z
   .object({
-    PORT: bg.Schema.Port,
-    LOGS_LEVEL: bg.Schema.LogLevel,
-    SMTP_HOST: bg.Schema.SmtpHost,
-    SMTP_PORT: bg.Schema.SmtpPort,
-    SMTP_USER: bg.Schema.SmtpUser,
-    SMTP_PASS: bg.Schema.SmtpPass,
-    EMAIL_FROM: bg.Schema.Email,
-    EMAIL_TO: bg.Schema.EmailTo,
-    TZ: bg.Schema.TimezoneUTC,
-    BASIC_AUTH_USERNAME: bg.Schema.BasicAuthUsername,
-    BASIC_AUTH_PASSWORD: bg.Schema.BasicAuthPassword,
-    API_KEY: bg.Schema.ApiKey,
+    PORT: bg.Port,
+    LOGS_LEVEL: bg.LogLevel,
+    SMTP_HOST: bg.SmtpHost,
+    SMTP_PORT: bg.SmtpPort,
+    SMTP_USER: bg.SmtpUser,
+    SMTP_PASS: bg.SmtpPass,
+    EMAIL_FROM: bg.EmailFrom,
+    EMAIL_TO: bg.EmailTo,
+    TZ: bg.TimezoneUtc,
+    BASIC_AUTH_USERNAME: bg.BasicAuthUsername,
+    BASIC_AUTH_PASSWORD: bg.BasicAuthPassword,
+    API_KEY: tools.ApiKey,
   })
   .strip();
 

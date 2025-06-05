@@ -1,10 +1,30 @@
 # Changelog
+- 2025-06-05 20:55 3433222 **refactor: rename notification send test**
+## 2025-06-05 20:55 
+- 2025-06-05 20:54 35eeee3 **refactor: install latest bgord/bun**
+- 2025-06-05 20:52 9d0d4e3 **refactor: cleanup package.json**
+- 2025-06-05 20:38 69c50c2 **refactor: port env schemas**
+- 2025-06-05 20:37 59a4971 **step: regenerate bun lock**
+- 2025-06-05 20:24 85a7af3 **fix: server**
+- 2025-06-05 20:23 78e866c **fix: infra**
+- 2025-06-05 20:21 53276ef **fix: index file**
+- 2025-06-05 20:20 a2b6063 **fix: infra logger**
+- 2025-06-05 20:20 2a3ce7c **fix: error handler**
+- 2025-06-05 20:19 9d958a1 **fix: notification schema**
+- 2025-06-05 20:19 661d77c **step: fix notification composer**
+- 2025-06-05 20:19 26e6ce0 **fix: notification send**
+- 2025-06-05 20:18 88f3e16 **fix: mailer import**
+- 2025-06-05 20:18 76a6ad3 **step: use local bgord/bun**
+- 2025-06-05 20:10 311e5af **step: install newest bgord packages**
+- 2025-06-05 20:09 db084f6 **step: update dev packages**
+- 2025-06-05 20:06 b444cd8 **step: bump bgord/scripts**
+- 2025-06-05 20:06 97202e3 **step: bump typescript**
 - 2025-05-29 14:26 caf4649 **step: adjust ubuntu in changelog workflow**
 - 2025-05-29 14:26 6319598 **step: adjust ubuntu 24.04**
 - 2025-05-29 14:26 1029219 **step: adjust bun-version**
-## 2025-05-29 14:26 
 - 2025-05-29 14:08 83873a0 **step: update node and bun versions**
 - 2025-05-29 14:03 de7fc53 **step: update bun lock**
+- 2025-05-29 12:27 25de93a **docs: generate CHANGELOG**
 - 2024-11-23 13:45 8e98fc8 **refactor: improve workflows**
 - 2024-11-23 12:45 7ea9232 **docs: generate CHANGELOG**
 - 2024-11-23 01:21 16117f6 **refactor: migrate test naming convention**

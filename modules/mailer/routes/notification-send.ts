@@ -1,4 +1,4 @@
-import * as bg from "@bgord/node";
+import * as bg from "@bgord/bun";
 import hono from "hono";
 import * as infra from "../../../infra";
 import * as Services from "../services";
@@ -7,8 +7,8 @@ import * as VO from "../value-objects";
 export async function NotificationSend(c: hono.Context, _next: hono.Next) {
   const body = await c.req.json();
 
-  const subject = bg.Schema.EmailSubject.parse(body.subject);
-  const content = bg.Schema.EmailContentHtml.parse(body.content);
+  const subject = bg.EmailSubject.parse(body.subject);
+  const content = bg.EmailContentHtml.parse(body.content);
   const kind = VO.NotificationKind.parse(body.kind);
 
   const notification = new Services.Notification(subject, content);
@@ -28,7 +28,7 @@ export async function NotificationSend(c: hono.Context, _next: hono.Next) {
     metadata: { message },
   });
 
-  if (infra.Env.type === bg.Schema.NodeEnvironmentEnum.production) {
+  if (infra.Env.type === bg.NodeEnvironmentEnum.production) {
     const result = await notification.send(message, infra.Env.EMAIL_TO);
 
     infra.logger.info({

@@ -54,7 +54,11 @@ export const prerequisites = [
     label: "memory-consumption",
     maximum: new tools.Size({ value: 300, unit: tools.SizeUnit.MB }),
   }),
-  new bg.PrerequisiteLogFile({ label: "log-file", logger }),
+  new bg.PrerequisiteLogFile({
+    label: "log-file",
+    logger,
+    enabled: Env.type === bg.NodeEnvironmentEnum.production,
+  }),
 ];
 
 export const healthcheck = [

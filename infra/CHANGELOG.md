@@ -1,6 +1,13 @@
 # Changelog
+- 2025-06-07 15:56 6f28ff9 **step: bump bgord/scripts**
+## 2025-06-07 15:56 
+- 2025-06-07 15:51 b4cbdbd **step: bump bgord/scripts**
+- 2025-06-07 15:39 093ee89 **step: bump bgord/scripts**
+- 2025-06-07 15:28 ccaa4a4 **step: bump bgord/scripts**
+- 2025-06-07 15:27 a62e787 **step: bump bgord/scripts**
+- 2025-06-07 14:01 9154881 **step: update packages**
+- 2025-06-06 23:02 4772ed5 **fix: log file prereq**
 - 2025-06-05 20:55 3433222 **refactor: rename notification send test**
-## 2025-06-05 20:55 
 - 2025-06-05 20:54 35eeee3 **refactor: install latest bgord/bun**
 - 2025-06-05 20:52 9d0d4e3 **refactor: cleanup package.json**
 - 2025-06-05 20:38 69c50c2 **refactor: port env schemas**
@@ -19,6 +26,7 @@
 - 2025-06-05 20:09 db084f6 **step: update dev packages**
 - 2025-06-05 20:06 b444cd8 **step: bump bgord/scripts**
 - 2025-06-05 20:06 97202e3 **step: bump typescript**
+- 2025-06-05 18:57 141b22c **docs: generate CHANGELOG**
 - 2025-05-29 14:26 caf4649 **step: adjust ubuntu in changelog workflow**
 - 2025-05-29 14:26 6319598 **step: adjust ubuntu 24.04**
 - 2025-05-29 14:26 1029219 **step: adjust bun-version**

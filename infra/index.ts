@@ -6,10 +6,17 @@ import type { TimingVariables } from "hono/timing";
 import { Env } from "./env";
 import { logger } from "./logger";
 import { Mailer } from "./mailer";
+import { SupportedLanguages } from "./supported-languages";
 
 export * from "./env";
 export * from "./mailer";
 export * from "./logger";
+export * from "./supported-languages";
+
+export const I18nConfig: bg.I18nConfigType = {
+  supportedLanguages: SupportedLanguages,
+  defaultLanguage: SupportedLanguages.en,
+};
 
 export const requestTimeoutError = new HTTPException(408, {
   message: "request_timeout_error",

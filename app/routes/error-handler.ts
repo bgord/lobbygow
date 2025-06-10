@@ -1,7 +1,7 @@
 import * as bg from "@bgord/bun";
 import hono from "hono";
 import { HTTPException } from "hono/http-exception";
-import z from "zod";
+import z from "zod/v4";
 import * as infra from "../../infra";
 
 export class ErrorHandler {

@@ -66,12 +66,6 @@ export const prerequisites = [
     logger,
     enabled: Env.type === bg.NodeEnvironmentEnum.production,
   }),
-  new bg.PrerequisiteSSLCertificateExpiry({
-    label: "ssl-certificate-expiry",
-    host: "lobbygow.bgord.dev",
-    validDaysMinimum: 7,
-    enabled: Env.type === bg.NodeEnvironmentEnum.production,
-  }),
 ];
 
 export const healthcheck = [

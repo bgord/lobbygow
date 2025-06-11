@@ -1,11 +1,13 @@
 # Changelog
+- 2025-06-11 21:42 01ee4e3 **refactor: remove deps vuln prereq**
+## 2025-06-11 21:42 
 - 2025-06-11 17:08 39f236d **step: temporarily remove exec size log**
-## 2025-06-11 17:08 
 - 2025-06-11 16:54 0779b31 **step: bump bgord/bun**
 - 2025-06-11 16:16 beda75f **refactor: enable ssl cert expiry in non-prod**
 - 2025-06-11 16:06 8261509 **step: add log size of the output n deploy workflow**
 - 2025-06-11 16:02 a6bb36f **step: add deps vulns and ssl prereqs**
 - 2025-06-11 15:40 71f3899 **step: bump bgord bun**
+- 2025-06-11 15:09 d004910 **docs: generate CHANGELOG**
 - 2025-06-11 15:01 a9ee2e9 **step: bump bgord bun**
 - 2025-06-11 14:54 231ae03 **refactor: rebuild packages**
 - 2025-06-11 14:52 41c9b9b **fix: knip errors**

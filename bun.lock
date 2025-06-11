@@ -4,7 +4,7 @@
     "": {
       "name": "lobbygow",
       "dependencies": {
-        "@bgord/bun": "0.10.0",
+        "@bgord/bun": "0.10.1",
         "@bgord/tools": "0.8.0",
       },
       "devDependencies": {
@@ -25,7 +25,7 @@
 
     "@babel/helper-validator-identifier": ["@babel/helper-validator-identifier@7.27.1", "", {}, "sha512-D2hP9eA+Sqx1kBZgzxZh0y1trbuU+JoDkiEwqhQ36nodYqJwyEIhPSdMNd7lOm/4io72luTPWH20Yda0xOuUow=="],
 
-    "@bgord/bun": ["@bgord/bun@0.10.0", "", { "dependencies": { "@bgord/tools": "0.8.0", "check-disk-space": "3.4.0", "croner": "9.0.0", "hcaptcha": "0.2.0", "hono": "4.7.11", "lodash": "4.17.21", "lucia": "3.2.2", "mime-types": "3.0.1", "node-cache": "5.1.2", "nodemailer": "7.0.3", "sharp": "0.34.2", "ssl-checker": "2.0.10", "winston": "3.17.0" } }, "sha512-3AbyrHKUKnFgwOtec0bR+h8+J3/NCuJoWs15+32lL4vzlvflfuRLnGsgppjtum5ghKx8A5PLHHxwVMsHXac1Bw=="],
+    "@bgord/bun": ["@bgord/bun@0.10.1", "", { "dependencies": { "@bgord/tools": "0.8.0", "check-disk-space": "3.4.0", "croner": "9.0.0", "hcaptcha": "0.2.0", "hono": "4.7.11", "lodash": "4.17.21", "lucia": "3.2.2", "mime-types": "3.0.1", "node-cache": "5.1.2", "nodemailer": "7.0.3", "sharp": "0.34.2", "ssl-checker": "2.0.10", "winston": "3.17.0" } }, "sha512-aaJ+ZAmkoXGDX5675whtkp0/XJ9bh/7VroQ4e0oAJKjOOkDyWgMMa73GexCAkqVN8JKDHPziILPabZI8xeKOVw=="],
 
     "@bgord/tools": ["@bgord/tools@0.8.0", "", { "dependencies": { "date-fns": "4.1.0", "zod": "3.25.61" } }, "sha512-ZuVG6S8H77jLOY+sVkw7HpYF8EvonkJOBPvtWZikCo1OmPnD+8fI5uKFRkLL6vYC/I/rdW53J3VU9OSo++mq+w=="],
 

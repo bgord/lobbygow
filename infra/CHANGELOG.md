@@ -1,6 +1,7 @@
 # Changelog
+- 2025-06-11 16:06 8261509 **step: add log size of the output n deploy workflow**
+## 2025-06-11 16:06 
 - 2025-06-11 16:02 a6bb36f **step: add deps vulns and ssl prereqs**
-## 2025-06-11 16:02 
 - 2025-06-11 15:40 71f3899 **step: bump bgord bun**
 - 2025-06-11 15:01 a9ee2e9 **step: bump bgord bun**
 - 2025-06-11 14:54 231ae03 **refactor: rebuild packages**
@@ -9,6 +10,7 @@
 - 2025-06-11 14:18 9f10631 **step: add notification composer tests**
 - 2025-06-11 14:10 22d6236 **refactor: remove default composer**
 - 2025-06-11 14:08 e457133 **step: add more tests**
+- 2025-06-11 14:03 4875a92 **docs: generate CHANGELOG**
 - 2025-06-11 13:52 4f4f0e1 **step: bump bgord bun**
 - 2025-06-11 13:44 2710e91 **refactor: adjust rate limit shield config**
 - 2025-06-11 13:41 417aaf5 **docs: generate CHANGELOG**

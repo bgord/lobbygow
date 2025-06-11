@@ -19,7 +19,7 @@ export class NotificationComposerChooser {
   }
 }
 
-class NotificationComposerError implements NotificationComposerStrategy {
+export class NotificationComposerError implements NotificationComposerStrategy {
   strategy = "error";
 
   static isApplicable(kind: VO.NotificationKindEnum) {
@@ -34,7 +34,7 @@ class NotificationComposerError implements NotificationComposerStrategy {
   }
 }
 
-class NotificationComposerInfo implements NotificationComposerStrategy {
+export class NotificationComposerInfo implements NotificationComposerStrategy {
   strategy = "info";
 
   static isApplicable(kind: VO.NotificationKindEnum) {
@@ -49,7 +49,7 @@ class NotificationComposerInfo implements NotificationComposerStrategy {
   }
 }
 
-class NotificationComposerSuccess implements NotificationComposerStrategy {
+export class NotificationComposerSuccess implements NotificationComposerStrategy {
   strategy = "success";
 
   static isApplicable(kind: VO.NotificationKindEnum) {

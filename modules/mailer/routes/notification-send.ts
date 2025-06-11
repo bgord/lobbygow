@@ -30,15 +30,13 @@ export async function NotificationSend(c: hono.Context, _next: hono.Next) {
     metadata: { message },
   });
 
-  if (infra.Env.type === bg.NodeEnvironmentEnum.production) {
-    const result = await notification.send(message, infra.Env.EMAIL_TO);
+  const result = await notification.send(message, infra.Env.EMAIL_TO);
 
-    infra.logger.info({
-      message: "Notification sent",
-      operation: "notification_sent_result",
-      metadata: { result },
-    });
-  }
+  infra.logger.info({
+    message: "Notification sent",
+    operation: "notification_sent_result",
+    metadata: { result },
+  });
 
   return new Response();
 }

@@ -4,8 +4,6 @@ import { HTTPException } from "hono/http-exception";
 import z from "zod/v4";
 import * as infra from "../../infra";
 
-import { safeParseBody } from "../../safe-parse-body";
-
 export class ErrorHandler {
   static handle: hono.ErrorHandler = async (error, c) => {
     const url = c.req.url;
@@ -38,7 +36,7 @@ export class ErrorHandler {
         message: "Invalid payload",
         operation: "invalid_payload",
         correlationId,
-        metadata: { url, body: await safeParseBody(c) },
+        metadata: { url, body: await bg.safeParseBody(c) },
       });
 
       return c.json({ message: "payload.invalid.error", _known: true }, 400);

@@ -1,9 +1,11 @@
 # Changelog
+- 2025-06-11 22:07 c1dc56b **step: add inspect app size script**
+## 2025-06-11 22:07 
 - 2025-06-11 21:53 9e8285c **step: remove deps vuln prereq**
-## 2025-06-11 21:53 
 - 2025-06-11 21:50 bb658bf **step: try vuln deps prereq alone**
 - 2025-06-11 21:48 23680b7 **refactor: remove ssl cert expiry req**
 - 2025-06-11 21:42 01ee4e3 **refactor: remove deps vuln prereq**
+- 2025-06-11 19:53 7e69178 **docs: generate CHANGELOG**
 - 2025-06-11 19:51 fc9a93e **docs: generate CHANGELOG**
 - 2025-06-11 19:49 0c9954d **docs: generate CHANGELOG**
 - 2025-06-11 19:42 b8b9b3b **docs: generate CHANGELOG**

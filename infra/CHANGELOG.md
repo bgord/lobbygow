@@ -1,11 +1,15 @@
 # Changelog
+- 2025-06-11 22:16 9ce2dba **refactor: update the inspect the app size step**
+## 2025-06-11 22:16 
+- 2025-06-11 22:15 72153b2 **step: bump bgord/scripts**
+- 2025-06-11 22:15 1e23746 **refactor: move the inspect script to bgord-scripts**
 - 2025-06-11 22:11 f6d90b8 **step: make project name parameter in the inspect script**
-## 2025-06-11 22:11 
 - 2025-06-11 22:07 c1dc56b **step: add inspect app size script**
 - 2025-06-11 21:53 9e8285c **step: remove deps vuln prereq**
 - 2025-06-11 21:50 bb658bf **step: try vuln deps prereq alone**
 - 2025-06-11 21:48 23680b7 **refactor: remove ssl cert expiry req**
 - 2025-06-11 21:42 01ee4e3 **refactor: remove deps vuln prereq**
+- 2025-06-11 20:12 8a1501e **docs: generate CHANGELOG**
 - 2025-06-11 20:07 0662c17 **docs: generate CHANGELOG**
 - 2025-06-11 19:53 7e69178 **docs: generate CHANGELOG**
 - 2025-06-11 19:51 fc9a93e **docs: generate CHANGELOG**

@@ -1,6 +1,9 @@
 # Changelog
+- 2025-06-11 15:40 71f3899 **step: bump bgord bun**
+## 2025-06-11 15:40 
+- 2025-06-11 15:01 a9ee2e9 **step: bump bgord bun**
+- 2025-06-11 14:54 231ae03 **refactor: rebuild packages**
 - 2025-06-11 14:52 41c9b9b **fix: knip errors**
-## 2025-06-11 14:52 
 - 2025-06-11 14:18 bc8c0a4 **refactor: rename tests directory**
 - 2025-06-11 14:18 9f10631 **step: add notification composer tests**
 - 2025-06-11 14:10 22d6236 **refactor: remove default composer**
@@ -11,6 +14,7 @@
 - 2025-06-11 13:18 a951d83 **step: add validation tests**
 - 2025-06-11 13:17 cbba88e **step: extract safe-parse-body**
 - 2025-06-11 13:15 926db6e **step: extract ip helper**
+- 2025-06-11 12:53 e51fb0a **docs: generate CHANGELOG**
 - 2025-06-11 01:02 49a83ae **refactor: use zod v4**
 - 2025-06-11 00:20 9cae78d **refactor: use setup from bg**
 - 2025-06-11 00:12 1960e66 **refactor: regenerate bun lock**

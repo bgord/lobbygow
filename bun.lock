@@ -4,7 +4,7 @@
     "": {
       "name": "lobbygow",
       "dependencies": {
-        "@bgord/bun": "0.8.2",
+        "@bgord/bun": "0.9.0",
         "@bgord/tools": "0.8.0",
       },
       "devDependencies": {
@@ -25,7 +25,7 @@
 
     "@babel/helper-validator-identifier": ["@babel/helper-validator-identifier@7.27.1", "", {}, "sha512-D2hP9eA+Sqx1kBZgzxZh0y1trbuU+JoDkiEwqhQ36nodYqJwyEIhPSdMNd7lOm/4io72luTPWH20Yda0xOuUow=="],
 
-    "@bgord/bun": ["@bgord/bun@0.8.2", "", { "dependencies": { "@bgord/tools": "0.8.0", "check-disk-space": "3.4.0", "croner": "9.0.0", "hcaptcha": "0.2.0", "hono": "4.7.11", "lodash": "4.17.21", "lucia": "3.2.2", "mime-types": "3.0.1", "node-cache": "5.1.2", "nodemailer": "7.0.3", "sharp": "0.34.2", "ssl-checker": "2.0.10", "winston": "3.17.0" } }, "sha512-MDy26AxIIikfKbuT7o+ZNTFXnWTrtcSpY89ZIOOAffa3Ls01qKlYgqlkk7+atVJEDjASOO1kUkRwTw4dk06x4w=="],
+    "@bgord/bun": ["@bgord/bun@0.9.0", "", { "dependencies": { "@bgord/tools": "0.8.0", "check-disk-space": "3.4.0", "croner": "9.0.0", "hcaptcha": "0.2.0", "hono": "4.7.11", "lodash": "4.17.21", "lucia": "3.2.2", "mime-types": "3.0.1", "node-cache": "5.1.2", "nodemailer": "7.0.3", "sharp": "0.34.2", "ssl-checker": "2.0.10", "winston": "3.17.0" } }, "sha512-fXsWjY7c8bsO3JiXoAOutWqBp8J01wwrmQqo9Toow38Ic3Eu6rmeqJ89YMuYY7Pw/re3zjQm0CRjTkA0Qcx0Tw=="],
 
     "@bgord/tools": ["@bgord/tools@0.8.0", "", { "dependencies": { "date-fns": "4.1.0", "zod": "3.25.61" } }, "sha512-ZuVG6S8H77jLOY+sVkw7HpYF8EvonkJOBPvtWZikCo1OmPnD+8fI5uKFRkLL6vYC/I/rdW53J3VU9OSo++mq+w=="],
 
@@ -812,14 +812,6 @@
     "zod": ["zod@3.25.61", "", {}, "sha512-fzfJgUw78LTNnHujj9re1Ov/JJQkRZZGDMcYqSx7Hp4rPOkKywaFHq0S6GoHeXs0wGNE/sIOutkXgnwzrVOGCQ=="],
 
     "zod-validation-error": ["zod-validation-error@3.4.1", "", { "peerDependencies": { "zod": "^3.24.4" } }, "sha512-1KP64yqDPQ3rupxNv7oXhf7KdhHHgaqbKuspVoiN93TT0xrBjql+Svjkdjq/Qh/7GSMmgQs3AfvBT0heE35thw=="],
-
-    "@emnapi/core/tslib": ["tslib@2.8.1", "", {}, "sha512-oJFu94HQb+KVduSUQL7wnpmqnfmLsOA/nAh6b6EH0wCEoK0/mPeXU6c3wKDV83MkOuHPRHtSXKKU99IBazS/2w=="],
-
-    "@emnapi/runtime/tslib": ["tslib@2.8.1", "", {}, "sha512-oJFu94HQb+KVduSUQL7wnpmqnfmLsOA/nAh6b6EH0wCEoK0/mPeXU6c3wKDV83MkOuHPRHtSXKKU99IBazS/2w=="],
-
-    "@emnapi/wasi-threads/tslib": ["tslib@2.8.1", "", {}, "sha512-oJFu94HQb+KVduSUQL7wnpmqnfmLsOA/nAh6b6EH0wCEoK0/mPeXU6c3wKDV83MkOuHPRHtSXKKU99IBazS/2w=="],
-
-    "@tybys/wasm-util/tslib": ["tslib@2.8.1", "", {}, "sha512-oJFu94HQb+KVduSUQL7wnpmqnfmLsOA/nAh6b6EH0wCEoK0/mPeXU6c3wKDV83MkOuHPRHtSXKKU99IBazS/2w=="],
 
     "bl/readable-stream": ["readable-stream@2.3.8", "", { "dependencies": { "core-util-is": "~1.0.0", "inherits": "~2.0.3", "isarray": "~1.0.0", "process-nextick-args": "~2.0.0", "safe-buffer": "~5.1.1", "string_decoder": "~1.1.1", "util-deprecate": "~1.0.1" } }, "sha512-8p0AUk4XODgIewSi0l8Epjs+EVnWiK7NoDIEGU0HhE7+ZyY8D1IMY7odu5lRrFXGg71L15KG8QrPmum45RTtdA=="],
 

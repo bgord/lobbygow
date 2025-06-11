@@ -17,7 +17,10 @@ const startup = new tools.Stopwatch();
 // Healthcheck =================
 server.get(
   "/healthcheck",
-  bg.rateLimitShield(tools.Time.Seconds(5)),
+  bg.rateLimitShield({
+    time: tools.Time.Seconds(5),
+    enabled: infra.Env.type === bg.NodeEnvironmentEnum.production,
+  }),
   timeout(tools.Time.Seconds(15).ms, infra.requestTimeoutError),
   infra.BasicAuthShield,
   ...bg.Healthcheck.build(infra.healthcheck),
@@ -27,7 +30,10 @@ server.get(
 // Mailer =================
 server.post(
   "/notification-send",
-  bg.rateLimitShield(tools.Time.Seconds(5)),
+  bg.rateLimitShield({
+    time: tools.Time.Seconds(5),
+    enabled: infra.Env.type === bg.NodeEnvironmentEnum.production,
+  }),
   timeout(tools.Time.Seconds(15).ms, infra.requestTimeoutError),
   infra.ApiKeyShield.verify,
   Mailer.Routes.NotificationSend,

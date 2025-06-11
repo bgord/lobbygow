@@ -73,6 +73,7 @@ export const prerequisites = [
     label: "ssl-certificate-expiry",
     host: "lobbygow.bgord.dev",
     validDaysMinimum: 7,
+    enabled: Env.type === bg.NodeEnvironmentEnum.production,
   }),
 ];
 

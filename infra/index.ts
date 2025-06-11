@@ -66,6 +66,14 @@ export const prerequisites = [
     logger,
     enabled: Env.type === bg.NodeEnvironmentEnum.production,
   }),
+  new bg.PrerequisiteDependencyVulnerabilities({
+    label: "dependency-vulnerabilities",
+  }),
+  new bg.PrerequisiteSSLCertificateExpiry({
+    label: "ssl-certificate-expiry",
+    host: "lobbygow.bgord.dev",
+    validDaysMinimum: 7,
+  }),
 ];
 
 export const healthcheck = [

@@ -35,6 +35,9 @@ jobs:
       - name: Build the app
         run: ./scripts/production-server-build.sh
 
+      - name: Inspect the app size
+        run: ./scripts/production-server-inspect.sh
+
       - name: Configure SSH
         run: |
           mkdir -p ~/.ssh/

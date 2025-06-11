@@ -10,29 +10,12 @@ export abstract class NotificationComposerStrategy {
 
 export class NotificationComposerChooser {
   static choose(kind: VO.NotificationKindEnum): NotificationComposerStrategy {
-    const strategies = [
-      NotificationComposerSuccess,
-      NotificationComposerInfo,
-      NotificationComposerError,
-      NotificationComposerDefault,
-    ];
+    const strategies = [NotificationComposerSuccess, NotificationComposerInfo, NotificationComposerError];
 
     const NotificationComposerStrategy =
-      strategies.find((strategy) => strategy.isApplicable(kind)) ?? NotificationComposerDefault;
+      strategies.find((strategy) => strategy.isApplicable(kind)) ?? NotificationComposerInfo;
 
     return new NotificationComposerStrategy();
-  }
-}
-
-class NotificationComposerDefault implements NotificationComposerStrategy {
-  strategy = "default";
-
-  static isApplicable() {
-    return true;
-  }
-
-  async compose(subject: bg.EmailSubjectType, content: bg.EmailContentHtmlType) {
-    return { subject, content };
   }
 }
 

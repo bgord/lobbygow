@@ -1,6 +1,8 @@
 # Changelog
+- 2025-06-11 17:08 39f236d **step: temporarily remove exec size log**
+## 2025-06-11 17:08 
+- 2025-06-11 16:54 0779b31 **step: bump bgord/bun**
 - 2025-06-11 16:16 beda75f **refactor: enable ssl cert expiry in non-prod**
-## 2025-06-11 16:16 
 - 2025-06-11 16:06 8261509 **step: add log size of the output n deploy workflow**
 - 2025-06-11 16:02 a6bb36f **step: add deps vulns and ssl prereqs**
 - 2025-06-11 15:40 71f3899 **step: bump bgord bun**
@@ -9,6 +11,7 @@
 - 2025-06-11 14:52 41c9b9b **fix: knip errors**
 - 2025-06-11 14:18 bc8c0a4 **refactor: rename tests directory**
 - 2025-06-11 14:18 9f10631 **step: add notification composer tests**
+- 2025-06-11 14:17 a8b82e8 **docs: generate CHANGELOG**
 - 2025-06-11 14:10 22d6236 **refactor: remove default composer**
 - 2025-06-11 14:08 e457133 **step: add more tests**
 - 2025-06-11 14:06 03913b7 **docs: generate CHANGELOG**

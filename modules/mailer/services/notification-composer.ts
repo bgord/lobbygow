@@ -19,6 +19,7 @@ export class NotificationComposerChooser {
   }
 }
 
+/** @public */
 export class NotificationComposerError implements NotificationComposerStrategy {
   strategy = "error";
 
@@ -34,6 +35,7 @@ export class NotificationComposerError implements NotificationComposerStrategy {
   }
 }
 
+/** @public */
 export class NotificationComposerInfo implements NotificationComposerStrategy {
   strategy = "info";
 
@@ -49,6 +51,7 @@ export class NotificationComposerInfo implements NotificationComposerStrategy {
   }
 }
 
+/** @public */
 export class NotificationComposerSuccess implements NotificationComposerStrategy {
   strategy = "success";
 

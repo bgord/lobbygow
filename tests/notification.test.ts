@@ -1,4 +1,4 @@
-import { describe, expect, test, spyOn, jest } from "bun:test";
+import { describe, expect, jest, spyOn, test } from "bun:test";
 
 import * as infra from "../infra";
 import { Notification } from "../modules/mailer/services/notification";
@@ -18,9 +18,7 @@ const notification = new Notification(subject, content);
 describe("Notification", () => {
   describe("compose", () => {
     test("kind - success", async () => {
-      const composer = NotificationComposerChooser.choose(
-        NotificationKindEnum.success,
-      );
+      const composer = NotificationComposerChooser.choose(NotificationKindEnum.success);
 
       const message = await notification.compose(composer);
 
@@ -29,9 +27,7 @@ describe("Notification", () => {
     });
 
     test("kind - error", async () => {
-      const composer = NotificationComposerChooser.choose(
-        NotificationKindEnum.error,
-      );
+      const composer = NotificationComposerChooser.choose(NotificationKindEnum.error);
 
       const message = await notification.compose(composer);
 
@@ -40,9 +36,7 @@ describe("Notification", () => {
     });
 
     test("kind - info", async () => {
-      const composer = NotificationComposerChooser.choose(
-        NotificationKindEnum.info,
-      );
+      const composer = NotificationComposerChooser.choose(NotificationKindEnum.info);
 
       const message = await notification.compose(composer);
 
@@ -53,13 +47,9 @@ describe("Notification", () => {
 
   describe("send", () => {
     test("kind - success", async () => {
-      const infraMailerSend = spyOn(infra.Mailer, "send").mockImplementation(
-        jest.fn(),
-      );
+      const infraMailerSend = spyOn(infra.Mailer, "send").mockImplementation(jest.fn());
 
-      const composer = NotificationComposerChooser.choose(
-        NotificationKindEnum.success,
-      );
+      const composer = NotificationComposerChooser.choose(NotificationKindEnum.success);
 
       const message = await notification.compose(composer);
 
@@ -74,13 +64,9 @@ describe("Notification", () => {
     });
 
     test("kind - error", async () => {
-      const infraMailerSend = spyOn(infra.Mailer, "send").mockImplementation(
-        jest.fn(),
-      );
+      const infraMailerSend = spyOn(infra.Mailer, "send").mockImplementation(jest.fn());
 
-      const composer = NotificationComposerChooser.choose(
-        NotificationKindEnum.error,
-      );
+      const composer = NotificationComposerChooser.choose(NotificationKindEnum.error);
 
       const message = await notification.compose(composer);
 
@@ -95,13 +81,9 @@ describe("Notification", () => {
     });
 
     test("kind - info", async () => {
-      const infraMailerSend = spyOn(infra.Mailer, "send").mockImplementation(
-        jest.fn(),
-      );
+      const infraMailerSend = spyOn(infra.Mailer, "send").mockImplementation(jest.fn());
 
-      const composer = NotificationComposerChooser.choose(
-        NotificationKindEnum.info,
-      );
+      const composer = NotificationComposerChooser.choose(NotificationKindEnum.info);
 
       const message = await notification.compose(composer);
 

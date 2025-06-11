@@ -3,7 +3,12 @@ import * as bgb from "@bgord/bun";
 import * as infra from "../infra";
 import * as Mailer from "../modules/mailer";
 import { server } from "../server";
-import * as testcases from "./testcases";
+
+const ip = {
+  server: {
+    requestIP: () => ({ address: "127.0.0.1", family: "foo", port: "123" }),
+  },
+};
 
 describe("POST /notification-send", () => {
   test("validation - empty payload", async () => {
@@ -15,7 +20,7 @@ describe("POST /notification-send", () => {
           [bgb.ApiKeyShield.HEADER_NAME]: infra.Env.API_KEY,
         }),
       },
-      testcases.ip,
+      ip,
     );
 
     const json = await response.json();
@@ -34,7 +39,7 @@ describe("POST /notification-send", () => {
           [bgb.ApiKeyShield.HEADER_NAME]: infra.Env.API_KEY,
         }),
       },
-      testcases.ip,
+      ip,
     );
 
     const json = await response.json();
@@ -56,7 +61,7 @@ describe("POST /notification-send", () => {
           [bgb.ApiKeyShield.HEADER_NAME]: infra.Env.API_KEY,
         }),
       },
-      testcases.ip,
+      ip,
     );
 
     const json = await response.json();
@@ -78,7 +83,7 @@ describe("POST /notification-send", () => {
           [bgb.ApiKeyShield.HEADER_NAME]: infra.Env.API_KEY,
         }),
       },
-      testcases.ip,
+      ip,
     );
 
     const json = await response.json();
@@ -105,7 +110,7 @@ describe("POST /notification-send", () => {
           [bgb.ApiKeyShield.HEADER_NAME]: infra.Env.API_KEY,
         }),
       },
-      testcases.ip,
+      ip,
     );
 
     expect(response.status).toBe(200);
@@ -136,7 +141,7 @@ describe("POST /notification-send", () => {
           [bgb.ApiKeyShield.HEADER_NAME]: infra.Env.API_KEY,
         }),
       },
-      testcases.ip,
+      ip,
     );
 
     expect(response.status).toBe(200);
@@ -167,7 +172,7 @@ describe("POST /notification-send", () => {
           [bgb.ApiKeyShield.HEADER_NAME]: infra.Env.API_KEY,
         }),
       },
-      testcases.ip,
+      ip,
     );
 
     expect(response.status).toBe(200);
@@ -194,7 +199,7 @@ describe("POST /notification-send", () => {
           [bgb.ApiKeyShield.HEADER_NAME]: infra.Env.API_KEY,
         }),
       },
-      testcases.ip,
+      ip,
     );
 
     expect(response.status).toBe(200);

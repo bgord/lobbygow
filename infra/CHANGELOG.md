@@ -1,11 +1,26 @@
 # Changelog
+- 2025-06-11 14:52 41c9b9b **fix: knip errors**
+## 2025-06-11 14:52 
+- 2025-06-11 14:18 bc8c0a4 **refactor: rename tests directory**
+- 2025-06-11 14:18 9f10631 **step: add notification composer tests**
+- 2025-06-11 14:10 22d6236 **refactor: remove default composer**
+- 2025-06-11 14:08 e457133 **step: add more tests**
+- 2025-06-11 13:52 4f4f0e1 **step: bump bgord bun**
+- 2025-06-11 13:44 2710e91 **refactor: adjust rate limit shield config**
+- 2025-06-11 13:36 86a0471 **step: update bgord packages**
+- 2025-06-11 13:18 a951d83 **step: add validation tests**
+- 2025-06-11 13:17 cbba88e **step: extract safe-parse-body**
+- 2025-06-11 13:15 926db6e **step: extract ip helper**
+- 2025-06-11 01:02 49a83ae **refactor: use zod v4**
+- 2025-06-11 00:20 9cae78d **refactor: use setup from bg**
+- 2025-06-11 00:12 1960e66 **refactor: regenerate bun lock**
 - 2025-06-07 15:56 6f28ff9 **step: bump bgord/scripts**
-## 2025-06-07 15:56 
 - 2025-06-07 15:51 b4cbdbd **step: bump bgord/scripts**
 - 2025-06-07 15:39 093ee89 **step: bump bgord/scripts**
 - 2025-06-07 15:28 ccaa4a4 **step: bump bgord/scripts**
 - 2025-06-07 15:27 a62e787 **step: bump bgord/scripts**
 - 2025-06-07 14:01 9154881 **step: update packages**
+- 2025-06-07 13:56 b231381 **docs: generate CHANGELOG**
 - 2025-06-06 23:02 4772ed5 **fix: log file prereq**
 - 2025-06-05 20:55 3433222 **refactor: rename notification send test**
 - 2025-06-05 20:54 35eeee3 **refactor: install latest bgord/bun**

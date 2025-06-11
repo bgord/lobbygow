@@ -24,6 +24,25 @@ describe("POST /notification-send", () => {
     expect(json).toEqual({ message: "payload.invalid.error", _known: true });
   });
 
+  test("validation - invalid payload", async () => {
+    const response = await server.request(
+      "/notification-send",
+      {
+        method: "POST",
+        body: "invalid-json",
+        headers: new Headers({
+          [bgb.ApiKeyShield.HEADER_NAME]: infra.Env.API_KEY,
+        }),
+      },
+      testcases.ip,
+    );
+
+    const json = await response.json();
+
+    expect(response.status).toBe(400);
+    expect(json).toEqual({ message: "payload.invalid.error", _known: true });
+  });
+
   test("validation - missing subject", async () => {
     const response = await server.request(
       "/notification-send",

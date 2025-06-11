@@ -3,12 +3,7 @@ import * as bgb from "@bgord/bun";
 import * as infra from "../infra";
 import * as Mailer from "../modules/mailer";
 import { server } from "../server";
-
-const ip = {
-  server: {
-    requestIP: () => ({ address: "127.0.0.1", family: "foo", port: "123" }),
-  },
-};
+import * as testcases from "./testcases";
 
 describe("POST /notification-send", () => {
   test("happy path", async () => {

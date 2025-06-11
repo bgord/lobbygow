@@ -4,8 +4,10 @@ import * as infra from "../../../infra";
 import * as Services from "../services";
 import * as VO from "../value-objects";
 
+import { safeParseBody } from "../../../safe-parse-body";
+
 export async function NotificationSend(c: hono.Context, _next: hono.Next) {
-  const body = await c.req.json();
+  const body = await safeParseBody(c);
 
   const subject = bg.EmailSubject.parse(body.subject);
   const content = bg.EmailContentHtml.parse(body.content);

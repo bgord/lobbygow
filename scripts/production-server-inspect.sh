@@ -6,4 +6,8 @@ setup_base_config
 
 OUTPUT_DIRECTORY="build"
 
-du -sh "$OUTPUT_DIRECTORY"/lobbygow
+PROJECT_NAME=$1
+
+validate_non_empty "PROJECT_NAME" "$PROJECT_NAME"
+
+du -sh "$OUTPUT_DIRECTORY/$PROJECT_NAME"

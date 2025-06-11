@@ -4,8 +4,8 @@
     "": {
       "name": "lobbygow",
       "dependencies": {
-        "@bgord/bun": "0.8.0",
-        "@bgord/tools": "0.7.0",
+        "@bgord/bun": "0.8.1",
+        "@bgord/tools": "0.8.0",
       },
       "devDependencies": {
         "@biomejs/biome": "1.9.4",
@@ -25,9 +25,9 @@
 
     "@babel/helper-validator-identifier": ["@babel/helper-validator-identifier@7.27.1", "", {}, "sha512-D2hP9eA+Sqx1kBZgzxZh0y1trbuU+JoDkiEwqhQ36nodYqJwyEIhPSdMNd7lOm/4io72luTPWH20Yda0xOuUow=="],
 
-    "@bgord/bun": ["@bgord/bun@0.8.0", "", { "dependencies": { "@bgord/tools": "0.7.0", "check-disk-space": "3.4.0", "croner": "9.0.0", "hcaptcha": "0.2.0", "hono": "4.7.11", "lodash": "4.17.21", "lucia": "3.2.2", "mime-types": "3.0.1", "node-cache": "5.1.2", "nodemailer": "7.0.3", "sharp": "0.34.2", "ssl-checker": "2.0.10", "winston": "3.17.0" } }, "sha512-kJ6r4Ac3KzDXcmzu6KIMZNXmV+jReYr5/NgWvTZAvUVB40/3yGeC36Ak0fxGzIUnTNH3qIO+m4SaKskAkNdVMw=="],
+    "@bgord/bun": ["@bgord/bun@0.8.1", "", { "dependencies": { "@bgord/tools": "0.8.0", "check-disk-space": "3.4.0", "croner": "9.0.0", "hcaptcha": "0.2.0", "hono": "4.7.11", "lodash": "4.17.21", "lucia": "3.2.2", "mime-types": "3.0.1", "node-cache": "5.1.2", "nodemailer": "7.0.3", "sharp": "0.34.2", "ssl-checker": "2.0.10", "winston": "3.17.0" } }, "sha512-HFiMsPVfco8IcSOjcwFWA/kuHRMTJ9PJHZPLtVISiGL0ORtmVbDtOcSP3dhlemtCTw7G9Y48uDHSQQIr87v2+w=="],
 
-    "@bgord/tools": ["@bgord/tools@0.7.0", "", { "dependencies": { "date-fns": "4.1.0", "zod": "3.25.55" } }, "sha512-GIp+EJZHt5sC1Fgkdh/v24ONA5+6SwDgwYt7rIyR4vi0rBDZ2jZ+M/My2pfFvKYUDTc/R6HeVQ6Re3QjbuEz8g=="],
+    "@bgord/tools": ["@bgord/tools@0.8.0", "", { "dependencies": { "date-fns": "4.1.0", "zod": "3.25.61" } }, "sha512-ZuVG6S8H77jLOY+sVkw7HpYF8EvonkJOBPvtWZikCo1OmPnD+8fI5uKFRkLL6vYC/I/rdW53J3VU9OSo++mq+w=="],
 
     "@biomejs/biome": ["@biomejs/biome@1.9.4", "", { "optionalDependencies": { "@biomejs/cli-darwin-arm64": "1.9.4", "@biomejs/cli-darwin-x64": "1.9.4", "@biomejs/cli-linux-arm64": "1.9.4", "@biomejs/cli-linux-arm64-musl": "1.9.4", "@biomejs/cli-linux-x64": "1.9.4", "@biomejs/cli-linux-x64-musl": "1.9.4", "@biomejs/cli-win32-arm64": "1.9.4", "@biomejs/cli-win32-x64": "1.9.4" }, "bin": { "biome": "bin/biome" } }, "sha512-1rkd7G70+o9KkTn5KLmDYXihGoTaIGO9PIIN2ZB7UJxFrWw04CZHPYiMRjYsaDvVV7hP1dYNRLxSANLaBFGpog=="],
 
@@ -809,11 +809,17 @@
 
     "yocto-queue": ["yocto-queue@1.2.1", "", {}, "sha512-AyeEbWOu/TAXdxlV9wmGcR0+yh2j3vYPGOECcIj2S7MkrLyC7ne+oye2BKTItt0ii2PHk4cDy+95+LshzbXnGg=="],
 
-    "zod": ["zod@3.25.57", "", {}, "sha512-6tgzLuwVST5oLUxXTmBqoinKMd3JeesgbgseXeFasKKj8Q1FCZrHnbqJOyiEvr4cVAlbug+CgIsmJ8cl/pU5FA=="],
+    "zod": ["zod@3.25.61", "", {}, "sha512-fzfJgUw78LTNnHujj9re1Ov/JJQkRZZGDMcYqSx7Hp4rPOkKywaFHq0S6GoHeXs0wGNE/sIOutkXgnwzrVOGCQ=="],
 
     "zod-validation-error": ["zod-validation-error@3.4.1", "", { "peerDependencies": { "zod": "^3.24.4" } }, "sha512-1KP64yqDPQ3rupxNv7oXhf7KdhHHgaqbKuspVoiN93TT0xrBjql+Svjkdjq/Qh/7GSMmgQs3AfvBT0heE35thw=="],
 
-    "@bgord/tools/zod": ["zod@3.25.55", "", {}, "sha512-219huNnkSLQnLsQ3uaRjXsxMrVm5C9W3OOpEVt2k5tvMKuA8nBSu38e0B//a+he9Iq2dvmk2VyYVlHqiHa4YBA=="],
+    "@emnapi/core/tslib": ["tslib@2.8.1", "", {}, "sha512-oJFu94HQb+KVduSUQL7wnpmqnfmLsOA/nAh6b6EH0wCEoK0/mPeXU6c3wKDV83MkOuHPRHtSXKKU99IBazS/2w=="],
+
+    "@emnapi/runtime/tslib": ["tslib@2.8.1", "", {}, "sha512-oJFu94HQb+KVduSUQL7wnpmqnfmLsOA/nAh6b6EH0wCEoK0/mPeXU6c3wKDV83MkOuHPRHtSXKKU99IBazS/2w=="],
+
+    "@emnapi/wasi-threads/tslib": ["tslib@2.8.1", "", {}, "sha512-oJFu94HQb+KVduSUQL7wnpmqnfmLsOA/nAh6b6EH0wCEoK0/mPeXU6c3wKDV83MkOuHPRHtSXKKU99IBazS/2w=="],
+
+    "@tybys/wasm-util/tslib": ["tslib@2.8.1", "", {}, "sha512-oJFu94HQb+KVduSUQL7wnpmqnfmLsOA/nAh6b6EH0wCEoK0/mPeXU6c3wKDV83MkOuHPRHtSXKKU99IBazS/2w=="],
 
     "bl/readable-stream": ["readable-stream@2.3.8", "", { "dependencies": { "core-util-is": "~1.0.0", "inherits": "~2.0.3", "isarray": "~1.0.0", "process-nextick-args": "~2.0.0", "safe-buffer": "~5.1.1", "string_decoder": "~1.1.1", "util-deprecate": "~1.0.1" } }, "sha512-8p0AUk4XODgIewSi0l8Epjs+EVnWiK7NoDIEGU0HhE7+ZyY8D1IMY7odu5lRrFXGg71L15KG8QrPmum45RTtdA=="],
 

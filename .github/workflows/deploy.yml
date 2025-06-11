@@ -35,6 +35,12 @@ jobs:
       - name: Build the app
         run: ./scripts/production-server-build.sh
 
+      - name: Log size of the output
+        run: |
+          echo "Executable size:"
+          stat --printf="%s bytes\n" "$OUTPUT_DIRECTORY/lobbygow"
+          du -h "$OUTPUT_DIRECTORY/lobbygow"
+
       - name: Configure SSH
         run: |
           mkdir -p ~/.ssh/

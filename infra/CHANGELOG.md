@@ -1,6 +1,7 @@
 # Changelog
+- 2025-06-11 16:02 a6bb36f **step: add deps vulns and ssl prereqs**
+## 2025-06-11 16:02 
 - 2025-06-11 15:40 71f3899 **step: bump bgord bun**
-## 2025-06-11 15:40 
 - 2025-06-11 15:01 a9ee2e9 **step: bump bgord bun**
 - 2025-06-11 14:54 231ae03 **refactor: rebuild packages**
 - 2025-06-11 14:52 41c9b9b **fix: knip errors**
@@ -10,6 +11,7 @@
 - 2025-06-11 14:08 e457133 **step: add more tests**
 - 2025-06-11 13:52 4f4f0e1 **step: bump bgord bun**
 - 2025-06-11 13:44 2710e91 **refactor: adjust rate limit shield config**
+- 2025-06-11 13:41 417aaf5 **docs: generate CHANGELOG**
 - 2025-06-11 13:36 86a0471 **step: update bgord packages**
 - 2025-06-11 13:18 a951d83 **step: add validation tests**
 - 2025-06-11 13:17 cbba88e **step: extract safe-parse-body**

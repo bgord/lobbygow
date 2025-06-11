@@ -66,6 +66,9 @@ export const prerequisites = [
     logger,
     enabled: Env.type === bg.NodeEnvironmentEnum.production,
   }),
+  new bg.PrerequisiteDependencyVulnerabilities({
+    label: "dependency-vulnerabilities",
+  }),
 ];
 
 export const healthcheck = [

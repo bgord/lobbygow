@@ -1,6 +1,8 @@
 # Changelog
+- 2025-06-11 21:48 23680b7 **refactor: remove ssl cert expiry req**
+## 2025-06-11 21:48 
 - 2025-06-11 21:42 01ee4e3 **refactor: remove deps vuln prereq**
-## 2025-06-11 21:42 
+- 2025-06-11 19:42 b8b9b3b **docs: generate CHANGELOG**
 - 2025-06-11 17:08 39f236d **step: temporarily remove exec size log**
 - 2025-06-11 16:54 0779b31 **step: bump bgord/bun**
 - 2025-06-11 16:16 beda75f **refactor: enable ssl cert expiry in non-prod**

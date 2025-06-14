@@ -1,6 +1,11 @@
 # Changelog
+- 2025-06-14 17:06 f43a3f8 **step: update packages**
+## 2025-06-14 17:06 
+- 2025-06-14 17:05 4b8dfdf **refactor: adjust timezone prereq**
+- 2025-06-14 17:04 9b1e301 **step: bump bgord-bun**
+- 2025-06-14 14:16 47bf072 **step: bump bgord-tools**
+- 2025-06-14 14:15 5cce5d5 **step: bump bgord-bun**
 - 2025-06-11 22:39 1738a64 **refactor: use safe parse body from bgord bun**
-## 2025-06-11 22:39 
 - 2025-06-11 22:38 d1f2884 **step: bump bgord bun**
 - 2025-06-11 22:27 10435d4 **refactor: move safe-parse-body to bgord-bun**
 - 2025-06-11 22:16 9ce2dba **refactor: update the inspect the app size step**
@@ -12,6 +17,7 @@
 - 2025-06-11 21:50 bb658bf **step: try vuln deps prereq alone**
 - 2025-06-11 21:48 23680b7 **refactor: remove ssl cert expiry req**
 - 2025-06-11 21:42 01ee4e3 **refactor: remove deps vuln prereq**
+- 2025-06-11 20:39 a6fb01d **docs: generate CHANGELOG**
 - 2025-06-11 20:16 76897c7 **docs: generate CHANGELOG**
 - 2025-06-11 20:12 8a1501e **docs: generate CHANGELOG**
 - 2025-06-11 20:07 0662c17 **docs: generate CHANGELOG**

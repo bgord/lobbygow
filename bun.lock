@@ -4,7 +4,7 @@
     "": {
       "name": "lobbygow",
       "dependencies": {
-        "@bgord/bun": "0.11.0",
+        "@bgord/bun": "0.11.1",
         "@bgord/tools": "0.9.2",
       },
       "devDependencies": {
@@ -25,7 +25,7 @@
 
     "@babel/helper-validator-identifier": ["@babel/helper-validator-identifier@7.27.1", "", {}, "sha512-D2hP9eA+Sqx1kBZgzxZh0y1trbuU+JoDkiEwqhQ36nodYqJwyEIhPSdMNd7lOm/4io72luTPWH20Yda0xOuUow=="],
 
-    "@bgord/bun": ["@bgord/bun@0.11.0", "", { "dependencies": { "@bgord/tools": "0.9.2", "check-disk-space": "3.4.0", "croner": "9.0.0", "hcaptcha": "0.2.0", "hono": "4.7.11", "lodash": "4.17.21", "lucia": "3.2.2", "mime-types": "3.0.1", "node-cache": "5.1.2", "nodemailer": "7.0.3", "sharp": "0.34.2", "ssl-checker": "2.0.10", "winston": "3.17.0" } }, "sha512-8pKETMDYMrPTNV+KXixJ8+QBxzLjN5RCS77Qjr1WNGN2Wx0sxd5xiL7SjWEv0tnEG2bmh1tZQnkeXyV06cP+sA=="],
+    "@bgord/bun": ["@bgord/bun@0.11.1", "", { "dependencies": { "@bgord/tools": "0.9.2", "check-disk-space": "3.4.0", "croner": "9.0.0", "hcaptcha": "0.2.0", "hono": "4.7.11", "lodash": "4.17.21", "lucia": "3.2.2", "mime-types": "3.0.1", "node-cache": "5.1.2", "nodemailer": "7.0.3", "sharp": "0.34.2", "ssl-checker": "2.0.10", "winston": "3.17.0" } }, "sha512-2HEBVspApkyIHM3OJBH3dnHmeLgIylpCKa8WXB4QRkmxz/mfHLDy/FIQ1NB0ImWsjJbi8KS7NXHJ+cpkEWHS2g=="],
 
     "@bgord/tools": ["@bgord/tools@0.9.2", "", { "dependencies": { "date-fns": "4.1.0", "zod": "3.25.64" } }, "sha512-jRCs42y9M/jaIRfkq3qtNJxaIborJ1IiLXQYblIco5D3lYzLE8OY3sM5P7YADktrKjd1qx+CUU8jCtKq8hmDsQ=="],
 
@@ -125,7 +125,7 @@
 
     "@cspell/dict-elixir": ["@cspell/dict-elixir@4.0.7", "", {}, "sha512-MAUqlMw73mgtSdxvbAvyRlvc3bYnrDqXQrx5K9SwW8F7fRYf9V4vWYFULh+UWwwkqkhX9w03ZqFYRTdkFku6uA=="],
 
-    "@cspell/dict-en-common-misspellings": ["@cspell/dict-en-common-misspellings@2.0.12", "", {}, "sha512-3H0NTilLTI2zpHK5Jm85TQHDLiAx2jlJrlOoe9jy5wrYN64RMojqk6NsusLzunetYVlZmEHNYyqmwizIq5soqA=="],
+    "@cspell/dict-en-common-misspellings": ["@cspell/dict-en-common-misspellings@2.1.1", "", {}, "sha512-6m2EEm4WUgsNzFzz/2boeOVrZenYQRaDXFtDNcaQK5Ly4A37HTRPm8uVvE8cAlACVk+HBHhH/4e7ebxdXwId9w=="],
 
     "@cspell/dict-en-gb-mit": ["@cspell/dict-en-gb-mit@3.1.1", "", {}, "sha512-sZbuOPlAGDwudoquXjaSA+TbJEzfG0MkUeF4Iz3tdL9xOYDb6lgueNVnDJfBrw6jrKKDdOI68MJqiLjW4uth8A=="],
 
@@ -171,7 +171,7 @@
 
     "@cspell/dict-makefile": ["@cspell/dict-makefile@1.0.4", "", {}, "sha512-E4hG/c0ekPqUBvlkrVvzSoAA+SsDA9bLi4xSV3AXHTVru7Y2bVVGMPtpfF+fI3zTkww/jwinprcU1LSohI3ylw=="],
 
-    "@cspell/dict-markdown": ["@cspell/dict-markdown@2.0.10", "", { "peerDependencies": { "@cspell/dict-css": "^4.0.17", "@cspell/dict-html": "^4.0.11", "@cspell/dict-html-symbol-entities": "^4.0.3", "@cspell/dict-typescript": "^3.2.1" } }, "sha512-vtVa6L/84F9sTjclTYDkWJF/Vx2c5xzxBKkQp+CEFlxOF2SYgm+RSoEvAvg5vj4N5kuqR4350ZlY3zl2eA3MXw=="],
+    "@cspell/dict-markdown": ["@cspell/dict-markdown@2.0.11", "", { "peerDependencies": { "@cspell/dict-css": "^4.0.17", "@cspell/dict-html": "^4.0.11", "@cspell/dict-html-symbol-entities": "^4.0.3", "@cspell/dict-typescript": "^3.2.2" } }, "sha512-stZieFKJyMQbzKTVoalSx2QqCpB0j8nPJF/5x+sBnDIWgMC65jp8Wil+jccWh9/vnUVukP3Ejewven5NC7SWuQ=="],
 
     "@cspell/dict-monkeyc": ["@cspell/dict-monkeyc@1.0.10", "", {}, "sha512-7RTGyKsTIIVqzbvOtAu6Z/lwwxjGRtY5RkKPlXKHEoEAgIXwfDxb5EkVwzGQwQr8hF/D3HrdYbRT8MFBfsueZw=="],
 
@@ -197,7 +197,7 @@
 
     "@cspell/dict-shell": ["@cspell/dict-shell@1.1.0", "", {}, "sha512-D/xHXX7T37BJxNRf5JJHsvziFDvh23IF/KvkZXNSh8VqcRdod3BAz9VGHZf6VDqcZXr1VRqIYR3mQ8DSvs3AVQ=="],
 
-    "@cspell/dict-software-terms": ["@cspell/dict-software-terms@5.0.11", "", {}, "sha512-jScYh463jurPige3hUYCNybG0ucCrl1AmbmnOrO8LUoZzIuWapQc64pUg4nJcfM75n/5tJxxNHN4bSekQzf+pA=="],
+    "@cspell/dict-software-terms": ["@cspell/dict-software-terms@5.1.0", "", {}, "sha512-8zsOVzcHpb4PAaKtOWAIJRbpaNINaUZRsHzqFb3K9hQIC6hxmet/avLlCeKdnmBVZkn3TmRN5caxTJamJvbXww=="],
 
     "@cspell/dict-sql": ["@cspell/dict-sql@2.2.0", "", {}, "sha512-MUop+d1AHSzXpBvQgQkCiok8Ejzb+nrzyG16E8TvKL2MQeDwnIvMe3bv90eukP6E1HWb+V/MA/4pnq0pcJWKqQ=="],
 
@@ -207,7 +207,7 @@
 
     "@cspell/dict-terraform": ["@cspell/dict-terraform@1.1.1", "", {}, "sha512-07KFDwCU7EnKl4hOZLsLKlj6Zceq/IsQ3LRWUyIjvGFfZHdoGtFdCp3ZPVgnFaAcd/DKv+WVkrOzUBSYqHopQQ=="],
 
-    "@cspell/dict-typescript": ["@cspell/dict-typescript@3.2.1", "", {}, "sha512-jdnKg4rBl75GUBTsUD6nTJl7FGvaIt5wWcWP7TZSC3rV1LfkwvbUiY3PiGpfJlAIdnLYSeFWIpYU9gyVgz206w=="],
+    "@cspell/dict-typescript": ["@cspell/dict-typescript@3.2.2", "", {}, "sha512-H9Y+uUHsTIDFO/jdfUAcqmcd5osT+2DB5b0aRCHfLWN/twUbGn/1qq3b7YwEvttxKlYzWHU3uNFf+KfA93VY7w=="],
 
     "@cspell/dict-vue": ["@cspell/dict-vue@3.0.4", "", {}, "sha512-0dPtI0lwHcAgSiQFx8CzvqjdoXROcH+1LyqgROCpBgppommWpVhbQ0eubnKotFEXgpUCONVkeZJ6Ql8NbTEu+w=="],
 
@@ -317,7 +317,7 @@
 
     "@types/conventional-commits-parser": ["@types/conventional-commits-parser@5.0.1", "", { "dependencies": { "@types/node": "*" } }, "sha512-7uz5EHdzz2TqoMfV7ee61Egf5y6NkcO4FB/1iCCQnbeiI1F3xzv3vK5dBCXUCLQgGYS+mUeigK1iKQzvED+QnQ=="],
 
-    "@types/node": ["@types/node@24.0.0", "", { "dependencies": { "undici-types": "~7.8.0" } }, "sha512-yZQa2zm87aRVcqDyH5+4Hv9KYgSdgwX1rFnGvpbzMaC7YAljmhBET93TPiTd3ObwTL+gSpIzPKg5BqVxdCvxKg=="],
+    "@types/node": ["@types/node@24.0.1", "", { "dependencies": { "undici-types": "~7.8.0" } }, "sha512-MX4Zioh39chHlDJbKmEgydJDS3tspMP/lnQC67G3SWsTnb9NeYVWOjkxpOSy4oMfPs4StcWHwBrvUb4ybfnuaw=="],
 
     "@types/triple-beam": ["@types/triple-beam@1.3.5", "", {}, "sha512-6WaYesThRMCl19iryMYP7/x2OVgCtbIVflDGFpWnb9irXI3UjYE4AzmYuiUKY1AJstGijoY+MgUszMgRxIYTYw=="],
 
@@ -809,11 +809,17 @@
 
     "yocto-queue": ["yocto-queue@1.2.1", "", {}, "sha512-AyeEbWOu/TAXdxlV9wmGcR0+yh2j3vYPGOECcIj2S7MkrLyC7ne+oye2BKTItt0ii2PHk4cDy+95+LshzbXnGg=="],
 
-    "zod": ["zod@3.25.61", "", {}, "sha512-fzfJgUw78LTNnHujj9re1Ov/JJQkRZZGDMcYqSx7Hp4rPOkKywaFHq0S6GoHeXs0wGNE/sIOutkXgnwzrVOGCQ=="],
+    "zod": ["zod@3.25.64", "", {}, "sha512-hbP9FpSZf7pkS7hRVUrOjhwKJNyampPgtXKc3AN6DsWtoHsg2Sb4SQaS4Tcay380zSwd2VPo9G9180emBACp5g=="],
 
-    "zod-validation-error": ["zod-validation-error@3.4.1", "", { "peerDependencies": { "zod": "^3.24.4" } }, "sha512-1KP64yqDPQ3rupxNv7oXhf7KdhHHgaqbKuspVoiN93TT0xrBjql+Svjkdjq/Qh/7GSMmgQs3AfvBT0heE35thw=="],
+    "zod-validation-error": ["zod-validation-error@3.5.0", "", { "peerDependencies": { "zod": "^3.25.0" } }, "sha512-IWK6O51sRkq0YsnYD2oLDuK2BNsIjYUlR0+1YSd4JyBzm6/892IWroUnLc7oW4FU+b0f6948BHi6H8MDcqpOGw=="],
 
-    "@bgord/tools/zod": ["zod@3.25.64", "", {}, "sha512-hbP9FpSZf7pkS7hRVUrOjhwKJNyampPgtXKc3AN6DsWtoHsg2Sb4SQaS4Tcay380zSwd2VPo9G9180emBACp5g=="],
+    "@emnapi/core/tslib": ["tslib@2.8.1", "", {}, "sha512-oJFu94HQb+KVduSUQL7wnpmqnfmLsOA/nAh6b6EH0wCEoK0/mPeXU6c3wKDV83MkOuHPRHtSXKKU99IBazS/2w=="],
+
+    "@emnapi/runtime/tslib": ["tslib@2.8.1", "", {}, "sha512-oJFu94HQb+KVduSUQL7wnpmqnfmLsOA/nAh6b6EH0wCEoK0/mPeXU6c3wKDV83MkOuHPRHtSXKKU99IBazS/2w=="],
+
+    "@emnapi/wasi-threads/tslib": ["tslib@2.8.1", "", {}, "sha512-oJFu94HQb+KVduSUQL7wnpmqnfmLsOA/nAh6b6EH0wCEoK0/mPeXU6c3wKDV83MkOuHPRHtSXKKU99IBazS/2w=="],
+
+    "@tybys/wasm-util/tslib": ["tslib@2.8.1", "", {}, "sha512-oJFu94HQb+KVduSUQL7wnpmqnfmLsOA/nAh6b6EH0wCEoK0/mPeXU6c3wKDV83MkOuHPRHtSXKKU99IBazS/2w=="],
 
     "bl/readable-stream": ["readable-stream@2.3.8", "", { "dependencies": { "core-util-is": "~1.0.0", "inherits": "~2.0.3", "isarray": "~1.0.0", "process-nextick-args": "~2.0.0", "safe-buffer": "~5.1.1", "string_decoder": "~1.1.1", "util-deprecate": "~1.0.1" } }, "sha512-8p0AUk4XODgIewSi0l8Epjs+EVnWiK7NoDIEGU0HhE7+ZyY8D1IMY7odu5lRrFXGg71L15KG8QrPmum45RTtdA=="],
 

@@ -1,8 +1,10 @@
 # Changelog
+- 2025-06-14 19:45 11b4139 **step: bump bgord/scripts**
+## 2025-06-14 19:45 
 - 2025-06-14 17:06 f43a3f8 **step: update packages**
-## 2025-06-14 17:06 
 - 2025-06-14 17:05 4b8dfdf **refactor: adjust timezone prereq**
 - 2025-06-14 17:04 9b1e301 **step: bump bgord-bun**
+- 2025-06-14 15:06 68c4019 **docs: generate CHANGELOG**
 - 2025-06-14 14:16 47bf072 **step: bump bgord-tools**
 - 2025-06-14 14:15 5cce5d5 **step: bump bgord-bun**
 - 2025-06-11 22:39 1738a64 **refactor: use safe parse body from bgord bun**

@@ -1,6 +1,11 @@
 # Changelog
+- 2025-06-19 12:34 9e7667b **step: bump bgord/scripts**
+- 2025-06-19 12:34 8220295 **step: update biome**
+- 2025-06-19 12:34 796a182 **step: update bgord packages**
+- 2025-06-19 12:34 53ce300 **step: update linters**
+## 2025-06-19 12:34 
 - 2025-06-14 19:45 11b4139 **step: bump bgord/scripts**
-## 2025-06-14 19:45 
+- 2025-06-14 17:45 c975836 **docs: generate CHANGELOG**
 - 2025-06-14 17:06 f43a3f8 **step: update packages**
 - 2025-06-14 17:05 4b8dfdf **refactor: adjust timezone prereq**
 - 2025-06-14 17:04 9b1e301 **step: bump bgord-bun**

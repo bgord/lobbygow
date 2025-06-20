@@ -1,7 +1,10 @@
 # Changelog
+- 2025-06-20 12:03 24c8f57 **step: bump bgord/scripts**
+## 2025-06-20 12:03 
 - 2025-06-20 11:29 46e275f **step: switch from changelog to docs-app**
-## 2025-06-20 11:29 
 - 2025-06-20 11:28 d9968a1 **step: bump bgord/scripts**
+- 2025-06-20 09:30 816f3bc **docs: generate readme**
+- 2025-06-20 09:29 d5ebe62 **docs: generate CHANGELOG**
 - 2025-06-19 12:34 9e7667b **step: bump bgord/scripts**
 - 2025-06-19 12:34 8220295 **step: update biome**
 - 2025-06-19 12:34 796a182 **step: update bgord packages**

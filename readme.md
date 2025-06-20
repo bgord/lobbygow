@@ -52,8 +52,12 @@ modules/
 
 ```
 infra/
+├── api-key-shield.ts
+├── basic-auth-shield.ts
 ├── env.ts
+├── healthcheck.ts
+├── i18n.ts
 ├── logger.ts
 ├── mailer.ts
-└── supported-languages.ts
+└── prerequisites.ts
 ```

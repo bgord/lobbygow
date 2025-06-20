@@ -1,8 +1,13 @@
 # Changelog
+- 2025-06-20 12:09 46ff765 **step: update bgord/bun**
+## 2025-06-20 12:09 
+- 2025-06-20 12:08 96265b7 **refactor: extract infra to separate files**
+- 2025-06-20 12:04 686dfa9 **refactor: adjust .env.example**
 - 2025-06-20 12:03 24c8f57 **step: bump bgord/scripts**
-## 2025-06-20 12:03 
 - 2025-06-20 11:29 46e275f **step: switch from changelog to docs-app**
 - 2025-06-20 11:28 d9968a1 **step: bump bgord/scripts**
+- 2025-06-20 10:04 d227234 **docs: generate readme**
+- 2025-06-20 10:04 2388e6f **docs: generate CHANGELOG**
 - 2025-06-20 09:30 816f3bc **docs: generate readme**
 - 2025-06-20 09:29 d5ebe62 **docs: generate CHANGELOG**
 - 2025-06-19 12:34 9e7667b **step: bump bgord/scripts**

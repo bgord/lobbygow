@@ -1,5 +1,7 @@
 # lobbygow
 
+[Check status](https://bgord.github.io/statuses/history/lobbygow)
+
 ## Configuration:
 
 Clone the repository

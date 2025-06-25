@@ -26,13 +26,13 @@ cp .env.example .env.test
 Start the app
 
 ```
-./bgord-scripts/bun-local-server-start.sh
+./bgord-scripts/local-server-start.sh
 ```
 
 Run the tests
 
 ```
-./bgord-scripts/bun-test-run.sh
+./bgord-scripts/test-run.sh
 ```
 
 ## Domain:

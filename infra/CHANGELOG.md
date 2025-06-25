@@ -1,9 +1,11 @@
 # Changelog
+- 2025-06-25 16:29 d3a94ba **step: bump bgord/scripts**
+## 2025-06-25 16:29 
 - 2025-06-25 16:22 c6b12ea **refactor: remove bun- prefix in scripts**
-## 2025-06-25 16:22 
 - 2025-06-25 16:21 58a045d **refactor: pinpoint codeql ubuntu version**
 - 2025-06-25 16:20 5f9ca0e **step: update packages**
 - 2025-06-25 16:19 64ba604 **step: bump bgord/scripts**
+- 2025-06-25 14:23 f8a66ab **docs: generate CHANGELOG**
 - 2025-06-20 12:12 d3f17ad **step: bump bgord/scripts**
 - 2025-06-20 12:11 28e65fe **step: bump bgord/scripts**
 - 2025-06-20 12:09 46ff765 **step: update bgord/bun**

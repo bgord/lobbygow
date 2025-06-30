@@ -1,12 +1,14 @@
 # Changelog
+- 2025-06-30 19:18 c9dfa6c **step: bump bgord/scripts**
+## 2025-06-30 19:18 
 - 2025-06-25 16:34 4371a28 **step: bump bgord/scripts**
-## 2025-06-25 16:34 
 - 2025-06-25 16:31 b551106 **refactor: remove bun_ from validate_environment_file**
 - 2025-06-25 16:29 d3a94ba **step: bump bgord/scripts**
 - 2025-06-25 16:22 c6b12ea **refactor: remove bun- prefix in scripts**
 - 2025-06-25 16:21 58a045d **refactor: pinpoint codeql ubuntu version**
 - 2025-06-25 16:20 5f9ca0e **step: update packages**
 - 2025-06-25 16:19 64ba604 **step: bump bgord/scripts**
+- 2025-06-25 14:35 6e6972c **docs: generate CHANGELOG**
 - 2025-06-25 14:32 56e25fc **docs: generate CHANGELOG**
 - 2025-06-25 14:30 9f6589a **docs: generate CHANGELOG**
 - 2025-06-25 14:30 8c96ece **docs: generate readme**

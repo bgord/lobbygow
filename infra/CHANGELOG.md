@@ -1,6 +1,8 @@
 # Changelog
+- 2025-06-30 19:19 49513a2 **step: update packages**
+## 2025-06-30 19:19 
 - 2025-06-30 19:18 c9dfa6c **step: bump bgord/scripts**
-## 2025-06-30 19:18 
+- 2025-06-30 17:19 d9f775b **docs: generate CHANGELOG**
 - 2025-06-25 16:34 4371a28 **step: bump bgord/scripts**
 - 2025-06-25 16:31 b551106 **refactor: remove bun_ from validate_environment_file**
 - 2025-06-25 16:29 d3a94ba **step: bump bgord/scripts**

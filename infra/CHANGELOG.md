@@ -1,11 +1,14 @@
 # Changelog
+- 2025-07-07 16:43 f91c0c5 **step: update packages**
+## 2025-07-07 16:43 
+- 2025-07-07 16:42 206930f **step: bump bgord/scripts**
 - 2025-06-30 20:04 c15a4ee **step: bump bgord/scripts**
-## 2025-06-30 20:04 
 - 2025-06-30 19:59 a509674 **step: add axiom transport to logger**
 - 2025-06-30 19:56 5478125 **step: add axiom envs**
 - 2025-06-30 19:54 14b6690 **step: update bgord bun**
 - 2025-06-30 19:19 49513a2 **step: update packages**
 - 2025-06-30 19:18 c9dfa6c **step: bump bgord/scripts**
+- 2025-06-30 18:04 7c7377a **docs: generate CHANGELOG**
 - 2025-06-30 18:02 bcb242c **docs: generate CHANGELOG**
 - 2025-06-30 17:21 92825d5 **docs: generate CHANGELOG**
 - 2025-06-30 17:19 d9f775b **docs: generate CHANGELOG**

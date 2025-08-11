@@ -21,7 +21,7 @@
     "typescript": "5.8.3"
   },
   "dependencies": {
-    "@bgord/bun": "0.18.8",
+    "@bgord/bun": "0.18.17",
     "@bgord/tools": "0.12.5"
   }
 }

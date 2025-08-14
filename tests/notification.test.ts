@@ -1,5 +1,4 @@
 import { describe, expect, jest, spyOn, test } from "bun:test";
-
 import * as infra from "../infra";
 import { Notification } from "../modules/mailer/services/notification";
 import {

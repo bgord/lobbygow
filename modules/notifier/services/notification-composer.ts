@@ -1,11 +1,14 @@
 import * as bg from "@bgord/bun";
+import * as tools from "@bgord/tools";
 import * as VO from "../value-objects";
-import type { MessageType } from "./notification";
 
 export abstract class NotificationComposerStrategy {
   abstract strategy: string;
 
-  abstract compose(subject: bg.EmailSubjectType, content: bg.EmailContentHtmlType): Promise<MessageType>;
+  abstract compose(
+    subject: bg.EmailSubjectType,
+    content: bg.EmailContentHtmlType,
+  ): Promise<tools.NotificationTemplate>;
 }
 
 export class NotificationComposerChooser {
@@ -27,11 +30,11 @@ export class NotificationComposerError implements NotificationComposerStrategy {
     return kind === VO.NotificationKindEnum.error;
   }
 
-  async compose(subject: bg.EmailSubjectType, content: bg.EmailContentHtmlType) {
-    return {
-      subject: bg.EmailSubject.parse(`❌ [ERROR] ${subject}`),
-      content,
-    };
+  async compose(
+    subject: bg.EmailSubjectType,
+    content: bg.EmailContentHtmlType,
+  ): Promise<tools.NotificationTemplate> {
+    return new tools.NotificationTemplate(bg.EmailSubject.parse(`❌ [ERROR] ${subject}`), content);
   }
 }
 
@@ -43,11 +46,11 @@ export class NotificationComposerInfo implements NotificationComposerStrategy {
     return kind === VO.NotificationKindEnum.info;
   }
 
-  async compose(subject: bg.EmailSubjectType, content: bg.EmailContentHtmlType) {
-    return {
-      subject: bg.EmailSubject.parse(`ℹ️  [INFO] ${subject}`),
-      content,
-    };
+  async compose(
+    subject: bg.EmailSubjectType,
+    content: bg.EmailContentHtmlType,
+  ): Promise<tools.NotificationTemplate> {
+    return new tools.NotificationTemplate(bg.EmailSubject.parse(`ℹ️  [INFO] ${subject}`), content);
   }
 }
 
@@ -59,10 +62,10 @@ export class NotificationComposerSuccess implements NotificationComposerStrategy
     return kind === VO.NotificationKindEnum.success;
   }
 
-  async compose(subject: bg.EmailSubjectType, content: bg.EmailContentHtmlType) {
-    return {
-      subject: bg.EmailSubject.parse(`✅ [SUCCESS] ${subject}`),
-      content,
-    };
+  async compose(
+    subject: bg.EmailSubjectType,
+    content: bg.EmailContentHtmlType,
+  ): Promise<tools.NotificationTemplate> {
+    return new tools.NotificationTemplate(bg.EmailSubject.parse(`✅ [SUCCESS] ${subject}`), content);
   }
 }

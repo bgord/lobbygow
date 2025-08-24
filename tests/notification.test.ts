@@ -18,7 +18,7 @@ describe("Notification", () => {
       const message = await notification.compose(composer);
 
       expect(composer).toBeInstanceOf(Notifier.Services.NotificationComposerSuccess);
-      expect(message).toEqual({ subject: `✅ [SUCCESS] ${subject}`, content });
+      expect(message.get()).toEqual({ subject: `✅ [SUCCESS] ${subject}`, html: content });
     });
 
     test("kind - error", async () => {
@@ -29,7 +29,7 @@ describe("Notification", () => {
       const message = await notification.compose(composer);
 
       expect(composer).toBeInstanceOf(Notifier.Services.NotificationComposerError);
-      expect(message).toEqual({ subject: `❌ [ERROR] ${subject}`, content });
+      expect(message.get()).toEqual({ subject: `❌ [ERROR] ${subject}`, html: content });
     });
 
     test("kind - info", async () => {
@@ -40,7 +40,7 @@ describe("Notification", () => {
       const message = await notification.compose(composer);
 
       expect(composer).toBeInstanceOf(Notifier.Services.NotificationComposerInfo);
-      expect(message).toEqual({ subject: `ℹ️  [INFO] ${subject}`, content });
+      expect(message.get()).toEqual({ subject: `ℹ️  [INFO] ${subject}`, html: content });
     });
   });
 
@@ -60,7 +60,7 @@ describe("Notification", () => {
         from: Env.EMAIL_FROM,
         to: Env.EMAIL_TO,
         subject: `✅ [SUCCESS] ${subject}`,
-        content,
+        html: content,
       });
     });
 
@@ -79,7 +79,7 @@ describe("Notification", () => {
         from: Env.EMAIL_FROM,
         to: Env.EMAIL_TO,
         subject: `❌ [ERROR] ${subject}`,
-        content,
+        html: content,
       });
     });
 
@@ -98,7 +98,7 @@ describe("Notification", () => {
         from: Env.EMAIL_FROM,
         to: Env.EMAIL_TO,
         subject: `ℹ️  [INFO] ${subject}`,
-        content,
+        html: content,
       });
     });
   });

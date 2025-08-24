@@ -1,28 +1,28 @@
 import { describe, expect, test } from "bun:test";
-import {
-  NotificationComposerChooser,
-  NotificationComposerError,
-  NotificationComposerInfo,
-  NotificationComposerSuccess,
-} from "../modules/mailer/services/notification-composer";
-import { NotificationKindEnum } from "../modules/mailer/value-objects/notification-kind-enum";
+import * as Notifier from "+notifier";
 
 describe("NotificationComposerChooser", () => {
   test("kind - success", () => {
-    const composer = NotificationComposerChooser.choose(NotificationKindEnum.success);
+    const composer = Notifier.Services.NotificationComposerChooser.choose(
+      Notifier.VO.NotificationKindEnum.success,
+    );
 
-    expect(composer).toBeInstanceOf(NotificationComposerSuccess);
+    expect(composer).toBeInstanceOf(Notifier.Services.NotificationComposerSuccess);
   });
 
   test("kind - error", () => {
-    const composer = NotificationComposerChooser.choose(NotificationKindEnum.error);
+    const composer = Notifier.Services.NotificationComposerChooser.choose(
+      Notifier.VO.NotificationKindEnum.error,
+    );
 
-    expect(composer).toBeInstanceOf(NotificationComposerError);
+    expect(composer).toBeInstanceOf(Notifier.Services.NotificationComposerError);
   });
 
   test("kind - info", () => {
-    const composer = NotificationComposerChooser.choose(NotificationKindEnum.info);
+    const composer = Notifier.Services.NotificationComposerChooser.choose(
+      Notifier.VO.NotificationKindEnum.info,
+    );
 
-    expect(composer).toBeInstanceOf(NotificationComposerInfo);
+    expect(composer).toBeInstanceOf(Notifier.Services.NotificationComposerInfo);
   });
 });

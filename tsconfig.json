@@ -13,8 +13,8 @@
     "paths": {
       "+infra": ["./infra/index"],
       "+infra/*": ["./infra/*"],
-      "+mailer": ["./modules/mailer/index"],
-      "+mailer/*": ["./modules/mailer/*"],
+      "+notifier": ["./modules/notifier/index"],
+      "+notifier/*": ["./modules/notifier/*"],
       "+app": ["./app/index"],
       "+app/*": ["./app/*"]
     }

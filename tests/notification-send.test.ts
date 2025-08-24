@@ -1,8 +1,8 @@
 import { describe, expect, jest, spyOn, test } from "bun:test";
 import * as bgb from "@bgord/bun";
+import * as Notifier from "+notifier";
 import { Env } from "+infra/env";
 import { Mailer } from "+infra/mailer.adapter";
-import * as VO from "+mailer/value-objects";
 import { server } from "../server";
 
 const ip = {
@@ -50,7 +50,7 @@ describe("POST /notification-send", () => {
       "/notification-send",
       {
         method: "POST",
-        body: JSON.stringify({ content: "content", kind: VO.NotificationKindEnum.info }),
+        body: JSON.stringify({ content: "content", kind: Notifier.VO.NotificationKindEnum.info }),
         headers: new Headers({ [bgb.ShieldApiKey.HEADER_NAME]: Env.API_KEY }),
       },
       ip,
@@ -67,7 +67,7 @@ describe("POST /notification-send", () => {
       "/notification-send",
       {
         method: "POST",
-        body: JSON.stringify({ subject: "subject", kind: VO.NotificationKindEnum.info }),
+        body: JSON.stringify({ subject: "subject", kind: Notifier.VO.NotificationKindEnum.info }),
         headers: new Headers({ [bgb.ShieldApiKey.HEADER_NAME]: Env.API_KEY }),
       },
       ip,
@@ -85,7 +85,7 @@ describe("POST /notification-send", () => {
     const payload = {
       subject: "subject",
       content: "content",
-      kind: VO.NotificationKindEnum.info,
+      kind: Notifier.VO.NotificationKindEnum.info,
     };
 
     const response = await server.request(
@@ -114,7 +114,7 @@ describe("POST /notification-send", () => {
     const payload = {
       subject: "subject",
       content: "content",
-      kind: VO.NotificationKindEnum.error,
+      kind: Notifier.VO.NotificationKindEnum.error,
     };
 
     const response = await server.request(
@@ -143,7 +143,7 @@ describe("POST /notification-send", () => {
     const payload = {
       subject: "subject",
       content: "content",
-      kind: VO.NotificationKindEnum.success,
+      kind: Notifier.VO.NotificationKindEnum.success,
     };
 
     const response = await server.request(

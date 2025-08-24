@@ -1,46 +1,45 @@
 import { describe, expect, jest, spyOn, test } from "bun:test";
+import * as Notifier from "+notifier";
 import { Env } from "+infra/env";
 import { Mailer } from "+infra/mailer.adapter";
-import { Notification } from "../modules/mailer/services/notification";
-import {
-  NotificationComposerChooser,
-  NotificationComposerError,
-  NotificationComposerInfo,
-  NotificationComposerSuccess,
-} from "../modules/mailer/services/notification-composer";
-import { NotificationKindEnum } from "../modules/mailer/value-objects/notification-kind-enum";
 
 const subject = "subject";
 const content = "content";
 
-const notification = new Notification(subject, content);
+const notification = new Notifier.Services.Notification(subject, content);
 
 describe("Notification", () => {
   describe("compose", () => {
     test("kind - success", async () => {
-      const composer = NotificationComposerChooser.choose(NotificationKindEnum.success);
+      const composer = Notifier.Services.NotificationComposerChooser.choose(
+        Notifier.VO.NotificationKindEnum.success,
+      );
 
       const message = await notification.compose(composer);
 
-      expect(composer).toBeInstanceOf(NotificationComposerSuccess);
+      expect(composer).toBeInstanceOf(Notifier.Services.NotificationComposerSuccess);
       expect(message).toEqual({ subject: `✅ [SUCCESS] ${subject}`, content });
     });
 
     test("kind - error", async () => {
-      const composer = NotificationComposerChooser.choose(NotificationKindEnum.error);
+      const composer = Notifier.Services.NotificationComposerChooser.choose(
+        Notifier.VO.NotificationKindEnum.error,
+      );
 
       const message = await notification.compose(composer);
 
-      expect(composer).toBeInstanceOf(NotificationComposerError);
+      expect(composer).toBeInstanceOf(Notifier.Services.NotificationComposerError);
       expect(message).toEqual({ subject: `❌ [ERROR] ${subject}`, content });
     });
 
     test("kind - info", async () => {
-      const composer = NotificationComposerChooser.choose(NotificationKindEnum.info);
+      const composer = Notifier.Services.NotificationComposerChooser.choose(
+        Notifier.VO.NotificationKindEnum.info,
+      );
 
       const message = await notification.compose(composer);
 
-      expect(composer).toBeInstanceOf(NotificationComposerInfo);
+      expect(composer).toBeInstanceOf(Notifier.Services.NotificationComposerInfo);
       expect(message).toEqual({ subject: `ℹ️  [INFO] ${subject}`, content });
     });
   });
@@ -49,7 +48,9 @@ describe("Notification", () => {
     test("kind - success", async () => {
       const infraMailerSend = spyOn(Mailer, "send").mockImplementation(jest.fn());
 
-      const composer = NotificationComposerChooser.choose(NotificationKindEnum.success);
+      const composer = Notifier.Services.NotificationComposerChooser.choose(
+        Notifier.VO.NotificationKindEnum.success,
+      );
 
       const message = await notification.compose(composer);
 
@@ -66,7 +67,9 @@ describe("Notification", () => {
     test("kind - error", async () => {
       const infraMailerSend = spyOn(Mailer, "send").mockImplementation(jest.fn());
 
-      const composer = NotificationComposerChooser.choose(NotificationKindEnum.error);
+      const composer = Notifier.Services.NotificationComposerChooser.choose(
+        Notifier.VO.NotificationKindEnum.error,
+      );
 
       const message = await notification.compose(composer);
 
@@ -83,7 +86,9 @@ describe("Notification", () => {
     test("kind - info", async () => {
       const infraMailerSend = spyOn(Mailer, "send").mockImplementation(jest.fn());
 
-      const composer = NotificationComposerChooser.choose(NotificationKindEnum.info);
+      const composer = Notifier.Services.NotificationComposerChooser.choose(
+        Notifier.VO.NotificationKindEnum.info,
+      );
 
       const message = await notification.compose(composer);
 

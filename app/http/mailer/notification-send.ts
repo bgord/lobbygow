@@ -1,6 +1,6 @@
 import * as bg from "@bgord/bun";
 import type hono from "hono";
-import * as Mailer from "+mailer";
+import * as Notifier from "+notifier";
 import { Env } from "+infra/env";
 import { logger } from "+infra/logger.adapter";
 
@@ -9,10 +9,10 @@ export async function NotificationSend(c: hono.Context, _next: hono.Next) {
 
   const subject = bg.EmailSubject.parse(body.subject);
   const content = bg.EmailContentHtml.parse(body.content);
-  const kind = Mailer.VO.NotificationKind.parse(body.kind);
+  const kind = Notifier.VO.NotificationKind.parse(body.kind);
 
-  const notification = new Mailer.Services.Notification(subject, content);
-  const composer = Mailer.Services.NotificationComposerChooser.choose(kind);
+  const notification = new Notifier.Services.Notification(subject, content);
+  const composer = Notifier.Services.NotificationComposerChooser.choose(kind);
 
   logger.info({
     message: "Notification composer chosen",

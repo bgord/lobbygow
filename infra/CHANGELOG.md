@@ -1,9 +1,23 @@
 # Changelog
+- 2025-08-24 13:29 9529a49 **refactor: make bc infra free**
+## 2025-08-24 13:29 
+- 2025-08-24 13:19 d3f2aaa **step: add tests/setup**
+- 2025-08-24 13:16 bad6f55 **refactor: use notification template**
+- 2025-08-24 13:07 2743d6a **refactor: rename mailer module to notifier**
+- 2025-08-24 13:04 9730824 **step: add mailer adapter to env**
+- 2025-08-24 13:04 8365a3b **refactor: do not skip tests in tsconfig**
+- 2025-08-24 12:58 ef252cf **refactor: make app/http**
+- 2025-08-24 12:58 31ff026 **refactor: adjust paths**
+- 2025-08-24 12:54 d2ac8d8 **refactor: do not export from infra/index**
+- 2025-08-24 12:47 2e634f5 **refactor: adjust to newest bgord/bun**
+- 2025-08-24 12:46 ec2d091 **step: update packages**
+- 2025-08-24 12:46 d609a7d **step: bump bgord/scripts**
 - 2025-08-14 20:19 7b2b26b **refactor: rate limiters**
 - 2025-08-14 20:19 33544cd **refactor: smtp mailer adapter**
-## 2025-08-14 20:19 
 - 2025-08-14 20:15 45c99a7 **step: update packages**
 - 2025-08-14 20:14 2b29137 **step: bump bgord/scripts**
+- 2025-08-14 18:20 b6b82c3 **docs: generate readme**
+- 2025-08-14 18:20 059596b **docs: generate CHANGELOG**
 - 2025-07-24 20:15 07088ac **step: update packages**
 - 2025-07-24 20:14 76759f0 **step: bump bgord/scripts**
 - 2025-07-24 18:16 56e3aaa **docs: generate CHANGELOG**

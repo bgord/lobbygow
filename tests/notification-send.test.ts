@@ -1,7 +1,8 @@
 import { describe, expect, jest, spyOn, test } from "bun:test";
 import * as bgb from "@bgord/bun";
-import * as infra from "../infra";
-import * as Mailer from "../modules/mailer";
+import { Env } from "+infra/env";
+import { Mailer } from "+infra/mailer.adapter";
+import * as VO from "+mailer/value-objects";
 import { server } from "../server";
 
 const ip = {
@@ -16,7 +17,7 @@ describe("POST /notification-send", () => {
       "/notification-send",
       {
         method: "POST",
-        headers: new Headers({ [bgb.ShieldApiKey.HEADER_NAME]: infra.Env.API_KEY }),
+        headers: new Headers({ [bgb.ShieldApiKey.HEADER_NAME]: Env.API_KEY }),
       },
       ip,
     );
@@ -33,7 +34,7 @@ describe("POST /notification-send", () => {
       {
         method: "POST",
         body: "invalid-json",
-        headers: new Headers({ [bgb.ShieldApiKey.HEADER_NAME]: infra.Env.API_KEY }),
+        headers: new Headers({ [bgb.ShieldApiKey.HEADER_NAME]: Env.API_KEY }),
       },
       ip,
     );
@@ -49,8 +50,8 @@ describe("POST /notification-send", () => {
       "/notification-send",
       {
         method: "POST",
-        body: JSON.stringify({ content: "content", kind: Mailer.VO.NotificationKindEnum.info }),
-        headers: new Headers({ [bgb.ShieldApiKey.HEADER_NAME]: infra.Env.API_KEY }),
+        body: JSON.stringify({ content: "content", kind: VO.NotificationKindEnum.info }),
+        headers: new Headers({ [bgb.ShieldApiKey.HEADER_NAME]: Env.API_KEY }),
       },
       ip,
     );
@@ -66,8 +67,8 @@ describe("POST /notification-send", () => {
       "/notification-send",
       {
         method: "POST",
-        body: JSON.stringify({ subject: "subject", kind: Mailer.VO.NotificationKindEnum.info }),
-        headers: new Headers({ [bgb.ShieldApiKey.HEADER_NAME]: infra.Env.API_KEY }),
+        body: JSON.stringify({ subject: "subject", kind: VO.NotificationKindEnum.info }),
+        headers: new Headers({ [bgb.ShieldApiKey.HEADER_NAME]: Env.API_KEY }),
       },
       ip,
     );
@@ -79,12 +80,12 @@ describe("POST /notification-send", () => {
   });
 
   test("happy path - info", async () => {
-    const infraMailerSend = spyOn(infra.Mailer, "send").mockImplementation(jest.fn());
+    const infraMailerSend = spyOn(Mailer, "send").mockImplementation(jest.fn());
 
     const payload = {
       subject: "subject",
       content: "content",
-      kind: Mailer.VO.NotificationKindEnum.info,
+      kind: VO.NotificationKindEnum.info,
     };
 
     const response = await server.request(
@@ -92,7 +93,7 @@ describe("POST /notification-send", () => {
       {
         method: "POST",
         body: JSON.stringify(payload),
-        headers: new Headers({ [bgb.ShieldApiKey.HEADER_NAME]: infra.Env.API_KEY }),
+        headers: new Headers({ [bgb.ShieldApiKey.HEADER_NAME]: Env.API_KEY }),
       },
       ip,
     );
@@ -100,20 +101,20 @@ describe("POST /notification-send", () => {
     expect(response.status).toBe(200);
 
     expect(infraMailerSend).toHaveBeenCalledWith({
-      from: infra.Env.EMAIL_FROM,
-      to: infra.Env.EMAIL_TO,
+      from: Env.EMAIL_FROM,
+      to: Env.EMAIL_TO,
       subject: `ℹ️  [INFO] ${payload.subject}`,
       content: payload.content,
     });
   });
 
   test("happy path - error", async () => {
-    const infraMailerSend = spyOn(infra.Mailer, "send").mockImplementation(jest.fn());
+    const infraMailerSend = spyOn(Mailer, "send").mockImplementation(jest.fn());
 
     const payload = {
       subject: "subject",
       content: "content",
-      kind: Mailer.VO.NotificationKindEnum.error,
+      kind: VO.NotificationKindEnum.error,
     };
 
     const response = await server.request(
@@ -121,7 +122,7 @@ describe("POST /notification-send", () => {
       {
         method: "POST",
         body: JSON.stringify(payload),
-        headers: new Headers({ [bgb.ShieldApiKey.HEADER_NAME]: infra.Env.API_KEY }),
+        headers: new Headers({ [bgb.ShieldApiKey.HEADER_NAME]: Env.API_KEY }),
       },
       ip,
     );
@@ -129,20 +130,20 @@ describe("POST /notification-send", () => {
     expect(response.status).toBe(200);
 
     expect(infraMailerSend).toHaveBeenCalledWith({
-      from: infra.Env.EMAIL_FROM,
-      to: infra.Env.EMAIL_TO,
+      from: Env.EMAIL_FROM,
+      to: Env.EMAIL_TO,
       subject: `❌ [ERROR] ${payload.subject}`,
       content: payload.content,
     });
   });
 
   test("happy path - success", async () => {
-    const infraMailerSend = spyOn(infra.Mailer, "send").mockImplementation(jest.fn());
+    const infraMailerSend = spyOn(Mailer, "send").mockImplementation(jest.fn());
 
     const payload = {
       subject: "subject",
       content: "content",
-      kind: Mailer.VO.NotificationKindEnum.success,
+      kind: VO.NotificationKindEnum.success,
     };
 
     const response = await server.request(
@@ -150,7 +151,7 @@ describe("POST /notification-send", () => {
       {
         method: "POST",
         body: JSON.stringify(payload),
-        headers: new Headers({ [bgb.ShieldApiKey.HEADER_NAME]: infra.Env.API_KEY }),
+        headers: new Headers({ [bgb.ShieldApiKey.HEADER_NAME]: Env.API_KEY }),
       },
       ip,
     );
@@ -158,15 +159,15 @@ describe("POST /notification-send", () => {
     expect(response.status).toBe(200);
 
     expect(infraMailerSend).toHaveBeenCalledWith({
-      from: infra.Env.EMAIL_FROM,
-      to: infra.Env.EMAIL_TO,
+      from: Env.EMAIL_FROM,
+      to: Env.EMAIL_TO,
       subject: `✅ [SUCCESS] ${payload.subject}`,
       content: payload.content,
     });
   });
 
   test("happy path - default kind", async () => {
-    const infraMailerSend = spyOn(infra.Mailer, "send").mockImplementation(jest.fn());
+    const infraMailerSend = spyOn(Mailer, "send").mockImplementation(jest.fn());
 
     const payload = { subject: "subject", content: "content" };
 
@@ -175,7 +176,7 @@ describe("POST /notification-send", () => {
       {
         method: "POST",
         body: JSON.stringify(payload),
-        headers: new Headers({ [bgb.ShieldApiKey.HEADER_NAME]: infra.Env.API_KEY }),
+        headers: new Headers({ [bgb.ShieldApiKey.HEADER_NAME]: Env.API_KEY }),
       },
       ip,
     );
@@ -183,8 +184,8 @@ describe("POST /notification-send", () => {
     expect(response.status).toBe(200);
 
     expect(infraMailerSend).toHaveBeenCalledWith({
-      from: infra.Env.EMAIL_FROM,
-      to: infra.Env.EMAIL_TO,
+      from: Env.EMAIL_FROM,
+      to: Env.EMAIL_TO,
       subject: `ℹ️  [INFO] ${payload.subject}`,
       content: payload.content,
     });

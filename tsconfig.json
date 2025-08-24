@@ -19,5 +19,5 @@
       "+app/*": ["./app/*"]
     }
   },
-  "exclude": ["bgord-scripts", "**/*.test.ts"]
+  "exclude": ["bgord-scripts"]
 }

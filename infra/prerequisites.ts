@@ -24,6 +24,7 @@ export const prerequisites = [
   }),
   new bg.PrerequisiteBun({
     label: "bun",
+    enabled: false, // TODO
     version: tools.PackageVersion.fromString("1.2.20"),
     current: Bun.version,
   }),

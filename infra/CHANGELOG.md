@@ -1,6 +1,7 @@
 # Changelog
+- 2025-08-24 13:37 89c748e **refactor: rename shields**
+## 2025-08-24 13:37 
 - 2025-08-24 13:29 9529a49 **refactor: make bc infra free**
-## 2025-08-24 13:29 
 - 2025-08-24 13:19 d3f2aaa **step: add tests/setup**
 - 2025-08-24 13:16 bad6f55 **refactor: use notification template**
 - 2025-08-24 13:07 2743d6a **refactor: rename mailer module to notifier**
@@ -12,6 +13,8 @@
 - 2025-08-24 12:47 2e634f5 **refactor: adjust to newest bgord/bun**
 - 2025-08-24 12:46 ec2d091 **step: update packages**
 - 2025-08-24 12:46 d609a7d **step: bump bgord/scripts**
+- 2025-08-24 11:36 1c9c56c **docs: generate readme**
+- 2025-08-24 11:36 06f3b05 **docs: generate CHANGELOG**
 - 2025-08-14 20:19 7b2b26b **refactor: rate limiters**
 - 2025-08-14 20:19 33544cd **refactor: smtp mailer adapter**
 - 2025-08-14 20:15 45c99a7 **step: update packages**

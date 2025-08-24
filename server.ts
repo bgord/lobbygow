@@ -3,13 +3,13 @@ import * as tools from "@bgord/tools";
 import { Hono } from "hono";
 import { timeout } from "hono/timeout";
 import * as infra from "+infra";
-import { BasicAuthShield } from "+infra/basic-auth-shield";
 import { Env } from "+infra/env";
 import { healthcheck } from "+infra/healthcheck";
 import { I18nConfig } from "+infra/i18n";
 import { logger } from "+infra/logger.adapter";
 import * as RateLimiters from "+infra/rate-limiters";
 import { ShieldApiKey } from "+infra/shield-api-key";
+import { ShieldBasicAuth } from "+infra/shield-basic-auth";
 import * as App from "./app";
 
 type HonoConfig = { Variables: infra.Variables; startup: tools.Stopwatch };
@@ -29,7 +29,7 @@ server.get(
     store: RateLimiters.HealthcheckStore,
   }),
   timeout(tools.Time.Seconds(15).ms, infra.requestTimeoutError),
-  BasicAuthShield,
+  ShieldBasicAuth,
   ...bg.Healthcheck.build(healthcheck),
 );
 // =============================

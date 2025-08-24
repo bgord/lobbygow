@@ -62,7 +62,6 @@ app/
 
 ```
 infra/
-├── basic-auth-shield.ts
 ├── env.ts
 ├── healthcheck.ts
 ├── i18n.ts
@@ -70,5 +69,6 @@ infra/
 ├── mailer.adapter.ts
 ├── prerequisites.ts
 ├── rate-limiters.ts
-└── shield-api-key.ts
+├── shield-api-key.ts
+└── shield-basic-auth.ts
 ```

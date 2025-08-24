@@ -1,5 +1,6 @@
 import type * as bg from "@bgord/bun";
-import * as infra from "../../../infra";
+import { Env } from "+infra/env";
+import { Mailer } from "+infra/mailer.adapter";
 import type { NotificationComposerStrategy } from "./notification-composer";
 
 export type MessageType = {
@@ -18,6 +19,6 @@ export class Notification {
   }
 
   async send(message: MessageType, to: bg.EmailToType) {
-    return infra.Mailer.send({ from: infra.Env.EMAIL_FROM, to, ...message });
+    return Mailer.send({ from: Env.EMAIL_FROM, to, ...message });
   }
 }

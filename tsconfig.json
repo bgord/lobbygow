@@ -12,7 +12,11 @@
     "strict": true,
     "paths": {
       "+infra": ["./infra/index"],
-      "+infra/*": ["./infra/*"]
+      "+infra/*": ["./infra/*"],
+      "+mailer": ["./modules/mailer/index"],
+      "+mailer/*": ["./modules/mailer/*"],
+      "+app": ["./app/index"],
+      "+app/*": ["./app/*"]
     }
   },
   "exclude": ["bgord-scripts", "**/*.test.ts"]

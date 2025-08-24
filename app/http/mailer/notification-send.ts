@@ -1,20 +1,20 @@
 import * as bg from "@bgord/bun";
 import type hono from "hono";
-import * as infra from "../../../infra";
-import * as Services from "../services";
-import * as VO from "../value-objects";
+import * as Mailer from "+mailer";
+import { Env } from "+infra/env";
+import { logger } from "+infra/logger.adapter";
 
 export async function NotificationSend(c: hono.Context, _next: hono.Next) {
   const body = await bg.safeParseBody(c);
 
   const subject = bg.EmailSubject.parse(body.subject);
   const content = bg.EmailContentHtml.parse(body.content);
-  const kind = VO.NotificationKind.parse(body.kind);
+  const kind = Mailer.VO.NotificationKind.parse(body.kind);
 
-  const notification = new Services.Notification(subject, content);
-  const composer = Services.NotificationComposerChooser.choose(kind);
+  const notification = new Mailer.Services.Notification(subject, content);
+  const composer = Mailer.Services.NotificationComposerChooser.choose(kind);
 
-  infra.logger.info({
+  logger.info({
     message: "Notification composer chosen",
     component: "http",
     operation: "notification_composer_chosen",
@@ -23,16 +23,16 @@ export async function NotificationSend(c: hono.Context, _next: hono.Next) {
 
   const message = await notification.compose(composer);
 
-  infra.logger.info({
+  logger.info({
     message: "Notification composed",
     component: "http",
     operation: "notification_composed_content",
     metadata: { message },
   });
 
-  const result = await notification.send(message, infra.Env.EMAIL_TO);
+  const result = await notification.send(message, Env.EMAIL_TO);
 
-  infra.logger.info({
+  logger.info({
     message: "Notification sent",
     component: "http",
     operation: "notification_sent_result",

@@ -11,7 +11,6 @@ import { logger } from "+infra/logger.adapter";
 import * as RateLimiters from "+infra/rate-limiters";
 import { ShieldApiKey } from "+infra/shield-api-key";
 import * as App from "./app";
-import * as Mailer from "./modules/mailer";
 
 type HonoConfig = { Variables: infra.Variables; startup: tools.Stopwatch };
 
@@ -45,7 +44,7 @@ server.post(
   }),
   timeout(tools.Time.Seconds(15).ms, infra.requestTimeoutError),
   ShieldApiKey.verify,
-  Mailer.Routes.NotificationSend,
+  App.Http.Mailer.NotificationSend,
 );
 // =============================
 

@@ -1,5 +1,5 @@
 import * as bg from "@bgord/bun";
-import hono from "hono";
+import type hono from "hono";
 import * as infra from "../../../infra";
 import * as Services from "../services";
 import * as VO from "../value-objects";

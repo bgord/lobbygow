@@ -1,6 +1,6 @@
-import * as bg from "@bgord/bun";
+import type * as bg from "@bgord/bun";
 import * as infra from "../../../infra";
-import { NotificationComposerStrategy } from "./notification-composer";
+import type { NotificationComposerStrategy } from "./notification-composer";
 
 export type MessageType = {
   subject: bg.EmailSubjectType;

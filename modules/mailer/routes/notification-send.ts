@@ -16,6 +16,7 @@ export async function NotificationSend(c: hono.Context, _next: hono.Next) {
 
   infra.logger.info({
     message: "Notification composer chosen",
+    component: "http",
     operation: "notification_composer_chosen",
     metadata: { name: composer.strategy },
   });
@@ -24,6 +25,7 @@ export async function NotificationSend(c: hono.Context, _next: hono.Next) {
 
   infra.logger.info({
     message: "Notification composed",
+    component: "http",
     operation: "notification_composed_content",
     metadata: { message },
   });
@@ -32,6 +34,7 @@ export async function NotificationSend(c: hono.Context, _next: hono.Next) {
 
   infra.logger.info({
     message: "Notification sent",
+    component: "http",
     operation: "notification_sent_result",
     metadata: { result },
   });

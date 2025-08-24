@@ -34,9 +34,11 @@ export class ErrorHandler {
     if (error instanceof z.ZodError) {
       infra.logger.error({
         message: "Invalid payload",
+        component: "http",
         operation: "invalid_payload",
         correlationId,
         metadata: { url, body: await bg.safeParseBody(c) },
+        error: bg.formatError(error),
       });
 
       return c.json({ message: "payload.invalid.error", _known: true }, 400);
@@ -44,9 +46,10 @@ export class ErrorHandler {
 
     infra.logger.error({
       message: "Unknown error",
+      component: "http",
       operation: "unknown_error",
       correlationId,
-      metadata: infra.logger.formatError(error),
+      error: bg.formatError(error),
     });
 
     return c.json({ message: "general.unknown" }, 500);

@@ -2,6 +2,11 @@ import * as bg from "@bgord/bun";
 import * as tools from "@bgord/tools";
 import { z } from "zod/v4";
 
+export enum MailerAdapter {
+  smtp = "smtp",
+  noop = "noop",
+}
+
 const EnvironmentSchema = z
   .object({
     PORT: bg.Port,
@@ -16,6 +21,7 @@ const EnvironmentSchema = z
     BASIC_AUTH_USERNAME: bg.BasicAuthUsername,
     BASIC_AUTH_PASSWORD: bg.BasicAuthPassword,
     API_KEY: tools.ApiKey,
+    MAILER_ADAPTER: z.enum(MailerAdapter),
     AXIOM_API_TOKEN: z.string().length(41),
   })
   .strip();

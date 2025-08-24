@@ -12,6 +12,7 @@ import { server, startup } from "./server";
 
   infra.logger.info({
     message: "Server has started",
+    component: "http",
     operation: "server_startup",
     metadata: {
       port: infra.Env.PORT,

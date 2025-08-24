@@ -17,7 +17,7 @@ const startup = new tools.Stopwatch();
 // Healthcheck =================
 server.get(
   "/healthcheck",
-  bg.RateLimitShield({
+  bg.ShieldRateLimit({
     enabled: infra.Env.type === bg.NodeEnvironmentEnum.production,
     subject: bg.AnonSubjectResolver,
     store: infra.RateLimiters.HealthcheckStore,
@@ -31,13 +31,13 @@ server.get(
 // Mailer =================
 server.post(
   "/notification-send",
-  bg.RateLimitShield({
+  bg.ShieldRateLimit({
     enabled: infra.Env.type === bg.NodeEnvironmentEnum.production,
     subject: bg.AnonSubjectResolver,
     store: infra.RateLimiters.NotificationSendStore,
   }),
   timeout(tools.Time.Seconds(15).ms, infra.requestTimeoutError),
-  infra.ApiKeyShield.verify,
+  infra.ShieldApiKey.verify,
   Mailer.Routes.NotificationSend,
 );
 // =============================

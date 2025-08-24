@@ -16,9 +16,7 @@ describe("POST /notification-send", () => {
       "/notification-send",
       {
         method: "POST",
-        headers: new Headers({
-          [bgb.ApiKeyShield.HEADER_NAME]: infra.Env.API_KEY,
-        }),
+        headers: new Headers({ [bgb.ShieldApiKey.HEADER_NAME]: infra.Env.API_KEY }),
       },
       ip,
     );
@@ -35,9 +33,7 @@ describe("POST /notification-send", () => {
       {
         method: "POST",
         body: "invalid-json",
-        headers: new Headers({
-          [bgb.ApiKeyShield.HEADER_NAME]: infra.Env.API_KEY,
-        }),
+        headers: new Headers({ [bgb.ShieldApiKey.HEADER_NAME]: infra.Env.API_KEY }),
       },
       ip,
     );
@@ -53,13 +49,8 @@ describe("POST /notification-send", () => {
       "/notification-send",
       {
         method: "POST",
-        body: JSON.stringify({
-          content: "content",
-          kind: Mailer.VO.NotificationKindEnum.info,
-        }),
-        headers: new Headers({
-          [bgb.ApiKeyShield.HEADER_NAME]: infra.Env.API_KEY,
-        }),
+        body: JSON.stringify({ content: "content", kind: Mailer.VO.NotificationKindEnum.info }),
+        headers: new Headers({ [bgb.ShieldApiKey.HEADER_NAME]: infra.Env.API_KEY }),
       },
       ip,
     );
@@ -75,13 +66,8 @@ describe("POST /notification-send", () => {
       "/notification-send",
       {
         method: "POST",
-        body: JSON.stringify({
-          subject: "subject",
-          kind: Mailer.VO.NotificationKindEnum.info,
-        }),
-        headers: new Headers({
-          [bgb.ApiKeyShield.HEADER_NAME]: infra.Env.API_KEY,
-        }),
+        body: JSON.stringify({ subject: "subject", kind: Mailer.VO.NotificationKindEnum.info }),
+        headers: new Headers({ [bgb.ShieldApiKey.HEADER_NAME]: infra.Env.API_KEY }),
       },
       ip,
     );
@@ -106,9 +92,7 @@ describe("POST /notification-send", () => {
       {
         method: "POST",
         body: JSON.stringify(payload),
-        headers: new Headers({
-          [bgb.ApiKeyShield.HEADER_NAME]: infra.Env.API_KEY,
-        }),
+        headers: new Headers({ [bgb.ShieldApiKey.HEADER_NAME]: infra.Env.API_KEY }),
       },
       ip,
     );
@@ -137,9 +121,7 @@ describe("POST /notification-send", () => {
       {
         method: "POST",
         body: JSON.stringify(payload),
-        headers: new Headers({
-          [bgb.ApiKeyShield.HEADER_NAME]: infra.Env.API_KEY,
-        }),
+        headers: new Headers({ [bgb.ShieldApiKey.HEADER_NAME]: infra.Env.API_KEY }),
       },
       ip,
     );
@@ -168,9 +150,7 @@ describe("POST /notification-send", () => {
       {
         method: "POST",
         body: JSON.stringify(payload),
-        headers: new Headers({
-          [bgb.ApiKeyShield.HEADER_NAME]: infra.Env.API_KEY,
-        }),
+        headers: new Headers({ [bgb.ShieldApiKey.HEADER_NAME]: infra.Env.API_KEY }),
       },
       ip,
     );
@@ -195,9 +175,7 @@ describe("POST /notification-send", () => {
       {
         method: "POST",
         body: JSON.stringify(payload),
-        headers: new Headers({
-          [bgb.ApiKeyShield.HEADER_NAME]: infra.Env.API_KEY,
-        }),
+        headers: new Headers({ [bgb.ShieldApiKey.HEADER_NAME]: infra.Env.API_KEY }),
       },
       ip,
     );

@@ -49,6 +49,6 @@ server.post(
 );
 // =============================
 
-server.onError(App.Routes.ErrorHandler.handle);
+server.onError(App.Http.ErrorHandler.handle);
 
 export { server, startup };

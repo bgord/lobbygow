@@ -2,15 +2,22 @@ import * as bg from "@bgord/bun";
 import * as tools from "@bgord/tools";
 import { Hono } from "hono";
 import { timeout } from "hono/timeout";
+import * as infra from "+infra";
+import { BasicAuthShield } from "+infra/basic-auth-shield";
+import { Env } from "+infra/env";
+import { healthcheck } from "+infra/healthcheck";
+import { I18nConfig } from "+infra/i18n";
+import { logger } from "+infra/logger.adapter";
+import * as RateLimiters from "+infra/rate-limiters";
+import { ShieldApiKey } from "+infra/shield-api-key";
 import * as App from "./app";
-import * as infra from "./infra";
 import * as Mailer from "./modules/mailer";
 
-type Env = { Variables: infra.Variables; startup: tools.Stopwatch };
+type HonoConfig = { Variables: infra.Variables; startup: tools.Stopwatch };
 
-const server = new Hono<Env>();
+const server = new Hono<HonoConfig>();
 
-server.use(...bg.Setup.essentials(infra.logger, infra.I18nConfig));
+server.use(...bg.Setup.essentials(logger, I18nConfig));
 
 const startup = new tools.Stopwatch();
 
@@ -18,13 +25,13 @@ const startup = new tools.Stopwatch();
 server.get(
   "/healthcheck",
   bg.ShieldRateLimit({
-    enabled: infra.Env.type === bg.NodeEnvironmentEnum.production,
+    enabled: Env.type === bg.NodeEnvironmentEnum.production,
     subject: bg.AnonSubjectResolver,
-    store: infra.RateLimiters.HealthcheckStore,
+    store: RateLimiters.HealthcheckStore,
   }),
   timeout(tools.Time.Seconds(15).ms, infra.requestTimeoutError),
-  infra.BasicAuthShield,
-  ...bg.Healthcheck.build(infra.healthcheck),
+  BasicAuthShield,
+  ...bg.Healthcheck.build(healthcheck),
 );
 // =============================
 
@@ -32,12 +39,12 @@ server.get(
 server.post(
   "/notification-send",
   bg.ShieldRateLimit({
-    enabled: infra.Env.type === bg.NodeEnvironmentEnum.production,
+    enabled: Env.type === bg.NodeEnvironmentEnum.production,
     subject: bg.AnonSubjectResolver,
-    store: infra.RateLimiters.NotificationSendStore,
+    store: RateLimiters.NotificationSendStore,
   }),
   timeout(tools.Time.Seconds(15).ms, infra.requestTimeoutError),
-  infra.ShieldApiKey.verify,
+  ShieldApiKey.verify,
   Mailer.Routes.NotificationSend,
 );
 // =============================

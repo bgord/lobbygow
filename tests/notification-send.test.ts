@@ -1,8 +1,8 @@
 import { describe, expect, jest, spyOn, test } from "bun:test";
 import * as bgb from "@bgord/bun";
 import * as Notifier from "+notifier";
-import { Env } from "+infra/env";
 import { Mailer } from "+infra/mailer.adapter";
+import { Env } from "../infra/env";
 import { server } from "../server";
 
 const ip = {

@@ -1,6 +1,8 @@
 # Changelog
+- 2025-08-24 14:36 b0aff78 **step: bump bun version**
+- 2025-08-24 14:36 51ee4a5 **step: bump bgord/scripts**
+## 2025-08-24 14:36 
 - 2025-08-24 14:10 2f4bb04 **fix: tests**
-## 2025-08-24 14:10 
 - 2025-08-24 13:37 89c748e **refactor: rename shields**
 - 2025-08-24 13:29 9529a49 **refactor: make bc infra free**
 - 2025-08-24 13:19 d3f2aaa **step: add tests/setup**
@@ -14,6 +16,7 @@
 - 2025-08-24 12:47 2e634f5 **refactor: adjust to newest bgord/bun**
 - 2025-08-24 12:46 ec2d091 **step: update packages**
 - 2025-08-24 12:46 d609a7d **step: bump bgord/scripts**
+- 2025-08-24 12:11 d9c5374 **docs: generate CHANGELOG**
 - 2025-08-24 11:37 464cca6 **docs: generate CHANGELOG**
 - 2025-08-24 11:37 41a85d8 **docs: generate readme**
 - 2025-08-24 11:36 1c9c56c **docs: generate readme**

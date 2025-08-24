@@ -99,12 +99,11 @@ describe("POST /notification-send", () => {
     );
 
     expect(response.status).toBe(200);
-
     expect(infraMailerSend).toHaveBeenCalledWith({
       from: Env.EMAIL_FROM,
       to: Env.EMAIL_TO,
       subject: `ℹ️  [INFO] ${payload.subject}`,
-      content: payload.content,
+      message: payload.content,
     });
   });
 
@@ -133,7 +132,7 @@ describe("POST /notification-send", () => {
       from: Env.EMAIL_FROM,
       to: Env.EMAIL_TO,
       subject: `❌ [ERROR] ${payload.subject}`,
-      content: payload.content,
+      message: payload.content,
     });
   });
 
@@ -162,7 +161,7 @@ describe("POST /notification-send", () => {
       from: Env.EMAIL_FROM,
       to: Env.EMAIL_TO,
       subject: `✅ [SUCCESS] ${payload.subject}`,
-      content: payload.content,
+      message: payload.content,
     });
   });
 
@@ -187,7 +186,7 @@ describe("POST /notification-send", () => {
       from: Env.EMAIL_FROM,
       to: Env.EMAIL_TO,
       subject: `ℹ️  [INFO] ${payload.subject}`,
-      content: payload.content,
+      message: payload.content,
     });
   });
 });

@@ -39,9 +39,7 @@ Run the tests
 
 ```
 modules/
-└── mailer
-    ├── routes
-    │   └── notification-send.ts
+└── notifier
     ├── services
     │   ├── notification-composer.ts
     │   └── notification.ts
@@ -50,17 +48,27 @@ modules/
         └── notification-kind.ts
 ```
 
+## App:
+
+```
+app/
+├── http
+│   ├── error-handler.ts
+│   └── mailer
+│       └── notification-send.ts
+```
+
 ## Infra:
 
 ```
 infra/
-├── api-key-shield.ts
 ├── basic-auth-shield.ts
 ├── env.ts
 ├── healthcheck.ts
 ├── i18n.ts
-├── logger.ts
-├── mailer.ts
+├── logger.adapter.ts
+├── mailer.adapter.ts
 ├── prerequisites.ts
-└── rate-limiters.ts
+├── rate-limiters.ts
+└── shield-api-key.ts
 ```

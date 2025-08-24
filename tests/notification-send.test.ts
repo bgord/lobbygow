@@ -80,7 +80,7 @@ describe("POST /notification-send", () => {
   });
 
   test("happy path - info", async () => {
-    const infraMailerSend = spyOn(Mailer, "send").mockImplementation(jest.fn());
+    const mailerSend = spyOn(Mailer, "send").mockImplementation(jest.fn());
 
     const payload = {
       subject: "subject",
@@ -99,16 +99,16 @@ describe("POST /notification-send", () => {
     );
 
     expect(response.status).toBe(200);
-    expect(infraMailerSend).toHaveBeenCalledWith({
+    expect(mailerSend).toHaveBeenCalledWith({
       from: Env.EMAIL_FROM,
       to: Env.EMAIL_TO,
       subject: `ℹ️  [INFO] ${payload.subject}`,
-      message: payload.content,
+      html: payload.content,
     });
   });
 
   test("happy path - error", async () => {
-    const infraMailerSend = spyOn(Mailer, "send").mockImplementation(jest.fn());
+    const mailerSend = spyOn(Mailer, "send").mockImplementation(jest.fn());
 
     const payload = {
       subject: "subject",
@@ -128,16 +128,16 @@ describe("POST /notification-send", () => {
 
     expect(response.status).toBe(200);
 
-    expect(infraMailerSend).toHaveBeenCalledWith({
+    expect(mailerSend).toHaveBeenCalledWith({
       from: Env.EMAIL_FROM,
       to: Env.EMAIL_TO,
       subject: `❌ [ERROR] ${payload.subject}`,
-      message: payload.content,
+      html: payload.content,
     });
   });
 
   test("happy path - success", async () => {
-    const infraMailerSend = spyOn(Mailer, "send").mockImplementation(jest.fn());
+    const mailerSend = spyOn(Mailer, "send").mockImplementation(jest.fn());
 
     const payload = {
       subject: "subject",
@@ -157,16 +157,16 @@ describe("POST /notification-send", () => {
 
     expect(response.status).toBe(200);
 
-    expect(infraMailerSend).toHaveBeenCalledWith({
+    expect(mailerSend).toHaveBeenCalledWith({
       from: Env.EMAIL_FROM,
       to: Env.EMAIL_TO,
       subject: `✅ [SUCCESS] ${payload.subject}`,
-      message: payload.content,
+      html: payload.content,
     });
   });
 
   test("happy path - default kind", async () => {
-    const infraMailerSend = spyOn(Mailer, "send").mockImplementation(jest.fn());
+    const mailerSend = spyOn(Mailer, "send").mockImplementation(jest.fn());
 
     const payload = { subject: "subject", content: "content" };
 
@@ -182,11 +182,11 @@ describe("POST /notification-send", () => {
 
     expect(response.status).toBe(200);
 
-    expect(infraMailerSend).toHaveBeenCalledWith({
+    expect(mailerSend).toHaveBeenCalledWith({
       from: Env.EMAIL_FROM,
       to: Env.EMAIL_TO,
       subject: `ℹ️  [INFO] ${payload.subject}`,
-      message: payload.content,
+      html: payload.content,
     });
   });
 });

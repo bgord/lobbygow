@@ -6,7 +6,7 @@ import { Mailer } from "+infra/mailer.adapter";
 const subject = "subject";
 const content = "content";
 
-const notification = new Notifier.Services.Notification(subject, content);
+const notification = new Notifier.Services.Notification(Mailer, Env.EMAIL_FROM, subject, content);
 
 describe("Notification", () => {
   describe("compose", () => {
@@ -46,7 +46,7 @@ describe("Notification", () => {
 
   describe("send", () => {
     test("kind - success", async () => {
-      const infraMailerSend = spyOn(Mailer, "send").mockImplementation(jest.fn());
+      const mailerSend = spyOn(Mailer, "send").mockImplementation(jest.fn());
 
       const composer = Notifier.Services.NotificationComposerChooser.choose(
         Notifier.VO.NotificationKindEnum.success,
@@ -56,7 +56,7 @@ describe("Notification", () => {
 
       await notification.send(message, Env.EMAIL_TO);
 
-      expect(infraMailerSend).toHaveBeenCalledWith({
+      expect(mailerSend).toHaveBeenCalledWith({
         from: Env.EMAIL_FROM,
         to: Env.EMAIL_TO,
         subject: `✅ [SUCCESS] ${subject}`,
@@ -65,7 +65,7 @@ describe("Notification", () => {
     });
 
     test("kind - error", async () => {
-      const infraMailerSend = spyOn(Mailer, "send").mockImplementation(jest.fn());
+      const mailerSend = spyOn(Mailer, "send").mockImplementation(jest.fn());
 
       const composer = Notifier.Services.NotificationComposerChooser.choose(
         Notifier.VO.NotificationKindEnum.error,
@@ -75,7 +75,7 @@ describe("Notification", () => {
 
       await notification.send(message, Env.EMAIL_TO);
 
-      expect(infraMailerSend).toHaveBeenCalledWith({
+      expect(mailerSend).toHaveBeenCalledWith({
         from: Env.EMAIL_FROM,
         to: Env.EMAIL_TO,
         subject: `❌ [ERROR] ${subject}`,
@@ -84,7 +84,7 @@ describe("Notification", () => {
     });
 
     test("kind - info", async () => {
-      const infraMailerSend = spyOn(Mailer, "send").mockImplementation(jest.fn());
+      const mailerSend = spyOn(Mailer, "send").mockImplementation(jest.fn());
 
       const composer = Notifier.Services.NotificationComposerChooser.choose(
         Notifier.VO.NotificationKindEnum.info,
@@ -94,7 +94,7 @@ describe("Notification", () => {
 
       await notification.send(message, Env.EMAIL_TO);
 
-      expect(infraMailerSend).toHaveBeenCalledWith({
+      expect(mailerSend).toHaveBeenCalledWith({
         from: Env.EMAIL_FROM,
         to: Env.EMAIL_TO,
         subject: `ℹ️  [INFO] ${subject}`,

@@ -3,6 +3,7 @@ import type hono from "hono";
 import * as Notifier from "+notifier";
 import { Env } from "+infra/env";
 import { logger } from "+infra/logger.adapter";
+import { Mailer } from "+infra/mailer.adapter";
 
 export async function NotificationSend(c: hono.Context, _next: hono.Next) {
   const body = await bg.safeParseBody(c);
@@ -11,7 +12,7 @@ export async function NotificationSend(c: hono.Context, _next: hono.Next) {
   const content = bg.EmailContentHtml.parse(body.content);
   const kind = Notifier.VO.NotificationKind.parse(body.kind);
 
-  const notification = new Notifier.Services.Notification(subject, content);
+  const notification = new Notifier.Services.Notification(Mailer, Env.EMAIL_FROM, subject, content);
   const composer = Notifier.Services.NotificationComposerChooser.choose(kind);
 
   logger.info({

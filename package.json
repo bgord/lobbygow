@@ -22,6 +22,6 @@
   },
   "dependencies": {
     "@bgord/bun": "0.21.1",
-    "@bgord/tools": "0.12.12"
+    "@bgord/tools": "0.12.23"
   }
 }

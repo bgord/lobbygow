@@ -1,7 +1,7 @@
 import * as bg from "@bgord/bun";
 import { BODY_LIMIT_MAX_SIZE } from "+infra";
 import { Env } from "+infra/env";
-import { logger } from "+infra/logger.adapter";
+import { Logger } from "+infra/logger.adapter";
 import { prerequisites } from "+infra/prerequisites";
 import { server, startup } from "./server";
 
@@ -13,7 +13,7 @@ import { server, startup } from "./server";
     maxRequestBodySize: BODY_LIMIT_MAX_SIZE,
   });
 
-  logger.info({
+  Logger.info({
     message: "Server has started",
     component: "http",
     operation: "server_startup",

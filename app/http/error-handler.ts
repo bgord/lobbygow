@@ -2,7 +2,7 @@ import * as bg from "@bgord/bun";
 import type hono from "hono";
 import { HTTPException } from "hono/http-exception";
 import z from "zod/v4";
-import { logger } from "+infra/logger.adapter";
+import { Logger } from "+infra/logger.adapter";
 
 export class ErrorHandler {
   static handle: hono.ErrorHandler = async (error, c) => {
@@ -32,7 +32,7 @@ export class ErrorHandler {
     }
 
     if (error instanceof z.ZodError) {
-      logger.error({
+      Logger.error({
         message: "Invalid payload",
         component: "http",
         operation: "invalid_payload",
@@ -44,7 +44,7 @@ export class ErrorHandler {
       return c.json({ message: "payload.invalid.error", _known: true }, 400);
     }
 
-    logger.error({
+    Logger.error({
       message: "Unknown error",
       component: "http",
       operation: "unknown_error",

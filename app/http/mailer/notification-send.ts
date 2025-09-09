@@ -2,7 +2,7 @@ import * as bg from "@bgord/bun";
 import type hono from "hono";
 import * as Notifier from "+notifier";
 import { Env } from "+infra/env";
-import { logger } from "+infra/logger.adapter";
+import { Logger } from "+infra/logger.adapter";
 import { Mailer } from "+infra/mailer.adapter";
 
 export async function NotificationSend(c: hono.Context, _next: hono.Next) {
@@ -15,7 +15,7 @@ export async function NotificationSend(c: hono.Context, _next: hono.Next) {
   const notification = new Notifier.Services.Notification(Mailer, Env.EMAIL_FROM, subject, content);
   const composer = Notifier.Services.NotificationComposerChooser.choose(kind);
 
-  logger.info({
+  Logger.info({
     message: "Notification composer chosen",
     component: "http",
     operation: "notification_composer_chosen",
@@ -24,7 +24,7 @@ export async function NotificationSend(c: hono.Context, _next: hono.Next) {
 
   const message = await notification.compose(composer);
 
-  logger.info({
+  Logger.info({
     message: "Notification composed",
     component: "http",
     operation: "notification_composed_content",
@@ -33,7 +33,7 @@ export async function NotificationSend(c: hono.Context, _next: hono.Next) {
 
   const result = await notification.send(message, Env.EMAIL_TO);
 
-  logger.info({
+  Logger.info({
     message: "Notification sent",
     component: "http",
     operation: "notification_sent_result",

@@ -1,6 +1,16 @@
 # Changelog
+- 2025-09-09 14:58 7fd4446 **refactor: update packages**
+- 2025-09-09 14:58 2a0f6f3 **refactor: adjust env**
+- 2025-09-09 14:58 150b31d **refactor: install zod**
+## 2025-09-09 14:58 
+- 2025-09-09 14:57 3b59afe **refactor: adjust prereqs**
+- 2025-09-09 14:57 06ace7c **refactor: adjust healthchecks**
+- 2025-09-09 14:56 6e60d74 **refactor: rename logger**
+- 2025-09-09 14:56 1178c03 **refactor: add server deps**
+- 2025-09-09 14:55 2eda5ec **step: add id provider adapter**
+- 2025-09-09 14:52 e96d8aa **step: add clock adapter**
+- 2025-09-09 14:50 b39dc1a **step: update packages**
 - 2025-08-24 15:04 933d2f5 **refactor: disable bun prereq**
-## 2025-08-24 15:04 
 - 2025-08-24 14:36 b0aff78 **step: bump bun version**
 - 2025-08-24 14:36 51ee4a5 **step: bump bgord/scripts**
 - 2025-08-24 14:10 2f4bb04 **fix: tests**
@@ -11,6 +21,7 @@
 - 2025-08-24 13:07 2743d6a **refactor: rename mailer module to notifier**
 - 2025-08-24 13:04 9730824 **step: add mailer adapter to env**
 - 2025-08-24 13:04 8365a3b **refactor: do not skip tests in tsconfig**
+- 2025-08-24 13:04 3689d85 **docs: generate CHANGELOG**
 - 2025-08-24 12:58 ef252cf **refactor: make app/http**
 - 2025-08-24 12:58 31ff026 **refactor: adjust paths**
 - 2025-08-24 12:54 d2ac8d8 **refactor: do not export from infra/index**

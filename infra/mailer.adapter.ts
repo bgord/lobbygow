@@ -1,6 +1,6 @@
 import * as bg from "@bgord/bun";
 import { Env, MailerAdapter } from "./env";
-import { logger } from "./logger.adapter";
+import { Logger } from "./logger.adapter";
 
 export const Mailer = {
   [MailerAdapter.smtp]: new bg.MailerSmtpAdapter({
@@ -9,5 +9,5 @@ export const Mailer = {
     SMTP_USER: Env.SMTP_USER,
     SMTP_PASS: Env.SMTP_PASS,
   }),
-  [MailerAdapter.noop]: new bg.MailerNoopAdapter(logger),
+  [MailerAdapter.noop]: new bg.MailerNoopAdapter(Logger),
 }[Env.MAILER_ADAPTER];

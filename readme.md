@@ -62,9 +62,11 @@ app/
 
 ```
 infra/
+├── clock.adapter.ts
 ├── env.ts
 ├── healthcheck.ts
 ├── i18n.ts
+├── id-provider.ts
 ├── logger.adapter.ts
 ├── mailer.adapter.ts
 ├── prerequisites.ts

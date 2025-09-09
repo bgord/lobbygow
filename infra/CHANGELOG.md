@@ -1,7 +1,8 @@
 # Changelog
+- 2025-09-09 15:01 f8179ab **refactor: adjust bun-version in workflow**
+## 2025-09-09 15:01 
 - 2025-09-09 14:59 e81eb9a **step: bump bgord/scripts**
 - 2025-09-09 14:59 5771a6a **refactor: remove dependabot workflow**
-## 2025-09-09 14:59 
 - 2025-09-09 14:58 7fd4446 **refactor: update packages**
 - 2025-09-09 14:58 2a0f6f3 **refactor: adjust env**
 - 2025-09-09 14:58 150b31d **refactor: install zod**
@@ -14,6 +15,7 @@
 - 2025-09-09 14:50 b39dc1a **step: update packages**
 - 2025-09-09 12:59 f58eda4 **docs: generate readme**
 - 2025-09-09 12:59 d685aa0 **docs: generate CHANGELOG**
+- 2025-09-09 12:59 1b86d03 **docs: generate CHANGELOG**
 - 2025-08-24 15:04 933d2f5 **refactor: disable bun prereq**
 - 2025-08-24 14:36 b0aff78 **step: bump bun version**
 - 2025-08-24 14:36 51ee4a5 **step: bump bgord/scripts**

@@ -1,6 +1,8 @@
 # Changelog
+- 2025-09-16 11:51 a96cfdf **step: update packages**
+## 2025-09-16 11:51 
+- 2025-09-09 19:47 2e9a523 **refactor: simplify size**
 - 2025-09-09 15:01 f8179ab **refactor: adjust bun-version in workflow**
-## 2025-09-09 15:01 
 - 2025-09-09 14:59 e81eb9a **step: bump bgord/scripts**
 - 2025-09-09 14:59 5771a6a **refactor: remove dependabot workflow**
 - 2025-09-09 14:58 7fd4446 **refactor: update packages**
@@ -13,6 +15,7 @@
 - 2025-09-09 14:55 2eda5ec **step: add id provider adapter**
 - 2025-09-09 14:52 e96d8aa **step: add clock adapter**
 - 2025-09-09 14:50 b39dc1a **step: update packages**
+- 2025-09-09 13:01 e2e8c7a **docs: generate CHANGELOG**
 - 2025-09-09 12:59 f58eda4 **docs: generate readme**
 - 2025-09-09 12:59 d685aa0 **docs: generate CHANGELOG**
 - 2025-09-09 12:59 1b86d03 **docs: generate CHANGELOG**

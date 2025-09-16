@@ -10,18 +10,18 @@
   "author": "Bartosz Gordon",
   "license": "ISC",
   "devDependencies": {
-    "@biomejs/biome": "2.2.3",
+    "@biomejs/biome": "2.2.4",
     "@commitlint/cli": "19.8.1",
     "@commitlint/config-conventional": "19.8.1",
     "knip": "5.63.1",
-    "lefthook": "1.12.4",
-    "@types/bun": "1.2.21",
+    "lefthook": "1.13.0",
+    "@types/bun": "1.2.22",
     "cspell": "9.2.1",
     "shellcheck": "4.1.0",
     "typescript": "5.9.2"
   },
   "dependencies": {
-    "@bgord/bun": "0.26.2",
-    "zod": "4.1.5"
+    "@bgord/bun": "0.26.3",
+    "zod": "4.1.8"
   }
 }

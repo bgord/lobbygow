@@ -1,6 +1,11 @@
 # Changelog
+- 2025-09-17 17:16 6118907 **refactor: graceful shutdown**
+## 2025-09-17 17:16 
+- 2025-09-17 17:15 d0c68f7 **refactor: rename deploy server to api**
+- 2025-09-17 17:15 cc266ff **step: update packages**
+- 2025-09-17 17:15 2e32b9f **step: bump bgord/scripts**
 - 2025-09-16 11:51 a96cfdf **step: update packages**
-## 2025-09-16 11:51 
+- 2025-09-16 09:52 2ab798b **docs: generate CHANGELOG**
 - 2025-09-09 19:47 2e9a523 **refactor: simplify size**
 - 2025-09-09 15:01 f8179ab **refactor: adjust bun-version in workflow**
 - 2025-09-09 14:59 e81eb9a **step: bump bgord/scripts**

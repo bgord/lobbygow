@@ -1,16 +1,15 @@
 import * as bg from "@bgord/bun";
 import * as tools from "@bgord/tools";
+import { Mailer } from "+infra/mailer.adapter";
 import { Env } from "./env";
 import { LoggerWinstonProductionAdapter } from "./logger.adapter";
+
+const production = Env.type === bg.NodeEnvironmentEnum.production;
 
 export const prerequisites = [
   new bg.PrerequisitePort({ label: "port", port: Env.PORT }),
   new bg.PrerequisiteTimezoneUTC({ label: "timezone", timezone: tools.Timezone.parse(Env.TZ) }),
-  new bg.PrerequisiteRAM({
-    label: "RAM",
-    minimum: tools.Size.fromMB(128),
-    enabled: Env.type !== bg.NodeEnvironmentEnum.local,
-  }),
+  new bg.PrerequisiteRAM({ label: "RAM", minimum: tools.Size.fromMB(128), enabled: production }),
   new bg.PrerequisiteSpace({ label: "disk-space", minimum: tools.Size.fromMB(512) }),
   new bg.PrerequisiteNode({
     label: "node",
@@ -26,6 +25,15 @@ export const prerequisites = [
   new bg.PrerequisiteLogFile({
     label: "log-file",
     logger: LoggerWinstonProductionAdapter,
-    enabled: Env.type === bg.NodeEnvironmentEnum.production,
+    enabled: production,
+  }),
+  new bg.PrerequisiteMailer({ label: "mailer", mailer: Mailer, enabled: production }),
+  new bg.PrerequisiteOutsideConnectivity({ label: "outside-connectivity", enabled: production }),
+  new bg.PrerequisiteRunningUser({ label: "user", username: "bgord", enabled: production }),
+  new bg.PrerequisiteSSLCertificateExpiry({
+    label: "certificate",
+    host: "lobbygow.bgord.dev",
+    validDaysMinimum: 7,
+    enabled: production,
   }),
 ];

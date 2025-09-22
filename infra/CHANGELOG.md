@@ -1,7 +1,9 @@
 # Changelog
+- 2025-09-22 14:34 6683ee4 **fix: disable ssl prereq**
+## 2025-09-22 14:34 
 - 2025-09-22 14:31 a91246a **feature: add more prereqs**
-## 2025-09-22 14:31 
 - 2025-09-22 14:27 0615ba6 **step: update packages**
+- 2025-09-22 12:31 143c5d3 **docs: generate CHANGELOG**
 - 2025-09-17 17:36 9a8339d **step: bump bgord/scripts**
 - 2025-09-17 17:16 6118907 **refactor: graceful shutdown**
 - 2025-09-17 17:15 d0c68f7 **refactor: rename deploy server to api**

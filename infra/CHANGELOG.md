@@ -1,8 +1,14 @@
 # Changelog
+- 2025-09-23 21:06 1667f7d **step: update packages**
+## 2025-09-23 21:06 
+- 2025-09-23 13:00 d88b391 **refactor: update logger redactors**
+- 2025-09-23 12:59 ac15b37 **step: bump bgord/scripts**
+- 2025-09-23 12:59 187e150 **step: update packages**
+- 2025-09-22 22:54 c49795f **step: update packages**
 - 2025-09-22 14:34 6683ee4 **fix: disable ssl prereq**
-## 2025-09-22 14:34 
 - 2025-09-22 14:31 a91246a **feature: add more prereqs**
 - 2025-09-22 14:27 0615ba6 **step: update packages**
+- 2025-09-22 12:34 2f32322 **docs: generate CHANGELOG**
 - 2025-09-22 12:31 143c5d3 **docs: generate CHANGELOG**
 - 2025-09-17 17:36 9a8339d **step: bump bgord/scripts**
 - 2025-09-17 17:16 6118907 **refactor: graceful shutdown**

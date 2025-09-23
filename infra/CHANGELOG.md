@@ -1,6 +1,8 @@
 # Changelog
+- 2025-09-23 21:10 2f3d28b **step: bump bgord/scripts**
+## 2025-09-23 21:10 
 - 2025-09-23 21:06 1667f7d **step: update packages**
-## 2025-09-23 21:06 
+- 2025-09-23 19:06 cdc2ff7 **docs: generate CHANGELOG**
 - 2025-09-23 13:00 d88b391 **refactor: update logger redactors**
 - 2025-09-23 12:59 ac15b37 **step: bump bgord/scripts**
 - 2025-09-23 12:59 187e150 **step: update packages**

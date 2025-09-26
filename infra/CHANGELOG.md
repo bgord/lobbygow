@@ -1,12 +1,14 @@
 # Changelog
+- 2025-09-26 13:46 02bdc8c **refactor: simplify node version in prereq**
+## 2025-09-26 13:46 
 - 2025-09-26 13:40 817faeb **refactor: update bun prereq version**
-## 2025-09-26 13:40 
 - 2025-09-26 12:06 ba5b14f **step: bump bgord/scripts**
 - 2025-09-26 12:06 7c709ed **step: bump bgord/scripts**
 - 2025-09-26 12:00 32480a3 **refactor: rewrite prod server build script**
 - 2025-09-26 11:59 f6a6e66 **step: bump bgord/scripts**
 - 2025-09-26 11:46 d711545 **step: update packages**
 - 2025-09-26 11:46 c75fc0a **step: bump bgord/scripts**
+- 2025-09-26 11:43 bb062b9 **docs: generate CHANGELOG**
 - 2025-09-26 11:33 9f23d14 **step: update packages**
 - 2025-09-26 10:07 1a474c9 **docs: generate CHANGELOG**
 - 2025-09-26 10:06 e176e6f **docs: generate CHANGELOG**

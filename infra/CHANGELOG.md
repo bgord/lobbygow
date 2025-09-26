@@ -1,9 +1,15 @@
 # Changelog
+- 2025-09-26 12:00 32480a3 **refactor: rewrite prod server build script**
+## 2025-09-26 12:00 
+- 2025-09-26 11:59 f6a6e66 **step: bump bgord/scripts**
+- 2025-09-26 11:46 d711545 **step: update packages**
+- 2025-09-26 11:46 c75fc0a **step: bump bgord/scripts**
+- 2025-09-26 11:33 9f23d14 **step: update packages**
 - 2025-09-23 21:20 c8fed39 **fix: scripts**
-## 2025-09-23 21:20 
 - 2025-09-23 21:14 7952671 **step: bump bgord/scripts**
 - 2025-09-23 21:10 2f3d28b **step: bump bgord/scripts**
 - 2025-09-23 21:06 1667f7d **step: update packages**
+- 2025-09-23 19:21 ac1e6f9 **docs: generate CHANGELOG**
 - 2025-09-23 19:14 8fc9c8a **docs: generate CHANGELOG**
 - 2025-09-23 19:11 6564048 **docs: generate CHANGELOG**
 - 2025-09-23 19:06 cdc2ff7 **docs: generate CHANGELOG**

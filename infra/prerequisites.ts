@@ -18,7 +18,7 @@ export const prerequisites = [
   }),
   new bg.PrerequisiteBun({
     label: "bun",
-    version: tools.PackageVersion.fromString("1.2.20"),
+    version: tools.PackageVersion.fromString("1.2.22"),
     current: Bun.version,
   }),
   new bg.PrerequisiteMemory({ label: "memory-consumption", maximum: tools.Size.fromMB(300) }),

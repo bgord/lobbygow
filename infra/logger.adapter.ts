@@ -4,7 +4,7 @@ import { Env } from "./env";
 const app = "lobbygow";
 
 const redactor = new bg.RedactorCompositeAdapter([
-  new bg.RedactorCompactAdapter(),
+  new bg.RedactorCompactArrayAdapter(),
   new bg.RedactorMaskAdapter(bg.RedactorMaskAdapter.DEFAULT_KEYS),
 ]);
 

@@ -1,7 +1,9 @@
 # Changelog
+- 2025-10-02 10:50 37ed245 **step: bump bgord/scripts**
+## 2025-10-02 10:50 
 - 2025-10-02 10:46 67386b2 **step: update packages**
-## 2025-10-02 10:46 
 - 2025-10-02 10:45 502828e **step: bump bgord/scripts**
+- 2025-10-02 08:46 d6e4d06 **docs: generate CHANGELOG**
 - 2025-10-01 22:05 922c8e4 **refactor: rename redactors**
 - 2025-10-01 22:02 c19b5e6 **step: update packages**
 - 2025-10-01 20:05 9cd7654 **docs: generate CHANGELOG**

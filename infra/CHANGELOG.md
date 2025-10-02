@@ -1,7 +1,10 @@
 # Changelog
+- 2025-10-02 10:46 67386b2 **step: update packages**
+## 2025-10-02 10:46 
+- 2025-10-02 10:45 502828e **step: bump bgord/scripts**
 - 2025-10-01 22:05 922c8e4 **refactor: rename redactors**
-## 2025-10-01 22:05 
 - 2025-10-01 22:02 c19b5e6 **step: update packages**
+- 2025-10-01 20:05 9cd7654 **docs: generate CHANGELOG**
 - 2025-09-26 13:49 f4e0e6d **refactor: restore previous bun version**
 - 2025-09-26 13:46 02bdc8c **refactor: simplify node version in prereq**
 - 2025-09-26 13:40 817faeb **refactor: update bun prereq version**

@@ -17,7 +17,7 @@ import { server, startup } from "./server";
     message: "Server has started",
     component: "http",
     operation: "server_startup",
-    metadata: { port: Env.PORT, startupTimeMs: startup.stop().durationMs },
+    metadata: { port: Env.PORT, startupTimeMs: startup.stop().ms },
   });
 
   new bg.GracefulShutdown(Logger).applyTo(app);

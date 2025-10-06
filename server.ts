@@ -37,7 +37,7 @@ server.get(
     },
     ShieldRateLimitDeps,
   ),
-  timeout(tools.Time.Seconds(15).ms, infra.requestTimeoutError),
+  timeout(tools.Duration.Seconds(15).ms, infra.requestTimeoutError),
   ShieldBasicAuth,
   ...bg.Healthcheck.build(healthcheck, HealthcheckDeps),
 );
@@ -54,7 +54,7 @@ server.post(
     },
     ShieldRateLimitDeps,
   ),
-  timeout(tools.Time.Seconds(15).ms, infra.requestTimeoutError),
+  timeout(tools.Duration.Seconds(15).ms, infra.requestTimeoutError),
   ShieldApiKey.verify,
   App.Http.Mailer.NotificationSend,
 );

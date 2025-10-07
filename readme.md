@@ -62,6 +62,7 @@ app/
 
 ```
 infra/
+├── certificate-inspector.adapter.ts
 ├── clock.adapter.ts
 ├── env.ts
 ├── healthcheck.ts

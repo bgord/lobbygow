@@ -1,6 +1,7 @@
 import * as bg from "@bgord/bun";
 import * as tools from "@bgord/tools";
 import { Mailer } from "+infra/mailer.adapter";
+import { CertificateInspector } from "./certificate-inspector.adapter";
 import { Env } from "./env";
 import { LoggerWinstonProductionAdapter } from "./logger.adapter";
 
@@ -30,10 +31,11 @@ export const prerequisites = [
   new bg.PrerequisiteMailer({ label: "mailer", mailer: Mailer, enabled: production }),
   new bg.PrerequisiteOutsideConnectivity({ label: "outside-connectivity", enabled: production }),
   new bg.PrerequisiteRunningUser({ label: "user", username: "bgord", enabled: production }),
-  // new bg.PrerequisiteSSLCertificateExpiry({
-  //   label: "certificate",
-  //   host: "lobbygow.bgord.dev",
-  //   validDaysMinimum: 7,
-  //   enabled: production,
-  // }),
+  new bg.PrerequisiteSSLCertificateExpiry({
+    label: "certificate",
+    host: "lobbygow.bgord.dev",
+    validDaysMinimum: 7,
+    enabled: production,
+    inspector: CertificateInspector,
+  }),
 ];

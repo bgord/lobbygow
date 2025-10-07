@@ -1,7 +1,11 @@
 # Changelog
+- 2025-10-07 22:56 cc11515 **step: add certificate inspector adapter**
+- 2025-10-07 22:56 17aa698 **step: restore ssl certificate expiry**
+## 2025-10-07 22:56 
+- 2025-10-07 22:49 1dda541 **step: update packages**
 - 2025-10-06 09:32 f00d9ff **refactor: adjust durations**
-## 2025-10-06 09:32 
 - 2025-10-06 09:31 c36c5cc **step: update packages**
+- 2025-10-06 07:32 0e3f855 **docs: generate CHANGELOG**
 - 2025-10-04 19:22 c5ade97 **step: update packages**
 - 2025-10-04 19:03 a19f475 **step: update packages**
 - 2025-10-04 17:23 fcd034e **docs: generate CHANGELOG**

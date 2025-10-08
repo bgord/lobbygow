@@ -1,10 +1,13 @@
 # Changelog
+- 2025-10-08 11:17 c82650e **refactor: change ssl cert expiry config**
+- 2025-10-08 11:17 878c254 **step: update packages**
+## 2025-10-08 11:17 
 - 2025-10-07 22:57 63f17a8 **step: remove codeql analysis**
-## 2025-10-07 22:57 
 - 2025-10-07 22:56 cc11515 **step: add certificate inspector adapter**
 - 2025-10-07 22:56 17aa698 **step: restore ssl certificate expiry**
 - 2025-10-07 22:49 1dda541 **step: update packages**
 - 2025-10-07 20:57 cf4960c **docs: generate CHANGELOG**
+- 2025-10-07 20:57 c3aa492 **docs: generate CHANGELOG**
 - 2025-10-07 20:57 625a356 **docs: generate readme**
 - 2025-10-06 09:32 f00d9ff **refactor: adjust durations**
 - 2025-10-06 09:31 c36c5cc **step: update packages**

@@ -34,7 +34,7 @@ export const prerequisites = [
   new bg.PrerequisiteSSLCertificateExpiry({
     label: "certificate",
     host: "lobbygow.bgord.dev",
-    validDaysMinimum: 7,
+    days: 7,
     enabled: production,
     inspector: CertificateInspector,
   }),

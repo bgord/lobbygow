@@ -1,7 +1,10 @@
 # Changelog
+- 2025-10-16 20:44 ffa4900 **refactor: add missing deps**
+## 2025-10-16 20:44 
+- 2025-10-16 20:35 cfa1068 **step: update packages**
 - 2025-10-08 11:17 c82650e **refactor: change ssl cert expiry config**
 - 2025-10-08 11:17 878c254 **step: update packages**
-## 2025-10-08 11:17 
+- 2025-10-08 09:17 95b03f5 **docs: generate CHANGELOG**
 - 2025-10-07 22:57 63f17a8 **step: remove codeql analysis**
 - 2025-10-07 22:56 cc11515 **step: add certificate inspector adapter**
 - 2025-10-07 22:56 17aa698 **step: restore ssl certificate expiry**

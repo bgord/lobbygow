@@ -68,6 +68,7 @@ infra/
 ├── healthcheck.ts
 ├── i18n.ts
 ├── id-provider.ts
+├── json-file-reader.adapter.ts
 ├── logger.adapter.ts
 ├── mailer.adapter.ts
 ├── prerequisites.ts

@@ -9,7 +9,4 @@ export const requestTimeoutError = new HTTPException(408, {
 
 export type Variables = TimingVariables & bg.TimeZoneOffsetVariables & bg.ContextVariables & bg.EtagVariables;
 
-export const BODY_LIMIT_MAX_SIZE = new tools.Size({
-  value: 128,
-  unit: tools.SizeUnit.kB,
-}).toBytes();
+export const BODY_LIMIT_MAX_SIZE = tools.Size.fromKb(128).toBytes();

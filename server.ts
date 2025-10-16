@@ -8,6 +8,7 @@ import { Env } from "+infra/env";
 import { healthcheck } from "+infra/healthcheck";
 import { I18nConfig } from "+infra/i18n";
 import { IdProvider } from "+infra/id-provider";
+import { JsonFileReader } from "+infra/json-file-reader.adapter";
 import { Logger } from "+infra/logger.adapter";
 import * as RateLimiters from "+infra/rate-limiters";
 import { ShieldApiKey } from "+infra/shield-api-key";
@@ -15,8 +16,8 @@ import { ShieldBasicAuth } from "+infra/shield-basic-auth";
 import * as App from "./app";
 
 const ShieldRateLimitDeps = { Clock };
-const HealthcheckDeps = { Clock };
-const ServerDeps = { Logger, I18n: I18nConfig, Clock, IdProvider };
+const HealthcheckDeps = { Clock, JsonFileReader, Logger };
+const ServerDeps = { Logger, I18n: I18nConfig, Clock, IdProvider, JsonFileReader };
 
 type HonoConfig = { Variables: infra.Variables; startup: tools.Stopwatch };
 

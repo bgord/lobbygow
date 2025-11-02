@@ -25,7 +25,7 @@ const server = new Hono<HonoConfig>();
 
 server.use(...bg.Setup.essentials(ServerDeps));
 
-const startup = new tools.Stopwatch(Clock.nowMs());
+const startup = new tools.Stopwatch(Clock.now());
 
 // Healthcheck =================
 server.get(

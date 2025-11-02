@@ -1,8 +1,10 @@
 # Changelog
+- 2025-11-02 23:20 8d30583 **step: bump bgord/scripts**
+## 2025-11-02 23:20 
 - 2025-11-02 23:12 0cb4bc2 **step: update packages**
-## 2025-11-02 23:12 
 - 2025-11-02 23:02 acbb9b4 **step: update packages**
 - 2025-11-02 23:02 3485be0 **step: update packages**
+- 2025-11-02 22:13 fd5106f **docs: generate CHANGELOG**
 - 2025-11-02 16:15 de9f888 **fix: adjust stopwatch**
 - 2025-11-02 16:15 8456c08 **step: add disk space checker**
 - 2025-11-02 16:12 17f78e3 **step: update packages**

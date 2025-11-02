@@ -1,8 +1,13 @@
 # Changelog
+- 2025-11-02 23:12 0cb4bc2 **step: update packages**
+## 2025-11-02 23:12 
+- 2025-11-02 23:02 acbb9b4 **step: update packages**
+- 2025-11-02 23:02 3485be0 **step: update packages**
 - 2025-11-02 16:15 de9f888 **fix: adjust stopwatch**
 - 2025-11-02 16:15 8456c08 **step: add disk space checker**
-## 2025-11-02 16:15 
 - 2025-11-02 16:12 17f78e3 **step: update packages**
+- 2025-11-02 15:15 9a83d3b **docs: generate readme**
+- 2025-11-02 15:15 28985ee **docs: generate CHANGELOG**
 - 2025-10-16 20:44 ffa4900 **refactor: add missing deps**
 - 2025-10-16 20:35 cfa1068 **step: update packages**
 - 2025-10-16 18:44 7f5fc79 **docs: generate readme**

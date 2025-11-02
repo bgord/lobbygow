@@ -1,7 +1,12 @@
 # Changelog
+- 2025-11-02 16:15 de9f888 **fix: adjust stopwatch**
+- 2025-11-02 16:15 8456c08 **step: add disk space checker**
+## 2025-11-02 16:15 
+- 2025-11-02 16:12 17f78e3 **step: update packages**
 - 2025-10-16 20:44 ffa4900 **refactor: add missing deps**
-## 2025-10-16 20:44 
 - 2025-10-16 20:35 cfa1068 **step: update packages**
+- 2025-10-16 18:44 7f5fc79 **docs: generate readme**
+- 2025-10-16 18:44 7af2738 **docs: generate CHANGELOG**
 - 2025-10-08 11:17 c82650e **refactor: change ssl cert expiry config**
 - 2025-10-08 11:17 878c254 **step: update packages**
 - 2025-10-08 09:17 95b03f5 **docs: generate CHANGELOG**

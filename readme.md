@@ -1,5 +1,7 @@
 # lobbygow
 
+[![Deploy](https://github.com/bgord/lobbygow/actions/workflows/deploy-server.yml/badge.svg)](https://github.com/bgord/lobbygow/actions/workflows/deploy-server.yml)
+
 [Check status](https://bgord.github.io/statuses/history/lobbygow)
 
 ## Configuration:
@@ -7,7 +9,7 @@
 Clone the repository
 
 ```
-git clone git@github.com:bgord/journal.git --recurse-submodules
+git clone git@github.com:bgord/lobbygow.git --recurse-submodules
 ```
 
 Install packages

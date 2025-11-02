@@ -64,6 +64,7 @@ app/
 infra/
 ├── certificate-inspector.adapter.ts
 ├── clock.adapter.ts
+├── disk-space-checker.adapter.ts
 ├── env.ts
 ├── healthcheck.ts
 ├── i18n.ts

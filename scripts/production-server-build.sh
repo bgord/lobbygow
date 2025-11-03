@@ -34,5 +34,5 @@ cp scripts/production-server-start.sh $OUTPUT_DIRECTORY
 step_end "scripts/production-server-start.sh copy"
 
 step_start "App compile"
-bun build --compile --minify --sourcemap index.ts --outfile "$OUTPUT_DIRECTORY"/lobbygow
+bun build --compile --production --minify --sourcemap index.ts --outfile "$OUTPUT_DIRECTORY"/lobbygow
 step_end "App compile"

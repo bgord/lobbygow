@@ -1,7 +1,9 @@
 # Changelog
+- 2025-11-04 21:26 829b3a4 **step: update packages**
+## 2025-11-04 21:26 
 - 2025-11-04 21:18 c5723b8 **step: adjust prereqs**
-## 2025-11-04 21:18 
 - 2025-11-04 21:17 b026911 **step: update packages**
+- 2025-11-04 20:18 7135c9e **docs: generate CHANGELOG**
 - 2025-11-04 15:50 e76fa4e **step: setup prereq clock drift**
 - 2025-11-04 15:45 521ee23 **step: update packages**
 - 2025-11-04 14:50 537b820 **docs: generate readme**

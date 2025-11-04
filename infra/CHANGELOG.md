@@ -1,7 +1,11 @@
 # Changelog
+- 2025-11-04 21:18 c5723b8 **step: adjust prereqs**
+## 2025-11-04 21:18 
+- 2025-11-04 21:17 b026911 **step: update packages**
 - 2025-11-04 15:50 e76fa4e **step: setup prereq clock drift**
-## 2025-11-04 15:50 
 - 2025-11-04 15:45 521ee23 **step: update packages**
+- 2025-11-04 14:50 537b820 **docs: generate readme**
+- 2025-11-04 14:50 2f69ac2 **docs: generate CHANGELOG**
 - 2025-11-03 18:29 71305e5 **fix: output directory**
 - 2025-11-03 18:14 63378a8 **fix: bun compile --production flag**
 - 2025-11-03 18:11 bf49efd **refactor: unify deploy api and deploy server**

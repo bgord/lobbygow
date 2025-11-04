@@ -1,6 +1,8 @@
 import * as bg from "@bgord/bun";
 import * as tools from "@bgord/tools";
+import { Clock } from "+infra/clock.adapter";
 import { Mailer } from "+infra/mailer.adapter";
+import { Timekeeper } from "+infra/timekeeper.adapter";
 import { CertificateInspector } from "./certificate-inspector.adapter";
 import { DiskSpaceChecker } from "./disk-space-checker.adapter";
 import { Env } from "./env";
@@ -42,5 +44,12 @@ export const prerequisites = [
     days: 7,
     enabled: production,
     inspector: CertificateInspector,
+  }),
+  new bg.PrerequisiteClockDrift({
+    label: "certificate",
+    enabled: production,
+    skew: tools.Duration.Minutes(1),
+    clock: Clock,
+    timekeeper: Timekeeper,
   }),
 ];

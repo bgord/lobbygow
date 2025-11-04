@@ -1,12 +1,13 @@
 import * as bg from "@bgord/bun";
 import { BODY_LIMIT_MAX_SIZE } from "+infra";
+import { Clock } from "+infra/clock.adapter";
 import { Env } from "+infra/env";
 import { Logger } from "+infra/logger.adapter";
 import { prerequisites } from "+infra/prerequisites";
 import { server, startup } from "./server";
 
 (async function main() {
-  await new bg.Prerequisites(Logger).check(prerequisites);
+  await new bg.Prerequisites({ logger: Logger, clock: Clock }).check(prerequisites);
 
   const app = Bun.serve({
     fetch: server.fetch,

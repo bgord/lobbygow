@@ -1,9 +1,12 @@
 # Changelog
+- 2025-11-05 13:18 dcf0f6c **refactor: adjust clock drift prereq config**
+## 2025-11-05 13:18 
+- 2025-11-05 13:17 16aa450 **step: update packages**
 - 2025-11-04 21:29 11535f4 **refactor: cleanup healthcheck**
-## 2025-11-04 21:29 
 - 2025-11-04 21:26 829b3a4 **step: update packages**
 - 2025-11-04 21:18 c5723b8 **step: adjust prereqs**
 - 2025-11-04 21:17 b026911 **step: update packages**
+- 2025-11-04 20:29 b32dbae **docs: generate CHANGELOG**
 - 2025-11-04 20:27 d2b349f **docs: generate CHANGELOG**
 - 2025-11-04 20:18 7135c9e **docs: generate CHANGELOG**
 - 2025-11-04 15:50 e76fa4e **step: setup prereq clock drift**

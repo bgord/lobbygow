@@ -1,10 +1,13 @@
 # Changelog
+- 2025-11-05 15:30 e410aa9 **step: update packages**
+## 2025-11-05 15:30 
+- 2025-11-05 15:29 5697aa6 **step: add /api base path**
 - 2025-11-05 13:33 050b332 **step: update packages**
-## 2025-11-05 13:33 
 - 2025-11-05 13:21 17ca7a8 **refactor: simplify ssl prereq label**
 - 2025-11-05 13:20 b230311 **fix: clock drift prereq label**
 - 2025-11-05 13:18 dcf0f6c **refactor: adjust clock drift prereq config**
 - 2025-11-05 13:17 16aa450 **step: update packages**
+- 2025-11-05 12:36 099c20e **docs: generate CHANGELOG**
 - 2025-11-05 12:21 d7964cc **docs: generate CHANGELOG**
 - 2025-11-05 12:18 9a071df **docs: generate CHANGELOG**
 - 2025-11-04 21:29 11535f4 **refactor: cleanup healthcheck**

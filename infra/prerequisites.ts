@@ -38,7 +38,7 @@ export const prerequisites = [
   new bg.PrerequisiteOutsideConnectivity({ label: "outside-connectivity", enabled: production }),
   new bg.PrerequisiteRunningUser({ label: "user", username: "bgord", enabled: production }),
   new bg.PrerequisiteSSLCertificateExpiry({
-    label: "certificate",
+    label: "ssl",
     host: "lobbygow.bgord.dev",
     days: 7,
     enabled: production,

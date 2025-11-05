@@ -1,6 +1,5 @@
 import * as bg from "@bgord/bun";
 import * as tools from "@bgord/tools";
-import { Clock } from "+infra/clock.adapter";
 import { Mailer } from "+infra/mailer.adapter";
 import { Timekeeper } from "+infra/timekeeper.adapter";
 import { CertificateInspector } from "./certificate-inspector.adapter";
@@ -49,7 +48,6 @@ export const prerequisites = [
     label: "certificate",
     enabled: production,
     skew: tools.Duration.Minutes(1),
-    clock: Clock,
     timekeeper: Timekeeper,
   }),
 ];

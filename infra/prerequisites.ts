@@ -45,7 +45,7 @@ export const prerequisites = [
     inspector: CertificateInspector,
   }),
   new bg.PrerequisiteClockDrift({
-    label: "certificate",
+    label: "clock-drift",
     enabled: production,
     skew: tools.Duration.Minutes(1),
     timekeeper: Timekeeper,

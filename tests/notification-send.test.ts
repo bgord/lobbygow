@@ -11,10 +11,12 @@ const ip = {
   },
 };
 
-describe("POST /notification-send", () => {
+const url = "/api/notification-send";
+
+describe(`POST ${url}`, () => {
   test("validation - empty payload", async () => {
     const response = await server.request(
-      "/notification-send",
+      url,
       {
         method: "POST",
         headers: new Headers({ [bgb.ShieldApiKey.HEADER_NAME]: Env.API_KEY }),
@@ -30,7 +32,7 @@ describe("POST /notification-send", () => {
 
   test("validation - invalid payload", async () => {
     const response = await server.request(
-      "/notification-send",
+      url,
       {
         method: "POST",
         body: "invalid-json",
@@ -47,7 +49,7 @@ describe("POST /notification-send", () => {
 
   test("validation - missing subject", async () => {
     const response = await server.request(
-      "/notification-send",
+      url,
       {
         method: "POST",
         body: JSON.stringify({ content: "content", kind: Notifier.VO.NotificationKindEnum.info }),
@@ -64,7 +66,7 @@ describe("POST /notification-send", () => {
 
   test("validation - missing content", async () => {
     const response = await server.request(
-      "/notification-send",
+      url,
       {
         method: "POST",
         body: JSON.stringify({ subject: "subject", kind: Notifier.VO.NotificationKindEnum.info }),
@@ -89,7 +91,7 @@ describe("POST /notification-send", () => {
     };
 
     const response = await server.request(
-      "/notification-send",
+      url,
       {
         method: "POST",
         body: JSON.stringify(payload),
@@ -117,7 +119,7 @@ describe("POST /notification-send", () => {
     };
 
     const response = await server.request(
-      "/notification-send",
+      url,
       {
         method: "POST",
         body: JSON.stringify(payload),
@@ -146,7 +148,7 @@ describe("POST /notification-send", () => {
     };
 
     const response = await server.request(
-      "/notification-send",
+      url,
       {
         method: "POST",
         body: JSON.stringify(payload),
@@ -171,7 +173,7 @@ describe("POST /notification-send", () => {
     const payload = { subject: "subject", content: "content" };
 
     const response = await server.request(
-      "/notification-send",
+      url,
       {
         method: "POST",
         body: JSON.stringify(payload),

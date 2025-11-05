@@ -21,7 +21,7 @@ const ServerDeps = { Logger, I18n: I18nConfig, Clock, IdProvider, JsonFileReader
 
 type HonoConfig = { Variables: infra.Variables; startup: tools.Stopwatch };
 
-const server = new Hono<HonoConfig>();
+const server = new Hono<HonoConfig>().basePath("/api");
 
 server.use(...bg.Setup.essentials(ServerDeps));
 

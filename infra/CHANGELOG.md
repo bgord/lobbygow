@@ -1,7 +1,11 @@
 # Changelog
+- 2025-11-07 12:22 3ed10ba **step: add fasttrack option**
+## 2025-11-07 12:22 
+- 2025-11-07 12:21 1bf0f50 **step: update packages**
+- 2025-11-06 10:22 42ac2a6 **step: update packages**
 - 2025-11-05 15:30 e410aa9 **step: update packages**
-## 2025-11-05 15:30 
 - 2025-11-05 15:29 5697aa6 **step: add /api base path**
+- 2025-11-05 14:31 c234767 **docs: generate CHANGELOG**
 - 2025-11-05 13:33 050b332 **step: update packages**
 - 2025-11-05 13:21 17ca7a8 **refactor: simplify ssl prereq label**
 - 2025-11-05 13:20 b230311 **fix: clock drift prereq label**

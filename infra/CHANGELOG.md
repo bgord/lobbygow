@@ -1,7 +1,10 @@
 # Changelog
+- 2025-11-13 09:59 630630b **step: update packages**
+## 2025-11-13 09:59 
+- 2025-11-11 09:37 bface8b **step: update packages**
 - 2025-11-08 19:23 a92f588 **step: bump bgord/scripts**
-## 2025-11-08 19:23 
 - 2025-11-08 19:21 86640b9 **step: update bun**
+- 2025-11-08 18:29 fa28b22 **docs: generate CHANGELOG**
 - 2025-11-07 12:35 45eef27 **step: bump bgord/scripts**
 - 2025-11-07 12:22 3ed10ba **step: add fasttrack option**
 - 2025-11-07 12:21 1bf0f50 **step: update packages**

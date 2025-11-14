@@ -14,14 +14,14 @@
     "@commitlint/cli": "20.1.0",
     "@commitlint/config-conventional": "20.0.0",
     "knip": "5.69.1",
-    "lefthook": "2.0.3",
+    "lefthook": "2.0.4",
     "@types/bun": "1.3.2",
     "cspell": "9.3.1",
     "shellcheck": "4.1.0",
     "typescript": "5.9.3"
   },
   "dependencies": {
-    "@bgord/bun": "1.2.3",
+    "@bgord/bun": "1.2.4",
     "zod": "4.1.12"
   }
 }

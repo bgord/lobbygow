@@ -1,8 +1,12 @@
 # Changelog
+- 2025-12-03 10:29 407560b **refactor: adjust deps**
+## 2025-12-03 10:29 
+- 2025-12-03 10:27 9bfd66b **step: update packages**
+- 2025-12-03 10:26 024e73b **refactor: unify deps**
 - 2025-12-01 11:52 7e989a4 **step: update packges**
-## 2025-12-01 11:52 
 - 2025-12-01 11:51 ca33a80 **step: bump bgord/scripts**
 - 2025-12-01 11:51 6a14912 **step: update bun**
+- 2025-12-01 10:54 260f5da **docs: generate CHANGELOG**
 - 2025-11-14 17:03 73e1876 **step: update packages**
 - 2025-11-14 16:03 a45c9e5 **docs: generate CHANGELOG**
 - 2025-11-13 09:59 630630b **step: update packages**

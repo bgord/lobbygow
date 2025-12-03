@@ -6,7 +6,9 @@ import { Mailer } from "+infra/mailer.adapter";
 const subject = "subject";
 const content = "content";
 
-const notification = new Notifier.Services.Notification(Mailer, Env.EMAIL_FROM, subject, content);
+const deps = { Mailer };
+
+const notification = new Notifier.Services.Notification(Env.EMAIL_FROM, subject, content, deps);
 
 describe("Notification", () => {
   describe("compose", () => {

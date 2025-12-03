@@ -4,10 +4,10 @@ import type { NotificationComposerStrategy } from "./notification-composer";
 
 export class Notification {
   constructor(
-    private readonly mailer: bg.MailerPort,
     private readonly EMAIL_FROM: bg.EmailFromType,
     private readonly subject: bg.EmailSubjectType,
     private readonly content: bg.EmailContentHtmlType,
+    private readonly deps: { Mailer: bg.MailerPort },
   ) {}
 
   async compose(strategy: NotificationComposerStrategy): Promise<tools.NotificationTemplate> {
@@ -15,6 +15,6 @@ export class Notification {
   }
 
   async send(message: tools.NotificationTemplate, to: bg.EmailToType) {
-    return this.mailer.send({ from: this.EMAIL_FROM, to, ...message.get() });
+    return this.deps.Mailer.send({ from: this.EMAIL_FROM, to, ...message.get() });
   }
 }

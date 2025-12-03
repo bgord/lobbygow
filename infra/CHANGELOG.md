@@ -1,8 +1,10 @@
 # Changelog
+- 2025-12-03 11:03 df47fa4 **step: add only-allow**
+## 2025-12-03 11:03 
 - 2025-12-03 10:29 407560b **refactor: adjust deps**
-## 2025-12-03 10:29 
 - 2025-12-03 10:27 9bfd66b **step: update packages**
 - 2025-12-03 10:26 024e73b **refactor: unify deps**
+- 2025-12-03 09:29 1cb3468 **docs: generate CHANGELOG**
 - 2025-12-01 11:52 7e989a4 **step: update packges**
 - 2025-12-01 11:51 ca33a80 **step: bump bgord/scripts**
 - 2025-12-01 11:51 6a14912 **step: update bun**

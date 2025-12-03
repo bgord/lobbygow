@@ -6,8 +6,10 @@ import { Logger } from "+infra/logger.adapter";
 import { prerequisites } from "+infra/prerequisites";
 import { server, startup } from "./server";
 
+const deps = { Logger: Logger, Clock: Clock };
+
 (async function main() {
-  await new bg.Prerequisites({ logger: Logger, clock: Clock }).check(prerequisites);
+  await new bg.Prerequisites(deps).check(prerequisites);
 
   const app = Bun.serve({
     fetch: server.fetch,
@@ -21,5 +23,5 @@ import { server, startup } from "./server";
     metadata: { port: Env.PORT, startupTimeMs: startup.stop().ms },
   });
 
-  new bg.GracefulShutdown(Logger).applyTo(app);
+  new bg.GracefulShutdown(deps).applyTo(app);
 })();

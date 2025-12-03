@@ -13,11 +13,7 @@ export const prerequisites = [
   new bg.PrerequisitePort({ label: "port", port: Env.PORT }),
   new bg.PrerequisiteTimezoneUTC({ label: "timezone", timezone: tools.Timezone.parse(Env.TZ) }),
   new bg.PrerequisiteRAM({ label: "RAM", minimum: tools.Size.fromMB(128), enabled: production }),
-  new bg.PrerequisiteSpace({
-    label: "disk-space",
-    minimum: tools.Size.fromMB(512),
-    checker: DiskSpaceChecker,
-  }),
+  new bg.PrerequisiteSpace({ label: "disk-space", minimum: tools.Size.fromMB(512), DiskSpaceChecker }),
   new bg.PrerequisiteNode({
     label: "node",
     version: tools.PackageVersion.fromString("24.1.0"),
@@ -31,10 +27,10 @@ export const prerequisites = [
   new bg.PrerequisiteMemory({ label: "memory-consumption", maximum: tools.Size.fromMB(300) }),
   new bg.PrerequisiteLogFile({
     label: "log-file",
-    logger: LoggerWinstonProductionAdapter,
+    Logger: LoggerWinstonProductionAdapter,
     enabled: production,
   }),
-  new bg.PrerequisiteMailer({ label: "mailer", mailer: Mailer, enabled: production }),
+  new bg.PrerequisiteMailer({ label: "mailer", Mailer, enabled: production }),
   new bg.PrerequisiteOutsideConnectivity({ label: "outside-connectivity", enabled: production }),
   new bg.PrerequisiteRunningUser({ label: "user", username: "bgord", enabled: production }),
   new bg.PrerequisiteSSLCertificateExpiry({
@@ -42,12 +38,12 @@ export const prerequisites = [
     host: "lobbygow.bgord.dev",
     days: 7,
     enabled: production,
-    inspector: CertificateInspector,
+    CertificateInspector,
   }),
   new bg.PrerequisiteClockDrift({
     label: "clock-drift",
     enabled: production,
     skew: tools.Duration.Minutes(1),
-    timekeeper: Timekeeper,
+    Timekeeper,
   }),
 ];

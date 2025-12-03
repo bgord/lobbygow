@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "preinstall": "npx only-allow bun"
+    "preinstall": "bunx only-allow bun"
   },
   "keywords": [],
   "author": "Bartosz Gordon",

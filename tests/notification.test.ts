@@ -1,20 +1,24 @@
 import { describe, expect, jest, spyOn, test } from "bun:test";
 import * as Notifier from "+notifier";
-import { Env } from "+infra/env";
-import { Mailer } from "+infra/mailer.adapter";
+import { bootstrap } from "+infra/bootstrap";
 
 const subject = "subject";
 const content = "content";
 
-const deps = { Mailer };
-
-const notification = new Notifier.Services.Notification(Env.EMAIL_FROM, subject, content, deps);
-
 describe("Notification", () => {
   describe("compose", () => {
     test("kind - success", async () => {
+      const di = await bootstrap();
+
       const composer = Notifier.Services.NotificationComposerChooser.choose(
         Notifier.VO.NotificationKindEnum.success,
+      );
+
+      const notification = new Notifier.Services.Notification(
+        di.Env.EMAIL_FROM,
+        subject,
+        content,
+        di.Adapters.System,
       );
 
       const message = await notification.compose(composer);
@@ -24,8 +28,17 @@ describe("Notification", () => {
     });
 
     test("kind - error", async () => {
+      const di = await bootstrap();
+
       const composer = Notifier.Services.NotificationComposerChooser.choose(
         Notifier.VO.NotificationKindEnum.error,
+      );
+
+      const notification = new Notifier.Services.Notification(
+        di.Env.EMAIL_FROM,
+        subject,
+        content,
+        di.Adapters.System,
       );
 
       const message = await notification.compose(composer);
@@ -35,8 +48,17 @@ describe("Notification", () => {
     });
 
     test("kind - info", async () => {
+      const di = await bootstrap();
+
       const composer = Notifier.Services.NotificationComposerChooser.choose(
         Notifier.VO.NotificationKindEnum.info,
+      );
+
+      const notification = new Notifier.Services.Notification(
+        di.Env.EMAIL_FROM,
+        subject,
+        content,
+        di.Adapters.System,
       );
 
       const message = await notification.compose(composer);
@@ -48,57 +70,84 @@ describe("Notification", () => {
 
   describe("send", () => {
     test("kind - success", async () => {
-      const mailerSend = spyOn(Mailer, "send").mockImplementation(jest.fn());
+      const di = await bootstrap();
+
+      const mailerSend = spyOn(di.Adapters.System.Mailer, "send").mockImplementation(jest.fn());
 
       const composer = Notifier.Services.NotificationComposerChooser.choose(
         Notifier.VO.NotificationKindEnum.success,
       );
 
+      const notification = new Notifier.Services.Notification(
+        di.Env.EMAIL_FROM,
+        subject,
+        content,
+        di.Adapters.System,
+      );
+
       const message = await notification.compose(composer);
 
-      await notification.send(message, Env.EMAIL_TO);
+      await notification.send(message, di.Env.EMAIL_TO);
 
       expect(mailerSend).toHaveBeenCalledWith({
-        from: Env.EMAIL_FROM,
-        to: Env.EMAIL_TO,
+        from: di.Env.EMAIL_FROM,
+        to: di.Env.EMAIL_TO,
         subject: `✅ [SUCCESS] ${subject}`,
         html: content,
       });
     });
 
     test("kind - error", async () => {
-      const mailerSend = spyOn(Mailer, "send").mockImplementation(jest.fn());
+      const di = await bootstrap();
+
+      const mailerSend = spyOn(di.Adapters.System.Mailer, "send").mockImplementation(jest.fn());
 
       const composer = Notifier.Services.NotificationComposerChooser.choose(
         Notifier.VO.NotificationKindEnum.error,
       );
 
+      const notification = new Notifier.Services.Notification(
+        di.Env.EMAIL_FROM,
+        subject,
+        content,
+        di.Adapters.System,
+      );
+
       const message = await notification.compose(composer);
 
-      await notification.send(message, Env.EMAIL_TO);
+      await notification.send(message, di.Env.EMAIL_TO);
 
       expect(mailerSend).toHaveBeenCalledWith({
-        from: Env.EMAIL_FROM,
-        to: Env.EMAIL_TO,
+        from: di.Env.EMAIL_FROM,
+        to: di.Env.EMAIL_TO,
         subject: `❌ [ERROR] ${subject}`,
         html: content,
       });
     });
 
     test("kind - info", async () => {
-      const mailerSend = spyOn(Mailer, "send").mockImplementation(jest.fn());
+      const di = await bootstrap();
+
+      const mailerSend = spyOn(di.Adapters.System.Mailer, "send").mockImplementation(jest.fn());
 
       const composer = Notifier.Services.NotificationComposerChooser.choose(
         Notifier.VO.NotificationKindEnum.info,
       );
 
+      const notification = new Notifier.Services.Notification(
+        di.Env.EMAIL_FROM,
+        subject,
+        content,
+        di.Adapters.System,
+      );
+
       const message = await notification.compose(composer);
 
-      await notification.send(message, Env.EMAIL_TO);
+      await notification.send(message, di.Env.EMAIL_TO);
 
       expect(mailerSend).toHaveBeenCalledWith({
-        from: Env.EMAIL_FROM,
-        to: Env.EMAIL_TO,
+        from: di.Env.EMAIL_FROM,
+        to: di.Env.EMAIL_TO,
         subject: `ℹ️  [INFO] ${subject}`,
         html: content,
       });

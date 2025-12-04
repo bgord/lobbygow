@@ -2,7 +2,7 @@ import * as bg from "@bgord/bun";
 import * as tools from "@bgord/tools";
 import { z } from "zod/v4";
 
-const EnvironmentSchema = z
+export const EnvironmentSchema = z
   .object({
     PORT: bg.Port,
     LOGS_LEVEL: bg.LogLevel,
@@ -20,7 +20,4 @@ const EnvironmentSchema = z
   })
   .strip();
 
-export const Env = new bg.EnvironmentValidator<z.infer<typeof EnvironmentSchema>>({
-  type: process.env.NODE_ENV,
-  schema: EnvironmentSchema,
-}).load();
+export type EnvironmentSchemaType = z.infer<typeof EnvironmentSchema>;

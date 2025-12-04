@@ -1,27 +1,25 @@
 import * as bg from "@bgord/bun";
 import { BODY_LIMIT_MAX_SIZE } from "+infra";
-import { Clock } from "+infra/clock.adapter";
-import { Env } from "+infra/env";
-import { Logger } from "+infra/logger.adapter";
-import { prerequisites } from "+infra/prerequisites";
-import { server, startup } from "./server";
-
-const deps = { Logger: Logger, Clock: Clock };
+import { bootstrap } from "+infra/bootstrap";
+import { createServer } from "./server";
 
 (async function main() {
-  await new bg.Prerequisites(deps).check(prerequisites);
+  const di = await bootstrap();
+  const { server, startup } = createServer(di);
+
+  await new bg.Prerequisites(di.Adapters.System).check(di.Tools.prerequisites);
 
   const app = Bun.serve({
     fetch: server.fetch,
     maxRequestBodySize: BODY_LIMIT_MAX_SIZE,
   });
 
-  Logger.info({
+  di.Adapters.System.Logger.info({
     message: "Server has started",
     component: "http",
     operation: "server_startup",
-    metadata: { port: Env.PORT, startupTimeMs: startup.stop().ms },
+    metadata: { port: di.Env.PORT, startupTimeMs: startup.stop().ms },
   });
 
-  new bg.GracefulShutdown(deps).applyTo(app);
+  new bg.GracefulShutdown(di.Adapters.System).applyTo(app);
 })();

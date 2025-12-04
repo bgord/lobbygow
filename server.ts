@@ -3,64 +3,54 @@ import * as tools from "@bgord/tools";
 import { Hono } from "hono";
 import { timeout } from "hono/timeout";
 import * as infra from "+infra";
-import { Clock } from "+infra/clock.adapter";
-import { Env } from "+infra/env";
-import { healthcheck } from "+infra/healthcheck";
-import { I18nConfig } from "+infra/i18n";
-import { IdProvider } from "+infra/id-provider";
-import { JsonFileReader } from "+infra/json-file-reader.adapter";
-import { Logger } from "+infra/logger.adapter";
+import type { bootstrap } from "+infra/bootstrap";
 import * as RateLimiters from "+infra/rate-limiters";
-import { ShieldApiKey } from "+infra/shield-api-key";
-import { ShieldBasicAuth } from "+infra/shield-basic-auth";
 import * as App from "./app";
 
-const ShieldRateLimitDeps = { Clock };
-const HealthcheckDeps = { Clock, JsonFileReader, Logger };
-const ServerDeps = { Logger, I18n: I18nConfig, Clock, IdProvider, JsonFileReader };
+export function createServer(di: Awaited<ReturnType<typeof bootstrap>>) {
+  type HonoConfig = { Variables: infra.Variables; startup: tools.Stopwatch };
 
-type HonoConfig = { Variables: infra.Variables; startup: tools.Stopwatch };
+  const server = new Hono<HonoConfig>().basePath("/api");
 
-const server = new Hono<HonoConfig>().basePath("/api");
+  server.use(...bg.Setup.essentials({ ...di.Adapters.System, I18n: di.Tools.I18nConfig }));
 
-server.use(...bg.Setup.essentials(ServerDeps));
+  const startup = new tools.Stopwatch(di.Adapters.System.Clock.now());
 
-const startup = new tools.Stopwatch(Clock.now());
+  // Healthcheck =================
+  server.get(
+    "/healthcheck",
+    bg.ShieldRateLimit(
+      {
+        enabled: di.Env.type === bg.NodeEnvironmentEnum.production,
+        subject: bg.AnonSubjectResolver,
+        store: RateLimiters.HealthcheckStore,
+      },
+      di.Adapters.System,
+    ),
+    timeout(tools.Duration.Seconds(15).ms, infra.requestTimeoutError),
+    di.Tools.ShieldBasicAuth,
+    ...bg.Healthcheck.build(di.Tools.healthcheck, di.Adapters.System),
+  );
+  // =============================
 
-// Healthcheck =================
-server.get(
-  "/healthcheck",
-  bg.ShieldRateLimit(
-    {
-      enabled: Env.type === bg.NodeEnvironmentEnum.production,
-      subject: bg.AnonSubjectResolver,
-      store: RateLimiters.HealthcheckStore,
-    },
-    ShieldRateLimitDeps,
-  ),
-  timeout(tools.Duration.Seconds(15).ms, infra.requestTimeoutError),
-  ShieldBasicAuth,
-  ...bg.Healthcheck.build(healthcheck, HealthcheckDeps),
-);
-// =============================
+  // Mailer =================
+  server.post(
+    "/notification-send",
+    bg.ShieldRateLimit(
+      {
+        enabled: di.Env.type === bg.NodeEnvironmentEnum.production,
+        subject: bg.AnonSubjectResolver,
+        store: RateLimiters.NotificationSendStore,
+      },
+      di.Adapters.System,
+    ),
+    timeout(tools.Duration.Seconds(15).ms, infra.requestTimeoutError),
+    di.Tools.ShieldApiKey.verify,
+    App.Http.Mailer.NotificationSend(di),
+  );
+  // =============================
 
-// Mailer =================
-server.post(
-  "/notification-send",
-  bg.ShieldRateLimit(
-    {
-      enabled: Env.type === bg.NodeEnvironmentEnum.production,
-      subject: bg.AnonSubjectResolver,
-      store: RateLimiters.NotificationSendStore,
-    },
-    ShieldRateLimitDeps,
-  ),
-  timeout(tools.Duration.Seconds(15).ms, infra.requestTimeoutError),
-  ShieldApiKey.verify,
-  App.Http.Mailer.NotificationSend,
-);
-// =============================
+  server.onError(App.Http.ErrorHandler.handle(di.Adapters.System));
 
-server.onError(App.Http.ErrorHandler.handle);
-
-export { server, startup };
+  return { server, startup };
+}

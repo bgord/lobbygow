@@ -1,6 +1,8 @@
 # Changelog
+- 2025-12-04 12:20 9c87694 **step: update packages**
+## 2025-12-04 12:20 
 - 2025-12-04 12:11 fa9472e **step: update packages**
-## 2025-12-04 12:11 
+- 2025-12-04 11:11 276c451 **docs: generate CHANGELOG**
 - 2025-12-04 10:52 87be279 **refactor: adjust hostname**
 - 2025-12-04 10:51 8b030f6 **step: update packages**
 - 2025-12-04 09:52 e8c0417 **docs: generate CHANGELOG**

@@ -66,19 +66,8 @@ app/
 
 ```
 infra/
-├── certificate-inspector.adapter.ts
-├── clock.adapter.ts
-├── disk-space-checker.adapter.ts
+├── bootstrap.ts
 ├── env.ts
-├── healthcheck.ts
 ├── i18n.ts
-├── id-provider.ts
-├── json-file-reader.adapter.ts
-├── logger.adapter.ts
-├── mailer.adapter.ts
-├── prerequisites.ts
-├── rate-limiters.ts
-├── shield-api-key.ts
-├── shield-basic-auth.ts
-└── timekeeper.adapter.ts
+└── rate-limiters.ts
 ```

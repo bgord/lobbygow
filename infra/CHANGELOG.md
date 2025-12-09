@@ -1,8 +1,11 @@
 # Changelog
+- 2025-12-09 22:43 a82db1a **step: update packages**
+## 2025-12-09 22:43 
 - 2025-12-09 20:59 f91e150 **step: update packages**
 - 2025-12-09 20:59 6f8b4b1 **step: bump bgord/scripts**
 - 2025-12-09 20:59 465d40d **step: update packages**
-## 2025-12-09 20:59 
+- 2025-12-09 20:00 2cd22bd **docs: generate readme**
+- 2025-12-09 20:00 0099f40 **docs: generate CHANGELOG**
 - 2025-12-04 20:39 b9bd0ea **refactor: extract bootstrap**
 - 2025-12-04 19:15 50a39f3 **refactor: improve mailer adapter**
 - 2025-12-04 12:20 9c87694 **step: update packages**

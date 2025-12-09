@@ -102,7 +102,7 @@ export async function bootstrap() {
     }),
     new bg.PrerequisiteBun({
       label: "bun",
-      version: tools.PackageVersion.fromString("1.3.3"),
+      version: tools.PackageVersion.fromString("1.3.4"),
       current: Bun.version,
     }),
     new bg.PrerequisiteMemory({ label: "memory-consumption", maximum: tools.Size.fromMB(300) }),

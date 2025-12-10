@@ -2,15 +2,12 @@ import * as bg from "@bgord/bun";
 import * as tools from "@bgord/tools";
 import { basicAuth } from "hono/basic-auth";
 import type { z } from "zod/v4";
-import { EnvironmentSchema } from "+infra/env";
+import type { EnvironmentSchema } from "+infra/env";
 import { I18nConfig } from "+infra/i18n";
 
-export async function bootstrap() {
-  const Env = new bg.EnvironmentValidator<z.infer<typeof EnvironmentSchema>>({
-    type: process.env.NODE_ENV,
-    schema: EnvironmentSchema,
-  }).load();
-
+export async function bootstrap(
+  Env: ReturnType<bg.EnvironmentValidator<z.infer<typeof EnvironmentSchema>>["load"]>,
+) {
   const Clock = new bg.ClockSystemAdapter();
   const IdProvider = new bg.IdProviderCryptoAdapter();
 

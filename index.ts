@@ -1,10 +1,17 @@
 import * as bg from "@bgord/bun";
+import type { z } from "zod/v4";
 import { BODY_LIMIT_MAX_SIZE } from "+infra";
 import { bootstrap } from "+infra/bootstrap";
+import { EnvironmentSchema } from "+infra/env";
 import { createServer } from "./server";
 
 (async function main() {
-  const di = await bootstrap();
+  const Env = new bg.EnvironmentValidator<z.infer<typeof EnvironmentSchema>>({
+    type: process.env.NODE_ENV,
+    schema: EnvironmentSchema,
+  }).load();
+
+  const di = await bootstrap(Env);
   const { server, startup } = createServer(di);
 
   await new bg.Prerequisites(di.Adapters.System).check(di.Tools.prerequisites);

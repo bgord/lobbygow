@@ -1,14 +1,22 @@
 import { describe, expect, jest, spyOn, test } from "bun:test";
+import * as bg from "@bgord/bun";
+import type { z } from "zod/v4";
 import * as Notifier from "+notifier";
 import { bootstrap } from "+infra/bootstrap";
+import { EnvironmentSchema } from "+infra/env";
 
 const subject = "subject";
 const content = "content";
 
+const Env = new bg.EnvironmentValidator<z.infer<typeof EnvironmentSchema>>({
+  type: process.env.NODE_ENV,
+  schema: EnvironmentSchema,
+}).load();
+
 describe("Notification", () => {
   describe("compose", () => {
     test("kind - success", async () => {
-      const di = await bootstrap();
+      const di = await bootstrap(Env);
 
       const composer = Notifier.Services.NotificationComposerChooser.choose(
         Notifier.VO.NotificationKindEnum.success,
@@ -28,7 +36,7 @@ describe("Notification", () => {
     });
 
     test("kind - error", async () => {
-      const di = await bootstrap();
+      const di = await bootstrap(Env);
 
       const composer = Notifier.Services.NotificationComposerChooser.choose(
         Notifier.VO.NotificationKindEnum.error,
@@ -48,7 +56,7 @@ describe("Notification", () => {
     });
 
     test("kind - info", async () => {
-      const di = await bootstrap();
+      const di = await bootstrap(Env);
 
       const composer = Notifier.Services.NotificationComposerChooser.choose(
         Notifier.VO.NotificationKindEnum.info,
@@ -70,7 +78,7 @@ describe("Notification", () => {
 
   describe("send", () => {
     test("kind - success", async () => {
-      const di = await bootstrap();
+      const di = await bootstrap(Env);
 
       const mailerSend = spyOn(di.Adapters.System.Mailer, "send").mockImplementation(jest.fn());
 
@@ -98,7 +106,7 @@ describe("Notification", () => {
     });
 
     test("kind - error", async () => {
-      const di = await bootstrap();
+      const di = await bootstrap(Env);
 
       const mailerSend = spyOn(di.Adapters.System.Mailer, "send").mockImplementation(jest.fn());
 
@@ -126,7 +134,7 @@ describe("Notification", () => {
     });
 
     test("kind - info", async () => {
-      const di = await bootstrap();
+      const di = await bootstrap(Env);
 
       const mailerSend = spyOn(di.Adapters.System.Mailer, "send").mockImplementation(jest.fn());
 

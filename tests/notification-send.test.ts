@@ -1,7 +1,10 @@
 import { describe, expect, jest, spyOn, test } from "bun:test";
+import * as bg from "@bgord/bun";
 import * as bgb from "@bgord/bun";
+import type { z } from "zod/v4";
 import * as Notifier from "+notifier";
 import { bootstrap } from "+infra/bootstrap";
+import { EnvironmentSchema } from "+infra/env";
 import { createServer } from "../server";
 
 const ip = {
@@ -12,9 +15,14 @@ const ip = {
 
 const url = "/api/notification-send";
 
+const Env = new bg.EnvironmentValidator<z.infer<typeof EnvironmentSchema>>({
+  type: process.env.NODE_ENV,
+  schema: EnvironmentSchema,
+}).load();
+
 describe(`POST ${url}`, () => {
   test("validation - empty payload", async () => {
-    const di = await bootstrap();
+    const di = await bootstrap(Env);
     const { server } = createServer(di);
 
     const response = await server.request(
@@ -33,7 +41,7 @@ describe(`POST ${url}`, () => {
   });
 
   test("validation - invalid payload", async () => {
-    const di = await bootstrap();
+    const di = await bootstrap(Env);
     const { server } = createServer(di);
 
     const response = await server.request(
@@ -53,7 +61,7 @@ describe(`POST ${url}`, () => {
   });
 
   test("validation - missing subject", async () => {
-    const di = await bootstrap();
+    const di = await bootstrap(Env);
     const { server } = createServer(di);
 
     const response = await server.request(
@@ -73,7 +81,7 @@ describe(`POST ${url}`, () => {
   });
 
   test("validation - missing content", async () => {
-    const di = await bootstrap();
+    const di = await bootstrap(Env);
     const { server } = createServer(di);
 
     const response = await server.request(
@@ -93,7 +101,7 @@ describe(`POST ${url}`, () => {
   });
 
   test("happy path - info", async () => {
-    const di = await bootstrap();
+    const di = await bootstrap(Env);
     const { server } = createServer(di);
 
     const mailerSend = spyOn(di.Adapters.System.Mailer, "send").mockImplementation(jest.fn());
@@ -124,7 +132,7 @@ describe(`POST ${url}`, () => {
   });
 
   test("happy path - error", async () => {
-    const di = await bootstrap();
+    const di = await bootstrap(Env);
     const { server } = createServer(di);
 
     const mailerSend = spyOn(di.Adapters.System.Mailer, "send").mockImplementation(jest.fn());
@@ -156,7 +164,7 @@ describe(`POST ${url}`, () => {
   });
 
   test("happy path - success", async () => {
-    const di = await bootstrap();
+    const di = await bootstrap(Env);
     const { server } = createServer(di);
 
     const mailerSend = spyOn(di.Adapters.System.Mailer, "send").mockImplementation(jest.fn());
@@ -188,7 +196,7 @@ describe(`POST ${url}`, () => {
   });
 
   test("happy path - default kind", async () => {
-    const di = await bootstrap();
+    const di = await bootstrap(Env);
     const { server } = createServer(di);
 
     const mailerSend = spyOn(di.Adapters.System.Mailer, "send").mockImplementation(jest.fn());

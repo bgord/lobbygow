@@ -29,7 +29,7 @@ describe(`POST ${url}`, () => {
       url,
       {
         method: "POST",
-        headers: new Headers({ [bgb.ShieldApiKey.HEADER_NAME]: di.Env.API_KEY }),
+        headers: new Headers({ [bgb.ShieldApiKeyAdapter.HEADER_NAME]: di.Env.API_KEY }),
       },
       ip,
     );
@@ -49,7 +49,7 @@ describe(`POST ${url}`, () => {
       {
         method: "POST",
         body: "invalid-json",
-        headers: new Headers({ [bgb.ShieldApiKey.HEADER_NAME]: di.Env.API_KEY }),
+        headers: new Headers({ [bgb.ShieldApiKeyAdapter.HEADER_NAME]: di.Env.API_KEY }),
       },
       ip,
     );
@@ -69,7 +69,7 @@ describe(`POST ${url}`, () => {
       {
         method: "POST",
         body: JSON.stringify({ content: "content", kind: Notifier.VO.NotificationKindEnum.info }),
-        headers: new Headers({ [bgb.ShieldApiKey.HEADER_NAME]: di.Env.API_KEY }),
+        headers: new Headers({ [bgb.ShieldApiKeyAdapter.HEADER_NAME]: di.Env.API_KEY }),
       },
       ip,
     );
@@ -89,7 +89,7 @@ describe(`POST ${url}`, () => {
       {
         method: "POST",
         body: JSON.stringify({ subject: "subject", kind: Notifier.VO.NotificationKindEnum.info }),
-        headers: new Headers({ [bgb.ShieldApiKey.HEADER_NAME]: di.Env.API_KEY }),
+        headers: new Headers({ [bgb.ShieldApiKeyAdapter.HEADER_NAME]: di.Env.API_KEY }),
       },
       ip,
     );
@@ -117,7 +117,7 @@ describe(`POST ${url}`, () => {
       {
         method: "POST",
         body: JSON.stringify(payload),
-        headers: new Headers({ [bgb.ShieldApiKey.HEADER_NAME]: di.Env.API_KEY }),
+        headers: new Headers({ [bgb.ShieldApiKeyAdapter.HEADER_NAME]: di.Env.API_KEY }),
       },
       ip,
     );
@@ -148,7 +148,7 @@ describe(`POST ${url}`, () => {
       {
         method: "POST",
         body: JSON.stringify(payload),
-        headers: new Headers({ [bgb.ShieldApiKey.HEADER_NAME]: di.Env.API_KEY }),
+        headers: new Headers({ [bgb.ShieldApiKeyAdapter.HEADER_NAME]: di.Env.API_KEY }),
       },
       ip,
     );
@@ -180,7 +180,7 @@ describe(`POST ${url}`, () => {
       {
         method: "POST",
         body: JSON.stringify(payload),
-        headers: new Headers({ [bgb.ShieldApiKey.HEADER_NAME]: di.Env.API_KEY }),
+        headers: new Headers({ [bgb.ShieldApiKeyAdapter.HEADER_NAME]: di.Env.API_KEY }),
       },
       ip,
     );
@@ -208,7 +208,7 @@ describe(`POST ${url}`, () => {
       {
         method: "POST",
         body: JSON.stringify(payload),
-        headers: new Headers({ [bgb.ShieldApiKey.HEADER_NAME]: di.Env.API_KEY }),
+        headers: new Headers({ [bgb.ShieldApiKeyAdapter.HEADER_NAME]: di.Env.API_KEY }),
       },
       ip,
     );

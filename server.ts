@@ -19,14 +19,14 @@ export function createServer(di: Awaited<ReturnType<typeof bootstrap>>) {
   // Healthcheck =================
   server.get(
     "/healthcheck",
-    bg.ShieldRateLimit(
+    new bg.ShieldRateLimitAdapter(
       {
         enabled: di.Env.type === bg.NodeEnvironmentEnum.production,
         subject: bg.AnonSubjectResolver,
         store: RateLimiters.HealthcheckStore,
       },
       di.Adapters.System,
-    ),
+    ).verify,
     timeout(tools.Duration.Seconds(15).ms, infra.requestTimeoutError),
     di.Tools.ShieldBasicAuth,
     ...bg.Healthcheck.build(di.Tools.healthcheck, di.Adapters.System),
@@ -36,14 +36,14 @@ export function createServer(di: Awaited<ReturnType<typeof bootstrap>>) {
   // Mailer =================
   server.post(
     "/notification-send",
-    bg.ShieldRateLimit(
+    new bg.ShieldRateLimitAdapter(
       {
         enabled: di.Env.type === bg.NodeEnvironmentEnum.production,
         subject: bg.AnonSubjectResolver,
         store: RateLimiters.NotificationSendStore,
       },
       di.Adapters.System,
-    ),
+    ).verify,
     timeout(tools.Duration.Seconds(15).ms, infra.requestTimeoutError),
     di.Tools.ShieldApiKey.verify,
     App.Http.Mailer.NotificationSend(di),

@@ -66,9 +66,9 @@ export async function bootstrap(
 
   // Mailer ========================
   const Mailer = {
-    [bg.NodeEnvironmentEnum.local]: new bg.MailerNoopAdapter(Logger),
-    [bg.NodeEnvironmentEnum.test]: new bg.MailerNoopAdapter(Logger),
-    [bg.NodeEnvironmentEnum.staging]: new bg.MailerNoopAdapter(Logger),
+    [bg.NodeEnvironmentEnum.local]: new bg.MailerNoopAdapter({ Logger }),
+    [bg.NodeEnvironmentEnum.test]: new bg.MailerNoopAdapter({ Logger }),
+    [bg.NodeEnvironmentEnum.staging]: new bg.MailerNoopAdapter({ Logger }),
     [bg.NodeEnvironmentEnum.production]: new bg.MailerSmtpAdapter({
       SMTP_HOST: Env.SMTP_HOST,
       SMTP_PORT: Env.SMTP_PORT,
@@ -78,7 +78,7 @@ export async function bootstrap(
   }[Env.type];
   // ===============================
 
-  const ShieldApiKey = new bg.ShieldApiKey({ API_KEY: Env.API_KEY });
+  const ShieldApiKey = new bg.ShieldApiKeyAdapter({ API_KEY: Env.API_KEY });
 
   const ShieldBasicAuth = basicAuth({
     username: Env.BASIC_AUTH_USERNAME,

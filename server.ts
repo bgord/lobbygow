@@ -28,7 +28,7 @@ export function createServer(di: Awaited<ReturnType<typeof bootstrap>>) {
       di.Adapters.System,
     ).verify,
     timeout(tools.Duration.Seconds(15).ms, infra.requestTimeoutError),
-    di.Tools.ShieldBasicAuth,
+    di.Adapters.System.BasicAuth,
     ...bg.Healthcheck.build(di.Tools.healthcheck, di.Adapters.System),
   );
   // =============================
@@ -45,7 +45,7 @@ export function createServer(di: Awaited<ReturnType<typeof bootstrap>>) {
       di.Adapters.System,
     ).verify,
     timeout(tools.Duration.Seconds(15).ms, infra.requestTimeoutError),
-    di.Tools.ShieldApiKey.verify,
+    di.Adapters.System.ShieldApiKey.verify,
     App.Http.Mailer.NotificationSend(di),
   );
   // =============================

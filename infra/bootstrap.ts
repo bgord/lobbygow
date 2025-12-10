@@ -80,10 +80,7 @@ export async function bootstrap(
 
   const ShieldApiKey = new bg.ShieldApiKeyAdapter({ API_KEY: Env.API_KEY });
 
-  const ShieldBasicAuth = basicAuth({
-    username: Env.BASIC_AUTH_USERNAME,
-    password: Env.BASIC_AUTH_PASSWORD,
-  });
+  const ShieldBasicAuth = basicAuth({ username: Env.BASIC_AUTH_USERNAME, password: Env.BASIC_AUTH_PASSWORD });
 
   const production = Env.type === bg.NodeEnvironmentEnum.production;
 

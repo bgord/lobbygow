@@ -1,9 +1,9 @@
 import * as bg from "@bgord/bun";
-import type { EnvironmentSchemaType } from "+infra/env";
+import type { z } from "zod/v4";
+import type { EnvironmentSchema } from "+infra/env";
 
 export function createMailer(
-  type: bg.NodeEnvironmentEnum,
-  Env: EnvironmentSchemaType,
+  Env: ReturnType<bg.EnvironmentValidator<z.infer<typeof EnvironmentSchema>>["load"]>,
   deps: { Logger: bg.LoggerPort },
 ): bg.MailerPort {
   return {
@@ -16,5 +16,5 @@ export function createMailer(
       SMTP_USER: Env.SMTP_USER,
       SMTP_PASS: Env.SMTP_PASS,
     }),
-  }[type];
+  }[Env.type];
 }

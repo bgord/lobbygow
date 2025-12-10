@@ -1,7 +1,10 @@
 import * as bg from "@bgord/bun";
-import type { EnvironmentSchemaType } from "+infra/env";
+import type { z } from "zod/v4";
+import type { EnvironmentSchema } from "+infra/env";
 
-export function createLogger(type: bg.NodeEnvironmentEnum, Env: EnvironmentSchemaType): bg.LoggerPort {
+export function createLogger(
+  Env: ReturnType<bg.EnvironmentValidator<z.infer<typeof EnvironmentSchema>>["load"]>,
+): bg.LoggerPort {
   const app = "lobbygow";
   const redactor = new bg.RedactorCompositeAdapter([
     new bg.RedactorCompactArrayAdapter(),
@@ -21,5 +24,5 @@ export function createLogger(type: bg.NodeEnvironmentEnum, Env: EnvironmentSchem
     [bg.NodeEnvironmentEnum.test]: new bg.LoggerNoopAdapter(),
     [bg.NodeEnvironmentEnum.staging]: new bg.LoggerNoopAdapter(),
     [bg.NodeEnvironmentEnum.production]: LoggerWinstonProductionAdapter.create(Env.LOGS_LEVEL),
-  }[type];
+  }[Env.type];
 }

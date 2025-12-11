@@ -32,11 +32,7 @@ export async function bootstrap(
       current: Bun.version,
     }),
     new bg.PrerequisiteMemory({ label: "memory-consumption", maximum: tools.Size.fromMB(300) }),
-    // new bg.PrerequisiteLogFile({
-    //   label: "log-file",
-    //   Logger: System.LoggerWinstonProductionAdapter,
-    //   enabled: production,
-    // }),
+    new bg.PrerequisiteLogFile({ label: "log-file", Logger: System.Logger, enabled: production }),
     new bg.PrerequisiteMailer({ label: "mailer", enabled: production, Mailer: System.Mailer }),
     new bg.PrerequisiteOutsideConnectivity({ label: "outside-connectivity", enabled: production }),
     new bg.PrerequisiteRunningUser({ label: "user", username: "bgord", enabled: production }),

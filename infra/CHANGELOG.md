@@ -1,6 +1,16 @@
 # Changelog
+- 2025-12-11 23:10 dffa495 **step: update packages**
+## 2025-12-11 23:10 
+- 2025-12-11 22:20 cea4fb4 **refactor: unify logger**
+- 2025-12-11 22:19 fc16c7a **step: update packages**
+- 2025-12-10 16:30 5f59015 **refactor: unfy bootstrap**
+- 2025-12-10 16:10 d7044bf **refactor: unify env in adapter creators**
+- 2025-12-10 15:43 e3ba50b **refactor: extract adapters**
+- 2025-12-10 13:25 1327129 **refactor: adjust shields**
+- 2025-12-10 13:23 2cf7cef **step: update packages**
+- 2025-12-10 12:46 c9a39bd **step: inject env into bootstrap**
 - 2025-12-10 11:58 af94b4c **step: update packages**
-## 2025-12-10 11:58 
+- 2025-12-10 10:58 31ca369 **docs: generate CHANGELOG**
 - 2025-12-09 23:01 46b137c **step: update packages**
 - 2025-12-09 22:50 b789764 **step: update packages**
 - 2025-12-09 22:43 a82db1a **step: update packages**

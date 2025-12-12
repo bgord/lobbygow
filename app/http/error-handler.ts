@@ -3,8 +3,10 @@ import type hono from "hono";
 import { HTTPException } from "hono/http-exception";
 import z from "zod/v4";
 
+type Dependencies = { Logger: bg.LoggerPort };
+
 export class ErrorHandler {
-  static handle: (deps: { Logger: bg.LoggerPort }) => hono.ErrorHandler = (deps) => async (error, c) => {
+  static handle: (deps: Dependencies) => hono.ErrorHandler = (deps) => async (error, c) => {
     const url = c.req.url;
     const correlationId = c.get("requestId") as bg.CorrelationIdType;
 

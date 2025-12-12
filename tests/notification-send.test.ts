@@ -13,20 +13,13 @@ const Env = new bg.EnvironmentValidator({ type: process.env.NODE_ENV, schema: En
   process.env,
 );
 
-describe(`POST ${url}`, () => {
+describe(`POST ${url}`, async () => {
+  const di = await bootstrap(Env);
+  const server = createServer(di);
+  const headers = new Headers({ [bgb.ShieldApiKeyAdapter.HEADER_NAME]: di.Env.API_KEY });
+
   test("validation - empty payload", async () => {
-    const di = await bootstrap(Env);
-    const server = createServer(di);
-
-    const response = await server.request(
-      url,
-      {
-        method: "POST",
-        headers: new Headers({ [bgb.ShieldApiKeyAdapter.HEADER_NAME]: di.Env.API_KEY }),
-      },
-      mocks.ip,
-    );
-
+    const response = await server.request(url, { method: "POST", headers }, mocks.ip);
     const json = await response.json();
 
     expect(response.status).toBe(400);
@@ -34,19 +27,7 @@ describe(`POST ${url}`, () => {
   });
 
   test("validation - invalid payload", async () => {
-    const di = await bootstrap(Env);
-    const server = createServer(di);
-
-    const response = await server.request(
-      url,
-      {
-        method: "POST",
-        body: "invalid-json",
-        headers: new Headers({ [bgb.ShieldApiKeyAdapter.HEADER_NAME]: di.Env.API_KEY }),
-      },
-      mocks.ip,
-    );
-
+    const response = await server.request(url, { method: "POST", body: "invalid-json", headers }, mocks.ip);
     const json = await response.json();
 
     expect(response.status).toBe(400);
@@ -54,19 +35,15 @@ describe(`POST ${url}`, () => {
   });
 
   test("validation - missing subject", async () => {
-    const di = await bootstrap(Env);
-    const server = createServer(di);
-
     const response = await server.request(
       url,
       {
         method: "POST",
         body: JSON.stringify({ content: "content", kind: Notifier.VO.NotificationKindEnum.info }),
-        headers: new Headers({ [bgb.ShieldApiKeyAdapter.HEADER_NAME]: di.Env.API_KEY }),
+        headers,
       },
       mocks.ip,
     );
-
     const json = await response.json();
 
     expect(response.status).toBe(400);
@@ -74,19 +51,15 @@ describe(`POST ${url}`, () => {
   });
 
   test("validation - missing content", async () => {
-    const di = await bootstrap(Env);
-    const server = createServer(di);
-
     const response = await server.request(
       url,
       {
         method: "POST",
         body: JSON.stringify({ subject: "subject", kind: Notifier.VO.NotificationKindEnum.info }),
-        headers: new Headers({ [bgb.ShieldApiKeyAdapter.HEADER_NAME]: di.Env.API_KEY }),
+        headers,
       },
       mocks.ip,
     );
-
     const json = await response.json();
 
     expect(response.status).toBe(400);
@@ -94,9 +67,6 @@ describe(`POST ${url}`, () => {
   });
 
   test("happy path - info", async () => {
-    const di = await bootstrap(Env);
-    const server = createServer(di);
-
     const mailerSend = spyOn(di.Adapters.System.Mailer, "send").mockImplementation(jest.fn());
 
     const payload = {
@@ -110,7 +80,7 @@ describe(`POST ${url}`, () => {
       {
         method: "POST",
         body: JSON.stringify(payload),
-        headers: new Headers({ [bgb.ShieldApiKeyAdapter.HEADER_NAME]: di.Env.API_KEY }),
+        headers,
       },
       mocks.ip,
     );
@@ -125,9 +95,6 @@ describe(`POST ${url}`, () => {
   });
 
   test("happy path - error", async () => {
-    const di = await bootstrap(Env);
-    const server = createServer(di);
-
     const mailerSend = spyOn(di.Adapters.System.Mailer, "send").mockImplementation(jest.fn());
 
     const payload = {
@@ -138,16 +105,11 @@ describe(`POST ${url}`, () => {
 
     const response = await server.request(
       url,
-      {
-        method: "POST",
-        body: JSON.stringify(payload),
-        headers: new Headers({ [bgb.ShieldApiKeyAdapter.HEADER_NAME]: di.Env.API_KEY }),
-      },
+      { method: "POST", body: JSON.stringify(payload), headers },
       mocks.ip,
     );
 
     expect(response.status).toBe(200);
-
     expect(mailerSend).toHaveBeenCalledWith({
       from: di.Env.EMAIL_FROM,
       to: di.Env.EMAIL_TO,
@@ -157,9 +119,6 @@ describe(`POST ${url}`, () => {
   });
 
   test("happy path - success", async () => {
-    const di = await bootstrap(Env);
-    const server = createServer(di);
-
     const mailerSend = spyOn(di.Adapters.System.Mailer, "send").mockImplementation(jest.fn());
 
     const payload = {
@@ -170,16 +129,11 @@ describe(`POST ${url}`, () => {
 
     const response = await server.request(
       url,
-      {
-        method: "POST",
-        body: JSON.stringify(payload),
-        headers: new Headers({ [bgb.ShieldApiKeyAdapter.HEADER_NAME]: di.Env.API_KEY }),
-      },
+      { method: "POST", body: JSON.stringify(payload), headers },
       mocks.ip,
     );
 
     expect(response.status).toBe(200);
-
     expect(mailerSend).toHaveBeenCalledWith({
       from: di.Env.EMAIL_FROM,
       to: di.Env.EMAIL_TO,
@@ -189,25 +143,17 @@ describe(`POST ${url}`, () => {
   });
 
   test("happy path - default kind", async () => {
-    const di = await bootstrap(Env);
-    const server = createServer(di);
-
     const mailerSend = spyOn(di.Adapters.System.Mailer, "send").mockImplementation(jest.fn());
 
     const payload = { subject: "subject", content: "content" };
 
     const response = await server.request(
       url,
-      {
-        method: "POST",
-        body: JSON.stringify(payload),
-        headers: new Headers({ [bgb.ShieldApiKeyAdapter.HEADER_NAME]: di.Env.API_KEY }),
-      },
+      { method: "POST", body: JSON.stringify(payload), headers },
       mocks.ip,
     );
 
     expect(response.status).toBe(200);
-
     expect(mailerSend).toHaveBeenCalledWith({
       from: di.Env.EMAIL_FROM,
       to: di.Env.EMAIL_TO,

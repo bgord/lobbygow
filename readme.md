@@ -67,8 +67,6 @@ app/
 ```
 infra/
 ├── adapters
-│   ├── notifier
-│   │   └── shield-rate-limit.adapter.ts
 │   └── system
 │       ├── certificate-inspector.adapter.ts
 │       ├── clock.adapter.ts

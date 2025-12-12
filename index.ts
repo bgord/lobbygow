@@ -5,12 +5,9 @@ import { EnvironmentSchema } from "+infra/env";
 import { createServer } from "./server";
 
 (async function main() {
-  const startup = new tools.Stopwatch(tools.Timestamp.fromNumber(Date.now()));
-
-  const Env = new bg.EnvironmentValidator({
-    type: process.env.NODE_ENV,
-    schema: EnvironmentSchema,
-  }).load(process.env);
+  const Env = new bg.EnvironmentValidator({ type: process.env.NODE_ENV, schema: EnvironmentSchema }).load(
+    process.env,
+  );
 
   const di = await bootstrap(Env);
 
@@ -25,6 +22,6 @@ import { createServer } from "./server";
     message: "Server has started",
     component: "http",
     operation: "server_startup",
-    metadata: { port: di.Env.PORT, startupTimeMs: startup.stop().ms },
+    metadata: { port: di.Env.PORT },
   });
 })();

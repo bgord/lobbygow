@@ -1,6 +1,7 @@
 # Changelog
+- 2025-12-12 19:55 3d29cac **refactor: extract test env loading**
+## 2025-12-12 19:55 
 - 2025-12-12 19:54 6620cab **refactor: force test environment in tests**
-## 2025-12-12 19:54 
 - 2025-12-12 19:52 17e2159 **refactor: simplify tests**
 - 2025-12-12 19:50 27eaa4c **refactor: extract dependencies to error handler**
 - 2025-12-12 19:47 5cb4716 **refactor: format**
@@ -15,6 +16,7 @@
 - 2025-12-12 19:10 c25396d **refactor: extract healthcheck shield rate limit**
 - 2025-12-12 19:01 3175f4f **refactor: define port return types**
 - 2025-12-12 18:57 0ca50aa **refactor: introduce EnvironmentType**
+- 2025-12-12 18:54 31c43ef **docs: generate CHANGELOG**
 - 2025-12-12 18:52 e34ebce **docs: generate CHANGELOG**
 - 2025-12-12 18:52 742168d **refactor: adjust environment validator**
 - 2025-12-12 18:50 982ae59 **docs: generate CHANGELOG**

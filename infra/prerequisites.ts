@@ -50,5 +50,6 @@ export function createPrerequisites(Env: EnvironmentType, deps: Dependencies) {
       Timekeeper: deps.Timekeeper,
       enabled: production,
     }),
+    new bg.PrerequisiteOs({ label: "os", accepted: ["Darwin", "Linux"] }),
   ];
 }

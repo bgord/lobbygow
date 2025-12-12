@@ -67,8 +67,9 @@ app/
 ```
 infra/
 ├── adapters
+│   ├── notifier
+│   │   └── shield-rate-limit.adapter.ts
 │   └── system
-│       ├── basic-auth.adapter.ts
 │       ├── certificate-inspector.adapter.ts
 │       ├── clock.adapter.ts
 │       ├── disk-space-checker.adapter.ts
@@ -77,9 +78,12 @@ infra/
 │       ├── logger.adapter.ts
 │       ├── mailer.adapter.ts
 │       ├── shield-api-key.adapter.ts
+│       ├── shield-basic-auth.adapter.ts
+│       ├── shield-rate-limit.adapter.ts
+│       ├── shield-timeout.adapter.ts
 │       └── timekeeper.adapter.ts
 ├── bootstrap.ts
 ├── env.ts
 ├── i18n.ts
-└── rate-limiters.ts
+└── prerequisites.ts
 ```

@@ -1,8 +1,29 @@
 # Changelog
+- 2025-12-12 19:24 87bacfa **refactor: remove stopwatch**
+## 2025-12-12 19:24 
+- 2025-12-12 19:20 868b4a7 **refactor: improve tests**
+- 2025-12-12 19:17 8aa464b **refactor: extract ip to mocks**
+- 2025-12-12 19:16 4cd6856 **refactor: create single infra hono config**
+- 2025-12-12 19:16 2ba11be **refactor: create notifier adapter**
+- 2025-12-12 19:10 c25396d **refactor: extract healthcheck shield rate limit**
+- 2025-12-12 19:01 3175f4f **refactor: define port return types**
+- 2025-12-12 18:57 0ca50aa **refactor: introduce EnvironmentType**
+- 2025-12-12 18:52 742168d **refactor: adjust environment validator**
+- 2025-12-12 18:43 8131980 **step: update packages**
+- 2025-12-12 18:39 a1fa667 **step: update packages**
+- 2025-12-12 18:38 e6c6116 **refactor: move startup to index**
+- 2025-12-12 18:00 d5b1b0b **refactor: use environment result type**
+- 2025-12-12 17:59 480f945 **refactor: remove request timeout error**
+- 2025-12-12 17:58 8f162f6 **refactor: use shield basic auth**
+- 2025-12-12 17:57 77b478d **refactor: use shield timeout**
+- 2025-12-12 17:55 8fad2f4 **step: update packages**
+- 2025-12-12 12:36 bca83b3 **refactor: extract prereqs**
+- 2025-12-12 12:26 632b861 **refactor: simplify infra/index**
 - 2025-12-11 23:10 dffa495 **step: update packages**
-## 2025-12-11 23:10 
 - 2025-12-11 22:20 cea4fb4 **refactor: unify logger**
 - 2025-12-11 22:19 fc16c7a **step: update packages**
+- 2025-12-11 22:10 c33415f **docs: generate readme**
+- 2025-12-11 22:10 8714755 **docs: generate CHANGELOG**
 - 2025-12-10 16:30 5f59015 **refactor: unfy bootstrap**
 - 2025-12-10 16:10 d7044bf **refactor: unify env in adapter creators**
 - 2025-12-10 15:43 e3ba50b **refactor: extract adapters**

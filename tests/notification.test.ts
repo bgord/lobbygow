@@ -7,9 +7,10 @@ import { EnvironmentSchema } from "+infra/env";
 const subject = "subject";
 const content = "content";
 
-const Env = new bg.EnvironmentValidator({ type: process.env.NODE_ENV, schema: EnvironmentSchema }).load(
-  process.env,
-);
+const Env = new bg.EnvironmentValidator({
+  type: bg.NodeEnvironmentEnum.test,
+  schema: EnvironmentSchema,
+}).load(process.env);
 
 describe("Notification", async () => {
   const di = await bootstrap(Env);

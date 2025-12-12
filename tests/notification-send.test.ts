@@ -9,9 +9,10 @@ import * as mocks from "./mocks";
 
 const url = "/api/notification-send";
 
-const Env = new bg.EnvironmentValidator({ type: process.env.NODE_ENV, schema: EnvironmentSchema }).load(
-  process.env,
-);
+const Env = new bg.EnvironmentValidator({
+  type: bg.NodeEnvironmentEnum.test,
+  schema: EnvironmentSchema,
+}).load(process.env);
 
 describe(`POST ${url}`, async () => {
   const di = await bootstrap(Env);

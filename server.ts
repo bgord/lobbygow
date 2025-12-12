@@ -26,14 +26,7 @@ export function createServer(di: Awaited<ReturnType<typeof bootstrap>>) {
   // Mailer =================
   server.post(
     "/notification-send",
-    new bg.ShieldRateLimitAdapter(
-      {
-        enabled: di.Env.type === bg.NodeEnvironmentEnum.production,
-        subject: bg.AnonSubjectResolver,
-        store: RateLimiters.NotificationSendStore,
-      },
-      di.Adapters.System,
-    ).verify,
+    di.Adapters.Notifier.ShieldRateLimit.verify,
     di.Adapters.System.ShieldTimeout.verify,
     di.Adapters.System.ShieldApiKey.verify,
     App.Http.Mailer.NotificationSend(di),

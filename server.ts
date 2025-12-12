@@ -29,7 +29,7 @@ export function createServer(di: Awaited<ReturnType<typeof bootstrap>>) {
     ).verify,
     timeout(tools.Duration.Seconds(15).ms, infra.requestTimeoutError),
     di.Adapters.System.BasicAuth,
-    ...bg.Healthcheck.build(di.Tools.healthcheck, di.Adapters.System),
+    ...bg.Healthcheck.build(di.Tools.prerequisites, di.Adapters.System),
   );
   // =============================
 

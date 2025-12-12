@@ -10,6 +10,7 @@ import { createJsonFileReader } from "./json-file-reader.adapter";
 import { createLogger } from "./logger.adapter";
 import { createMailer } from "./mailer.adapter";
 import { createShieldApiKey } from "./shield-api-key.adapter";
+import { createShieldTimeout } from "./shield-timeout.adapter";
 import { createTimekeeper } from "./timekeeper.adapter";
 
 export function createSystemAdapters(
@@ -33,5 +34,6 @@ export function createSystemAdapters(
     Mailer,
     ShieldApiKey,
     Timekeeper,
+    ShieldTimeout: createShieldTimeout(),
   };
 }

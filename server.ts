@@ -1,8 +1,7 @@
 import * as bg from "@bgord/bun";
 import * as tools from "@bgord/tools";
 import { Hono } from "hono";
-import { timeout } from "hono/timeout";
-import * as infra from "+infra";
+import type * as infra from "+infra";
 import type { bootstrap } from "+infra/bootstrap";
 import * as RateLimiters from "+infra/rate-limiters";
 import * as App from "./app";
@@ -27,7 +26,7 @@ export function createServer(di: Awaited<ReturnType<typeof bootstrap>>) {
       },
       di.Adapters.System,
     ).verify,
-    timeout(tools.Duration.Seconds(15).ms, infra.requestTimeoutError),
+    di.Adapters.System.ShieldTimeout.verify,
     di.Adapters.System.BasicAuth,
     ...bg.Healthcheck.build(di.Tools.prerequisites, di.Adapters.System),
   );
@@ -44,7 +43,7 @@ export function createServer(di: Awaited<ReturnType<typeof bootstrap>>) {
       },
       di.Adapters.System,
     ).verify,
-    timeout(tools.Duration.Seconds(15).ms, infra.requestTimeoutError),
+    di.Adapters.System.ShieldTimeout.verify,
     di.Adapters.System.ShieldApiKey.verify,
     App.Http.Mailer.NotificationSend(di),
   );

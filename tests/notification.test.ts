@@ -11,11 +11,11 @@ const Env = new bg.EnvironmentValidator({ type: process.env.NODE_ENV, schema: En
   process.env,
 );
 
-describe("Notification", () => {
+describe("Notification", async () => {
+  const di = await bootstrap(Env);
+
   describe("compose", () => {
     test("kind - success", async () => {
-      const di = await bootstrap(Env);
-
       const composer = Notifier.Services.NotificationComposerChooser.choose(
         Notifier.VO.NotificationKindEnum.success,
       );
@@ -34,8 +34,6 @@ describe("Notification", () => {
     });
 
     test("kind - error", async () => {
-      const di = await bootstrap(Env);
-
       const composer = Notifier.Services.NotificationComposerChooser.choose(
         Notifier.VO.NotificationKindEnum.error,
       );
@@ -54,8 +52,6 @@ describe("Notification", () => {
     });
 
     test("kind - info", async () => {
-      const di = await bootstrap(Env);
-
       const composer = Notifier.Services.NotificationComposerChooser.choose(
         Notifier.VO.NotificationKindEnum.info,
       );
@@ -76,8 +72,6 @@ describe("Notification", () => {
 
   describe("send", () => {
     test("kind - success", async () => {
-      const di = await bootstrap(Env);
-
       const mailerSend = spyOn(di.Adapters.System.Mailer, "send").mockImplementation(jest.fn());
 
       const composer = Notifier.Services.NotificationComposerChooser.choose(
@@ -104,8 +98,6 @@ describe("Notification", () => {
     });
 
     test("kind - error", async () => {
-      const di = await bootstrap(Env);
-
       const mailerSend = spyOn(di.Adapters.System.Mailer, "send").mockImplementation(jest.fn());
 
       const composer = Notifier.Services.NotificationComposerChooser.choose(
@@ -132,8 +124,6 @@ describe("Notification", () => {
     });
 
     test("kind - info", async () => {
-      const di = await bootstrap(Env);
-
       const mailerSend = spyOn(di.Adapters.System.Mailer, "send").mockImplementation(jest.fn());
 
       const composer = Notifier.Services.NotificationComposerChooser.choose(

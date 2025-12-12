@@ -1,6 +1,7 @@
 # Changelog
+- 2025-12-12 19:47 5cb4716 **refactor: format**
+## 2025-12-12 19:47 
 - 2025-12-12 19:46 d39e26d **Revert "refactor: remove notifier specific shield rate limit"**
-## 2025-12-12 19:46 
 - 2025-12-12 19:38 331ca43 **refactor: simplify logger adapter**
 - 2025-12-12 19:27 b69ad50 **refactor: remove notifier specific shield rate limit**
 - 2025-12-12 19:24 87bacfa **refactor: remove stopwatch**
@@ -12,6 +13,8 @@
 - 2025-12-12 19:01 3175f4f **refactor: define port return types**
 - 2025-12-12 18:57 0ca50aa **refactor: introduce EnvironmentType**
 - 2025-12-12 18:52 742168d **refactor: adjust environment validator**
+- 2025-12-12 18:46 e0c1cb6 **docs: generate CHANGELOG**
+- 2025-12-12 18:46 361607c **docs: generate readme**
 - 2025-12-12 18:43 8131980 **step: update packages**
 - 2025-12-12 18:39 a1fa667 **step: update packages**
 - 2025-12-12 18:38 e6c6116 **refactor: move startup to index**

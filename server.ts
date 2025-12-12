@@ -1,15 +1,11 @@
 import * as bg from "@bgord/bun";
-import type * as tools from "@bgord/tools";
 import { Hono } from "hono";
 import type * as infra from "+infra";
 import type { bootstrap } from "+infra/bootstrap";
-import * as RateLimiters from "+infra/rate-limiters";
 import * as App from "./app";
 
 export function createServer(di: Awaited<ReturnType<typeof bootstrap>>) {
-  type HonoConfig = { Variables: infra.Variables; startup: tools.Stopwatch };
-
-  const server = new Hono<HonoConfig>()
+  const server = new Hono<infra.Config>()
     .basePath("/api")
     .use(...bg.Setup.essentials({ ...di.Adapters.System, I18n: di.Tools.I18nConfig }));
 

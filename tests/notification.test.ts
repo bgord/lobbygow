@@ -1,19 +1,13 @@
 import { describe, expect, jest, spyOn, test } from "bun:test";
-import * as bg from "@bgord/bun";
 import * as Notifier from "+notifier";
 import { bootstrap } from "+infra/bootstrap";
-import { EnvironmentSchema } from "+infra/env";
+import * as mocks from "./mocks";
 
 const subject = "subject";
 const content = "content";
 
-const Env = new bg.EnvironmentValidator({
-  type: bg.NodeEnvironmentEnum.test,
-  schema: EnvironmentSchema,
-}).load(process.env);
-
 describe("Notification", async () => {
-  const di = await bootstrap(Env);
+  const di = await bootstrap(mocks.Env);
 
   describe("compose", () => {
     test("kind - success", async () => {

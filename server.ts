@@ -10,9 +10,9 @@ import * as App from "./app";
 export function createServer(di: Awaited<ReturnType<typeof bootstrap>>) {
   type HonoConfig = { Variables: infra.Variables; startup: tools.Stopwatch };
 
-  const server = new Hono<HonoConfig>().basePath("/api");
-
-  server.use(...bg.Setup.essentials({ ...di.Adapters.System, I18n: di.Tools.I18nConfig }));
+  const server = new Hono<HonoConfig>()
+    .basePath("/api")
+    .use(...bg.Setup.essentials({ ...di.Adapters.System, I18n: di.Tools.I18nConfig }));
 
   const startup = new tools.Stopwatch(di.Adapters.System.Clock.now());
 

@@ -5,6 +5,8 @@ import { EnvironmentSchema, type EnvironmentSchemaType } from "+infra/env";
 import { createServer } from "./server";
 
 (async function main() {
+  const startup = new tools.Stopwatch(tools.Timestamp.fromNumber(Date.now()));
+
   const Env = new bg.EnvironmentValidator<EnvironmentSchemaType>({
     type: process.env.NODE_ENV,
     schema: EnvironmentSchema,
@@ -12,7 +14,7 @@ import { createServer } from "./server";
 
   const di = await bootstrap(Env);
 
-  const { server, startup } = createServer(di);
+  const server = createServer(di);
 
   await new bg.Prerequisites(di.Adapters.System).check(di.Tools.prerequisites);
 

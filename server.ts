@@ -1,5 +1,5 @@
 import * as bg from "@bgord/bun";
-import * as tools from "@bgord/tools";
+import type * as tools from "@bgord/tools";
 import { Hono } from "hono";
 import type * as infra from "+infra";
 import type { bootstrap } from "+infra/bootstrap";
@@ -12,8 +12,6 @@ export function createServer(di: Awaited<ReturnType<typeof bootstrap>>) {
   const server = new Hono<HonoConfig>()
     .basePath("/api")
     .use(...bg.Setup.essentials({ ...di.Adapters.System, I18n: di.Tools.I18nConfig }));
-
-  const startup = new tools.Stopwatch(di.Adapters.System.Clock.now());
 
   // Healthcheck =================
   server.get(
@@ -51,5 +49,5 @@ export function createServer(di: Awaited<ReturnType<typeof bootstrap>>) {
 
   server.onError(App.Http.ErrorHandler.handle(di.Adapters.System));
 
-  return { server, startup };
+  return server;
 }

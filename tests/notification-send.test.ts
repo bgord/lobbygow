@@ -23,7 +23,7 @@ const Env = new bg.EnvironmentValidator<z.infer<typeof EnvironmentSchema>>({
 describe(`POST ${url}`, () => {
   test("validation - empty payload", async () => {
     const di = await bootstrap(Env);
-    const { server } = createServer(di);
+    const server = createServer(di);
 
     const response = await server.request(
       url,
@@ -42,7 +42,7 @@ describe(`POST ${url}`, () => {
 
   test("validation - invalid payload", async () => {
     const di = await bootstrap(Env);
-    const { server } = createServer(di);
+    const server = createServer(di);
 
     const response = await server.request(
       url,
@@ -62,7 +62,7 @@ describe(`POST ${url}`, () => {
 
   test("validation - missing subject", async () => {
     const di = await bootstrap(Env);
-    const { server } = createServer(di);
+    const server = createServer(di);
 
     const response = await server.request(
       url,
@@ -82,7 +82,7 @@ describe(`POST ${url}`, () => {
 
   test("validation - missing content", async () => {
     const di = await bootstrap(Env);
-    const { server } = createServer(di);
+    const server = createServer(di);
 
     const response = await server.request(
       url,
@@ -102,7 +102,7 @@ describe(`POST ${url}`, () => {
 
   test("happy path - info", async () => {
     const di = await bootstrap(Env);
-    const { server } = createServer(di);
+    const server = createServer(di);
 
     const mailerSend = spyOn(di.Adapters.System.Mailer, "send").mockImplementation(jest.fn());
 
@@ -133,7 +133,7 @@ describe(`POST ${url}`, () => {
 
   test("happy path - error", async () => {
     const di = await bootstrap(Env);
-    const { server } = createServer(di);
+    const server = createServer(di);
 
     const mailerSend = spyOn(di.Adapters.System.Mailer, "send").mockImplementation(jest.fn());
 
@@ -165,7 +165,7 @@ describe(`POST ${url}`, () => {
 
   test("happy path - success", async () => {
     const di = await bootstrap(Env);
-    const { server } = createServer(di);
+    const server = createServer(di);
 
     const mailerSend = spyOn(di.Adapters.System.Mailer, "send").mockImplementation(jest.fn());
 
@@ -197,7 +197,7 @@ describe(`POST ${url}`, () => {
 
   test("happy path - default kind", async () => {
     const di = await bootstrap(Env);
-    const { server } = createServer(di);
+    const server = createServer(di);
 
     const mailerSend = spyOn(di.Adapters.System.Mailer, "send").mockImplementation(jest.fn());
 

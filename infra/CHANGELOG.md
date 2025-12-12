@@ -1,6 +1,7 @@
 # Changelog
+- 2025-12-12 19:27 b69ad50 **refactor: remove notifier specific shield rate limit**
+## 2025-12-12 19:27 
 - 2025-12-12 19:24 87bacfa **refactor: remove stopwatch**
-## 2025-12-12 19:24 
 - 2025-12-12 19:20 868b4a7 **refactor: improve tests**
 - 2025-12-12 19:17 8aa464b **refactor: extract ip to mocks**
 - 2025-12-12 19:16 4cd6856 **refactor: create single infra hono config**
@@ -12,6 +13,8 @@
 - 2025-12-12 18:43 8131980 **step: update packages**
 - 2025-12-12 18:39 a1fa667 **step: update packages**
 - 2025-12-12 18:38 e6c6116 **refactor: move startup to index**
+- 2025-12-12 18:25 f605bae **docs: generate readme**
+- 2025-12-12 18:25 f072d7f **docs: generate CHANGELOG**
 - 2025-12-12 18:00 d5b1b0b **refactor: use environment result type**
 - 2025-12-12 17:59 480f945 **refactor: remove request timeout error**
 - 2025-12-12 17:58 8f162f6 **refactor: use shield basic auth**

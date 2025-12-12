@@ -1,6 +1,7 @@
 # Changelog
+- 2025-12-12 19:38 331ca43 **refactor: simplify logger adapter**
+## 2025-12-12 19:38 
 - 2025-12-12 19:27 b69ad50 **refactor: remove notifier specific shield rate limit**
-## 2025-12-12 19:27 
 - 2025-12-12 19:24 87bacfa **refactor: remove stopwatch**
 - 2025-12-12 19:20 868b4a7 **refactor: improve tests**
 - 2025-12-12 19:17 8aa464b **refactor: extract ip to mocks**
@@ -13,6 +14,8 @@
 - 2025-12-12 18:43 8131980 **step: update packages**
 - 2025-12-12 18:39 a1fa667 **step: update packages**
 - 2025-12-12 18:38 e6c6116 **refactor: move startup to index**
+- 2025-12-12 18:27 de5bc84 **docs: generate CHANGELOG**
+- 2025-12-12 18:27 1cf6ce4 **docs: generate readme**
 - 2025-12-12 18:25 f605bae **docs: generate readme**
 - 2025-12-12 18:25 f072d7f **docs: generate CHANGELOG**
 - 2025-12-12 18:00 d5b1b0b **refactor: use environment result type**

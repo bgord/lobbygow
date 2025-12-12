@@ -1,7 +1,6 @@
 import { describe, expect, jest, spyOn, test } from "bun:test";
 import * as bg from "@bgord/bun";
 import * as bgb from "@bgord/bun";
-import type { z } from "zod/v4";
 import * as Notifier from "+notifier";
 import { bootstrap } from "+infra/bootstrap";
 import { EnvironmentSchema } from "+infra/env";
@@ -15,10 +14,9 @@ const ip = {
 
 const url = "/api/notification-send";
 
-const Env = new bg.EnvironmentValidator<z.infer<typeof EnvironmentSchema>>({
-  type: process.env.NODE_ENV,
-  schema: EnvironmentSchema,
-}).load();
+const Env = new bg.EnvironmentValidator({ type: process.env.NODE_ENV, schema: EnvironmentSchema }).load(
+  process.env,
+);
 
 describe(`POST ${url}`, () => {
   test("validation - empty payload", async () => {

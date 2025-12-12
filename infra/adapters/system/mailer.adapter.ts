@@ -1,10 +1,11 @@
 import * as bg from "@bgord/bun";
-import type { z } from "zod/v4";
 import type { EnvironmentSchema } from "+infra/env";
 
+type Dependencies = { Logger: bg.LoggerPort };
+
 export function createMailer(
-  Env: ReturnType<bg.EnvironmentValidator<z.infer<typeof EnvironmentSchema>>["load"]>,
-  deps: { Logger: bg.LoggerPort },
+  Env: bg.EnvironmentResultType<typeof EnvironmentSchema>,
+  deps: Dependencies,
 ): bg.MailerPort {
   return {
     [bg.NodeEnvironmentEnum.local]: new bg.MailerNoopAdapter(deps),

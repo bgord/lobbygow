@@ -1,10 +1,9 @@
 import * as bg from "@bgord/bun";
 import * as tools from "@bgord/tools";
-import type { z } from "zod/v4";
 import type { EnvironmentSchema } from "+infra/env";
 
 export function createDiskSpaceChecker(
-  Env: ReturnType<bg.EnvironmentValidator<z.infer<typeof EnvironmentSchema>>["load"]>,
+  Env: bg.EnvironmentResultType<typeof EnvironmentSchema>,
 ): bg.DiskSpaceCheckerPort {
   const DiskSpaceCheckerNoopAdapter = new bg.DiskSpaceCheckerNoopAdapter(tools.Size.fromGB(10));
   const DiskSpaceCheckerBunAdapter = new bg.DiskSpaceCheckerBunAdapter();

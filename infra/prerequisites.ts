@@ -1,6 +1,6 @@
 import * as bg from "@bgord/bun";
 import * as tools from "@bgord/tools";
-import type { EnvironmentSchemaType } from "+infra/env";
+import type { EnvironmentSchema } from "+infra/env";
 
 type Dependencies = {
   DiskSpaceChecker: bg.DiskSpaceCheckerPort;
@@ -11,7 +11,7 @@ type Dependencies = {
 };
 
 export function createPrerequisites(
-  Env: bg.EnvironmentResultType<EnvironmentSchemaType>,
+  Env: bg.EnvironmentResultType<typeof EnvironmentSchema>,
   deps: Dependencies,
 ) {
   const production = Env.type === bg.NodeEnvironmentEnum.production;

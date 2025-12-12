@@ -1,10 +1,7 @@
 import * as bg from "@bgord/bun";
-import type { z } from "zod/v4";
 import type { EnvironmentSchema } from "+infra/env";
 
-export function createLogger(
-  Env: ReturnType<bg.EnvironmentValidator<z.infer<typeof EnvironmentSchema>>["load"]>,
-): bg.LoggerPort {
+export function createLogger(Env: bg.EnvironmentResultType<typeof EnvironmentSchema>): bg.LoggerPort {
   const app = "lobbygow";
   const redactor = new bg.RedactorCompositeAdapter([
     new bg.RedactorCompactArrayAdapter(),

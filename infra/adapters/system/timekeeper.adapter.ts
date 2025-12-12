@@ -1,10 +1,11 @@
 import * as bg from "@bgord/bun";
-import type { z } from "zod/v4";
 import type { EnvironmentSchema } from "+infra/env";
 
+type Dependencies = { Clock: bg.ClockPort };
+
 export function createTimekeeper(
-  Env: ReturnType<bg.EnvironmentValidator<z.infer<typeof EnvironmentSchema>>["load"]>,
-  deps: { Clock: bg.ClockPort },
+  Env: bg.EnvironmentResultType<typeof EnvironmentSchema>,
+  deps: Dependencies,
 ): bg.TimekeeperPort {
   return {
     [bg.NodeEnvironmentEnum.local]: new bg.TimekeeperGoogleAdapter(),

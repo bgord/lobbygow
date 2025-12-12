@@ -1,16 +1,16 @@
 import * as bg from "@bgord/bun";
 import * as tools from "@bgord/tools";
 import { bootstrap } from "+infra/bootstrap";
-import { EnvironmentSchema, type EnvironmentSchemaType } from "+infra/env";
+import { EnvironmentSchema } from "+infra/env";
 import { createServer } from "./server";
 
 (async function main() {
   const startup = new tools.Stopwatch(tools.Timestamp.fromNumber(Date.now()));
 
-  const Env = new bg.EnvironmentValidator<EnvironmentSchemaType>({
+  const Env = new bg.EnvironmentValidator({
     type: process.env.NODE_ENV,
     schema: EnvironmentSchema,
-  }).load();
+  }).load(process.env);
 
   const di = await bootstrap(Env);
 

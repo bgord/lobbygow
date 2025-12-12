@@ -1,6 +1,5 @@
 import { describe, expect, jest, spyOn, test } from "bun:test";
 import * as bg from "@bgord/bun";
-import type { z } from "zod/v4";
 import * as Notifier from "+notifier";
 import { bootstrap } from "+infra/bootstrap";
 import { EnvironmentSchema } from "+infra/env";
@@ -8,10 +7,9 @@ import { EnvironmentSchema } from "+infra/env";
 const subject = "subject";
 const content = "content";
 
-const Env = new bg.EnvironmentValidator<z.infer<typeof EnvironmentSchema>>({
-  type: process.env.NODE_ENV,
-  schema: EnvironmentSchema,
-}).load();
+const Env = new bg.EnvironmentValidator({ type: process.env.NODE_ENV, schema: EnvironmentSchema }).load(
+  process.env,
+);
 
 describe("Notification", () => {
   describe("compose", () => {

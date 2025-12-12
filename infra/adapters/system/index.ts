@@ -8,6 +8,7 @@ import { createLogger } from "./logger.adapter";
 import { createMailer } from "./mailer.adapter";
 import { createShieldApiKey } from "./shield-api-key.adapter";
 import { createShieldBasicAuth } from "./shield-basic-auth.adapter";
+import { createShieldRateLimit } from "./shield-rate-limit.adapter";
 import { createShieldTimeout } from "./shield-timeout.adapter";
 import { createTimekeeper } from "./timekeeper.adapter";
 
@@ -31,5 +32,6 @@ export function createSystemAdapters(Env: EnvironmentType) {
     ShieldApiKey,
     Timekeeper,
     ShieldTimeout: createShieldTimeout(),
+    ShieldRateLimit: createShieldRateLimit(Env, { Clock }),
   };
 }

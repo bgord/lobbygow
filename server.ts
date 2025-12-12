@@ -16,14 +16,7 @@ export function createServer(di: Awaited<ReturnType<typeof bootstrap>>) {
   // Healthcheck =================
   server.get(
     "/healthcheck",
-    new bg.ShieldRateLimitAdapter(
-      {
-        enabled: di.Env.type === bg.NodeEnvironmentEnum.production,
-        subject: bg.AnonSubjectResolver,
-        store: RateLimiters.HealthcheckStore,
-      },
-      di.Adapters.System,
-    ).verify,
+    di.Adapters.System.ShieldRateLimit.verify,
     di.Adapters.System.ShieldTimeout.verify,
     di.Adapters.System.ShieldBasicAuth.verify,
     ...bg.Healthcheck.build(di.Tools.prerequisites, di.Adapters.System),

@@ -10,7 +10,6 @@ import { createServer } from "./server";
   );
 
   const di = await bootstrap(Env);
-
   const server = createServer(di);
 
   await new bg.Prerequisites(di.Adapters.System).check(di.Tools.prerequisites);

@@ -1,7 +1,7 @@
 import * as bg from "@bgord/bun";
-import type { EnvironmentSchema } from "+infra/env";
+import type { EnvironmentType } from "+infra/env";
 
-export function createShieldBasicAuth(Env: bg.EnvironmentResultType<typeof EnvironmentSchema>) {
+export function createShieldBasicAuth(Env: EnvironmentType) {
   return new bg.ShieldBasicAuthAdapter({
     username: Env.BASIC_AUTH_USERNAME,
     password: Env.BASIC_AUTH_PASSWORD,

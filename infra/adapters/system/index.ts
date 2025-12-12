@@ -1,5 +1,4 @@
-import type * as bg from "@bgord/bun";
-import type { EnvironmentSchema } from "+infra/env";
+import type { EnvironmentType } from "+infra/env";
 import { createCertificateInspector } from "./certificate-inspector.adapter";
 import { createClock } from "./clock.adapter";
 import { createDiskSpaceChecker } from "./disk-space-checker.adapter";
@@ -12,7 +11,7 @@ import { createShieldBasicAuth } from "./shield-basic-auth.adapter";
 import { createShieldTimeout } from "./shield-timeout.adapter";
 import { createTimekeeper } from "./timekeeper.adapter";
 
-export function createSystemAdapters(Env: bg.EnvironmentResultType<typeof EnvironmentSchema>) {
+export function createSystemAdapters(Env: EnvironmentType) {
   const Clock = createClock();
   const IdProvider = createIdProvider();
   const Logger = createLogger(Env);

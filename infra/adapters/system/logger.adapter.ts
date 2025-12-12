@@ -1,7 +1,7 @@
 import * as bg from "@bgord/bun";
-import type { EnvironmentSchema } from "+infra/env";
+import type { EnvironmentType } from "+infra/env";
 
-export function createLogger(Env: bg.EnvironmentResultType<typeof EnvironmentSchema>): bg.LoggerPort {
+export function createLogger(Env: EnvironmentType): bg.LoggerPort {
   const app = "lobbygow";
   const redactor = new bg.RedactorCompositeAdapter([
     new bg.RedactorCompactArrayAdapter(),

@@ -20,4 +20,4 @@ export const EnvironmentSchema = z
   })
   .strip();
 
-export type EnvironmentSchemaType = z.infer<typeof EnvironmentSchema>;
+export type EnvironmentType = bg.EnvironmentResultType<typeof EnvironmentSchema>;

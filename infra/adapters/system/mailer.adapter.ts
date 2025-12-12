@@ -1,12 +1,9 @@
 import * as bg from "@bgord/bun";
-import type { EnvironmentSchema } from "+infra/env";
+import type { EnvironmentType } from "+infra/env";
 
 type Dependencies = { Logger: bg.LoggerPort };
 
-export function createMailer(
-  Env: bg.EnvironmentResultType<typeof EnvironmentSchema>,
-  deps: Dependencies,
-): bg.MailerPort {
+export function createMailer(Env: EnvironmentType, deps: Dependencies): bg.MailerPort {
   return {
     [bg.NodeEnvironmentEnum.local]: new bg.MailerNoopAdapter(deps),
     [bg.NodeEnvironmentEnum.test]: new bg.MailerNoopAdapter(deps),

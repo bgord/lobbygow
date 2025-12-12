@@ -1,10 +1,10 @@
 import * as bg from "@bgord/bun";
-import type { EnvironmentSchema } from "+infra/env";
+import type { EnvironmentType } from "+infra/env";
 
 type Dependencies = { Clock: bg.ClockPort };
 
 export function createCertificateInspector(
-  Env: bg.EnvironmentResultType<typeof EnvironmentSchema>,
+  Env: EnvironmentType,
   deps: Dependencies,
 ): bg.CertificateInspectorPort {
   return {

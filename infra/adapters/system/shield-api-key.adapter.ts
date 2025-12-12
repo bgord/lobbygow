@@ -1,6 +1,6 @@
 import * as bg from "@bgord/bun";
-import type { EnvironmentSchema } from "+infra/env";
+import type { EnvironmentType } from "+infra/env";
 
-export function createShieldApiKey(Env: bg.EnvironmentResultType<typeof EnvironmentSchema>): bg.ShieldPort {
+export function createShieldApiKey(Env: EnvironmentType): bg.ShieldPort {
   return new bg.ShieldApiKeyAdapter({ API_KEY: Env.API_KEY });
 }

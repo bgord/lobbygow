@@ -1,6 +1,5 @@
 import type * as bg from "@bgord/bun";
-import type { z } from "zod/v4";
-import type { EnvironmentSchema } from "+infra/env";
+import type { EnvironmentSchemaType } from "+infra/env";
 import { createCertificateInspector } from "./certificate-inspector.adapter";
 import { createClock } from "./clock.adapter";
 import { createDiskSpaceChecker } from "./disk-space-checker.adapter";
@@ -13,9 +12,7 @@ import { createShieldBasicAuth } from "./shield-basic-auth.adapter";
 import { createShieldTimeout } from "./shield-timeout.adapter";
 import { createTimekeeper } from "./timekeeper.adapter";
 
-export function createSystemAdapters(
-  Env: ReturnType<bg.EnvironmentValidator<z.infer<typeof EnvironmentSchema>>["load"]>,
-) {
+export function createSystemAdapters(Env: bg.EnvironmentResultType<EnvironmentSchemaType>) {
   const Clock = createClock();
   const IdProvider = createIdProvider();
   const Logger = createLogger(Env);

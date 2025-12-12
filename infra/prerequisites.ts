@@ -11,7 +11,7 @@ type Dependencies = {
 };
 
 export function createPrerequisites(
-  Env: ReturnType<bg.EnvironmentValidator<EnvironmentSchemaType>["load"]>,
+  Env: bg.EnvironmentResultType<EnvironmentSchemaType>,
   deps: Dependencies,
 ) {
   const production = Env.type === bg.NodeEnvironmentEnum.production;

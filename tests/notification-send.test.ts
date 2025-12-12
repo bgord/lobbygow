@@ -5,12 +5,7 @@ import * as Notifier from "+notifier";
 import { bootstrap } from "+infra/bootstrap";
 import { EnvironmentSchema } from "+infra/env";
 import { createServer } from "../server";
-
-const ip = {
-  server: {
-    requestIP: () => ({ address: "127.0.0.1", family: "foo", port: "123" }),
-  },
-};
+import * as mocks from "./mocks";
 
 const url = "/api/notification-send";
 
@@ -29,7 +24,7 @@ describe(`POST ${url}`, () => {
         method: "POST",
         headers: new Headers({ [bgb.ShieldApiKeyAdapter.HEADER_NAME]: di.Env.API_KEY }),
       },
-      ip,
+      mocks.ip,
     );
 
     const json = await response.json();
@@ -49,7 +44,7 @@ describe(`POST ${url}`, () => {
         body: "invalid-json",
         headers: new Headers({ [bgb.ShieldApiKeyAdapter.HEADER_NAME]: di.Env.API_KEY }),
       },
-      ip,
+      mocks.ip,
     );
 
     const json = await response.json();
@@ -69,7 +64,7 @@ describe(`POST ${url}`, () => {
         body: JSON.stringify({ content: "content", kind: Notifier.VO.NotificationKindEnum.info }),
         headers: new Headers({ [bgb.ShieldApiKeyAdapter.HEADER_NAME]: di.Env.API_KEY }),
       },
-      ip,
+      mocks.ip,
     );
 
     const json = await response.json();
@@ -89,7 +84,7 @@ describe(`POST ${url}`, () => {
         body: JSON.stringify({ subject: "subject", kind: Notifier.VO.NotificationKindEnum.info }),
         headers: new Headers({ [bgb.ShieldApiKeyAdapter.HEADER_NAME]: di.Env.API_KEY }),
       },
-      ip,
+      mocks.ip,
     );
 
     const json = await response.json();
@@ -117,7 +112,7 @@ describe(`POST ${url}`, () => {
         body: JSON.stringify(payload),
         headers: new Headers({ [bgb.ShieldApiKeyAdapter.HEADER_NAME]: di.Env.API_KEY }),
       },
-      ip,
+      mocks.ip,
     );
 
     expect(response.status).toBe(200);
@@ -148,7 +143,7 @@ describe(`POST ${url}`, () => {
         body: JSON.stringify(payload),
         headers: new Headers({ [bgb.ShieldApiKeyAdapter.HEADER_NAME]: di.Env.API_KEY }),
       },
-      ip,
+      mocks.ip,
     );
 
     expect(response.status).toBe(200);
@@ -180,7 +175,7 @@ describe(`POST ${url}`, () => {
         body: JSON.stringify(payload),
         headers: new Headers({ [bgb.ShieldApiKeyAdapter.HEADER_NAME]: di.Env.API_KEY }),
       },
-      ip,
+      mocks.ip,
     );
 
     expect(response.status).toBe(200);
@@ -208,7 +203,7 @@ describe(`POST ${url}`, () => {
         body: JSON.stringify(payload),
         headers: new Headers({ [bgb.ShieldApiKeyAdapter.HEADER_NAME]: di.Env.API_KEY }),
       },
-      ip,
+      mocks.ip,
     );
 
     expect(response.status).toBe(200);

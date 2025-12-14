@@ -1,7 +1,9 @@
 # Changelog
+- 2025-12-14 12:31 ee0a5f3 **step: update packages**
+## 2025-12-14 12:31 
 - 2025-12-13 00:13 0ae4c20 **step: update packages**
-## 2025-12-13 00:13 
 - 2025-12-13 00:12 82d293a **step: add os prereq**
+- 2025-12-12 23:13 f680632 **docs: generate CHANGELOG**
 - 2025-12-12 19:55 3d29cac **refactor: extract test env loading**
 - 2025-12-12 19:54 6620cab **refactor: force test environment in tests**
 - 2025-12-12 19:52 17e2159 **refactor: simplify tests**

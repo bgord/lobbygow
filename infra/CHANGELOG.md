@@ -1,7 +1,10 @@
 # Changelog
+- 2025-12-15 11:56 0f5ab14 **refactor: update env**
+## 2025-12-15 11:56 
+- 2025-12-15 11:52 ca9a854 **step: update packages**
 - 2025-12-14 23:42 4a21f42 **refactor: adjust email**
-## 2025-12-14 23:42 
 - 2025-12-14 23:41 42bd7ab **step: update packages**
+- 2025-12-14 22:42 91a35c4 **docs: generate CHANGELOG**
 - 2025-12-14 13:07 0680bdb **refactor: update prereqs**
 - 2025-12-14 13:06 ad827f9 **step: update packages**
 - 2025-12-14 12:31 ee0a5f3 **step: update packages**

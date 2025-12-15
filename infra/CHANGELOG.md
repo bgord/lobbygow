@@ -1,12 +1,14 @@
 # Changelog
+- 2025-12-15 19:29 814e52d **step: add gitleaks local prereq**
+## 2025-12-15 19:29 
 - 2025-12-15 19:26 c25acbf **step: update deploy server**
-## 2025-12-15 19:26 
 - 2025-12-15 19:25 7192c67 **step: bump bgord/scripts**
 - 2025-12-15 19:22 f85a2e6 **step: bump bgord/scripts**
 - 2025-12-15 19:14 646f1c3 **step: bump bgord/scripts**
 - 2025-12-15 19:12 7cedfa0 **step: bump bgord/scripts**
 - 2025-12-15 19:04 a262cc8 **step: update packages**
 - 2025-12-15 19:04 7d3aabf **step: bump bgord/scripts**
+- 2025-12-15 18:26 65ff7b5 **docs: generate CHANGELOG**
 - 2025-12-15 18:22 d671587 **docs: generate CHANGELOG**
 - 2025-12-15 18:15 4f986de **docs: generate CHANGELOG**
 - 2025-12-15 18:05 25b5215 **docs: generate CHANGELOG**

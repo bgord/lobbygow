@@ -21,3 +21,8 @@ export const EnvironmentSchema = z
   .strip();
 
 export type EnvironmentType = bg.EnvironmentResultType<typeof EnvironmentSchema>;
+
+export const EnvironmentLoader = new bg.EnvironmentLoaderProcessEnvAdapter(
+  { type: process.env.NODE_ENV, schema: EnvironmentSchema },
+  process.env,
+);

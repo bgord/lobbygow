@@ -1,13 +1,14 @@
 import { describe, expect, jest, spyOn, test } from "bun:test";
 import * as Notifier from "+notifier";
 import { bootstrap } from "+infra/bootstrap";
-import * as mocks from "./mocks";
+import { EnvironmentLoader } from "+infra/env";
 
 const subject = "subject";
 const content = "content";
 
 describe("Notification", async () => {
-  const di = await bootstrap(mocks.Env);
+  const Env = await EnvironmentLoader.load();
+  const di = await bootstrap(Env);
 
   describe("compose", () => {
     test("kind - success", async () => {

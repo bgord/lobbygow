@@ -2,15 +2,13 @@ import { describe, expect, jest, spyOn, test } from "bun:test";
 import * as bgb from "@bgord/bun";
 import * as Notifier from "+notifier";
 import { bootstrap } from "+infra/bootstrap";
-import { EnvironmentLoader } from "+infra/env";
 import { createServer } from "../server";
 import * as mocks from "./mocks";
 
 const url = "/api/notification-send";
 
 describe(`POST ${url}`, async () => {
-  const Env = await EnvironmentLoader.load();
-  const di = await bootstrap(Env);
+  const di = await bootstrap();
   const server = createServer(di);
   const headers = new Headers({ [bgb.ShieldApiKeyAdapter.HEADER_NAME]: di.Env.API_KEY });
 

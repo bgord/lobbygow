@@ -1,13 +1,10 @@
 import * as bg from "@bgord/bun";
 import * as tools from "@bgord/tools";
 import { bootstrap } from "+infra/bootstrap";
-import { EnvironmentLoader } from "+infra/env";
 import { createServer } from "./server";
 
 (async function main() {
-  const Env = await EnvironmentLoader.load();
-
-  const di = await bootstrap(Env);
+  const di = await bootstrap();
   const server = createServer(di);
 
   await new bg.Prerequisites(di.Adapters.System).check(di.Tools.prerequisites);

@@ -1,10 +1,12 @@
 import { createNotifierAdapters } from "+infra/adapters/notifier";
 import { createSystemAdapters } from "+infra/adapters/system";
-import type { EnvironmentType } from "+infra/env";
+import { createEnvironmentLoader } from "+infra/env";
 import { I18nConfig } from "+infra/i18n";
 import { createPrerequisites } from "+infra/prerequisites";
 
-export async function bootstrap(Env: EnvironmentType) {
+export async function bootstrap() {
+  const EnvironmentLoader = await createEnvironmentLoader();
+  const Env = await EnvironmentLoader.load();
   const System = createSystemAdapters(Env);
   const Notifier = createNotifierAdapters(Env, System);
 

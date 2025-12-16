@@ -22,6 +22,26 @@ export const Schema = z
 
 export type EnvironmentType = bg.EnvironmentResultType<typeof Schema>;
 
-const type = bg.NodeEnvironment.parse(process.env.NODE_ENV);
+export async function createEnvironmentLoader(): Promise<bg.EnvironmentLoaderPort<typeof Schema>> {
+  const type = bg.NodeEnvironment.parse(process.env.NODE_ENV);
 
-export const EnvironmentLoader = new bg.EnvironmentLoaderProcessAdapter({ type, Schema }, process.env);
+  // TODO: Add to prereqs
+  const MasterKeyPath = tools.FilePathAbsolute.fromString("/run/master-key.txt");
+  const CryptoKeyProvider = new bg.CryptoKeyProviderFileAdapter(MasterKeyPath);
+
+  const Encryption = new bg.EncryptionBunAdapter({ CryptoKeyProvider });
+
+  return {
+    [bg.NodeEnvironmentEnum.local]: new bg.EnvironmentLoaderProcessSafeAdapter({ type, Schema }, process.env),
+    [bg.NodeEnvironmentEnum.test]: new bg.EnvironmentLoaderProcessAdapter({ type, Schema }, process.env),
+    [bg.NodeEnvironmentEnum.staging]: new bg.EnvironmentLoaderProcessSafeAdapter(
+      { type, Schema },
+      process.env,
+    ),
+    [bg.NodeEnvironmentEnum.production]: new bg.EnvironmentLoaderEncryptedAdapter(
+      // TODO: Add to prereqs
+      { type, Schema, path: tools.FilePathRelative.fromString("infra/secrets.txt") },
+      { Encryption },
+    ),
+  }[type];
+}

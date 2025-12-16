@@ -1,6 +1,10 @@
 # Changelog
+- 2025-12-16 22:59 208173f **step: adjust paths**
+## 2025-12-16 22:59 
+- 2025-12-16 13:59 5f1b8b7 **refactor: update env**
+- 2025-12-16 13:56 7defe65 **step: update packages**
 - 2025-12-16 13:01 b182fe4 **step: update packages**
-## 2025-12-16 13:01 
+- 2025-12-16 12:01 2adebd9 **docs: generate CHANGELOG**
 - 2025-12-16 11:28 658085b **refactor: arrange act assert**
 - 2025-12-16 10:00 d1d3acd **step: update packages**
 - 2025-12-16 09:16 7eeadb7 **refactor: update env**

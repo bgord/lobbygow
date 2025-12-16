@@ -64,7 +64,6 @@ describe(`POST ${url}`, async () => {
 
   test("happy path - info", async () => {
     const mailerSend = spyOn(di.Adapters.System.Mailer, "send").mockImplementation(jest.fn());
-
     const payload = {
       subject: "subject",
       content: "content",
@@ -92,7 +91,6 @@ describe(`POST ${url}`, async () => {
 
   test("happy path - error", async () => {
     const mailerSend = spyOn(di.Adapters.System.Mailer, "send").mockImplementation(jest.fn());
-
     const payload = {
       subject: "subject",
       content: "content",
@@ -116,7 +114,6 @@ describe(`POST ${url}`, async () => {
 
   test("happy path - success", async () => {
     const mailerSend = spyOn(di.Adapters.System.Mailer, "send").mockImplementation(jest.fn());
-
     const payload = {
       subject: "subject",
       content: "content",
@@ -140,7 +137,6 @@ describe(`POST ${url}`, async () => {
 
   test("happy path - default kind", async () => {
     const mailerSend = spyOn(di.Adapters.System.Mailer, "send").mockImplementation(jest.fn());
-
     const payload = { subject: "subject", content: "content" };
 
     const response = await server.request(

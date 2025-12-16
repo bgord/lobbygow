@@ -15,7 +15,6 @@ describe("Notification", async () => {
       const composer = Notifier.Services.NotificationComposerChooser.choose(
         Notifier.VO.NotificationKindEnum.success,
       );
-
       const notification = new Notifier.Services.Notification(
         di.Env.EMAIL_FROM,
         subject,
@@ -33,7 +32,6 @@ describe("Notification", async () => {
       const composer = Notifier.Services.NotificationComposerChooser.choose(
         Notifier.VO.NotificationKindEnum.error,
       );
-
       const notification = new Notifier.Services.Notification(
         di.Env.EMAIL_FROM,
         subject,
@@ -51,7 +49,6 @@ describe("Notification", async () => {
       const composer = Notifier.Services.NotificationComposerChooser.choose(
         Notifier.VO.NotificationKindEnum.info,
       );
-
       const notification = new Notifier.Services.Notification(
         di.Env.EMAIL_FROM,
         subject,
@@ -69,11 +66,9 @@ describe("Notification", async () => {
   describe("send", () => {
     test("kind - success", async () => {
       const mailerSend = spyOn(di.Adapters.System.Mailer, "send").mockImplementation(jest.fn());
-
       const composer = Notifier.Services.NotificationComposerChooser.choose(
         Notifier.VO.NotificationKindEnum.success,
       );
-
       const notification = new Notifier.Services.Notification(
         di.Env.EMAIL_FROM,
         subject,
@@ -95,18 +90,15 @@ describe("Notification", async () => {
 
     test("kind - error", async () => {
       const mailerSend = spyOn(di.Adapters.System.Mailer, "send").mockImplementation(jest.fn());
-
       const composer = Notifier.Services.NotificationComposerChooser.choose(
         Notifier.VO.NotificationKindEnum.error,
       );
-
       const notification = new Notifier.Services.Notification(
         di.Env.EMAIL_FROM,
         subject,
         content,
         di.Adapters.System,
       );
-
       const message = await notification.compose(composer);
 
       await notification.send(message, di.Env.EMAIL_TO);
@@ -121,18 +113,15 @@ describe("Notification", async () => {
 
     test("kind - info", async () => {
       const mailerSend = spyOn(di.Adapters.System.Mailer, "send").mockImplementation(jest.fn());
-
       const composer = Notifier.Services.NotificationComposerChooser.choose(
         Notifier.VO.NotificationKindEnum.info,
       );
-
       const notification = new Notifier.Services.Notification(
         di.Env.EMAIL_FROM,
         subject,
         content,
         di.Adapters.System,
       );
-
       const message = await notification.compose(composer);
 
       await notification.send(message, di.Env.EMAIL_TO);

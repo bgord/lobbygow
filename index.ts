@@ -9,7 +9,11 @@ import { createServer } from "./server";
 
   await new bg.Prerequisites(di.Adapters.System).check(di.Tools.prerequisites);
 
-  const app = Bun.serve({ fetch: server.fetch, maxRequestBodySize: tools.Size.fromKb(128).toBytes() });
+  const app = Bun.serve({
+    port: di.Env.PORT,
+    fetch: server.fetch,
+    maxRequestBodySize: tools.Size.fromKb(128).toBytes(),
+  });
   new bg.GracefulShutdown(di.Adapters.System).applyTo(app);
 
   di.Adapters.System.Logger.info({

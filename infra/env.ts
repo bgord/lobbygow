@@ -2,7 +2,7 @@ import * as bg from "@bgord/bun";
 import * as tools from "@bgord/tools";
 import { z } from "zod/v4";
 
-export const EnvironmentSchema = z
+export const Schema = z
   .object({
     PORT: bg.Port,
     LOGS_LEVEL: bg.LogLevel,
@@ -20,9 +20,8 @@ export const EnvironmentSchema = z
   })
   .strip();
 
-export type EnvironmentType = bg.EnvironmentResultType<typeof EnvironmentSchema>;
+export type EnvironmentType = bg.EnvironmentResultType<typeof Schema>;
 
-export const EnvironmentLoader = new bg.EnvironmentLoaderProcessEnvAdapter(
-  { type: process.env.NODE_ENV, schema: EnvironmentSchema },
-  process.env,
-);
+const type = bg.NodeEnvironment.parse(process.env.NODE_ENV);
+
+export const EnvironmentLoader = new bg.EnvironmentLoaderProcessAdapter({ type, Schema }, process.env);

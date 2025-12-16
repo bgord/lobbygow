@@ -1,6 +1,9 @@
 # Changelog
+- 2025-12-17 00:13 cd6665b **step: adjust build process**
+## 2025-12-17 00:13 
+- 2025-12-17 00:11 0a024f0 **step: bump bgord/scripts**
 - 2025-12-16 22:59 208173f **step: adjust paths**
-## 2025-12-16 22:59 
+- 2025-12-16 21:59 4e3cfb5 **docs: generate CHANGELOG**
 - 2025-12-16 13:59 5f1b8b7 **refactor: update env**
 - 2025-12-16 13:56 7defe65 **step: update packages**
 - 2025-12-16 13:01 b182fe4 **step: update packages**

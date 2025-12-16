@@ -1,8 +1,11 @@
 # Changelog
+- 2025-12-16 13:01 b182fe4 **step: update packages**
+## 2025-12-16 13:01 
+- 2025-12-16 11:28 658085b **refactor: arrange act assert**
 - 2025-12-16 10:00 d1d3acd **step: update packages**
-## 2025-12-16 10:00 
 - 2025-12-16 09:16 7eeadb7 **refactor: update env**
 - 2025-12-16 09:14 7a87c85 **step: update packages**
+- 2025-12-16 09:01 62b22ab **docs: generate CHANGELOG**
 - 2025-12-15 19:53 f2cac6f **step: bump bgord/scripts**
 - 2025-12-15 19:53 26364d9 **step: update deploy server**
 - 2025-12-15 19:29 814e52d **step: add gitleaks local prereq**

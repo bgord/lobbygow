@@ -25,8 +25,7 @@ export type EnvironmentType = bg.EnvironmentResultType<typeof Schema>;
 export async function createEnvironmentLoader(): Promise<bg.EnvironmentLoaderPort<typeof Schema>> {
   const type = bg.NodeEnvironment.parse(process.env.NODE_ENV);
 
-  // TODO: Add to prereqs
-  const MasterKeyPath = tools.FilePathAbsolute.fromString("/run/master-key.txt");
+  const MasterKeyPath = tools.FilePathAbsolute.fromString("/etc/bgord/lobbygow/master.key");
   const CryptoKeyProvider = new bg.CryptoKeyProviderFileAdapter(MasterKeyPath);
 
   const Encryption = new bg.EncryptionBunAdapter({ CryptoKeyProvider });
@@ -39,8 +38,7 @@ export async function createEnvironmentLoader(): Promise<bg.EnvironmentLoaderPor
       process.env,
     ),
     [bg.NodeEnvironmentEnum.production]: new bg.EnvironmentLoaderEncryptedAdapter(
-      // TODO: Add to prereqs
-      { type, Schema, path: tools.FilePathRelative.fromString("infra/secrets.txt") },
+      { type, Schema, path: tools.FilePathAbsolute.fromString("/var/www/lobbygow/secrets.enc") },
       { Encryption },
     ),
   }[type];

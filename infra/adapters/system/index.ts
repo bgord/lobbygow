@@ -1,9 +1,9 @@
 import type { EnvironmentType } from "+infra/env";
 import { createCertificateInspector } from "./certificate-inspector.adapter";
-import { createClock } from "./clock.adapter";
+import { Clock } from "./clock.adapter";
 import { createDiskSpaceChecker } from "./disk-space-checker.adapter";
-import { createIdProvider } from "./id-provider.adapter";
-import { createJsonFileReader } from "./json-file-reader.adapter";
+import { IdProvider } from "./id-provider.adapter";
+import { JsonFileReader } from "./json-file-reader.adapter";
 import { createLogger } from "./logger.adapter";
 import { createMailer } from "./mailer.adapter";
 import { createShieldApiKey } from "./shield-api-key.adapter";
@@ -13,8 +13,6 @@ import { createShieldTimeout } from "./shield-timeout.adapter";
 import { createTimekeeper } from "./timekeeper.adapter";
 
 export function createSystemAdapters(Env: EnvironmentType) {
-  const Clock = createClock();
-  const IdProvider = createIdProvider();
   const Logger = createLogger(Env);
   const Mailer = createMailer(Env, { Logger });
   const ShieldApiKey = createShieldApiKey(Env);
@@ -26,7 +24,7 @@ export function createSystemAdapters(Env: EnvironmentType) {
     Clock,
     DiskSpaceChecker: createDiskSpaceChecker(Env),
     IdProvider,
-    JsonFileReader: createJsonFileReader(),
+    JsonFileReader,
     Logger,
     Mailer,
     ShieldApiKey,

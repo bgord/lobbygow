@@ -76,8 +76,8 @@ app/
 infra/
 ├── adapters
 │   └── system
-│       ├── cache-repository.adapter.ts
-│       ├── cache-resolver.adapter.ts
+│       ├── cache-repository-shield-rate-limit.adapter.ts
+│       ├── cache-resolver-shield-rate-limit.adapter.ts
 │       ├── certificate-inspector.adapter.ts
 │       ├── clock.adapter.ts
 │       ├── disk-space-checker.adapter.ts

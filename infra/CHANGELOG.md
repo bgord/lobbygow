@@ -1,12 +1,14 @@
 # Changelog
+- 2025-12-18 00:27 478c840 **refactor: remove unnecessary factory functions**
+## 2025-12-18 00:27 
 - 2025-12-18 00:04 d971929 **step: update packages**
-## 2025-12-18 00:04 
 - 2025-12-17 23:57 d0cb396 **refactor: construct shield rate limit in place**
 - 2025-12-17 23:51 4d2ec6a **refactor: make naming unambigious**
 - 2025-12-17 23:21 367f2d4 **fix: cache repository ttl**
 - 2025-12-17 23:20 f2696de **refactor: adjust shield rate limit adapter**
 - 2025-12-17 23:13 e4f9080 **refactor: adjust env**
 - 2025-12-17 23:07 59c6a40 **step: update packages**
+- 2025-12-17 23:05 0dfa403 **docs: generate CHANGELOG**
 - 2025-12-17 22:57 6a53776 **docs: generate CHANGELOG**
 - 2025-12-17 22:57 1f50c5a **docs: generate readme**
 - 2025-12-17 22:52 cbe57a2 **docs: generate CHANGELOG**

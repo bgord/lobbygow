@@ -1,7 +1,9 @@
 # Changelog
+- 2025-12-19 00:03 b21afc5 **step: update packages**
+## 2025-12-19 00:03 
 - 2025-12-18 20:34 dec1523 **refactor: update cache infra**
-## 2025-12-18 20:34 
 - 2025-12-18 20:28 ef249d0 **step: update packages**
+- 2025-12-18 19:35 bbd42f8 **docs: generate CHANGELOG**
 - 2025-12-18 00:37 498a627 **step: bump bgord/scripts**
 - 2025-12-18 00:37 060f0dd **step: update bun version**
 - 2025-12-18 00:27 478c840 **refactor: remove unnecessary factory functions**

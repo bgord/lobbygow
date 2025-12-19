@@ -1,6 +1,10 @@
 # Changelog
+- 2025-12-19 21:46 f48a4c8 **refactor: remove axiom**
+## 2025-12-19 21:46 
+- 2025-12-19 21:45 593c182 **step: update packages**
+- 2025-12-19 17:39 fb5926b **refactor: remove validate_environment_file**
 - 2025-12-19 12:55 a3a8578 **step: update packages**
-## 2025-12-19 12:55 
+- 2025-12-19 11:56 d82882d **docs: generate CHANGELOG**
 - 2025-12-19 11:13 fff30b2 **step: update packages**
 - 2025-12-19 10:16 edb36c6 **docs: generate CHANGELOG**
 - 2025-12-19 01:06 429d1b6 **step: update packages**

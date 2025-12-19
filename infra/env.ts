@@ -16,7 +16,6 @@ export const Schema = z
     BASIC_AUTH_USERNAME: bg.BasicAuthUsername,
     BASIC_AUTH_PASSWORD: bg.BasicAuthPassword,
     API_KEY: tools.ApiKey,
-    AXIOM_API_TOKEN: z.string().length(41),
   })
   .strip();
 

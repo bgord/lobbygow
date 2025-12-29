@@ -1,7 +1,18 @@
 # Changelog
+- 2025-12-29 17:39 b95def1 **refactor: separate tools and adapters**
+## 2025-12-29 17:39 
+- 2025-12-29 17:25 2568b92 **step: adjust prereq runner startup**
+- 2025-12-29 17:25 2340ed2 **refactor: adjust tests**
+- 2025-12-29 17:24 636815a **step: adjust healthcheck**
+- 2025-12-29 17:24 0416d82 **step: adjust shields**
+- 2025-12-29 17:20 ad58683 **step: update packages**
+- 2025-12-29 17:12 d0038e8 **refactor: update logger**
+- 2025-12-29 17:12 c92a7f4 **refactor: update prereqs**
+- 2025-12-29 17:11 205ba9d **step: update env adapters**
+- 2025-12-29 17:00 1955d62 **step: update packages**
 - 2025-12-19 21:46 f48a4c8 **refactor: remove axiom**
-## 2025-12-19 21:46 
 - 2025-12-19 21:45 593c182 **step: update packages**
+- 2025-12-19 20:46 c6ff4b5 **docs: generate CHANGELOG**
 - 2025-12-19 17:39 fb5926b **refactor: remove validate_environment_file**
 - 2025-12-19 12:55 a3a8578 **step: update packages**
 - 2025-12-19 11:56 d82882d **docs: generate CHANGELOG**

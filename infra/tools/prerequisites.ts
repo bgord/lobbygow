@@ -10,6 +10,7 @@ type Dependencies = {
   CertificateInspector: bg.CertificateInspectorPort;
   Timekeeper: bg.TimekeeperPort;
   Sleeper: bg.SleeperPort;
+  TimeoutRunner: bg.TimeoutRunnerPort;
 };
 
 export function createPrerequisites(Env: EnvironmentType, deps: Dependencies) {
@@ -20,6 +21,7 @@ export function createPrerequisites(Env: EnvironmentType, deps: Dependencies) {
     { max: 2, backoff: new bg.RetryBackoffLinearStrategy(tools.Duration.Ms(300)) },
     deps,
   );
+  const withTimeout = bg.PrerequisiteDecorator.withTimeout(tools.Duration.Seconds(2), deps);
 
   return [
     new bg.Prerequisite("port", new bg.PrerequisiteVerifierPortAdapter({ port: Env.PORT })),
@@ -53,16 +55,16 @@ export function createPrerequisites(Env: EnvironmentType, deps: Dependencies) {
     new bg.Prerequisite(
       "memory-consumption",
       new bg.PrerequisiteVerifierMemoryAdapter({ maximum: tools.Size.fromMB(300) }),
-      { decorators: [withRetry] },
+      { decorators: [withRetry, withTimeout] },
     ),
     new bg.Prerequisite("log-file", new bg.PrerequisiteVerifierLogFileAdapter(deps), { enabled: production }),
     new bg.Prerequisite("mailer", new bg.PrerequisiteVerifierMailerAdapter(deps), {
       enabled: production,
-      decorators: [withRetry],
+      decorators: [withRetry, withTimeout],
     }),
     new bg.Prerequisite("outside-connectivity", new bg.PrerequisiteVerifierOutsideConnectivityAdapter(), {
       enabled: production,
-      decorators: [withRetry],
+      decorators: [withRetry, withTimeout],
     }),
     new bg.Prerequisite("user", new bg.PrerequisiteVerifierRunningUserAdapter({ username: "bgord" }), {
       enabled: production,
@@ -73,12 +75,12 @@ export function createPrerequisites(Env: EnvironmentType, deps: Dependencies) {
         { hostname: "lobbygow.bgord.dev", days: 7 },
         deps,
       ),
-      { enabled: production, decorators: [withRetry] },
+      { enabled: production, decorators: [withRetry, withTimeout] },
     ),
     new bg.Prerequisite(
       "clock-drift",
       new bg.PrerequisiteVerifierClockDriftAdapter({ skew: tools.Duration.Minutes(1) }, deps),
-      { enabled: production, decorators: [withRetry] },
+      { enabled: production, decorators: [withRetry, withTimeout] },
     ),
     new bg.Prerequisite("os", new bg.PrerequisiteVerifierOsAdapter({ accepted: ["Darwin", "Linux"] })),
     new bg.Prerequisite(

@@ -8,6 +8,7 @@ import { createLogger } from "./logger.adapter";
 import { createMailer } from "./mailer.adapter";
 import { createSleeper } from "./sleeper.adapter";
 import { createTimekeeper } from "./timekeeper.adapter";
+import { createTimeoutRunner } from "./timeout-runner.adapter";
 
 export function createSystemAdapters(Env: EnvironmentType) {
   const Logger = createLogger(Env);
@@ -24,5 +25,6 @@ export function createSystemAdapters(Env: EnvironmentType) {
     Mailer,
     Timekeeper,
     Sleeper: createSleeper(Env),
+    TimeoutRunner: createTimeoutRunner(Env),
   };
 }

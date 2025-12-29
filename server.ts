@@ -12,19 +12,19 @@ export function createServer(di: Awaited<ReturnType<typeof bootstrap>>) {
   // Healthcheck =================
   server.get(
     "/healthcheck",
-    di.Adapters.System.ShieldRateLimit.verify,
-    di.Adapters.System.ShieldTimeout.verify,
-    di.Adapters.System.ShieldBasicAuth.verify,
-    ...bg.Healthcheck.build(di.Env.type, di.Tools.prerequisites, di.Adapters.System),
+    di.Tools.ShieldRateLimit.verify,
+    di.Tools.ShieldTimeout.verify,
+    di.Tools.ShieldBasicAuth.verify,
+    ...bg.Healthcheck.build(di.Env.type, di.Tools.Prerequisites, di.Adapters.System),
   );
   // =============================
 
   // Mailer =================
   server.post(
     "/notification-send",
-    di.Adapters.System.ShieldRateLimit.verify,
-    di.Adapters.System.ShieldTimeout.verify,
-    di.Adapters.System.ShieldApiKey.verify,
+    di.Tools.ShieldRateLimit.verify,
+    di.Tools.ShieldTimeout.verify,
+    di.Tools.ShieldApiKey.verify,
     App.Http.Mailer.NotificationSend(di),
   );
   // =============================

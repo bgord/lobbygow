@@ -6,20 +6,14 @@ import { FileReaderJson } from "./file-reader-json.adapter";
 import { IdProvider } from "./id-provider.adapter";
 import { createLogger } from "./logger.adapter";
 import { createMailer } from "./mailer.adapter";
-import { createShieldApiKey } from "./shield-api-key.adapter";
-import { createShieldBasicAuth } from "./shield-basic-auth.adapter";
-import { createShieldRateLimit } from "./shield-rate-limit.adapter";
-import { createShieldTimeout } from "./shield-timeout.adapter";
 import { createTimekeeper } from "./timekeeper.adapter";
 
 export function createSystemAdapters(Env: EnvironmentType) {
   const Logger = createLogger(Env);
   const Mailer = createMailer(Env, { Logger });
-  const ShieldApiKey = createShieldApiKey(Env);
   const Timekeeper = createTimekeeper(Env, { Clock });
 
   return {
-    ShieldBasicAuth: createShieldBasicAuth(Env),
     CertificateInspector: createCertificateInspector(Env, { Clock }),
     Clock,
     DiskSpaceChecker: createDiskSpaceChecker(Env),
@@ -27,9 +21,6 @@ export function createSystemAdapters(Env: EnvironmentType) {
     FileReaderJson,
     Logger,
     Mailer,
-    ShieldApiKey,
     Timekeeper,
-    ShieldTimeout: createShieldTimeout(),
-    ShieldRateLimit: createShieldRateLimit(Env, { Clock }),
   };
 }

@@ -15,7 +15,7 @@ export function createServer(di: Awaited<ReturnType<typeof bootstrap>>) {
     di.Adapters.System.ShieldRateLimit.verify,
     di.Adapters.System.ShieldTimeout.verify,
     di.Adapters.System.ShieldBasicAuth.verify,
-    ...bg.Healthcheck.build(di.Tools.prerequisites, di.Adapters.System),
+    ...bg.Healthcheck.build(di.Env.type, di.Tools.prerequisites, di.Adapters.System),
   );
   // =============================
 

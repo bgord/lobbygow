@@ -2,8 +2,8 @@ import type { EnvironmentType } from "+infra/env";
 import { createCertificateInspector } from "./certificate-inspector.adapter";
 import { Clock } from "./clock.adapter";
 import { createDiskSpaceChecker } from "./disk-space-checker.adapter";
+import { FileReaderJson } from "./file-reader-json.adapter";
 import { IdProvider } from "./id-provider.adapter";
-import { JsonFileReader } from "./json-file-reader.adapter";
 import { createLogger } from "./logger.adapter";
 import { createMailer } from "./mailer.adapter";
 import { createShieldApiKey } from "./shield-api-key.adapter";
@@ -24,7 +24,7 @@ export function createSystemAdapters(Env: EnvironmentType) {
     Clock,
     DiskSpaceChecker: createDiskSpaceChecker(Env),
     IdProvider,
-    JsonFileReader,
+    FileReaderJson,
     Logger,
     Mailer,
     ShieldApiKey,

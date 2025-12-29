@@ -9,11 +9,17 @@ type Dependencies = {
   Mailer: bg.MailerPort;
   CertificateInspector: bg.CertificateInspectorPort;
   Timekeeper: bg.TimekeeperPort;
+  Sleeper: bg.SleeperPort;
 };
 
 export function createPrerequisites(Env: EnvironmentType, deps: Dependencies) {
   const production = Env.type === bg.NodeEnvironmentEnum.production;
   const local = Env.type === bg.NodeEnvironmentEnum.local;
+
+  const withRetry = bg.PrerequisiteDecorator.withRetry(
+    { max: 2, backoff: new bg.RetryBackoffLinearStrategy(tools.Duration.Ms(300)) },
+    deps,
+  );
 
   return [
     new bg.Prerequisite("port", new bg.PrerequisiteVerifierPortAdapter({ port: Env.PORT })),
@@ -23,10 +29,12 @@ export function createPrerequisites(Env: EnvironmentType, deps: Dependencies) {
     ),
     new bg.Prerequisite("ram", new bg.PrerequisiteVerifierRamAdapter({ minimum: tools.Size.fromMB(128) }), {
       enabled: production,
+      decorators: [withRetry],
     }),
     new bg.Prerequisite(
       "disk-space",
       new bg.PrerequisiteVerifierSpaceAdapter({ minimum: tools.Size.fromMB(512) }, deps),
+      { decorators: [withRetry] },
     ),
     new bg.Prerequisite(
       "node",
@@ -45,11 +53,16 @@ export function createPrerequisites(Env: EnvironmentType, deps: Dependencies) {
     new bg.Prerequisite(
       "memory-consumption",
       new bg.PrerequisiteVerifierMemoryAdapter({ maximum: tools.Size.fromMB(300) }),
+      { decorators: [withRetry] },
     ),
     new bg.Prerequisite("log-file", new bg.PrerequisiteVerifierLogFileAdapter(deps), { enabled: production }),
-    new bg.Prerequisite("mailer", new bg.PrerequisiteVerifierMailerAdapter(deps), { enabled: production }),
+    new bg.Prerequisite("mailer", new bg.PrerequisiteVerifierMailerAdapter(deps), {
+      enabled: production,
+      decorators: [withRetry],
+    }),
     new bg.Prerequisite("outside-connectivity", new bg.PrerequisiteVerifierOutsideConnectivityAdapter(), {
       enabled: production,
+      decorators: [withRetry],
     }),
     new bg.Prerequisite("user", new bg.PrerequisiteVerifierRunningUserAdapter({ username: "bgord" }), {
       enabled: production,
@@ -60,12 +73,12 @@ export function createPrerequisites(Env: EnvironmentType, deps: Dependencies) {
         { hostname: "lobbygow.bgord.dev", days: 7 },
         deps,
       ),
-      { enabled: production },
+      { enabled: production, decorators: [withRetry] },
     ),
     new bg.Prerequisite(
       "clock-drift",
       new bg.PrerequisiteVerifierClockDriftAdapter({ skew: tools.Duration.Minutes(1) }, deps),
-      { enabled: production },
+      { enabled: production, decorators: [withRetry] },
     ),
     new bg.Prerequisite("os", new bg.PrerequisiteVerifierOsAdapter({ accepted: ["Darwin", "Linux"] })),
     new bg.Prerequisite(

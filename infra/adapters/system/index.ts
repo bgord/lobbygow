@@ -6,6 +6,7 @@ import { FileReaderJson } from "./file-reader-json.adapter";
 import { IdProvider } from "./id-provider.adapter";
 import { createLogger } from "./logger.adapter";
 import { createMailer } from "./mailer.adapter";
+import { createSleeper } from "./sleeper.adapter";
 import { createTimekeeper } from "./timekeeper.adapter";
 
 export function createSystemAdapters(Env: EnvironmentType) {
@@ -22,5 +23,6 @@ export function createSystemAdapters(Env: EnvironmentType) {
     Logger,
     Mailer,
     Timekeeper,
+    Sleeper: createSleeper(Env),
   };
 }

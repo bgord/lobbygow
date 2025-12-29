@@ -14,6 +14,8 @@ type Dependencies = {
   Mailer: bg.MailerPort;
   CertificateInspector: bg.CertificateInspectorPort;
   Timekeeper: bg.TimekeeperPort;
+  Sleeper: bg.SleeperPort;
+  TimeoutRunner: bg.TimeoutRunnerPort;
 };
 
 export function createTools(Env: EnvironmentType, deps: Dependencies) {

@@ -67,7 +67,7 @@ export function createPrerequisites(Env: EnvironmentType, deps: Dependencies) {
     }),
     new bg.Prerequisite("outside-connectivity", new bg.PrerequisiteVerifierOutsideConnectivityAdapter(), {
       enabled: production,
-      decorators: [withRetry, withTimeout, withFailSafe],
+      decorators: [withFailSafe, withRetry, withTimeout],
     }),
     new bg.Prerequisite("user", new bg.PrerequisiteVerifierRunningUserAdapter({ username: "bgord" }), {
       enabled: production,
@@ -78,7 +78,7 @@ export function createPrerequisites(Env: EnvironmentType, deps: Dependencies) {
         { hostname: "lobbygow.bgord.dev", days: 7 },
         deps,
       ),
-      { enabled: production, decorators: [withRetry, withTimeout, withFailSafe] },
+      { enabled: production, decorators: [withFailSafe, withRetry, withTimeout] },
     ),
     new bg.Prerequisite(
       "clock-drift",

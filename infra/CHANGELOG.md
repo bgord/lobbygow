@@ -1,6 +1,10 @@
 # Changelog
+- 2025-12-29 22:49 19acfbb **refactor: order decorators**
+## 2025-12-29 22:49 
+- 2025-12-29 22:34 75b9bdd **step: add with fail safe to prereqs**
+- 2025-12-29 22:27 0a85b19 **step: add with timeout to prereqs**
+- 2025-12-29 22:16 63c6185 **step: add with retry to prereqs**
 - 2025-12-29 17:55 01f6917 **step: update packages**
-## 2025-12-29 17:55 
 - 2025-12-29 17:40 98fd7d2 **step: update packages**
 - 2025-12-29 17:39 b95def1 **refactor: separate tools and adapters**
 - 2025-12-29 17:25 2568b92 **step: adjust prereq runner startup**
@@ -12,6 +16,7 @@
 - 2025-12-29 17:12 c92a7f4 **refactor: update prereqs**
 - 2025-12-29 17:11 205ba9d **step: update env adapters**
 - 2025-12-29 17:00 1955d62 **step: update packages**
+- 2025-12-29 16:56 8e697d8 **docs: generate CHANGELOG**
 - 2025-12-29 16:39 b74dfb9 **docs: generate readme**
 - 2025-12-29 16:39 a79fdf3 **docs: generate CHANGELOG**
 - 2025-12-19 21:46 f48a4c8 **refactor: remove axiom**

@@ -79,17 +79,18 @@ infra/
 │       ├── certificate-inspector.adapter.ts
 │       ├── clock.adapter.ts
 │       ├── disk-space-checker.adapter.ts
+│       ├── file-reader-json.adapter.ts
 │       ├── id-provider.adapter.ts
-│       ├── json-file-reader.adapter.ts
 │       ├── logger.adapter.ts
 │       ├── mailer.adapter.ts
-│       ├── shield-api-key.adapter.ts
-│       ├── shield-basic-auth.adapter.ts
-│       ├── shield-rate-limit.adapter.ts
-│       ├── shield-timeout.adapter.ts
 │       └── timekeeper.adapter.ts
 ├── bootstrap.ts
 ├── env.ts
-├── i18n.ts
-└── prerequisites.ts
+└── tools
+    ├── i18n.ts
+    ├── prerequisites.ts
+    ├── shield-api-key.strategy.ts
+    ├── shield-basic-auth.strategy.ts
+    ├── shield-rate-limit.strategy.ts
+    └── shield-timeout.strategy.ts
 ```

@@ -10,7 +10,7 @@ const url = "/api/notification-send";
 describe(`POST ${url}`, async () => {
   const di = await bootstrap();
   const server = createServer(di);
-  const headers = new Headers({ [bgb.ShieldApiKeyAdapter.HEADER_NAME]: di.Env.API_KEY });
+  const headers = new Headers({ [bgb.ShieldApiKeyStrategy.HEADER_NAME]: di.Env.API_KEY });
 
   test("validation - empty payload", async () => {
     const response = await server.request(url, { method: "POST", headers }, mocks.ip);

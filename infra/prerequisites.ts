@@ -3,6 +3,7 @@ import * as tools from "@bgord/tools";
 import { type EnvironmentType, MasterKeyPath, SecretsPath } from "+infra/env";
 
 type Dependencies = {
+  Clock: bg.ClockPort;
   DiskSpaceChecker: bg.DiskSpaceCheckerPort;
   Logger: bg.LoggerPort;
   Mailer: bg.MailerPort;
@@ -15,46 +16,72 @@ export function createPrerequisites(Env: EnvironmentType, deps: Dependencies) {
   const local = Env.type === bg.NodeEnvironmentEnum.local;
 
   return [
-    new bg.PrerequisitePort({ label: "port", port: Env.PORT }),
-    new bg.PrerequisiteTimezoneUTC({ label: "timezone", timezone: tools.Timezone.parse(Env.TZ) }),
-    new bg.PrerequisiteRAM({ label: "RAM", minimum: tools.Size.fromMB(128), enabled: production }),
-    new bg.PrerequisiteSpace({ label: "disk-space", minimum: tools.Size.fromMB(512) }, deps),
-    new bg.PrerequisiteNode({
-      label: "node",
-      version: tools.PackageVersion.fromString("24.1.0"),
-      current: process.version,
-    }),
-    new bg.PrerequisiteBun({
-      label: "bun",
-      version: tools.PackageVersion.fromString("1.3.5"),
-      current: Bun.version,
-    }),
-    new bg.PrerequisiteMemory({ label: "memory-consumption", maximum: tools.Size.fromMB(300) }),
-    new bg.PrerequisiteLogFile({ label: "log-file", enabled: production }, deps),
-    new bg.PrerequisiteMailer({ label: "mailer", enabled: production }, deps),
-    new bg.PrerequisiteOutsideConnectivity({ label: "outside-connectivity", enabled: production }),
-    new bg.PrerequisiteRunningUser({ label: "user", username: "bgord", enabled: production }),
-    new bg.PrerequisiteSSLCertificateExpiry(
-      { label: "ssl", hostname: "lobbygow.bgord.dev", days: 7, enabled: production },
-      deps,
+    new bg.Prerequisite("port", new bg.PrerequisiteVerifierPortAdapter({ port: Env.PORT })),
+    new bg.Prerequisite(
+      "timezone",
+      new bg.PrerequisiteVerifierTimezoneUtcAdapter({ timezone: tools.Timezone.parse(Env.TZ) }),
     ),
-    new bg.PrerequisiteClockDrift(
-      { label: "clock-drift", skew: tools.Duration.Minutes(1), enabled: production },
-      deps,
-    ),
-    new bg.PrerequisiteOs({ label: "os", accepted: ["Darwin", "Linux"] }),
-    new bg.PrerequisiteBinary({ label: "gitleaks", binary: bg.Binary.parse("gitleaks"), enabled: local }),
-    new bg.PrerequisiteFile({
-      label: "master-key",
-      file: MasterKeyPath,
-      permissions: { read: true },
+    new bg.Prerequisite("ram", new bg.PrerequisiteVerifierRamAdapter({ minimum: tools.Size.fromMB(128) }), {
       enabled: production,
     }),
-    new bg.PrerequisiteFile({
-      label: "secrets",
-      file: SecretsPath,
-      permissions: { read: true },
+    new bg.Prerequisite(
+      "disk-space",
+      new bg.PrerequisiteVerifierSpaceAdapter({ minimum: tools.Size.fromMB(512) }, deps),
+    ),
+    new bg.Prerequisite(
+      "node",
+      new bg.PrerequisiteVerifierNodeAdapter({
+        version: tools.PackageVersion.fromString("24.1.0"),
+        current: process.version,
+      }),
+    ),
+    new bg.Prerequisite(
+      "bun",
+      new bg.PrerequisiteVerifierBunAdapter({
+        version: tools.PackageVersion.fromString("1.3.5"),
+        current: Bun.version,
+      }),
+    ),
+    new bg.Prerequisite(
+      "memory-consumption",
+      new bg.PrerequisiteVerifierMemoryAdapter({ maximum: tools.Size.fromMB(300) }),
+    ),
+    new bg.Prerequisite("log-file", new bg.PrerequisiteVerifierLogFileAdapter(deps), { enabled: production }),
+    new bg.Prerequisite("mailer", new bg.PrerequisiteVerifierMailerAdapter(deps), { enabled: production }),
+    new bg.Prerequisite("outside-connectivity", new bg.PrerequisiteVerifierOutsideConnectivityAdapter(), {
       enabled: production,
     }),
+    new bg.Prerequisite("user", new bg.PrerequisiteVerifierRunningUserAdapter({ username: "bgord" }), {
+      enabled: production,
+    }),
+    new bg.Prerequisite(
+      "ssl",
+      new bg.PrerequisiteVerifierSSLCertificateExpiryAdapter(
+        { hostname: "lobbygow.bgord.dev", days: 7 },
+        deps,
+      ),
+      { enabled: production },
+    ),
+    new bg.Prerequisite(
+      "clock-drift",
+      new bg.PrerequisiteVerifierClockDriftAdapter({ skew: tools.Duration.Minutes(1) }, deps),
+      { enabled: production },
+    ),
+    new bg.Prerequisite("os", new bg.PrerequisiteVerifierOsAdapter({ accepted: ["Darwin", "Linux"] })),
+    new bg.Prerequisite(
+      "gitleaks",
+      new bg.PrerequisiteVerifierBinaryAdapter({ binary: bg.Binary.parse("gitleaks") }),
+      { enabled: local },
+    ),
+    new bg.Prerequisite(
+      "master-key",
+      new bg.PrerequisiteVerifierFileAdapter({ file: MasterKeyPath, permissions: { read: true } }),
+      { enabled: production },
+    ),
+    new bg.Prerequisite(
+      "secrets",
+      new bg.PrerequisiteVerifierFileAdapter({ file: SecretsPath, permissions: { read: true } }),
+      { enabled: production },
+    ),
   ];
 }

@@ -94,5 +94,6 @@ infra/
     ├── shield-api-key.strategy.ts
     ├── shield-basic-auth.strategy.ts
     ├── shield-rate-limit.strategy.ts
+    ├── shield-security.strategy.ts
     └── shield-timeout.strategy.ts
 ```

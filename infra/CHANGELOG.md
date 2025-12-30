@@ -1,8 +1,11 @@
 # Changelog
+- 2025-12-30 13:18 aa17394 **step: enable shield security in prod**
+## 2025-12-30 13:18 
 - 2025-12-30 13:03 6aa7c2c **refactor: adjust cert inspector**
-## 2025-12-30 13:03 
 - 2025-12-30 13:02 2b3ca62 **step: update packages**
 - 2025-12-30 12:54 23720c9 **feature: add shield security**
+- 2025-12-30 12:03 133e608 **docs: generate readme**
+- 2025-12-30 12:03 0ca29ed **docs: generate CHANGELOG**
 - 2025-12-29 22:49 19acfbb **refactor: order decorators**
 - 2025-12-29 22:34 75b9bdd **step: add with fail safe to prereqs**
 - 2025-12-29 22:27 0a85b19 **step: add with timeout to prereqs**

@@ -7,7 +7,8 @@ import * as App from "./app";
 export function createServer(di: Awaited<ReturnType<typeof bootstrap>>) {
   const server = new Hono<infra.Config>()
     .basePath("/api")
-    .use(...bg.Setup.essentials({ ...di.Adapters.System, I18n: di.Tools.I18nConfig }));
+    .use(...bg.Setup.essentials({ ...di.Adapters.System, I18n: di.Tools.I18nConfig }))
+    .use(di.Tools.ShieldSecurity.verify);
 
   // Healthcheck =================
   server.get(

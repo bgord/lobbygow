@@ -23,3 +23,5 @@ infra/tracker-imports/*
 infra/list-imports/*
 !infra/list-imports/.gitkeep
 tsconfig.tsbuildinfo
+.stryker-tmp
+reports/

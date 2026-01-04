@@ -7,8 +7,8 @@ export const NotificationSend =
   (di: Awaited<ReturnType<typeof bootstrap>>) => async (c: hono.Context, _next: hono.Next) => {
     const body = await bg.safeParseBody(c);
 
-    const subject = bg.EmailSubject.parse(body.subject);
-    const content = bg.EmailContentHtml.parse(body.content);
+    const subject = bg.MailerSubject.parse(body.subject);
+    const content = bg.MailerContentHtml.parse(body.content);
     const kind = Notifier.VO.NotificationKind.parse(body.kind);
 
     const notification = new Notifier.Services.Notification(

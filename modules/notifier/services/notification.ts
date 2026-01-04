@@ -5,8 +5,8 @@ import type { NotificationComposerStrategy } from "./notification-composer";
 export class Notification {
   constructor(
     private readonly EMAIL_FROM: tools.EmailType,
-    private readonly subject: bg.EmailSubjectType,
-    private readonly content: bg.EmailContentHtmlType,
+    private readonly subject: bg.MailerSubjectType,
+    private readonly content: bg.MailerContentHtmlType,
     private readonly deps: { Mailer: bg.MailerPort },
   ) {}
 

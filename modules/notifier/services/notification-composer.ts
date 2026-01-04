@@ -6,8 +6,8 @@ export abstract class NotificationComposerStrategy {
   abstract strategy: string;
 
   abstract compose(
-    subject: bg.EmailSubjectType,
-    content: bg.EmailContentHtmlType,
+    subject: bg.MailerSubjectType,
+    content: bg.MailerContentHtmlType,
   ): Promise<tools.NotificationTemplate>;
 }
 
@@ -31,10 +31,10 @@ export class NotificationComposerError implements NotificationComposerStrategy {
   }
 
   async compose(
-    subject: bg.EmailSubjectType,
-    content: bg.EmailContentHtmlType,
+    subject: bg.MailerSubjectType,
+    content: bg.MailerContentHtmlType,
   ): Promise<tools.NotificationTemplate> {
-    return new tools.NotificationTemplate(bg.EmailSubject.parse(`❌ [ERROR] ${subject}`), content);
+    return new tools.NotificationTemplate(bg.MailerSubject.parse(`❌ [ERROR] ${subject}`), content);
   }
 }
 
@@ -47,10 +47,10 @@ export class NotificationComposerInfo implements NotificationComposerStrategy {
   }
 
   async compose(
-    subject: bg.EmailSubjectType,
-    content: bg.EmailContentHtmlType,
+    subject: bg.MailerSubjectType,
+    content: bg.MailerContentHtmlType,
   ): Promise<tools.NotificationTemplate> {
-    return new tools.NotificationTemplate(bg.EmailSubject.parse(`ℹ️  [INFO] ${subject}`), content);
+    return new tools.NotificationTemplate(bg.MailerSubject.parse(`ℹ️  [INFO] ${subject}`), content);
   }
 }
 
@@ -63,9 +63,9 @@ export class NotificationComposerSuccess implements NotificationComposerStrategy
   }
 
   async compose(
-    subject: bg.EmailSubjectType,
-    content: bg.EmailContentHtmlType,
+    subject: bg.MailerSubjectType,
+    content: bg.MailerContentHtmlType,
   ): Promise<tools.NotificationTemplate> {
-    return new tools.NotificationTemplate(bg.EmailSubject.parse(`✅ [SUCCESS] ${subject}`), content);
+    return new tools.NotificationTemplate(bg.MailerSubject.parse(`✅ [SUCCESS] ${subject}`), content);
   }
 }

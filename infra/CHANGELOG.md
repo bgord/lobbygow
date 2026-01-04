@@ -1,8 +1,14 @@
 # Changelog
+- 2026-01-04 16:19 e229cfd **step: gitignore stryker**
+## 2026-01-04 16:19 
+- 2026-01-04 16:16 d0516cb **step: update types**
+- 2026-01-04 16:16 3886892 **step: install stryker**
+- 2026-01-04 16:14 d353a9a **step: bump bgord/scripts**
+- 2026-01-04 16:14 1182d2b **step: update packages**
 - 2025-12-30 14:44 e37b75b **step: update packages**
-## 2025-12-30 14:44 
 - 2025-12-30 14:13 03d46af **refactor: use integer types**
 - 2025-12-30 14:12 6859b33 **step: update packages**
+- 2025-12-30 13:45 1b90782 **docs: generate CHANGELOG**
 - 2025-12-30 13:18 aa17394 **step: enable shield security in prod**
 - 2025-12-30 13:14 3782fca **docs: generate CHANGELOG**
 - 2025-12-30 13:03 6aa7c2c **refactor: adjust cert inspector**

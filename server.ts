@@ -5,9 +5,18 @@ import type { bootstrap } from "+infra/bootstrap";
 import * as App from "./app";
 
 export function createServer(di: Awaited<ReturnType<typeof bootstrap>>) {
+  const HashContent = new bg.HashContentSha256BunStrategy();
+  const CacheRepository = new bg.CacheRepositoryNodeCacheAdapter({ type: "infinite" });
+  const CacheResolver = new bg.CacheResolverSimpleStrategy({ CacheRepository });
+
   const server = new Hono<infra.Config>()
     .basePath("/api")
-    .use(...bg.Setup.essentials({ ...di.Adapters.System, ...di.Tools }))
+    .use(
+      ...bg.Setup.essentials(
+        { ...di.Adapters.System, ...di.Tools, HashContent, CacheResolver },
+        { csrf: { origins: [] } },
+      ),
+    )
     .use(di.Tools.ShieldSecurity.verify);
 
   // Healthcheck =================

@@ -15,17 +15,14 @@ export class ErrorHandler {
         return c.json({ message: "request_timeout_error", _known: true }, 408);
       }
 
-      if (error.message === bg.AccessDeniedApiKeyError.message) {
-        return c.json(
-          { message: bg.AccessDeniedApiKeyError.message, _known: true },
-          bg.AccessDeniedApiKeyError.status,
-        );
+      if (error.message === bg.ShieldApiKeyError.message) {
+        return c.json({ message: bg.ShieldApiKeyError.message, _known: true }, bg.ShieldApiKeyError.status);
       }
 
-      if (error.message === bg.TooManyRequestsError.message) {
+      if (error.message === bg.ShieldRateLimitError.message) {
         return c.json(
-          { message: bg.TooManyRequestsError.message, _known: true },
-          bg.TooManyRequestsError.status,
+          { message: bg.ShieldRateLimitError.message, _known: true },
+          bg.ShieldRateLimitError.status,
         );
       }
 

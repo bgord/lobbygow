@@ -1,6 +1,13 @@
 # Changelog
+- 2026-01-07 00:08 2ea70ad **step: set csrf**
+## 2026-01-07 00:08 
+- 2026-01-07 00:04 2e29797 **step: add build info repo to tools**
+- 2026-01-07 00:04 1813c4a **step: pass down build info**
+- 2026-01-07 00:02 eef5e3e **step: use new resolvers**
+- 2026-01-07 00:02 6af69e6 **refactor: use new errors**
+- 2026-01-07 00:01 49f5f75 **step: update packages**
 - 2026-01-06 17:35 1ffa0d6 **step: update packages**
-## 2026-01-06 17:35 
+- 2026-01-06 16:35 30d7059 **docs: generate CHANGELOG**
 - 2026-01-06 13:17 a9f2eab **step: update packages**
 - 2026-01-06 13:17 746d699 **step: bump bgord/scripts**
 - 2026-01-06 13:16 42f271f **step: update packages**

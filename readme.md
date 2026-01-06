@@ -89,6 +89,7 @@ infra/
 ├── bootstrap.ts
 ├── env.ts
 └── tools
+    ├── build-info-repository.ts
     ├── i18n.ts
     ├── prerequisites.ts
     ├── shield-api-key.strategy.ts

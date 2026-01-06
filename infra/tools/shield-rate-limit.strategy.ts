@@ -14,7 +14,7 @@ export function createShieldRateLimit(Env: EnvironmentType, deps: Dependencies):
   return new bg.ShieldRateLimitStrategy(
     {
       enabled: Env.type === bg.NodeEnvironmentEnum.production,
-      resolver: new bg.CacheSubjectResolver(
+      resolver: new bg.CacheSubjectRequestResolver(
         [
           new bg.CacheSubjectSegmentFixedStrategy("rate_limit"),
           new bg.CacheSubjectSegmentPathStrategy(),

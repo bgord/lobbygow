@@ -1,10 +1,14 @@
 # Changelog
+- 2026-01-06 13:17 a9f2eab **step: update packages**
+- 2026-01-06 13:17 746d699 **step: bump bgord/scripts**
+## 2026-01-06 13:17 
+- 2026-01-06 13:16 42f271f **step: update packages**
 - 2026-01-04 16:19 e229cfd **step: gitignore stryker**
-## 2026-01-04 16:19 
 - 2026-01-04 16:16 d0516cb **step: update types**
 - 2026-01-04 16:16 3886892 **step: install stryker**
 - 2026-01-04 16:14 d353a9a **step: bump bgord/scripts**
 - 2026-01-04 16:14 1182d2b **step: update packages**
+- 2026-01-04 15:19 7488f7a **docs: generate CHANGELOG**
 - 2025-12-30 14:44 e37b75b **step: update packages**
 - 2025-12-30 14:13 03d46af **refactor: use integer types**
 - 2025-12-30 14:12 6859b33 **step: update packages**

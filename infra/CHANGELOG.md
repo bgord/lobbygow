@@ -1,8 +1,10 @@
 # Changelog
+- 2026-01-06 17:35 1ffa0d6 **step: update packages**
+## 2026-01-06 17:35 
 - 2026-01-06 13:17 a9f2eab **step: update packages**
 - 2026-01-06 13:17 746d699 **step: bump bgord/scripts**
-## 2026-01-06 13:17 
 - 2026-01-06 13:16 42f271f **step: update packages**
+- 2026-01-06 12:17 042cebc **docs: generate CHANGELOG**
 - 2026-01-04 16:19 e229cfd **step: gitignore stryker**
 - 2026-01-04 16:16 d0516cb **step: update types**
 - 2026-01-04 16:16 3886892 **step: install stryker**

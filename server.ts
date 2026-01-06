@@ -7,7 +7,7 @@ import * as App from "./app";
 export function createServer(di: Awaited<ReturnType<typeof bootstrap>>) {
   const server = new Hono<infra.Config>()
     .basePath("/api")
-    .use(...bg.Setup.essentials({ ...di.Adapters.System, I18n: di.Tools.I18nConfig }))
+    .use(...bg.Setup.essentials({ ...di.Adapters.System, ...di.Tools }))
     .use(di.Tools.ShieldSecurity.verify);
 
   // Healthcheck =================
@@ -16,7 +16,7 @@ export function createServer(di: Awaited<ReturnType<typeof bootstrap>>) {
     di.Tools.ShieldRateLimit.verify,
     di.Tools.ShieldTimeout.verify,
     di.Tools.ShieldBasicAuth.verify,
-    ...bg.Healthcheck.build(di.Env.type, di.Tools.Prerequisites, di.Adapters.System),
+    ...bg.Healthcheck.build(di.Env.type, di.Tools.Prerequisites, { ...di.Adapters.System, ...di.Tools }),
   );
   // =============================
 

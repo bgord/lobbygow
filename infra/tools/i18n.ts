@@ -6,7 +6,7 @@ export enum SupportedLanguages {
   pl = "pl",
 }
 
-export const I18nConfig: bg.I18nConfigType = {
+export const I18n: bg.I18nConfigType = {
   supportedLanguages: SupportedLanguages,
   defaultLanguage: SupportedLanguages.en,
 };

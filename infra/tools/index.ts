@@ -1,6 +1,7 @@
 import type * as bg from "@bgord/bun";
 import type { EnvironmentType } from "+infra/env";
-import { I18nConfig } from "./i18n";
+import { createBuildInfoRepository } from "./build-info-repository";
+import { I18n } from "./i18n";
 import { createPrerequisites } from "./prerequisites";
 import { createShieldApiKey } from "./shield-api-key.strategy";
 import { createShieldBasicAuth } from "./shield-basic-auth.strategy";
@@ -17,6 +18,7 @@ type Dependencies = {
   Timekeeper: bg.TimekeeperPort;
   Sleeper: bg.SleeperPort;
   TimeoutRunner: bg.TimeoutRunnerPort;
+  FileReaderJson: bg.FileReaderJsonPort;
 };
 
 export function createTools(Env: EnvironmentType, deps: Dependencies) {
@@ -26,7 +28,8 @@ export function createTools(Env: EnvironmentType, deps: Dependencies) {
     ShieldBasicAuth: createShieldBasicAuth(Env),
     ShieldApiKey: createShieldApiKey(Env),
     Prerequisites: createPrerequisites(Env, deps),
-    I18nConfig,
+    I18n,
     ShieldSecurity: createShieldSecurity(Env, deps),
+    BuildInfoRepository: createBuildInfoRepository(deps),
   };
 }

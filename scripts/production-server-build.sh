@@ -28,5 +28,5 @@ cp scripts/production-server-start.sh $OUTPUT_DIRECTORY
 step_end "scripts/production-server-start.sh copy"
 
 step_start "App compile"
-bun build --compile --production --minify --sourcemap --no-compile-autoload-dotenv index.ts --outfile "$OUTPUT_DIRECTORY"/lobbygow
+bun build --target bun --production --minify --sourcemap index.ts --outdir "$OUTPUT_DIRECTORY"
 step_end "App compile"

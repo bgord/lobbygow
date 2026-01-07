@@ -1,6 +1,6 @@
 import type * as bg from "@bgord/bun";
 import type { EnvironmentType } from "+infra/env";
-import { createBuildInfoRepository } from "./build-info-repository";
+import { createBuildInfoRepository } from "./build-info-repository.strategy";
 import { I18n } from "./i18n";
 import { createPrerequisites } from "./prerequisites";
 import { createShieldApiKey } from "./shield-api-key.strategy";
@@ -30,6 +30,6 @@ export function createTools(Env: EnvironmentType, deps: Dependencies) {
     Prerequisites: createPrerequisites(Env, deps),
     I18n,
     ShieldSecurity: createShieldSecurity(Env, deps),
-    BuildInfoRepository: createBuildInfoRepository(deps),
+    BuildInfoRepository: createBuildInfoRepository(Env, deps),
   };
 }

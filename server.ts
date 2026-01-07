@@ -13,8 +13,8 @@ export function createServer(di: Awaited<ReturnType<typeof bootstrap>>) {
     .basePath("/api")
     .use(
       ...bg.Setup.essentials(
+        { csrf: { origin: [] } },
         { ...di.Adapters.System, ...di.Tools, HashContent, CacheResolver },
-        { csrf: { origins: [] } },
       ),
     )
     .use(di.Tools.ShieldSecurity.verify);

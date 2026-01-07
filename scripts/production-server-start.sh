@@ -6,4 +6,4 @@ echo "Starting project..."
 export NODE_ENV="production"
 
 cd /var/www/lobbygow || exit
-./lobbygow
+/home/bgord/.bun/bin/bun index.js

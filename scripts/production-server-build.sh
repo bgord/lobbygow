@@ -27,6 +27,10 @@ step_start "scripts/production-server-start.sh copy"
 cp scripts/production-server-start.sh $OUTPUT_DIRECTORY
 step_end "scripts/production-server-start.sh copy"
 
+step_start "Infra directory create"
+mkdir -p "$OUTPUT_DIRECTORY/infra"
+step_end "Infra directory create"
+
 step_start "App compile"
 bun build --target bun --production --minify --sourcemap index.ts --outdir "$OUTPUT_DIRECTORY"
 step_end "App compile"

@@ -1,11 +1,13 @@
 # Changelog
+- 2026-01-07 16:41 03ddada **fix: missing infra dir in build output**
+## 2026-01-07 16:41 
 - 2026-01-07 16:39 7181b04 **step: update deploy server**
 - 2026-01-07 16:39 440e143 **step: bump bgord/scripts**
-## 2026-01-07 16:39 
 - 2026-01-07 16:28 e8ffbaa **step: add build info to gitignore**
 - 2026-01-07 16:12 aadb893 **step: add build info file prereq**
 - 2026-01-07 16:11 d45f934 **step: update packages**
 - 2026-01-07 16:11 a6e8405 **step: update build info**
+- 2026-01-07 15:40 158d4e9 **docs: generate CHANGELOG**
 - 2026-01-07 11:40 81510fc **step: update start**
 - 2026-01-07 11:40 0853c10 **step: update build**
 - 2026-01-07 11:39 4a18923 **step: bump bgord/scripts**

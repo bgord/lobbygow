@@ -1,7 +1,9 @@
 # Changelog
+- 2026-01-12 22:47 31535e7 **step: update packages**
+## 2026-01-12 22:47 
 - 2026-01-08 10:44 f9ce1d7 **step: update deploy server**
 - 2026-01-08 10:44 9ff488a **step: bump bgord/scripts**
-## 2026-01-08 10:44 
+- 2026-01-08 09:44 1dab06e **docs: generate CHANGELOG**
 - 2026-01-07 16:41 03ddada **fix: missing infra dir in build output**
 - 2026-01-07 16:39 7181b04 **step: update deploy server**
 - 2026-01-07 16:39 440e143 **step: bump bgord/scripts**

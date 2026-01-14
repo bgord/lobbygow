@@ -1,6 +1,12 @@
 # Changelog
+- 2026-01-14 13:47 605b5ba **step: update packages**
+## 2026-01-14 13:47 
+- 2026-01-14 13:36 95070bf **step: bump bgord/scripts**
+- 2026-01-14 13:36 3b0415b **step: update bun version**
+- 2026-01-14 13:35 1c1e670 **step: update bun prereq**
+- 2026-01-14 13:32 0322784 **step: update packages**
 - 2026-01-12 22:47 31535e7 **step: update packages**
-## 2026-01-12 22:47 
+- 2026-01-12 21:47 c841779 **docs: generate CHANGELOG**
 - 2026-01-08 10:44 f9ce1d7 **step: update deploy server**
 - 2026-01-08 10:44 9ff488a **step: bump bgord/scripts**
 - 2026-01-08 09:44 1dab06e **docs: generate CHANGELOG**

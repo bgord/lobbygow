@@ -32,5 +32,5 @@ mkdir -p "$OUTPUT_DIRECTORY/infra"
 step_end "Infra directory create"
 
 step_start "App compile"
-bun build --target bun --production --minify --sourcemap index.ts --outdir "$OUTPUT_DIRECTORY"
+bun build index.ts --outdir "$OUTPUT_DIRECTORY" --target bun --production --minify --sourcemap --metafile
 step_end "App compile"

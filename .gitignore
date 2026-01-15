@@ -26,3 +26,4 @@ tsconfig.tsbuildinfo
 .stryker-tmp
 reports/
 infra/build-info.json
+meta.json

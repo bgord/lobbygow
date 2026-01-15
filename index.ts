@@ -8,6 +8,7 @@ import { createServer } from "./server";
   const server = createServer(di);
 
   await new bg.PrerequisiteRunnerStartup(di.Adapters.System).check(di.Tools.Prerequisites);
+  bg.EventLoopLag.start();
 
   const app = Bun.serve({
     port: di.Env.PORT,

@@ -1,7 +1,9 @@
 # Changelog
+- 2026-01-16 12:07 0df0ab8 **step: update packages**
+## 2026-01-16 12:07 
 - 2026-01-15 22:29 42020bb **step: enable event loop lag monitoring**
-## 2026-01-15 22:29 
 - 2026-01-15 22:28 9538b23 **step: update packages**
+- 2026-01-15 21:30 70e4caa **docs: generate CHANGELOG**
 - 2026-01-15 15:45 d48959e **refactor: adjust build info repo**
 - 2026-01-15 15:44 5d2ecc8 **step: bump bgord/scripts**
 - 2026-01-15 15:40 4f2ae6d **step: add metafile to build**

@@ -1,6 +1,8 @@
 # Changelog
+- 2026-01-16 15:09 0069f39 **step: update packages**
+## 2026-01-16 15:09 
 - 2026-01-16 13:42 2a25e09 **step: bump bgord/scripts**
-## 2026-01-16 13:42 
+- 2026-01-16 12:42 18726f9 **docs: generate CHANGELOG**
 - 2026-01-16 12:07 0df0ab8 **step: update packages**
 - 2026-01-16 11:07 d612060 **docs: generate CHANGELOG**
 - 2026-01-15 22:29 42020bb **step: enable event loop lag monitoring**

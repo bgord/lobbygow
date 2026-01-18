@@ -10,9 +10,9 @@ import { createSleeper } from "./sleeper.adapter";
 import { createTimekeeper } from "./timekeeper.adapter";
 import { createTimeoutRunner } from "./timeout-runner.adapter";
 
-export function createSystemAdapters(Env: EnvironmentType) {
+export async function createSystemAdapters(Env: EnvironmentType) {
   const Logger = createLogger(Env);
-  const Mailer = createMailer(Env, { Logger });
+  const Mailer = await createMailer(Env, { Logger });
   const Timekeeper = createTimekeeper(Env, { Clock });
 
   return {

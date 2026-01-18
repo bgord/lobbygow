@@ -11,6 +11,7 @@ describe(`POST ${url}`, async () => {
   const di = await bootstrap();
   const server = createServer(di);
   const headers = new Headers({ [bgb.ShieldApiKeyStrategy.HEADER_NAME]: di.Env.API_KEY });
+  const config = { from: di.Env.EMAIL_FROM, to: di.Env.EMAIL_TO };
 
   test("validation - empty payload", async () => {
     const response = await server.request(url, { method: "POST", headers }, mocks.ip);
@@ -80,10 +81,8 @@ describe(`POST ${url}`, async () => {
 
     expect(response.status).toBe(200);
     expect(mailerSend).toHaveBeenCalledWith({
-      from: di.Env.EMAIL_FROM,
-      to: di.Env.EMAIL_TO,
-      subject: `ℹ️  [INFO] ${payload.subject}`,
-      html: payload.content,
+      config,
+      message: { subject: `ℹ️  [INFO] ${payload.subject}`, html: payload.content },
     });
   });
 
@@ -103,10 +102,8 @@ describe(`POST ${url}`, async () => {
 
     expect(response.status).toBe(200);
     expect(mailerSend).toHaveBeenCalledWith({
-      from: di.Env.EMAIL_FROM,
-      to: di.Env.EMAIL_TO,
-      subject: `❌ [ERROR] ${payload.subject}`,
-      html: payload.content,
+      config,
+      message: { subject: `❌ [ERROR] ${payload.subject}`, html: payload.content },
     });
   });
 
@@ -126,10 +123,8 @@ describe(`POST ${url}`, async () => {
 
     expect(response.status).toBe(200);
     expect(mailerSend).toHaveBeenCalledWith({
-      from: di.Env.EMAIL_FROM,
-      to: di.Env.EMAIL_TO,
-      subject: `✅ [SUCCESS] ${payload.subject}`,
-      html: payload.content,
+      config,
+      message: { subject: `✅ [SUCCESS] ${payload.subject}`, html: payload.content },
     });
   });
 
@@ -145,10 +140,8 @@ describe(`POST ${url}`, async () => {
 
     expect(response.status).toBe(200);
     expect(mailerSend).toHaveBeenCalledWith({
-      from: di.Env.EMAIL_FROM,
-      to: di.Env.EMAIL_TO,
-      subject: `ℹ️  [INFO] ${payload.subject}`,
-      html: payload.content,
+      config,
+      message: { subject: `ℹ️  [INFO] ${payload.subject}`, html: payload.content },
     });
   });
 });

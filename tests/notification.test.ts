@@ -7,6 +7,7 @@ const content = "content";
 
 describe("Notification", async () => {
   const di = await bootstrap();
+  const config = { from: di.Env.EMAIL_FROM, to: di.Env.EMAIL_TO };
 
   describe("compose", () => {
     test("kind - success", async () => {
@@ -23,7 +24,7 @@ describe("Notification", async () => {
       const message = await notification.compose(composer);
 
       expect(composer).toBeInstanceOf(Notifier.Services.NotificationComposerSuccess);
-      expect(message.get()).toEqual({ subject: `✅ [SUCCESS] ${subject}`, html: content });
+      expect(message).toEqual({ subject: `✅ [SUCCESS] ${subject}`, html: content });
     });
 
     test("kind - error", async () => {
@@ -40,7 +41,7 @@ describe("Notification", async () => {
       const message = await notification.compose(composer);
 
       expect(composer).toBeInstanceOf(Notifier.Services.NotificationComposerError);
-      expect(message.get()).toEqual({ subject: `❌ [ERROR] ${subject}`, html: content });
+      expect(message).toEqual({ subject: `❌ [ERROR] ${subject}`, html: content });
     });
 
     test("kind - info", async () => {
@@ -57,7 +58,7 @@ describe("Notification", async () => {
       const message = await notification.compose(composer);
 
       expect(composer).toBeInstanceOf(Notifier.Services.NotificationComposerInfo);
-      expect(message.get()).toEqual({ subject: `ℹ️  [INFO] ${subject}`, html: content });
+      expect(message).toEqual({ subject: `ℹ️  [INFO] ${subject}`, html: content });
     });
   });
 
@@ -73,16 +74,13 @@ describe("Notification", async () => {
         content,
         di.Adapters.System,
       );
-
       const message = await notification.compose(composer);
 
       await notification.send(message, di.Env.EMAIL_TO);
 
       expect(mailerSend).toHaveBeenCalledWith({
-        from: di.Env.EMAIL_FROM,
-        to: di.Env.EMAIL_TO,
-        subject: `✅ [SUCCESS] ${subject}`,
-        html: content,
+        config,
+        message: { subject: `✅ [SUCCESS] ${subject}`, html: content },
       });
     });
 
@@ -102,10 +100,8 @@ describe("Notification", async () => {
       await notification.send(message, di.Env.EMAIL_TO);
 
       expect(mailerSend).toHaveBeenCalledWith({
-        from: di.Env.EMAIL_FROM,
-        to: di.Env.EMAIL_TO,
-        subject: `❌ [ERROR] ${subject}`,
-        html: content,
+        config,
+        message: { subject: `❌ [ERROR] ${subject}`, html: content },
       });
     });
 
@@ -125,10 +121,8 @@ describe("Notification", async () => {
       await notification.send(message, di.Env.EMAIL_TO);
 
       expect(mailerSend).toHaveBeenCalledWith({
-        from: di.Env.EMAIL_FROM,
-        to: di.Env.EMAIL_TO,
-        subject: `ℹ️  [INFO] ${subject}`,
-        html: content,
+        config,
+        message: { subject: `ℹ️  [INFO] ${subject}`, html: content },
       });
     });
   });

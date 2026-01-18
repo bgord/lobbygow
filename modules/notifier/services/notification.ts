@@ -1,4 +1,4 @@
-import type * as bg from "@bgord/bun";
+import * as bg from "@bgord/bun";
 import type * as tools from "@bgord/tools";
 import type { NotificationComposerStrategy } from "./notification-composer";
 
@@ -10,11 +10,13 @@ export class Notification {
     private readonly deps: { Mailer: bg.MailerPort },
   ) {}
 
-  async compose(strategy: NotificationComposerStrategy): Promise<tools.NotificationTemplate> {
+  async compose(strategy: NotificationComposerStrategy): Promise<bg.MailerTemplateMessage> {
     return strategy.compose(this.subject, this.content);
   }
 
-  async send(message: tools.NotificationTemplate, to: tools.EmailType) {
-    return this.deps.Mailer.send({ from: this.EMAIL_FROM, to, ...message.get() });
+  async send(message: bg.MailerTemplateMessage, to: tools.EmailType) {
+    const template = new bg.MailerTemplate({ from: this.EMAIL_FROM, to }, message);
+
+    return this.deps.Mailer.send(template);
   }
 }

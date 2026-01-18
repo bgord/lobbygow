@@ -1,5 +1,4 @@
 import * as bg from "@bgord/bun";
-import * as tools from "@bgord/tools";
 import * as VO from "../value-objects";
 
 export abstract class NotificationComposerStrategy {
@@ -8,7 +7,7 @@ export abstract class NotificationComposerStrategy {
   abstract compose(
     subject: bg.MailerSubjectType,
     content: bg.MailerContentHtmlType,
-  ): Promise<tools.NotificationTemplate>;
+  ): Promise<bg.MailerTemplateMessage>;
 }
 
 export class NotificationComposerChooser {
@@ -32,9 +31,9 @@ export class NotificationComposerError implements NotificationComposerStrategy {
 
   async compose(
     subject: bg.MailerSubjectType,
-    content: bg.MailerContentHtmlType,
-  ): Promise<tools.NotificationTemplate> {
-    return new tools.NotificationTemplate(bg.MailerSubject.parse(`❌ [ERROR] ${subject}`), content);
+    html: bg.MailerContentHtmlType,
+  ): Promise<bg.MailerTemplateMessage> {
+    return { subject: bg.MailerSubject.parse(`❌ [ERROR] ${subject}`), html };
   }
 }
 
@@ -48,9 +47,9 @@ export class NotificationComposerInfo implements NotificationComposerStrategy {
 
   async compose(
     subject: bg.MailerSubjectType,
-    content: bg.MailerContentHtmlType,
-  ): Promise<tools.NotificationTemplate> {
-    return new tools.NotificationTemplate(bg.MailerSubject.parse(`ℹ️  [INFO] ${subject}`), content);
+    html: bg.MailerContentHtmlType,
+  ): Promise<bg.MailerTemplateMessage> {
+    return { subject: bg.MailerSubject.parse(`ℹ️  [INFO] ${subject}`), html };
   }
 }
 
@@ -64,8 +63,8 @@ export class NotificationComposerSuccess implements NotificationComposerStrategy
 
   async compose(
     subject: bg.MailerSubjectType,
-    content: bg.MailerContentHtmlType,
-  ): Promise<tools.NotificationTemplate> {
-    return new tools.NotificationTemplate(bg.MailerSubject.parse(`✅ [SUCCESS] ${subject}`), content);
+    html: bg.MailerContentHtmlType,
+  ): Promise<bg.MailerTemplateMessage> {
+    return { subject: bg.MailerSubject.parse(`✅ [SUCCESS] ${subject}`), html };
   }
 }

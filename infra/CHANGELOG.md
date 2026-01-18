@@ -1,10 +1,13 @@
 # Changelog
+- 2026-01-18 15:36 8f14853 **refactor: update tests**
+## 2026-01-18 15:36 
+- 2026-01-18 15:34 9d76fb9 **step: update packages**
 - 2026-01-18 13:27 779f4dc **refactor: adjust tests**
-## 2026-01-18 13:27 
 - 2026-01-18 13:08 48df9c0 **step: update packages**
 - 2026-01-18 13:07 d7acc2f **refactor: adjust mailer adapter factory**
 - 2026-01-18 12:42 f740ce6 **step: install nodemailer**
 - 2026-01-18 12:42 0e23ed8 **step: update packages**
+- 2026-01-18 12:29 5c80edc **docs: generate CHANGELOG**
 - 2026-01-17 21:57 8b6c914 **step: update packages**
 - 2026-01-17 20:58 d3918f2 **docs: generate CHANGELOG**
 - 2026-01-16 17:01 0a05896 **step: update packages**

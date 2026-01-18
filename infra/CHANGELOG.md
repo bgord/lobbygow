@@ -1,7 +1,10 @@
 # Changelog
+- 2026-01-18 17:41 8bfe6bc **refactor: remove log file prereq**
+- 2026-01-18 17:41 6a649f0 **step: update packages**
+## 2026-01-18 17:41 
 - 2026-01-18 15:36 8f14853 **refactor: update tests**
-## 2026-01-18 15:36 
 - 2026-01-18 15:34 9d76fb9 **step: update packages**
+- 2026-01-18 14:36 f8269b4 **docs: generate CHANGELOG**
 - 2026-01-18 13:27 779f4dc **refactor: adjust tests**
 - 2026-01-18 13:08 48df9c0 **step: update packages**
 - 2026-01-18 13:07 d7acc2f **refactor: adjust mailer adapter factory**

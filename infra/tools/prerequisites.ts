@@ -63,7 +63,6 @@ export function createPrerequisites(Env: EnvironmentType, deps: Dependencies) {
       new bg.PrerequisiteVerifierMemoryAdapter({ maximum: tools.Size.fromMB(300) }),
       { decorators: [withRetry, withTimeout] },
     ),
-    new bg.Prerequisite("log-file", new bg.PrerequisiteVerifierLogFileAdapter(deps), { enabled: production }),
     new bg.Prerequisite("mailer", new bg.PrerequisiteVerifierMailerAdapter(deps), {
       enabled: production,
       decorators: [withRetry, withTimeout],

@@ -17,6 +17,6 @@ export async function createMailer(Env: EnvironmentType, deps: Dependencies): Pr
     [bg.NodeEnvironmentEnum.local]: MailerNoopWithLogger,
     [bg.NodeEnvironmentEnum.test]: new bg.MailerNoopAdapter(),
     [bg.NodeEnvironmentEnum.staging]: MailerNoopWithLogger,
-    [bg.NodeEnvironmentEnum.production]: MailerSmtp,
+    [bg.NodeEnvironmentEnum.production]: new bg.MailerWithLoggerAdapter({ inner: MailerSmtp, ...deps }),
   }[Env.type];
 }

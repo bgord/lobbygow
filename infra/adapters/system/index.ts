@@ -2,6 +2,7 @@ import type { EnvironmentType } from "+infra/env";
 import { createCertificateInspector } from "./certificate-inspector.adapter";
 import { Clock } from "./clock.adapter";
 import { createDiskSpaceChecker } from "./disk-space-checker.adapter";
+import { createFileInspection } from "./file-inspection.adapter";
 import { FileReaderJson } from "./file-reader-json.adapter";
 import { IdProvider } from "./id-provider.adapter";
 import { createLogger } from "./logger.adapter";
@@ -26,5 +27,6 @@ export async function createSystemAdapters(Env: EnvironmentType) {
     Timekeeper,
     Sleeper: createSleeper(Env),
     TimeoutRunner: createTimeoutRunner(Env),
+    FileInspection: createFileInspection(Env),
   };
 }

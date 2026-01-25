@@ -11,6 +11,7 @@ type Dependencies = {
   Timekeeper: bg.TimekeeperPort;
   Sleeper: bg.SleeperPort;
   TimeoutRunner: bg.TimeoutRunnerPort;
+  FileInspection: bg.FileInspectionPort;
 };
 
 export function createPrerequisites(Env: EnvironmentType, deps: Dependencies) {
@@ -95,20 +96,20 @@ export function createPrerequisites(Env: EnvironmentType, deps: Dependencies) {
     ),
     new bg.Prerequisite(
       "master-key",
-      new bg.PrerequisiteVerifierFileAdapter({ file: MasterKeyPath, permissions: { read: true } }),
+      new bg.PrerequisiteVerifierFileAdapter({ file: MasterKeyPath, permissions: { read: true } }, deps),
       { enabled: production },
     ),
     new bg.Prerequisite(
       "secrets",
-      new bg.PrerequisiteVerifierFileAdapter({ file: SecretsPath, permissions: { read: true } }),
+      new bg.PrerequisiteVerifierFileAdapter({ file: SecretsPath, permissions: { read: true } }, deps),
       { enabled: production },
     ),
     new bg.Prerequisite(
       "build-info-file",
-      new bg.PrerequisiteVerifierFileAdapter({
-        file: bg.BUILD_INFO_REPOSITORY_FILE_PATH,
-        permissions: { read: true },
-      }),
+      new bg.PrerequisiteVerifierFileAdapter(
+        { file: bg.BUILD_INFO_REPOSITORY_FILE_PATH, permissions: { read: true } },
+        deps,
+      ),
       { enabled: production },
     ),
   ];

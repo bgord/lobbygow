@@ -5,7 +5,7 @@ import type { bootstrap } from "+infra/bootstrap";
 import * as App from "./app";
 
 export function createServer(di: Awaited<ReturnType<typeof bootstrap>>) {
-  const HashContent = new bg.HashContentSha256BunStrategy();
+  const HashContent = new bg.HashContentSha256Strategy();
   const CacheRepository = new bg.CacheRepositoryNodeCacheAdapter({ type: "infinite" });
   const CacheResolver = new bg.CacheResolverSimpleStrategy({ CacheRepository });
 
@@ -25,7 +25,10 @@ export function createServer(di: Awaited<ReturnType<typeof bootstrap>>) {
     di.Tools.ShieldRateLimit.verify,
     di.Tools.ShieldTimeout.verify,
     di.Tools.ShieldBasicAuth.verify,
-    ...bg.Healthcheck.build(di.Env.type, di.Tools.Prerequisites, { ...di.Adapters.System, ...di.Tools }),
+    ...bg.Healthcheck.build(
+      { Env: di.Env.type, prerequisites: di.Tools.Prerequisites },
+      { ...di.Adapters.System, ...di.Tools },
+    ),
   );
   // =============================
 

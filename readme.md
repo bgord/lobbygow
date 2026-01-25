@@ -79,6 +79,7 @@ infra/
 │       ├── certificate-inspector.adapter.ts
 │       ├── clock.adapter.ts
 │       ├── disk-space-checker.adapter.ts
+│       ├── file-inspection.adapter.ts
 │       ├── file-reader-json.adapter.ts
 │       ├── id-provider.adapter.ts
 │       ├── logger.adapter.ts

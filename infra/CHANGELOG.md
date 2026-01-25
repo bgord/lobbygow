@@ -1,7 +1,15 @@
 # Changelog
+- 2026-01-25 16:56 2e5b6e3 **refactor: update env**
+## 2026-01-25 16:56 
+- 2026-01-25 16:54 2e95faf **step: setup file inspection**
+- 2026-01-25 16:48 a4f3454 **refactor: update apis**
+- 2026-01-25 16:48 39a0c21 **refactor: use woodchopper**
+- 2026-01-25 16:38 542fbd6 **refactor: adjust new apis**
+- 2026-01-25 16:34 a12eb39 **step: add tmp**
+- 2026-01-25 16:33 727c0ac **step: update packages**
 - 2026-01-18 17:41 8bfe6bc **refactor: remove log file prereq**
 - 2026-01-18 17:41 6a649f0 **step: update packages**
-## 2026-01-18 17:41 
+- 2026-01-18 16:41 130a24a **docs: generate CHANGELOG**
 - 2026-01-18 15:36 8f14853 **refactor: update tests**
 - 2026-01-18 15:34 9d76fb9 **step: update packages**
 - 2026-01-18 14:36 f8269b4 **docs: generate CHANGELOG**

@@ -27,7 +27,7 @@ export const SecretsPath = tools.FilePathAbsolute.fromString("/var/www/lobbygow/
 export async function createEnvironmentLoader(): Promise<bg.EnvironmentLoaderPort<typeof Schema>> {
   const type = bg.NodeEnvironment.parse(process.env.NODE_ENV);
 
-  const CryptoKeyProvider = new bg.CryptoKeyProviderFileAdapter(MasterKeyPath);
+  const CryptoKeyProvider = new bg.CryptoKeyProviderFileAdapter(MasterKeyPath, {});
   const Encryption = new bg.EncryptionAesGcmAdapter({ CryptoKeyProvider });
 
   const CacheRepository = new bg.CacheRepositoryNodeCacheAdapter({ type: "infinite" });

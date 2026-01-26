@@ -1,6 +1,10 @@
 # Changelog
+- 2026-01-26 18:49 76f29e7 **step: update packages**
+## 2026-01-26 18:49 
+- 2026-01-26 18:48 5841c64 **refactor: adjust shield rate limit**
+- 2026-01-26 18:46 c1f2ac1 **step: update packages**
+- 2026-01-26 18:46 97d35d0 **step: use sampling**
 - 2026-01-26 13:44 e60183f **step: use home path in the start script**
-## 2026-01-26 13:44 
 - 2026-01-26 13:40 2c68fcf **step: improve the start script**
 - 2026-01-26 13:35 e20ceaf **step: add package json to output**
 - 2026-01-26 13:27 c9aa760 **Revert "step: simplify paths in the start script"**
@@ -11,6 +15,7 @@
 - 2026-01-26 13:09 33eccb2 **refactor: update workflow**
 - 2026-01-26 13:06 ae9d130 **step: add nodemailer**
 - 2026-01-26 12:59 b97a3a6 **step: update packages**
+- 2026-01-26 12:44 33db147 **docs: generate CHANGELOG**
 - 2026-01-26 12:40 2306d84 **docs: generate CHANGELOG**
 - 2026-01-26 12:35 96c1de0 **docs: generate CHANGELOG**
 - 2026-01-26 12:27 95d5e91 **docs: generate CHANGELOG**

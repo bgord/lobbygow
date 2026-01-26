@@ -1,12 +1,14 @@
 # Changelog
+- 2026-01-26 13:27 c9aa760 **Revert "step: simplify paths in the start script"**
+## 2026-01-26 13:27 
 - 2026-01-26 13:25 b106aef **step: update packages**
 - 2026-01-26 13:25 932a5f2 **step: simplify paths in the start script**
-## 2026-01-26 13:25 
 - 2026-01-26 13:13 abbcb68 **refactor: install all packages in prod**
 - 2026-01-26 13:09 4f584fb **step: bump bgord/scripts**
 - 2026-01-26 13:09 33eccb2 **refactor: update workflow**
 - 2026-01-26 13:06 ae9d130 **step: add nodemailer**
 - 2026-01-26 12:59 b97a3a6 **step: update packages**
+- 2026-01-26 12:25 ac5f1d2 **docs: generate CHANGELOG**
 - 2026-01-26 12:13 5d551cd **docs: generate CHANGELOG**
 - 2026-01-26 12:10 dabf7d0 **docs: generate CHANGELOG**
 - 2026-01-26 12:06 291df1a **docs: generate CHANGELOG**

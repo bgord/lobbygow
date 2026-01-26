@@ -35,7 +35,7 @@ export class ErrorHandler {
         component: "http",
         operation: "invalid_payload",
         correlationId,
-        metadata: { url, body: await bg.safeParseBody(c) },
+        metadata: { url },
         error,
       });
 

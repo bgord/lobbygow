@@ -11,9 +11,8 @@ export function createShieldRateLimit(Env: EnvironmentType, deps: Dependencies):
 
   const HashContent = new bg.HashContentSha256Strategy();
 
-  return new bg.ShieldRateLimitStrategy(
+  const ShieldRateLimit = new bg.ShieldRateLimitStrategy(
     {
-      enabled: Env.type === bg.NodeEnvironmentEnum.production,
       resolver: new bg.CacheSubjectRequestResolver(
         [
           new bg.CacheSubjectSegmentFixedStrategy("rate_limit"),
@@ -26,4 +25,11 @@ export function createShieldRateLimit(Env: EnvironmentType, deps: Dependencies):
     },
     { CacheResolver, ...deps },
   );
+
+  return {
+    [bg.NodeEnvironmentEnum.local]: new bg.ShieldNoopStrategy(),
+    [bg.NodeEnvironmentEnum.test]: new bg.ShieldNoopStrategy(),
+    [bg.NodeEnvironmentEnum.staging]: new bg.ShieldNoopStrategy(),
+    [bg.NodeEnvironmentEnum.production]: ShieldRateLimit,
+  }[Env.type];
 }

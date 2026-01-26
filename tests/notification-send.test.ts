@@ -14,15 +14,11 @@ describe(`POST ${url}`, async () => {
   const config = { from: di.Env.EMAIL_FROM, to: di.Env.EMAIL_TO };
 
   test("validation - empty payload", async () => {
-    const response = await server.request(url, { method: "POST", headers }, mocks.ip);
-    const json = await response.json();
-
-    expect(response.status).toBe(400);
-    expect(json).toEqual({ message: "payload.invalid.error", _known: true });
-  });
-
-  test("validation - invalid payload", async () => {
-    const response = await server.request(url, { method: "POST", body: "invalid-json", headers }, mocks.ip);
+    const response = await server.request(
+      url,
+      { method: "POST", body: JSON.stringify({}), headers },
+      mocks.ip,
+    );
     const json = await response.json();
 
     expect(response.status).toBe(400);

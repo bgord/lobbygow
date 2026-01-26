@@ -5,7 +5,7 @@ import type { bootstrap } from "+infra/bootstrap";
 
 export const NotificationSend =
   (di: Awaited<ReturnType<typeof bootstrap>>) => async (c: hono.Context, _next: hono.Next) => {
-    const body = await bg.safeParseBody(c);
+    const body = await c.req.json();
 
     const subject = bg.MailerSubject.parse(body.subject);
     const content = bg.MailerContentHtml.parse(body.content);

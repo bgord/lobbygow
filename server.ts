@@ -27,7 +27,7 @@ export function createServer(di: Awaited<ReturnType<typeof bootstrap>>) {
     di.Tools.ShieldBasicAuth.verify,
     ...bg.Healthcheck.build(
       { Env: di.Env.type, prerequisites: di.Tools.Prerequisites },
-      { ...di.Adapters.System, ...di.Tools },
+      { ...di.Adapters.System, ...di.Tools, LoggerStatsProvider: di.Adapters.System.Logger },
     ),
   );
   // =============================

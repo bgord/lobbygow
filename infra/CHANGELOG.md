@@ -1,6 +1,8 @@
 # Changelog
+- 2026-01-26 13:06 ae9d130 **step: add nodemailer**
+## 2026-01-26 13:06 
 - 2026-01-26 12:59 b97a3a6 **step: update packages**
-## 2026-01-26 12:59 
+- 2026-01-26 12:00 77b8fe3 **docs: generate CHANGELOG**
 - 2026-01-25 16:56 2e5b6e3 **refactor: update env**
 - 2026-01-25 16:54 2e95faf **step: setup file inspection**
 - 2026-01-25 16:48 a4f3454 **refactor: update apis**

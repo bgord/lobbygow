@@ -1,9 +1,11 @@
 # Changelog
+- 2026-01-26 13:13 abbcb68 **refactor: install all packages in prod**
+## 2026-01-26 13:13 
 - 2026-01-26 13:09 4f584fb **step: bump bgord/scripts**
 - 2026-01-26 13:09 33eccb2 **refactor: update workflow**
-## 2026-01-26 13:09 
 - 2026-01-26 13:06 ae9d130 **step: add nodemailer**
 - 2026-01-26 12:59 b97a3a6 **step: update packages**
+- 2026-01-26 12:10 dabf7d0 **docs: generate CHANGELOG**
 - 2026-01-26 12:06 291df1a **docs: generate CHANGELOG**
 - 2026-01-26 12:00 77b8fe3 **docs: generate CHANGELOG**
 - 2026-01-25 16:56 2e5b6e3 **refactor: update env**

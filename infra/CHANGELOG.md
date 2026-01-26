@@ -1,9 +1,11 @@
 # Changelog
+- 2026-01-26 18:54 3328ba6 **step: add logger stats to healthcheck**
+## 2026-01-26 18:54 
 - 2026-01-26 18:49 76f29e7 **step: update packages**
-## 2026-01-26 18:49 
 - 2026-01-26 18:48 5841c64 **refactor: adjust shield rate limit**
 - 2026-01-26 18:46 c1f2ac1 **step: update packages**
 - 2026-01-26 18:46 97d35d0 **step: use sampling**
+- 2026-01-26 17:49 cdca99f **docs: generate CHANGELOG**
 - 2026-01-26 13:44 e60183f **step: use home path in the start script**
 - 2026-01-26 13:40 2c68fcf **step: improve the start script**
 - 2026-01-26 13:35 e20ceaf **step: add package json to output**

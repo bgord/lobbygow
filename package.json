@@ -24,7 +24,7 @@
     "typescript": "5.9.3"
   },
   "dependencies": {
-    "@bgord/bun": "1.10.10",
+    "@bgord/bun": "1.10.11",
     "nodemailer": "7.0.13",
     "zod": "4.3.6"
   }

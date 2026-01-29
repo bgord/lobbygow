@@ -1,9 +1,11 @@
 # Changelog
+- 2026-01-29 16:14 7662e89 **step: update packages**
+## 2026-01-29 16:14 
 - 2026-01-29 16:07 e43085d **step: update prereqs**
-## 2026-01-29 16:07 
 - 2026-01-29 16:01 4fe84f6 **step: update packages**
 - 2026-01-29 15:59 c9b97f9 **step: update bun**
 - 2026-01-29 15:59 816bde8 **step: bump bgord/scripts**
+- 2026-01-29 15:08 aaf0001 **docs: generate CHANGELOG**
 - 2026-01-28 12:59 0e57ca1 **step: update packages**
 - 2026-01-28 11:59 a371a2f **docs: generate CHANGELOG**
 - 2026-01-26 18:54 3328ba6 **step: add logger stats to healthcheck**

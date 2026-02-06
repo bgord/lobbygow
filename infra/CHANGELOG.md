@@ -1,6 +1,8 @@
 # Changelog
+- 2026-02-06 18:01 657082d **step: update packages**
+## 2026-02-06 18:01 
 - 2026-01-30 10:34 dd8a43e **step: update packages**
-## 2026-01-30 10:34 
+- 2026-01-30 09:34 48ca4a6 **docs: generate CHANGELOG**
 - 2026-01-29 16:14 7662e89 **step: update packages**
 - 2026-01-29 16:07 e43085d **step: update prereqs**
 - 2026-01-29 16:01 4fe84f6 **step: update packages**

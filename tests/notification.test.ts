@@ -65,7 +65,7 @@ describe("Notification", async () => {
 
   describe("send", () => {
     test("kind - success", async () => {
-      const mailerSend = spyOn(di.Adapters.System.Mailer, "send").mockImplementation(jest.fn());
+      using mailerSend = spyOn(di.Adapters.System.Mailer, "send").mockImplementation(jest.fn());
       const composer = Notifier.Services.NotificationComposerChooser.choose(
         Notifier.VO.NotificationKindEnum.success,
       );
@@ -86,7 +86,7 @@ describe("Notification", async () => {
     });
 
     test("kind - error", async () => {
-      const mailerSend = spyOn(di.Adapters.System.Mailer, "send").mockImplementation(jest.fn());
+      using mailerSend = spyOn(di.Adapters.System.Mailer, "send").mockImplementation(jest.fn());
       const composer = Notifier.Services.NotificationComposerChooser.choose(
         Notifier.VO.NotificationKindEnum.error,
       );
@@ -107,7 +107,7 @@ describe("Notification", async () => {
     });
 
     test("kind - info", async () => {
-      const mailerSend = spyOn(di.Adapters.System.Mailer, "send").mockImplementation(jest.fn());
+      using mailerSend = spyOn(di.Adapters.System.Mailer, "send").mockImplementation(jest.fn());
       const composer = Notifier.Services.NotificationComposerChooser.choose(
         Notifier.VO.NotificationKindEnum.info,
       );

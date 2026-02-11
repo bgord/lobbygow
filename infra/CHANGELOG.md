@@ -1,9 +1,13 @@
 # Changelog
+- 2026-02-11 12:34 b6e1b92 **step: update packages**
+## 2026-02-11 12:34 
+- 2026-02-11 00:07 cb8ff8d **refactor: adjust spies**
+- 2026-02-11 00:06 dc9bbbc **step: update packages**
 - 2026-02-08 12:25 9540999 **step: update bun version**
-## 2026-02-08 12:25 
 - 2026-02-08 12:24 d7c9276 **step: bump bgord/scripts**
 - 2026-02-08 12:00 ef0323a **step: bump bgord/scripts**
 - 2026-02-08 12:00 763ea74 **step: update packages**
+- 2026-02-08 11:26 a870128 **docs: generate CHANGELOG**
 - 2026-02-08 11:01 7eb95fe **docs: generate CHANGELOG**
 - 2026-02-06 18:01 657082d **step: update packages**
 - 2026-02-06 17:01 7605e07 **docs: generate CHANGELOG**

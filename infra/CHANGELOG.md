@@ -1,6 +1,8 @@
 # Changelog
+- 2026-02-15 11:32 eab90da **step: update packages**
+## 2026-02-15 11:32 
 - 2026-02-11 12:34 b6e1b92 **step: update packages**
-## 2026-02-11 12:34 
+- 2026-02-11 11:35 cae3b65 **docs: generate CHANGELOG**
 - 2026-02-11 00:07 cb8ff8d **refactor: adjust spies**
 - 2026-02-11 00:06 dc9bbbc **step: update packages**
 - 2026-02-08 12:25 9540999 **step: update bun version**

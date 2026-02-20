@@ -1,6 +1,8 @@
 # Changelog
+- 2026-02-20 16:16 4ae6f7c **step: update packages**
+## 2026-02-20 16:16 
 - 2026-02-15 11:32 eab90da **step: update packages**
-## 2026-02-15 11:32 
+- 2026-02-15 10:33 09c7ebf **docs: generate CHANGELOG**
 - 2026-02-11 12:34 b6e1b92 **step: update packages**
 - 2026-02-11 11:35 cae3b65 **docs: generate CHANGELOG**
 - 2026-02-11 00:07 cb8ff8d **refactor: adjust spies**

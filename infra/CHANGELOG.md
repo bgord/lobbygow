@@ -1,7 +1,9 @@
 # Changelog
+- 2026-02-24 11:13 7695fd7 **step: update packages**
+## 2026-02-24 11:13 
 - 2026-02-20 16:18 4eb0497 **step: bump bgord/scripts**
-## 2026-02-20 16:18 
 - 2026-02-20 16:16 4ae6f7c **step: update packages**
+- 2026-02-20 15:18 79cbd32 **docs: generate CHANGELOG**
 - 2026-02-20 15:17 eeba8fe **docs: generate CHANGELOG**
 - 2026-02-15 11:32 eab90da **step: update packages**
 - 2026-02-15 10:33 09c7ebf **docs: generate CHANGELOG**

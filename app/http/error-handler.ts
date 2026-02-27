@@ -5,6 +5,8 @@ import z from "zod/v4";
 
 type Dependencies = { Logger: bg.LoggerPort };
 
+const validationErrors = [bg.MailerSubjectError.Invalid, bg.MailerContentHtmlError.Invalid] as Array<string>;
+
 export class ErrorHandler {
   static handle: (deps: Dependencies) => hono.ErrorHandler = (deps) => async (error, c) => {
     const url = c.req.url;
@@ -30,6 +32,21 @@ export class ErrorHandler {
     }
 
     if (error instanceof z.ZodError) {
+      const validationError = error.issues.find((issue) => validationErrors.includes(issue.message));
+
+      if (validationError) {
+        deps.Logger.error({
+          message: "Expected validation error",
+          component: "http",
+          operation: "validation",
+          correlationId,
+          metadata: { url, error: validationError },
+          error,
+        });
+
+        return c.json({ message: validationError.message, _known: true }, 400);
+      }
+
       deps.Logger.error({
         message: "Invalid payload",
         component: "http",

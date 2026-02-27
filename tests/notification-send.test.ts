@@ -1,5 +1,5 @@
 import { describe, expect, jest, spyOn, test } from "bun:test";
-import * as bgb from "@bgord/bun";
+import * as bg from "@bgord/bun";
 import * as Notifier from "+notifier";
 import { bootstrap } from "+infra/bootstrap";
 import { createServer } from "../server";
@@ -10,7 +10,7 @@ const url = "/api/notification-send";
 describe(`POST ${url}`, async () => {
   const di = await bootstrap();
   const server = createServer(di);
-  const headers = new Headers({ [bgb.ShieldApiKeyStrategy.HEADER_NAME]: di.Env.API_KEY });
+  const headers = new Headers({ [bg.ShieldApiKeyStrategy.HEADER_NAME]: di.Env.API_KEY });
   const config = { from: di.Env.EMAIL_FROM, to: di.Env.EMAIL_TO };
 
   test("validation - empty payload", async () => {
@@ -22,7 +22,7 @@ describe(`POST ${url}`, async () => {
     const json = await response.json();
 
     expect(response.status).toBe(400);
-    expect(json).toEqual({ message: "payload.invalid.error", _known: true });
+    expect(json).toEqual({ message: "mailer.subject.invalid", _known: true });
   });
 
   test("validation - missing subject", async () => {
@@ -38,7 +38,7 @@ describe(`POST ${url}`, async () => {
     const json = await response.json();
 
     expect(response.status).toBe(400);
-    expect(json).toEqual({ message: "payload.invalid.error", _known: true });
+    expect(json).toEqual({ message: "mailer.subject.invalid", _known: true });
   });
 
   test("validation - missing content", async () => {
@@ -54,7 +54,7 @@ describe(`POST ${url}`, async () => {
     const json = await response.json();
 
     expect(response.status).toBe(400);
-    expect(json).toEqual({ message: "payload.invalid.error", _known: true });
+    expect(json).toEqual({ message: "mailer.content.html.invalid", _known: true });
   });
 
   test("happy path - info", async () => {

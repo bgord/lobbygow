@@ -1,6 +1,9 @@
 # Changelog
+- 2026-03-02 11:24 fb1986d **step: update packages**
+- 2026-03-02 11:24 c0569b4 **step: update packages**
+## 2026-03-02 11:24 
 - 2026-03-01 09:20 3521d27 **step: update packages**
-## 2026-03-01 09:20 
+- 2026-03-01 08:20 1ac44ce **docs: generate CHANGELOG**
 - 2026-02-27 13:17 feff9ba **step: assert full validation errors**
 - 2026-02-26 09:51 faa5f34 **step: bump bgord/scripts**
 - 2026-02-26 09:51 0448245 **step: update bun**

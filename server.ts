@@ -12,32 +12,32 @@ export function createServer(di: Awaited<ReturnType<typeof bootstrap>>) {
   const server = new Hono<infra.Config>()
     .basePath("/api")
     .use(
-      ...bg.Setup.essentials(
+      ...bg.SetupHono.essentials(
         { csrf: { origin: [] } },
         { ...di.Adapters.System, ...di.Tools, HashContent, CacheResolver },
       ),
     )
-    .use(di.Tools.ShieldSecurity.verify);
+    .use(di.Tools.ShieldSecurity.handle());
 
   // Healthcheck =================
   server.get(
     "/healthcheck",
-    di.Tools.ShieldRateLimit.verify,
-    di.Tools.ShieldTimeout.verify,
-    di.Tools.ShieldBasicAuth.verify,
-    ...bg.Healthcheck.build(
+    di.Tools.ShieldRateLimit.handle(),
+    di.Tools.ShieldTimeout.handle(),
+    di.Tools.ShieldBasicAuth.handle(),
+    ...new bg.HealthcheckHonoHandler(
       { Env: di.Env.type, prerequisites: di.Tools.Prerequisites },
       { ...di.Adapters.System, ...di.Tools, LoggerStatsProvider: di.Adapters.System.Logger },
-    ),
+    ).handle(),
   );
   // =============================
 
   // Mailer =================
   server.post(
     "/notification-send",
-    di.Tools.ShieldRateLimit.verify,
-    di.Tools.ShieldTimeout.verify,
-    di.Tools.ShieldApiKey.verify,
+    di.Tools.ShieldRateLimit.handle(),
+    di.Tools.ShieldTimeout.handle(),
+    di.Tools.ShieldApiKey.handle(),
     App.Http.Mailer.NotificationSend(di),
   );
   // =============================

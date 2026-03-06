@@ -1,8 +1,10 @@
 # Changelog
+- 2026-03-06 12:08 e2b62d6 **step: update packages**
+## 2026-03-06 12:08 
 - 2026-03-05 15:54 a3c4d77 **step: update packages**
-## 2026-03-05 15:54 
 - 2026-03-05 15:49 85b8dbe **refactor: update bgord bun for hono separation**
 - 2026-03-05 15:48 26e3a46 **step: update packages**
+- 2026-03-05 14:55 bad8bd9 **docs: generate CHANGELOG**
 - 2026-03-02 11:24 fb1986d **step: update packages**
 - 2026-03-02 11:24 c0569b4 **step: update packages**
 - 2026-03-02 10:25 7f3827e **docs: generate CHANGELOG**

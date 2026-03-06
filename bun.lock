@@ -5,7 +5,7 @@
     "": {
       "name": "lobbygow",
       "dependencies": {
-        "@bgord/bun": "1.12.2",
+        "@bgord/bun": "1.12.4",
         "nodemailer": "8.0.1",
         "zod": "4.3.6",
       },
@@ -90,7 +90,7 @@
 
     "@babel/types": ["@babel/types@7.29.0", "", { "dependencies": { "@babel/helper-string-parser": "^7.27.1", "@babel/helper-validator-identifier": "^7.28.5" } }, "sha512-LwdZHpScM4Qz8Xw2iKSzS+cfglZzJGvofQICy7W7v4caru4EaAmyUuO6BGrbyQ2mYV11W0U8j5mBhd14dd3B0A=="],
 
-    "@bgord/bun": ["@bgord/bun@1.12.2", "", { "dependencies": { "@bgord/tools": "1.3.22", "emittery": "1.2.1", "hono": "4.12.5", "node-cache": "5.1.2" }, "peerDependencies": { "better-auth": "1.5.4", "csv": "6.4.1", "nodemailer": "8.0.1", "resend": "6.9.3", "sharp": "0.34.5", "yazl": "3.3.1", "zod": "4.3.6" }, "optionalPeers": ["better-auth", "csv", "nodemailer", "resend", "sharp", "yazl"] }, "sha512-+BybjCrcSwNIVXAl9fazRy9klw1RkJexBOsauXmeS3IuWXDdgFfs8IeZCGNoHpIdaENjT0/zRBO9rrfypmdgDQ=="],
+    "@bgord/bun": ["@bgord/bun@1.12.4", "", { "dependencies": { "@bgord/tools": "1.3.22", "emittery": "2.0.0", "hono": "4.12.5", "node-cache": "5.1.2" }, "peerDependencies": { "better-auth": "1.5.4", "csv": "6.4.1", "nodemailer": "8.0.1", "resend": "6.9.3", "sharp": "0.34.5", "yazl": "3.3.1", "zod": "4.3.6" }, "optionalPeers": ["better-auth", "csv", "nodemailer", "resend", "sharp", "yazl"] }, "sha512-OHff2kNr7WmzWcVtvXBnW++UyxMW8RwXPchb0j4RigISi72OiadfIAvAJKEnSNvjuDs9XVXHdwfrx2DZERrKeg=="],
 
     "@bgord/tools": ["@bgord/tools@1.3.22", "", { "dependencies": { "date-fns": "4.1.0" }, "peerDependencies": { "zod": "4.3.6" } }, "sha512-XNDPrzTM4GGSX4aEt8sHmtx/6GP4t62Z82TVXYmD5V72CtQCQo2I9ug+0RybHIoMI4ITQtwkDp9TXdbqkubnAA=="],
 
@@ -578,7 +578,7 @@
 
     "electron-to-chromium": ["electron-to-chromium@1.5.307", "", {}, "sha512-5z3uFKBWjiNR44nFcYdkcXjKMbg5KXNdciu7mhTPo9tB7NbqSNP2sSnGR+fqknZSCwKkBN+oxiiajWs4dT6ORg=="],
 
-    "emittery": ["emittery@1.2.1", "", {}, "sha512-sFz64DCRjirhwHLxofFqxYQm6DCp6o0Ix7jwKQvuCHPn4GMRZNuBZyLPu9Ccmk/QSCAMZt6FOUqA8JZCQvA9fw=="],
+    "emittery": ["emittery@2.0.0", "", {}, "sha512-FLtgn/CGBXiX3ZtPAm5q4LWWepHChOt55J9u01WFu3dyap2U7IwptlrqoE1COR/kxwdy/DOxIBALSxIW449I1g=="],
 
     "emoji-regex": ["emoji-regex@10.6.0", "", {}, "sha512-toUI84YS5YmxW219erniWD0CIVOo46xGKColeNQRgOzDorgBi1v4D71/OFzgD9GO2UGKIv1C3Sp8DAn0+j5w7A=="],
 

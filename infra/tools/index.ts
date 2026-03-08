@@ -1,7 +1,6 @@
 import type * as bg from "@bgord/bun";
 import type { EnvironmentType } from "+infra/env";
 import { createBuildInfoRepository } from "./build-info-repository.strategy";
-import { Languages } from "./languages";
 import { createPrerequisites } from "./prerequisites";
 import { createShieldApiKey } from "./shield-api-key.strategy";
 import { createShieldBasicAuth } from "./shield-basic-auth.strategy";
@@ -29,7 +28,6 @@ export function createTools(Env: EnvironmentType, deps: Dependencies) {
     ShieldBasicAuth: createShieldBasicAuth(Env),
     ShieldApiKey: createShieldApiKey(Env),
     Prerequisites: createPrerequisites(Env, deps),
-    Languages,
     ShieldSecurity: createShieldSecurity(Env, deps),
     BuildInfoRepository: createBuildInfoRepository(Env, deps),
   };

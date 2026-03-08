@@ -16,7 +16,8 @@
       "+notifier": ["./modules/notifier/index"],
       "+notifier/*": ["./modules/notifier/*"],
       "+app": ["./app/index"],
-      "+app/*": ["./app/*"]
+      "+app/*": ["./app/*"],
+      "+languages": ["./modules/languages.ts"]
     }
   },
   "exclude": ["bgord-scripts"]

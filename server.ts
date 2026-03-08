@@ -1,6 +1,7 @@
 import * as bg from "@bgord/bun";
 import { Hono } from "hono";
 import type * as infra from "+infra";
+import { languages } from "+languages";
 import type { bootstrap } from "+infra/bootstrap";
 import * as App from "./app";
 
@@ -13,7 +14,7 @@ export function createServer(di: Awaited<ReturnType<typeof bootstrap>>) {
     .basePath("/api")
     .use(
       ...bg.SetupHono.essentials(
-        { csrf: { origin: [] }, I18n: { languages: di.Tools.Languages, strategies: [] } },
+        { csrf: { origin: [] }, I18n: { languages, strategies: [] } },
         { ...di.Adapters.System, ...di.Tools, HashContent, CacheResolver },
       ),
     )

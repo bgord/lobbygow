@@ -6,7 +6,7 @@ import { createShieldApiKey } from "./shield-api-key.strategy";
 import { createShieldBasicAuth } from "./shield-basic-auth.strategy";
 import { createShieldRateLimit } from "./shield-rate-limit.strategy";
 import { createShieldSecurity } from "./shield-security.strategy";
-import { createShieldTimeout } from "./shield-timeout.strategy";
+import { ShieldTimeout } from "./shield-timeout.strategy";
 
 type Dependencies = {
   Clock: bg.ClockPort;
@@ -23,7 +23,7 @@ type Dependencies = {
 
 export function createTools(Env: EnvironmentType, deps: Dependencies) {
   return {
-    ShieldTimeout: createShieldTimeout(),
+    ShieldTimeout,
     ShieldRateLimit: createShieldRateLimit(Env, deps),
     ShieldBasicAuth: createShieldBasicAuth(Env),
     ShieldApiKey: createShieldApiKey(Env),

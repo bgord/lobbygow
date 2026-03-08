@@ -1,8 +1,13 @@
 # Changelog
+- 2026-03-08 20:45 f1f24a5 **refactor: update shield timeout**
+## 2026-03-08 20:45 
+- 2026-03-08 20:44 5a8745c **step: update packages**
+- 2026-03-08 15:26 3a44ec7 **step: bump bgord/scripts**
 - 2026-03-08 12:10 9a5720f **refactor: standardize modules/language**
-## 2026-03-08 12:10 
 - 2026-03-08 11:58 f06aa9f **refactor: use new languages**
 - 2026-03-08 11:50 d386445 **step: update packages**
+- 2026-03-08 11:11 f3c9093 **docs: generate readme**
+- 2026-03-08 11:11 d99c795 **docs: generate CHANGELOG**
 - 2026-03-08 10:59 3bb330e **docs: generate readme**
 - 2026-03-08 10:59 08153e0 **docs: generate CHANGELOG**
 - 2026-03-06 16:32 13206d3 **step: update packages**

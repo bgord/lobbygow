@@ -1,7 +1,10 @@
 # Changelog
+- 2026-03-08 12:10 9a5720f **refactor: standardize modules/language**
+## 2026-03-08 12:10 
 - 2026-03-08 11:58 f06aa9f **refactor: use new languages**
-## 2026-03-08 11:58 
 - 2026-03-08 11:50 d386445 **step: update packages**
+- 2026-03-08 10:59 3bb330e **docs: generate readme**
+- 2026-03-08 10:59 08153e0 **docs: generate CHANGELOG**
 - 2026-03-06 16:32 13206d3 **step: update packages**
 - 2026-03-06 15:32 673f474 **docs: generate CHANGELOG**
 - 2026-03-06 15:16 44dbe81 **step: update packages**

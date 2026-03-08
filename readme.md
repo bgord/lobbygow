@@ -51,6 +51,7 @@ bun run bgord-scripts/secrets-encrypt.ts --master-key /run/master-key.txt --inpu
 
 ```
 modules/
+├── languages.ts
 └── notifier
     ├── services
     │   ├── notification-composer.ts
@@ -91,7 +92,6 @@ infra/
 ├── env.ts
 └── tools
     ├── build-info-repository.strategy.ts
-    ├── languages.ts
     ├── prerequisites.ts
     ├── shield-api-key.strategy.ts
     ├── shield-basic-auth.strategy.ts

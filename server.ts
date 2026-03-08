@@ -13,7 +13,7 @@ export function createServer(di: Awaited<ReturnType<typeof bootstrap>>) {
     .basePath("/api")
     .use(
       ...bg.SetupHono.essentials(
-        { csrf: { origin: [] } },
+        { csrf: { origin: [] }, I18n: { languages: di.Tools.Languages, strategies: [] } },
         { ...di.Adapters.System, ...di.Tools, HashContent, CacheResolver },
       ),
     )

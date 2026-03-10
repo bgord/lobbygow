@@ -1,7 +1,9 @@
 # Changelog
+- 2026-03-10 11:20 938fafb **step: update packages**
+## 2026-03-10 11:20 
 - 2026-03-08 20:45 f1f24a5 **refactor: update shield timeout**
-## 2026-03-08 20:45 
 - 2026-03-08 20:44 5a8745c **step: update packages**
+- 2026-03-08 19:45 16cf37b **docs: generate CHANGELOG**
 - 2026-03-08 15:26 3a44ec7 **step: bump bgord/scripts**
 - 2026-03-08 12:10 9a5720f **refactor: standardize modules/language**
 - 2026-03-08 11:58 f06aa9f **refactor: use new languages**

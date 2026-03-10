@@ -5,8 +5,8 @@
     "": {
       "name": "lobbygow",
       "dependencies": {
-        "@bgord/bun": "1.12.7",
-        "nodemailer": "8.0.1",
+        "@bgord/bun": "1.12.8",
+        "nodemailer": "8.0.2",
         "zod": "4.3.6",
       },
       "devDependencies": {
@@ -90,7 +90,7 @@
 
     "@babel/types": ["@babel/types@7.29.0", "", { "dependencies": { "@babel/helper-string-parser": "^7.27.1", "@babel/helper-validator-identifier": "^7.28.5" } }, "sha512-LwdZHpScM4Qz8Xw2iKSzS+cfglZzJGvofQICy7W7v4caru4EaAmyUuO6BGrbyQ2mYV11W0U8j5mBhd14dd3B0A=="],
 
-    "@bgord/bun": ["@bgord/bun@1.12.7", "", { "dependencies": { "@bgord/tools": "1.3.24", "emittery": "2.0.0", "hono": "4.12.5", "node-cache": "5.1.2" }, "peerDependencies": { "better-auth": "1.5.4", "csv": "6.4.1", "nodemailer": "8.0.1", "resend": "6.9.3", "sharp": "0.34.5", "yazl": "3.3.1", "zod": "4.3.6" }, "optionalPeers": ["better-auth", "csv", "nodemailer", "resend", "sharp", "yazl"] }, "sha512-n2oJRqz7+KBdCm+RclddmHNVbqcLiy9m49UOi4aYB0yBwHifkS31K4Zsn5hQpKWKQ8KcXyhprwDXkMVYqlruOg=="],
+    "@bgord/bun": ["@bgord/bun@1.12.8", "", { "dependencies": { "@bgord/tools": "1.3.24", "emittery": "2.0.0", "hono": "4.12.6", "node-cache": "5.1.2" }, "peerDependencies": { "better-auth": "1.5.4", "csv": "6.4.1", "nodemailer": "8.0.2", "resend": "6.9.3", "sharp": "0.34.5", "yazl": "3.3.1", "zod": "4.3.6" }, "optionalPeers": ["better-auth", "csv", "nodemailer", "resend", "sharp", "yazl"] }, "sha512-4prNEH1i+6ISbYrEI5bsHH6JQBkU9WPOlVm1WhNA31olc333CC7Lh+FeyVfq7lyPinJiOTme8eY8sYZ7g2v2Rg=="],
 
     "@bgord/tools": ["@bgord/tools@1.3.24", "", { "dependencies": { "date-fns": "4.1.0" }, "peerDependencies": { "zod": "4.3.6" } }, "sha512-zbQvqfNsuCqVFWQ/jO4TSHa8rORNFp4kzUyQLjcwWPxyw0kDV7tOJLiyw9uTjfpB+x7xbpV0irgzPX2InodT0Q=="],
 
@@ -686,7 +686,7 @@
 
     "hasown": ["hasown@2.0.2", "", { "dependencies": { "function-bind": "^1.1.2" } }, "sha512-0hJU9SCPvmMzIBdZFqNPXWa6dqh7WdH0cII9y+CyS8rG3nL48Bclra9HmKhVVUHyPWNH5Y7xDwAB7bfgSjkUMQ=="],
 
-    "hono": ["hono@4.12.5", "", {}, "sha512-3qq+FUBtlTHhtYxbxheZgY8NIFnkkC/MR8u5TTsr7YZ3wixryQ3cCwn3iZbg8p8B88iDBBAYSfZDS75t8MN7Vg=="],
+    "hono": ["hono@4.12.6", "", {}, "sha512-KljEp+MeEEEIOT75qBo1UjqqB29fRMtlDEwCxcexOzdkUq6LR/vRvHk5pdROcxyOYyW1niq7Gb5pFVGy5R1eBw=="],
 
     "human-signals": ["human-signals@8.0.1", "", {}, "sha512-eKCa6bwnJhvxj14kZk5NCPc6Hb6BdsU9DZcOnmQKSnO1VKrfV0zCvtttPZUsBvjmNDn8rpcJfpwSYnHBjc95MQ=="],
 
@@ -832,7 +832,7 @@
 
     "node-releases": ["node-releases@2.0.36", "", {}, "sha512-TdC8FSgHz8Mwtw9g5L4gR/Sh9XhSP/0DEkQxfEFXOpiul5IiHgHan2VhYYb6agDSfp4KuvltmGApc8HMgUrIkA=="],
 
-    "nodemailer": ["nodemailer@8.0.1", "", {}, "sha512-5kcldIXmaEjZcHR6F28IKGSgpmZHaF1IXLWFTG+Xh3S+Cce4MiakLtWY+PlBU69fLbRa8HlaGIrC/QolUpHkhg=="],
+    "nodemailer": ["nodemailer@8.0.2", "", {}, "sha512-zbj002pZAIkWQFxyAaqoxvn+zoIwRnS40hgjqTXudKOOJkiFFgBeNqjgD3/YCR12sZnrghWYBY+yP1ZucdDRpw=="],
 
     "npm-run-path": ["npm-run-path@6.0.0", "", { "dependencies": { "path-key": "^4.0.0", "unicorn-magic": "^0.3.0" } }, "sha512-9qny7Z9DsQU8Ou39ERsPU4OZQlSTP47ShQzuKZ6PRXpYLtIFgl/DEBYEXKlvcEa+9tHVcK8CF81Y2V72qaZhWA=="],
 

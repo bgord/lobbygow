@@ -1,5 +1,5 @@
 import type * as bg from "@bgord/bun";
-import type { EnvironmentType } from "+infra/env";
+import type { EnvironmentResultType } from "+infra/env";
 import { createBuildInfoRepository } from "./build-info-repository.strategy";
 import { createPrerequisites } from "./prerequisites";
 import { createShieldApiKey } from "./shield-api-key.strategy";
@@ -21,7 +21,7 @@ type Dependencies = {
   FileInspection: bg.FileInspectionPort;
 };
 
-export function createTools(Env: EnvironmentType, deps: Dependencies) {
+export function createTools(Env: EnvironmentResultType, deps: Dependencies) {
   return {
     ShieldTimeout,
     ShieldRateLimit: createShieldRateLimit(Env, deps),

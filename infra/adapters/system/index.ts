@@ -1,4 +1,4 @@
-import type { EnvironmentType } from "+infra/env";
+import type { EnvironmentResultType } from "+infra/env";
 import { createCertificateInspector } from "./certificate-inspector.adapter";
 import { Clock } from "./clock.adapter";
 import { createDiskSpaceChecker } from "./disk-space-checker.adapter";
@@ -11,7 +11,7 @@ import { createSleeper } from "./sleeper.adapter";
 import { createTimekeeper } from "./timekeeper.adapter";
 import { createTimeoutRunner } from "./timeout-runner.adapter";
 
-export async function createSystemAdapters(Env: EnvironmentType) {
+export async function createSystemAdapters(Env: EnvironmentResultType) {
   const Logger = createLogger(Env, { Clock });
   const Mailer = await createMailer(Env, { Logger, Clock });
   const Timekeeper = createTimekeeper(Env, { Clock });

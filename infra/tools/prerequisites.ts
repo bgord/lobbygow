@@ -1,6 +1,6 @@
 import * as bg from "@bgord/bun";
 import * as tools from "@bgord/tools";
-import { type EnvironmentType, MasterKeyPath, SecretsPath } from "+infra/env";
+import { type EnvironmentResultType, MasterKeyPath, SecretsPath } from "+infra/env";
 
 type Dependencies = {
   Clock: bg.ClockPort;
@@ -14,7 +14,7 @@ type Dependencies = {
   FileInspection: bg.FileInspectionPort;
 };
 
-export function createPrerequisites(Env: EnvironmentType, deps: Dependencies) {
+export function createPrerequisites(Env: EnvironmentResultType, deps: Dependencies) {
   const production = Env.type === bg.NodeEnvironmentEnum.production;
   const local = Env.type === bg.NodeEnvironmentEnum.local;
 

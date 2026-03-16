@@ -1,7 +1,9 @@
 # Changelog
+- 2026-03-16 12:19 3c83b5d **step: update packages**
+## 2026-03-16 12:19 
 - 2026-03-16 12:02 47b1d4c **refactor: adjust env**
-## 2026-03-16 12:02 
 - 2026-03-16 11:51 cca6a96 **step: update packages**
+- 2026-03-16 11:15 b839f3a **docs: generate CHANGELOG**
 - 2026-03-12 17:55 202ba4f **step: update packages**
 - 2026-03-10 11:20 938fafb **step: update packages**
 - 2026-03-10 10:20 e1933f7 **docs: generate CHANGELOG**

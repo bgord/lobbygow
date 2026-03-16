@@ -1,6 +1,10 @@
 # Changelog
+- 2026-03-16 12:02 47b1d4c **refactor: adjust env**
+## 2026-03-16 12:02 
+- 2026-03-16 11:51 cca6a96 **step: update packages**
+- 2026-03-12 17:55 202ba4f **step: update packages**
 - 2026-03-10 11:20 938fafb **step: update packages**
-## 2026-03-10 11:20 
+- 2026-03-10 10:20 e1933f7 **docs: generate CHANGELOG**
 - 2026-03-08 20:45 f1f24a5 **refactor: update shield timeout**
 - 2026-03-08 20:44 5a8745c **step: update packages**
 - 2026-03-08 19:45 16cf37b **docs: generate CHANGELOG**

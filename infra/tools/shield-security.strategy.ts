@@ -1,5 +1,6 @@
 import * as bg from "@bgord/bun";
 import * as tools from "@bgord/tools";
+import * as v from "valibot";
 import type { EnvironmentResultType } from "+infra/env";
 
 type Dependencies = { Sleeper: bg.SleeperPort; Logger: bg.LoggerPort };
@@ -20,7 +21,7 @@ export function createShieldSecurity(Env: EnvironmentResultType, deps: Dependenc
         new bg.SecurityPolicy(
           new bg.SecurityRuleViolationThresholdStrategy(
             new bg.SecurityRuleBaitRoutesStrategy(["/api/.env"]),
-            { threshold: tools.IntegerPositive.parse(3) },
+            { threshold: v.parse(tools.IntegerPositive, 3) },
             { ...deps, HashContent, CacheRepository },
           ),
           new bg.SecurityCountermeasureReportStrategy(deps),
@@ -29,7 +30,7 @@ export function createShieldSecurity(Env: EnvironmentResultType, deps: Dependenc
         new bg.SecurityPolicy(
           new bg.SecurityRuleViolationThresholdStrategy(
             new bg.SecurityRuleUserAgentStrategy(),
-            { threshold: tools.IntegerPositive.parse(3) },
+            { threshold: v.parse(tools.IntegerPositive, 3) },
             { ...deps, HashContent, CacheRepository },
           ),
           new bg.SecurityCountermeasureReportStrategy(deps),

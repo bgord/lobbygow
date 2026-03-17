@@ -1,10 +1,11 @@
 import { describe, expect, jest, spyOn, test } from "bun:test";
 import * as bg from "@bgord/bun";
+import * as v from "valibot";
 import * as Notifier from "+notifier";
 import { bootstrap } from "+infra/bootstrap";
 
-const subject = bg.MailerSubject.parse("subject");
-const content = bg.MailerContentHtml.parse("content");
+const subject = v.parse(bg.MailerSubject, "subject");
+const content = v.parse(bg.MailerContentHtml, "content");
 
 describe("Notification", async () => {
   const di = await bootstrap();
@@ -25,7 +26,10 @@ describe("Notification", async () => {
       const message = await notification.compose(composer);
 
       expect(composer).toBeInstanceOf(Notifier.Services.NotificationComposerSuccess);
-      expect(message).toEqual({ subject: bg.MailerSubject.parse(`✅ [SUCCESS] ${subject}`), html: content });
+      expect(message).toEqual({
+        subject: v.parse(bg.MailerSubject, `✅ [SUCCESS] ${subject}`),
+        html: content,
+      });
     });
 
     test("kind - error", async () => {
@@ -42,7 +46,7 @@ describe("Notification", async () => {
       const message = await notification.compose(composer);
 
       expect(composer).toBeInstanceOf(Notifier.Services.NotificationComposerError);
-      expect(message).toEqual({ subject: bg.MailerSubject.parse(`❌ [ERROR] ${subject}`), html: content });
+      expect(message).toEqual({ subject: v.parse(bg.MailerSubject, `❌ [ERROR] ${subject}`), html: content });
     });
 
     test("kind - info", async () => {
@@ -59,7 +63,7 @@ describe("Notification", async () => {
       const message = await notification.compose(composer);
 
       expect(composer).toBeInstanceOf(Notifier.Services.NotificationComposerInfo);
-      expect(message).toEqual({ subject: bg.MailerSubject.parse(`ℹ️  [INFO] ${subject}`), html: content });
+      expect(message).toEqual({ subject: v.parse(bg.MailerSubject, `ℹ️  [INFO] ${subject}`), html: content });
     });
   });
 

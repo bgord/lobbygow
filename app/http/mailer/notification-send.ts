@@ -1,5 +1,6 @@
 import * as bg from "@bgord/bun";
 import type hono from "hono";
+import * as v from "valibot";
 import * as Notifier from "+notifier";
 import type { bootstrap } from "+infra/bootstrap";
 
@@ -7,8 +8,8 @@ export const NotificationSend =
   (di: Awaited<ReturnType<typeof bootstrap>>) => async (c: hono.Context, _next: hono.Next) => {
     const body = await c.req.json();
 
-    const subject = bg.MailerSubject.parse(body.subject);
-    const content = bg.MailerContentHtml.parse(body.content);
+    const subject = v.parse(bg.MailerSubject, body.subject);
+    const content = v.parse(bg.MailerContentHtml, body.content);
     const kind = Notifier.VO.NotificationKind.parse(body.kind);
 
     const notification = new Notifier.Services.Notification(

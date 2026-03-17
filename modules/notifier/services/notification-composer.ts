@@ -1,4 +1,5 @@
 import * as bg from "@bgord/bun";
+import * as v from "valibot";
 import * as VO from "../value-objects";
 
 export abstract class NotificationComposerStrategy {
@@ -33,7 +34,7 @@ export class NotificationComposerError implements NotificationComposerStrategy {
     subject: bg.MailerSubjectType,
     html: bg.MailerContentHtmlType,
   ): Promise<bg.MailerTemplateMessage> {
-    return { subject: bg.MailerSubject.parse(`❌ [ERROR] ${subject}`), html };
+    return { subject: v.parse(bg.MailerSubject, `❌ [ERROR] ${subject}`), html };
   }
 }
 
@@ -49,7 +50,7 @@ export class NotificationComposerInfo implements NotificationComposerStrategy {
     subject: bg.MailerSubjectType,
     html: bg.MailerContentHtmlType,
   ): Promise<bg.MailerTemplateMessage> {
-    return { subject: bg.MailerSubject.parse(`ℹ️  [INFO] ${subject}`), html };
+    return { subject: v.parse(bg.MailerSubject, `ℹ️  [INFO] ${subject}`), html };
   }
 }
 
@@ -65,6 +66,6 @@ export class NotificationComposerSuccess implements NotificationComposerStrategy
     subject: bg.MailerSubjectType,
     html: bg.MailerContentHtmlType,
   ): Promise<bg.MailerTemplateMessage> {
-    return { subject: bg.MailerSubject.parse(`✅ [SUCCESS] ${subject}`), html };
+    return { subject: v.parse(bg.MailerSubject, `✅ [SUCCESS] ${subject}`), html };
   }
 }

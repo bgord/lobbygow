@@ -1,10 +1,13 @@
 # Changelog
+- 2026-03-17 21:43 e267708 **refactor: use Int**
+## 2026-03-17 21:43 
+- 2026-03-17 21:42 37dd27d **step: update packages**
 - 2026-03-17 11:30 25428ac **refactor: error handler**
-## 2026-03-17 11:30 
 - 2026-03-17 11:27 42b44c4 **refactor: env**
 - 2026-03-17 11:22 185ee9f **refactor: vos**
 - 2026-03-17 11:14 e0aa520 **step: update packages**
 - 2026-03-17 11:14 5c5ec1b **refactor: remove zod**
+- 2026-03-17 10:34 4fdb9c0 **docs: generate CHANGELOG**
 - 2026-03-16 12:19 3c83b5d **step: update packages**
 - 2026-03-16 12:02 47b1d4c **refactor: adjust env**
 - 2026-03-16 11:51 cca6a96 **step: update packages**

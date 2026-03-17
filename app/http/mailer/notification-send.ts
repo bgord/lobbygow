@@ -10,7 +10,7 @@ export const NotificationSend =
 
     const subject = v.parse(bg.MailerSubject, body.subject);
     const content = v.parse(bg.MailerContentHtml, body.content);
-    const kind = Notifier.VO.NotificationKind.parse(body.kind);
+    const kind = v.parse(Notifier.VO.NotificationKind, body.kind);
 
     const notification = new Notifier.Services.Notification(
       di.Env.EMAIL_FROM,

@@ -1,4 +1,7 @@
-import z from "zod/v4";
+import * as v from "valibot";
 import { NotificationKindEnum } from "./notification-kind-enum";
 
-export const NotificationKind = z.enum(NotificationKindEnum).optional().default(NotificationKindEnum.info);
+export const NotificationKind = v.optional(
+  v.picklist(Object.values(NotificationKindEnum)),
+  NotificationKindEnum.info,
+);

@@ -1,7 +1,7 @@
 import * as bg from "@bgord/bun";
 import type hono from "hono";
 import { HTTPException } from "hono/http-exception";
-import z from "zod/v4";
+import * as v from "valibot";
 
 type Dependencies = { Logger: bg.LoggerPort };
 
@@ -31,7 +31,7 @@ export class ErrorHandler {
       return error.getResponse();
     }
 
-    if (error instanceof z.ZodError) {
+    if (error instanceof v.ValiError) {
       const validationError = error.issues.find((issue) => validationErrors.includes(issue.message));
 
       if (validationError) {

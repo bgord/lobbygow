@@ -67,11 +67,7 @@ describe(`POST ${url}`, async () => {
 
     const response = await server.request(
       url,
-      {
-        method: "POST",
-        body: JSON.stringify(payload),
-        headers,
-      },
+      { method: "POST", body: JSON.stringify(payload), headers },
       mocks.ip,
     );
 

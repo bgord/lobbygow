@@ -13,7 +13,9 @@ import { createTimeoutRunner } from "./timeout-runner.adapter";
 
 export async function createSystemAdapters(Env: EnvironmentResultType) {
   const Logger = createLogger(Env, { Clock });
-  const Mailer = await createMailer(Env, { Logger, Clock });
+  const Sleeper = createSleeper(Env);
+  const TimeoutRunner = createTimeoutRunner(Env);
+  const Mailer = await createMailer(Env, { Logger, Clock, Sleeper, TimeoutRunner });
   const Timekeeper = createTimekeeper(Env, { Clock });
 
   return {
@@ -25,8 +27,8 @@ export async function createSystemAdapters(Env: EnvironmentResultType) {
     Logger,
     Mailer,
     Timekeeper,
-    Sleeper: createSleeper(Env),
-    TimeoutRunner: createTimeoutRunner(Env),
+    Sleeper,
+    TimeoutRunner,
     FileInspection: createFileInspection(Env),
   };
 }

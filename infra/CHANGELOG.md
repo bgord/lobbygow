@@ -1,7 +1,10 @@
 # Changelog
+- 2026-03-18 12:59 2f4a6bf **refactor: use mailer builder**
+- 2026-03-18 12:59 2d14bb1 **step: update packages**
+## 2026-03-18 12:59 
 - 2026-03-17 21:43 e267708 **refactor: use Int**
-## 2026-03-17 21:43 
 - 2026-03-17 21:42 37dd27d **step: update packages**
+- 2026-03-17 20:43 4fa3d8b **docs: generate CHANGELOG**
 - 2026-03-17 11:30 25428ac **refactor: error handler**
 - 2026-03-17 11:27 42b44c4 **refactor: env**
 - 2026-03-17 11:22 185ee9f **refactor: vos**

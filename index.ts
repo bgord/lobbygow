@@ -7,7 +7,7 @@ import { createServer } from "./server";
   const di = await bootstrap();
   const server = createServer(di);
 
-  await new bg.PrerequisiteRunnerStartup(di.Adapters.System).check(di.Tools.Prerequisites);
+  await new bg.PrerequisiteRunnerStartup(di.Adapters.System).check(di.Tools.Prerequisites.healthcheck);
   bg.EventLoopLag.start();
 
   const app = Bun.serve({

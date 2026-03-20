@@ -20,7 +20,13 @@ export function createServer(di: Awaited<ReturnType<typeof bootstrap>>) {
     )
     .use(di.Tools.ShieldSecurity.handle());
 
-  // Healthcheck =================
+  // Probes =================
+  server.get("/liveness", ...new bg.LivenessHonoHandler().handle());
+  server.get(
+    "/readiness",
+    di.Tools.ShieldTimeout.handle(),
+    ...new bg.ReadinessHonoHandler({ prerequisites: [] }).handle(),
+  );
   server.get(
     "/healthcheck",
     di.Tools.ShieldRateLimit.handle(),

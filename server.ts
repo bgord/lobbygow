@@ -25,7 +25,7 @@ export function createServer(di: Awaited<ReturnType<typeof bootstrap>>) {
   server.get(
     "/readiness",
     di.Tools.ShieldTimeout.handle(),
-    ...new bg.ReadinessHonoHandler({ prerequisites: [] }).handle(),
+    ...new bg.ReadinessHonoHandler({ prerequisites: di.Tools.Prerequisites.readiness }).handle(),
   );
   server.get(
     "/healthcheck",

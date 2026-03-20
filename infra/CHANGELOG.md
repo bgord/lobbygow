@@ -1,7 +1,15 @@
 # Changelog
+- 2026-03-20 14:54 d242049 **step: add readiness prereqs**
+## 2026-03-20 14:54 
+- 2026-03-20 14:53 3a2ce34 **refactor: split prereqs to healthcheck and readiness**
+- 2026-03-20 14:50 5c444f2 **step: add probes**
+- 2026-03-20 14:45 4b6486a **step: update prereqs**
+- 2026-03-20 14:44 2eb9f3e **step: update packages**
+- 2026-03-20 14:44 1af478f **step: bump bgord/scripts**
+- 2026-03-18 15:55 ae89e56 **step: bump bgord/scripts**
 - 2026-03-18 12:59 2f4a6bf **refactor: use mailer builder**
 - 2026-03-18 12:59 2d14bb1 **step: update packages**
-## 2026-03-18 12:59 
+- 2026-03-18 12:00 dd006df **docs: generate CHANGELOG**
 - 2026-03-17 21:43 e267708 **refactor: use Int**
 - 2026-03-17 21:42 37dd27d **step: update packages**
 - 2026-03-17 20:43 4fa3d8b **docs: generate CHANGELOG**

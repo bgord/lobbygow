@@ -11,7 +11,7 @@ export function createBuildInfoConfig(
 ): bg.ReactiveConfigPort<bg.BuildInfoType> {
   const noop = new bg.ReactiveConfigNoopAdapter<bg.BuildInfoType>(bg.BuildInfo, {
     timestamp: tools.Timestamp.fromNumber(1767775662000).ms,
-    version: v.parse(tools.PackageVersionSchema, "1.0.0"),
+    version: v.parse(tools.PackageVersionSchema, "v1.0.0"),
     sha: bg.CommitSha.fromString("a".repeat(40)).toString(),
     size: tools.Size.fromBytes(0).toBytes(),
   });

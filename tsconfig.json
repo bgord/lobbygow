@@ -1,6 +1,5 @@
 {
   "compilerOptions": {
-    "esModuleInterop": true,
     "incremental": true,
     "jsx": "react",
     "lib": ["ESNext", "DOM"],
@@ -9,7 +8,6 @@
     "noUnusedParameters": true,
     "resolveJsonModule": true,
     "skipLibCheck": true,
-    "strict": true,
     "paths": {
       "+infra": ["./infra/index"],
       "+infra/*": ["./infra/*"],

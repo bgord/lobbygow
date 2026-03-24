@@ -1,13 +1,17 @@
 {
   "compilerOptions": {
+    "module": "preserve",
+    "moduleResolution": "bundler",
+    "skipLibCheck": true,
     "incremental": true,
     "jsx": "react",
     "lib": ["ESNext", "DOM"],
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitReturns": true,
+    "noPropertyAccessFromIndexSignature": true,
     "noUncheckedIndexedAccess": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "resolveJsonModule": true,
-    "skipLibCheck": true,
     "paths": {
       "+infra": ["./infra/index"],
       "+infra/*": ["./infra/*"],
@@ -16,7 +20,8 @@
       "+app": ["./app/index"],
       "+app/*": ["./app/*"],
       "+languages": ["./modules/languages.ts"]
-    }
+    },
+    "types": ["bun"]
   },
   "exclude": ["bgord-scripts"]
 }

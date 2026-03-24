@@ -91,7 +91,7 @@ infra/
 ├── bootstrap.ts
 ├── env.ts
 └── tools
-    ├── build-info-repository.strategy.ts
+    ├── build-info-config.adapter.ts
     ├── prerequisites.ts
     ├── shield-api-key.strategy.ts
     ├── shield-basic-auth.strategy.ts

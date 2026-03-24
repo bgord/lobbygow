@@ -1,6 +1,11 @@
 # Changelog
+- 2026-03-24 10:54 b4486b0 **refactor: update tsconfig**
+## 2026-03-24 10:54 
+- 2026-03-24 10:51 ffbad06 **refactor: remove defaults**
+- 2026-03-24 10:47 2514570 **refactor: build info config**
+- 2026-03-24 10:37 71f22e3 **step: update packages**
+- 2026-03-22 19:54 3b85830 **docs: generate CHANGELOG**
 - 2026-03-22 18:47 da89c32 **step: update packages**
-## 2026-03-22 18:47 
 - 2026-03-20 14:54 d242049 **step: add readiness prereqs**
 - 2026-03-20 14:53 3a2ce34 **refactor: split prereqs to healthcheck and readiness**
 - 2026-03-20 14:50 5c444f2 **step: add probes**

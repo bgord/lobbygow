@@ -1,6 +1,8 @@
 # Changelog
+- 2026-03-26 10:57 ac9714a **step: update packages**
+## 2026-03-26 10:57 
 - 2026-03-25 16:55 7fbf75c **step: update packages**
-## 2026-03-25 16:55 
+- 2026-03-25 15:55 c61901e **docs: generate CHANGELOG**
 - 2026-03-24 10:58 59fb22f **step: bump bgord/scripts**
 - 2026-03-24 10:54 b4486b0 **refactor: update tsconfig**
 - 2026-03-24 10:51 ffbad06 **refactor: remove defaults**

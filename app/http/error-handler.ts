@@ -17,15 +17,12 @@ export class ErrorHandler {
         return c.json({ message: "request_timeout_error", _known: true }, 408);
       }
 
-      if (error.message === bg.ShieldApiKeyError.message) {
-        return c.json({ message: bg.ShieldApiKeyError.message, _known: true }, bg.ShieldApiKeyError.status);
+      if (error.message === bg.ShieldApiKeyStrategyError.Rejected) {
+        return c.json({ message: bg.ShieldApiKeyStrategyError.Rejected, _known: true }, 403);
       }
 
-      if (error.message === bg.ShieldRateLimitError.message) {
-        return c.json(
-          { message: bg.ShieldRateLimitError.message, _known: true },
-          bg.ShieldRateLimitError.status,
-        );
+      if (error.message === bg.ShieldRateLimitStrategyError.Rejected) {
+        return c.json({ message: bg.ShieldRateLimitStrategyError.Rejected, _known: true }, 429);
       }
 
       return error.getResponse();

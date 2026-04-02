@@ -1,6 +1,7 @@
 import * as bg from "@bgord/bun";
 import * as tools from "@bgord/tools";
 import { bootstrap } from "+infra/bootstrap";
+import { registerCronTasks } from "+infra/register-cron-tasks";
 import { createServer } from "./server";
 
 (async function main() {
@@ -9,6 +10,8 @@ import { createServer } from "./server";
 
   await new bg.PrerequisiteRunnerStartup(di.Adapters.System).check(di.Tools.Prerequisites.healthcheck);
   bg.EventLoopLag.start();
+
+  registerCronTasks(di);
 
   const app = Bun.serve({
     port: di.Env.PORT,

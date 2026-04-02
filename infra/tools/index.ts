@@ -1,6 +1,7 @@
 import type * as bg from "@bgord/bun";
 import type { EnvironmentResultType } from "+infra/env";
 import { createBuildInfoConfig } from "./build-info-config.adapter";
+import { createCronScheduler } from "./cron-scheduler.adapter";
 import { createPrerequisites } from "./prerequisites";
 import { createShieldApiKey } from "./shield-api-key.strategy";
 import { createShieldBasicAuth } from "./shield-basic-auth.strategy";
@@ -21,8 +22,11 @@ type Dependencies = {
   FileInspection: bg.FileInspectionPort;
 };
 
-export function createTools(Env: EnvironmentResultType, deps: Dependencies) {
+export async function createTools(Env: EnvironmentResultType, deps: Dependencies) {
+  const CronScheduler = await createCronScheduler(Env, deps);
+
   return {
+    CronScheduler,
     ShieldTimeout,
     ShieldRateLimit: createShieldRateLimit(Env, deps),
     ShieldBasicAuth: createShieldBasicAuth(Env),

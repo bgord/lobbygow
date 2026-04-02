@@ -6,6 +6,9 @@ export async function bootstrap() {
   const EnvironmentLoader = await createEnvironmentLoader();
   const Env = await EnvironmentLoader.load();
   const System = await createSystemAdapters(Env);
+  const Tools = await createTools(Env, System);
 
-  return { Env, Adapters: { System }, Tools: createTools(Env, System) };
+  return { Env, Adapters: { System }, Tools };
 }
+
+export type BootstrapType = Awaited<ReturnType<typeof bootstrap>>;

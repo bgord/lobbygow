@@ -1,6 +1,9 @@
 # Changelog
+- 2026-04-02 14:17 796f935 **refactor: update configs**
+## 2026-04-02 14:17 
+- 2026-04-02 14:15 607fae6 **step: update packages**
 - 2026-03-29 10:41 0d20daf **step: update packages**
-## 2026-03-29 10:41 
+- 2026-03-29 08:41 5aa820d **docs: generate CHANGELOG**
 - 2026-03-28 09:58 e76f684 **step: update packages**
 - 2026-03-28 08:58 02a7a49 **docs: generate CHANGELOG**
 - 2026-03-26 17:18 18a0af4 **step: update packages**

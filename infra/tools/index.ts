@@ -2,6 +2,7 @@ import type * as bg from "@bgord/bun";
 import type { EnvironmentResultType } from "+infra/env";
 import { createBuildInfoConfig } from "./build-info-config.adapter";
 import { createCronScheduler } from "./cron-scheduler.adapter";
+import { createJobQueue } from "./job-queue.adapter";
 import { createPrerequisites } from "./prerequisites";
 import { createShieldApiKey } from "./shield-api-key.strategy";
 import { createShieldBasicAuth } from "./shield-basic-auth.strategy";
@@ -24,6 +25,7 @@ type Dependencies = {
 
 export async function createTools(Env: EnvironmentResultType, deps: Dependencies) {
   const CronScheduler = await createCronScheduler(Env, deps);
+  const JobQueue = await createJobQueue(Env, deps);
 
   return {
     CronScheduler,
@@ -34,5 +36,6 @@ export async function createTools(Env: EnvironmentResultType, deps: Dependencies
     Prerequisites: createPrerequisites(Env, deps),
     ShieldSecurity: createShieldSecurity(Env, deps),
     BuildInfoConfig: createBuildInfoConfig(Env, deps),
+    JobQueue,
   };
 }

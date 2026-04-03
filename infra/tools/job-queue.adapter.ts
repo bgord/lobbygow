@@ -3,7 +3,7 @@ import * as tools from "@bgord/tools";
 import * as Notifier from "+notifier";
 import type { EnvironmentResultType } from "+infra/env";
 
-type Dependencies = { Clock: bg.ClockPort };
+type Dependencies = { Clock: bg.ClockPort; Mailer: bg.MailerPort };
 
 export type AcceptedJob = Notifier.Jobs.SendEmailJobType;
 
@@ -17,7 +17,7 @@ export async function createJobQueue(
     [Notifier.Jobs.SEND_EMAIL_JOB]: {
       schema: Notifier.Jobs.SendEmailJobSchema,
       retry: new bg.JobRetryPolicyLimitStrategy(tools.Int.nonNegative(3)),
-      handler: Notifier.JobHandlers.SendEmailJobHandler,
+      handler: Notifier.JobHandlers.SendEmailJobHandler(deps),
     },
   });
 

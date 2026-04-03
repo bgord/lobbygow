@@ -1,71 +1,31 @@
 import * as bg from "@bgord/bun";
 import * as v from "valibot";
-import * as VO from "../value-objects";
+import * as VO from "+notifier/value-objects";
 
-export abstract class NotificationComposerStrategy {
-  abstract strategy: string;
-
-  abstract compose(
-    subject: bg.MailerSubjectType,
-    content: bg.MailerContentHtmlType,
-  ): Promise<bg.MailerTemplateMessage>;
+interface NotificationComposerStrategy {
+  compose(subject: bg.MailerSubjectType, content: bg.MailerContentHtmlType): bg.MailerTemplateMessage;
 }
 
-export class NotificationComposerChooser {
-  static choose(kind: VO.NotificationKindEnum): NotificationComposerStrategy {
-    const strategies = [NotificationComposerSuccess, NotificationComposerInfo, NotificationComposerError];
-
-    const NotificationComposerStrategy =
-      strategies.find((strategy) => strategy.isApplicable(kind)) ?? NotificationComposerInfo;
-
-    return new NotificationComposerStrategy();
+class NotificationComposerError implements NotificationComposerStrategy {
+  compose(subject: bg.MailerSubjectType, content: bg.MailerContentHtmlType): bg.MailerTemplateMessage {
+    return { subject: v.parse(bg.MailerSubject, `❌ [ERROR] ${subject}`), html: content };
   }
 }
 
-/** @public */
-export class NotificationComposerError implements NotificationComposerStrategy {
-  strategy = "error";
-
-  static isApplicable(kind: VO.NotificationKindEnum) {
-    return kind === VO.NotificationKindEnum.error;
-  }
-
-  async compose(
-    subject: bg.MailerSubjectType,
-    html: bg.MailerContentHtmlType,
-  ): Promise<bg.MailerTemplateMessage> {
-    return { subject: v.parse(bg.MailerSubject, `❌ [ERROR] ${subject}`), html };
+class NotificationComposerInfo implements NotificationComposerStrategy {
+  compose(subject: bg.MailerSubjectType, content: bg.MailerContentHtmlType): bg.MailerTemplateMessage {
+    return { subject: v.parse(bg.MailerSubject, `ℹ️  [INFO] ${subject}`), html: content };
   }
 }
 
-/** @public */
-export class NotificationComposerInfo implements NotificationComposerStrategy {
-  strategy = "info";
-
-  static isApplicable(kind: VO.NotificationKindEnum) {
-    return kind === VO.NotificationKindEnum.info;
-  }
-
-  async compose(
-    subject: bg.MailerSubjectType,
-    html: bg.MailerContentHtmlType,
-  ): Promise<bg.MailerTemplateMessage> {
-    return { subject: v.parse(bg.MailerSubject, `ℹ️  [INFO] ${subject}`), html };
+class NotificationComposerSuccess implements NotificationComposerStrategy {
+  compose(subject: bg.MailerSubjectType, content: bg.MailerContentHtmlType): bg.MailerTemplateMessage {
+    return { subject: v.parse(bg.MailerSubject, `✅ [SUCCESS] ${subject}`), html: content };
   }
 }
 
-/** @public */
-export class NotificationComposerSuccess implements NotificationComposerStrategy {
-  strategy = "success";
-
-  static isApplicable(kind: VO.NotificationKindEnum) {
-    return kind === VO.NotificationKindEnum.success;
-  }
-
-  async compose(
-    subject: bg.MailerSubjectType,
-    html: bg.MailerContentHtmlType,
-  ): Promise<bg.MailerTemplateMessage> {
-    return { subject: v.parse(bg.MailerSubject, `✅ [SUCCESS] ${subject}`), html };
-  }
-}
+export const NotificationComposer: Record<VO.NotificationKindEnum, NotificationComposerStrategy> = {
+  [VO.NotificationKindEnum.info]: new NotificationComposerInfo(),
+  [VO.NotificationKindEnum.error]: new NotificationComposerError(),
+  [VO.NotificationKindEnum.success]: new NotificationComposerSuccess(),
+};

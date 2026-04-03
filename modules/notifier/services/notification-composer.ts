@@ -24,6 +24,7 @@ class NotificationComposerSuccess implements NotificationComposerStrategy {
   }
 }
 
+/** @public */
 export const NotificationComposer: Record<VO.NotificationKindEnum, NotificationComposerStrategy> = {
   [VO.NotificationKindEnum.info]: new NotificationComposerInfo(),
   [VO.NotificationKindEnum.error]: new NotificationComposerError(),

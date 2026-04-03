@@ -5,7 +5,7 @@ import type { EnvironmentResultType } from "+infra/env";
 
 type Dependencies = { Clock: bg.ClockPort; Mailer: bg.MailerPort };
 
-export type AcceptedJob = Notifier.Jobs.SendEmailJobType;
+type AcceptedJob = Notifier.Jobs.SendEmailJobType;
 
 export async function createJobQueue(
   Env: EnvironmentResultType,

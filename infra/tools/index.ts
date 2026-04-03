@@ -26,7 +26,7 @@ type Dependencies = {
 export async function createTools(Env: EnvironmentResultType, deps: Dependencies) {
   return {
     BuildInfoConfig: createBuildInfoConfig(Env, deps),
-    CronScheduler: await createCronScheduler(Env),
+    CronScheduler: await createCronScheduler(Env, deps),
     JobQueue: await createJobQueue(Env, deps),
     Prerequisites: createPrerequisites(Env, deps),
     ShieldApiKey: createShieldApiKey(Env),

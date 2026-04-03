@@ -1,6 +1,7 @@
 # Changelog
+- 2026-04-03 18:10 9f073e2 **step: update packages**
+## 2026-04-03 18:10 
 - 2026-04-03 18:02 e718a4b **step: wire up job queue stats provider to healthcheck**
-## 2026-04-03 18:02 
 - 2026-04-03 17:58 0ee6285 **refactor: make room for job queue stats provider**
 - 2026-04-03 17:57 b271a6b **fix: cleanup exports**
 - 2026-04-03 17:55 a9ee2fe **step: update packages**
@@ -13,6 +14,7 @@
 - 2026-04-03 17:32 d9e7cce **step: add job queue noop adapter**
 - 2026-04-03 17:31 df66e6a **step: add test clock adapter**
 - 2026-04-03 17:31 7b5d067 **step: add mocks**
+- 2026-04-03 16:03 995ba8f **docs: generate CHANGELOG**
 - 2026-04-03 15:57 80de3b1 **docs: generate readme**
 - 2026-04-03 15:57 213b13f **docs: generate CHANGELOG**
 - 2026-04-02 21:43 1131bea **step: setup job worker**

@@ -24,18 +24,15 @@ type Dependencies = {
 };
 
 export async function createTools(Env: EnvironmentResultType, deps: Dependencies) {
-  const CronScheduler = await createCronScheduler(Env, deps);
-  const JobQueue = await createJobQueue(Env, deps);
-
   return {
-    CronScheduler,
-    ShieldTimeout,
-    ShieldRateLimit: createShieldRateLimit(Env, deps),
-    ShieldBasicAuth: createShieldBasicAuth(Env),
-    ShieldApiKey: createShieldApiKey(Env),
-    Prerequisites: createPrerequisites(Env, deps),
-    ShieldSecurity: createShieldSecurity(Env, deps),
     BuildInfoConfig: createBuildInfoConfig(Env, deps),
-    JobQueue,
+    CronScheduler: await createCronScheduler(Env),
+    JobQueue: await createJobQueue(Env, deps),
+    Prerequisites: createPrerequisites(Env, deps),
+    ShieldApiKey: createShieldApiKey(Env),
+    ShieldBasicAuth: createShieldBasicAuth(Env),
+    ShieldRateLimit: createShieldRateLimit(Env, deps),
+    ShieldSecurity: createShieldSecurity(Env, deps),
+    ShieldTimeout,
   };
 }

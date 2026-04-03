@@ -3,7 +3,7 @@ import * as tools from "@bgord/tools";
 import * as Notifier from "+notifier";
 import type { EnvironmentResultType } from "+infra/env";
 
-type Dependencies = { Logger: bg.LoggerPort; Clock: bg.ClockPort };
+type Dependencies = { Clock: bg.ClockPort };
 
 export type AcceptedJob = Notifier.Jobs.SendEmailJobType;
 
@@ -17,11 +17,11 @@ export async function createJobQueue(
     [Notifier.Jobs.SEND_EMAIL_JOB]: {
       schema: Notifier.Jobs.SendEmailJobSchema,
       retry: new bg.JobRetryPolicyLimitStrategy(tools.Int.nonNegative(3)),
-      handler: async (job: Notifier.Jobs.SendEmailJobType) => console.log(job),
+      handler: Notifier.JobHandlers.SendEmailJobHandler,
     },
   });
 
-  const inner = new bg.JobQueueAdapter<AcceptedJob>({
+  const JobQueue = new bg.JobQueueAdapter<AcceptedJob>({
     registry,
     enqueuer: new bg.JobEnqueuerSqliteAdapter({ db: store.db, ...deps }),
     claimer: new bg.JobClaimerSqliteAdapter({ db: store.db, ...deps }),
@@ -30,8 +30,6 @@ export async function createJobQueue(
     requeuer: new bg.JobRequeuerSqliteAdapter({ db: store.db, ...deps }),
     serializer: new bg.PayloadSerializerJsonAdapter(),
   });
-
-  const JobQueue = new bg.JobQueueWithLoggerAdapter<AcceptedJob>({ inner, ...deps });
 
   return {
     [bg.NodeEnvironmentEnum.local]: JobQueue,

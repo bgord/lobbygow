@@ -45,7 +45,7 @@ export function createServer(di: Awaited<ReturnType<typeof bootstrap>>) {
     di.Tools.ShieldRateLimit.handle(),
     di.Tools.ShieldTimeout.handle(),
     di.Tools.ShieldApiKey.handle(),
-    App.Http.Mailer.NotificationSend(di),
+    App.Http.Mailer.NotificationSend(di.Env, { ...di.Adapters.System, ...di.Tools }),
   );
   // =============================
 

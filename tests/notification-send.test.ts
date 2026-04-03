@@ -1,4 +1,4 @@
-import { describe, expect, jest, spyOn, test } from "bun:test";
+import { describe, expect, spyOn, test } from "bun:test";
 import * as bg from "@bgord/bun";
 import * as Notifier from "+notifier";
 import { bootstrap } from "+infra/bootstrap";
@@ -10,8 +10,7 @@ const url = "/api/notification-send";
 describe(`POST ${url}`, async () => {
   const di = await bootstrap();
   const server = createServer(di);
-  const headers = new Headers({ [bg.ShieldApiKeyStrategy.HEADER_NAME]: di.Env.API_KEY });
-  const config = { from: di.Env.EMAIL_FROM, to: di.Env.EMAIL_TO };
+  const headers = { [bg.ShieldApiKeyStrategy.HEADER_NAME]: di.Env.API_KEY, ...mocks.correlationIdHeaders };
 
   test("validation - empty payload", async () => {
     const response = await server.request(
@@ -21,7 +20,7 @@ describe(`POST ${url}`, async () => {
     );
     const json = await response.json();
 
-    expect(response.status).toBe(400);
+    expect(response.status).toEqual(400);
     expect(json).toEqual({ message: "mailer.subject.invalid", _known: true });
   });
 
@@ -37,7 +36,7 @@ describe(`POST ${url}`, async () => {
     );
     const json = await response.json();
 
-    expect(response.status).toBe(400);
+    expect(response.status).toEqual(400);
     expect(json).toEqual({ message: "mailer.subject.invalid", _known: true });
   });
 
@@ -53,87 +52,71 @@ describe(`POST ${url}`, async () => {
     );
     const json = await response.json();
 
-    expect(response.status).toBe(400);
+    expect(response.status).toEqual(400);
     expect(json).toEqual({ message: "mailer.content.html.invalid", _known: true });
   });
 
   test("happy path - info", async () => {
-    using mailerSend = spyOn(di.Adapters.System.Mailer, "send").mockImplementation(jest.fn());
-    const payload = {
-      subject: "subject",
-      content: "content",
-      kind: Notifier.VO.NotificationKindEnum.info,
-    };
+    using enqueue = spyOn(di.Tools.JobQueue, "enqueue");
 
     const response = await server.request(
       url,
-      { method: "POST", body: JSON.stringify(payload), headers },
+      {
+        method: "POST",
+        body: JSON.stringify({ ...mocks.notification, kind: Notifier.VO.NotificationKindEnum.info }),
+        headers,
+      },
       mocks.ip,
     );
 
-    expect(response.status).toBe(200);
-    expect(mailerSend).toHaveBeenCalledWith({
-      config,
-      message: { subject: `ℹ️  [INFO] ${payload.subject}`, html: payload.content },
-    });
+    expect(response.status).toEqual(200);
+    expect(enqueue).toHaveBeenCalledWith(mocks.GenericSendEmailJobInfo);
   });
 
   test("happy path - error", async () => {
-    using mailerSend = spyOn(di.Adapters.System.Mailer, "send").mockImplementation(jest.fn());
-    const payload = {
-      subject: "subject",
-      content: "content",
-      kind: Notifier.VO.NotificationKindEnum.error,
-    };
+    using enqueue = spyOn(di.Tools.JobQueue, "enqueue");
 
     const response = await server.request(
       url,
-      { method: "POST", body: JSON.stringify(payload), headers },
+      {
+        method: "POST",
+        body: JSON.stringify({ ...mocks.notification, kind: Notifier.VO.NotificationKindEnum.error }),
+        headers,
+      },
       mocks.ip,
     );
 
-    expect(response.status).toBe(200);
-    expect(mailerSend).toHaveBeenCalledWith({
-      config,
-      message: { subject: `❌ [ERROR] ${payload.subject}`, html: payload.content },
-    });
+    expect(response.status).toEqual(200);
+    expect(enqueue).toHaveBeenCalledWith(mocks.GenericSendEmailJobError);
   });
 
   test("happy path - success", async () => {
-    using mailerSend = spyOn(di.Adapters.System.Mailer, "send").mockImplementation(jest.fn());
-    const payload = {
-      subject: "subject",
-      content: "content",
-      kind: Notifier.VO.NotificationKindEnum.success,
-    };
+    using enqueue = spyOn(di.Tools.JobQueue, "enqueue");
 
     const response = await server.request(
       url,
-      { method: "POST", body: JSON.stringify(payload), headers },
+      {
+        method: "POST",
+        body: JSON.stringify({ ...mocks.notification, kind: Notifier.VO.NotificationKindEnum.success }),
+        headers,
+      },
       mocks.ip,
     );
 
-    expect(response.status).toBe(200);
-    expect(mailerSend).toHaveBeenCalledWith({
-      config,
-      message: { subject: `✅ [SUCCESS] ${payload.subject}`, html: payload.content },
-    });
+    expect(response.status).toEqual(200);
+    expect(enqueue).toHaveBeenCalledWith(mocks.GenericSendEmailJobSuccess);
   });
 
-  test("happy path - default kind", async () => {
-    using mailerSend = spyOn(di.Adapters.System.Mailer, "send").mockImplementation(jest.fn());
-    const payload = { subject: "subject", content: "content" };
+  test("happy path - default", async () => {
+    using enqueue = spyOn(di.Tools.JobQueue, "enqueue");
 
     const response = await server.request(
       url,
-      { method: "POST", body: JSON.stringify(payload), headers },
+      { method: "POST", body: JSON.stringify(mocks.notification), headers },
       mocks.ip,
     );
 
-    expect(response.status).toBe(200);
-    expect(mailerSend).toHaveBeenCalledWith({
-      config,
-      message: { subject: `ℹ️  [INFO] ${payload.subject}`, html: payload.content },
-    });
+    expect(response.status).toEqual(200);
+    expect(enqueue).toHaveBeenCalledWith(mocks.GenericSendEmailJobInfo);
   });
 });

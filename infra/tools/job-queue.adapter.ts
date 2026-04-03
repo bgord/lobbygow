@@ -46,6 +46,7 @@ export async function createJobQueue(
       [bg.NodeEnvironmentEnum.staging]: JobQueue,
       [bg.NodeEnvironmentEnum.production]: JobQueue,
     }[Env.type],
+
     JobQueueStatsProvider: {
       [bg.NodeEnvironmentEnum.local]: new bg.JobQueueStatsProviderNoopAdapter(),
       [bg.NodeEnvironmentEnum.test]: new bg.JobQueueStatsProviderNoopAdapter(),

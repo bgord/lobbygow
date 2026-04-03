@@ -10,7 +10,7 @@ type AcceptedJob = Notifier.Jobs.SendEmailJobType;
 export async function createJobQueue(
   Env: EnvironmentResultType,
   deps: Dependencies,
-): Promise<bg.JobQueuePort<AcceptedJob>> {
+): Promise<{ JobQueue: bg.JobQueuePort<AcceptedJob> }> {
   const store = new bg.JobQueueSqliteStore({ database: ":memory:" });
 
   const registry = new bg.JobRegistryAdapter<AcceptedJob>({
@@ -32,17 +32,19 @@ export async function createJobQueue(
   });
 
   return {
-    [bg.NodeEnvironmentEnum.local]: JobQueue,
-    [bg.NodeEnvironmentEnum.test]: new bg.JobQueueAdapter<AcceptedJob>({
-      registry,
-      enqueuer: new bg.JobEnqueuerNoopAdapter(),
-      claimer: new bg.JobClaimerNoopAdapter(),
-      completer: new bg.JobCompleterNoopAdapter(),
-      failer: new bg.JobFailerNoopAdapter(),
-      requeuer: new bg.JobRequeuerNoopAdapter(),
-      serializer: new bg.PayloadSerializerJsonAdapter(),
-    }),
-    [bg.NodeEnvironmentEnum.staging]: JobQueue,
-    [bg.NodeEnvironmentEnum.production]: JobQueue,
-  }[Env.type];
+    JobQueue: {
+      [bg.NodeEnvironmentEnum.local]: JobQueue,
+      [bg.NodeEnvironmentEnum.test]: new bg.JobQueueAdapter<AcceptedJob>({
+        registry,
+        enqueuer: new bg.JobEnqueuerNoopAdapter(),
+        claimer: new bg.JobClaimerNoopAdapter(),
+        completer: new bg.JobCompleterNoopAdapter(),
+        failer: new bg.JobFailerNoopAdapter(),
+        requeuer: new bg.JobRequeuerNoopAdapter(),
+        serializer: new bg.PayloadSerializerJsonAdapter(),
+      }),
+      [bg.NodeEnvironmentEnum.staging]: JobQueue,
+      [bg.NodeEnvironmentEnum.production]: JobQueue,
+    }[Env.type],
+  };
 }

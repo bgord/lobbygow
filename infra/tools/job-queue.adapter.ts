@@ -8,7 +8,7 @@ type Dependencies = { Logger: bg.LoggerPort; Clock: bg.ClockPort };
 export type AcceptedJob = Notifier.Jobs.SendEmailJobType;
 
 export async function createJobQueue(
-  _Env: EnvironmentResultType,
+  Env: EnvironmentResultType,
   deps: Dependencies,
 ): Promise<bg.JobQueuePort<AcceptedJob>> {
   const store = new bg.JobQueueSqliteStore({ database: ":memory:" });
@@ -31,5 +31,20 @@ export async function createJobQueue(
     serializer: new bg.PayloadSerializerJsonAdapter(),
   });
 
-  return new bg.JobQueueWithLoggerAdapter<AcceptedJob>({ inner, ...deps });
+  const JobQueue = new bg.JobQueueWithLoggerAdapter<AcceptedJob>({ inner, ...deps });
+
+  return {
+    [bg.NodeEnvironmentEnum.local]: JobQueue,
+    [bg.NodeEnvironmentEnum.test]: new bg.JobQueueAdapter<AcceptedJob>({
+      registry,
+      enqueuer: new bg.JobEnqueuerNoopAdapter(),
+      claimer: new bg.JobClaimerNoopAdapter(),
+      completer: new bg.JobCompleterNoopAdapter(),
+      failer: new bg.JobFailerNoopAdapter(),
+      requeuer: new bg.JobRequeuerNoopAdapter(),
+      serializer: new bg.PayloadSerializerJsonAdapter(),
+    }),
+    [bg.NodeEnvironmentEnum.staging]: JobQueue,
+    [bg.NodeEnvironmentEnum.production]: JobQueue,
+  }[Env.type];
 }

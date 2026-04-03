@@ -34,7 +34,12 @@ export function createServer(di: Awaited<ReturnType<typeof bootstrap>>) {
     di.Tools.ShieldBasicAuth.handle(),
     ...new bg.HealthcheckHonoHandler(
       { Env: di.Env.type, prerequisites: di.Tools.Prerequisites.healthcheck },
-      { ...di.Adapters.System, ...di.Tools, LoggerStatsProvider: di.Adapters.System.Logger },
+      {
+        ...di.Adapters.System,
+        ...di.Tools,
+        LoggerStatsProvider: di.Adapters.System.Logger,
+        JobQueueStatsProvider: di.Tools.JobQueueStatsProvider,
+      },
     ).handle(),
   );
   // =============================

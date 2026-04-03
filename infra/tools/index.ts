@@ -24,12 +24,13 @@ type Dependencies = {
 };
 
 export async function createTools(Env: EnvironmentResultType, deps: Dependencies) {
-  const { JobQueue } = await createJobQueue(Env, deps);
+  const { JobQueue, JobQueueStatsProvider } = await createJobQueue(Env, deps);
 
   return {
     BuildInfoConfig: createBuildInfoConfig(Env, deps),
     CronScheduler: await createCronScheduler(Env, deps),
     JobQueue,
+    JobQueueStatsProvider,
     Prerequisites: createPrerequisites(Env, deps),
     ShieldApiKey: createShieldApiKey(Env),
     ShieldBasicAuth: createShieldBasicAuth(Env),

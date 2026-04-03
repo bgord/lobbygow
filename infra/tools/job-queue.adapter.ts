@@ -10,7 +10,7 @@ type AcceptedJob = Notifier.Jobs.SendEmailJobType;
 export async function createJobQueue(
   Env: EnvironmentResultType,
   deps: Dependencies,
-): Promise<{ JobQueue: bg.JobQueuePort<AcceptedJob> }> {
+): Promise<{ JobQueue: bg.JobQueuePort<AcceptedJob>; JobQueueStatsProvider: bg.JobQueueStatsProviderPort }> {
   const store = new bg.JobQueueSqliteStore({ database: ":memory:" });
 
   const registry = new bg.JobRegistryAdapter<AcceptedJob>({
@@ -45,6 +45,12 @@ export async function createJobQueue(
       }),
       [bg.NodeEnvironmentEnum.staging]: JobQueue,
       [bg.NodeEnvironmentEnum.production]: JobQueue,
+    }[Env.type],
+    JobQueueStatsProvider: {
+      [bg.NodeEnvironmentEnum.local]: new bg.JobQueueStatsProviderNoopAdapter(),
+      [bg.NodeEnvironmentEnum.test]: new bg.JobQueueStatsProviderNoopAdapter(),
+      [bg.NodeEnvironmentEnum.staging]: new bg.JobQueueStatsProviderNoopAdapter(),
+      [bg.NodeEnvironmentEnum.production]: new bg.JobQueueStatsProviderSqliteAdapter(store),
     }[Env.type],
   };
 }

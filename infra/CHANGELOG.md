@@ -1,6 +1,9 @@
 # Changelog
+- 2026-04-08 10:47 6575829 **refactor: switch to temporal**
+## 2026-04-08 10:47 
+- 2026-04-08 10:42 c63669e **step: update packages**
+- 2026-04-06 09:43 2d90ea1 **step: update packages**
 - 2026-04-03 18:30 3b42238 **step: update packages**
-## 2026-04-03 18:30 
 - 2026-04-03 18:29 eaeb1be **step: add send email job handler test**
 - 2026-04-03 18:29 6f86993 **step: bump bgord/scripts**
 - 2026-04-03 18:10 9f073e2 **step: update packages**
@@ -17,6 +20,7 @@
 - 2026-04-03 17:32 d9e7cce **step: add job queue noop adapter**
 - 2026-04-03 17:31 df66e6a **step: add test clock adapter**
 - 2026-04-03 17:31 7b5d067 **step: add mocks**
+- 2026-04-03 16:48 dae554d **docs: generate CHANGELOG**
 - 2026-04-03 16:11 d686a7c **docs: generate CHANGELOG**
 - 2026-04-03 16:03 995ba8f **docs: generate CHANGELOG**
 - 2026-04-03 15:57 80de3b1 **docs: generate readme**

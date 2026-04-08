@@ -10,7 +10,7 @@ export const expectAnyId = expect.stringMatching(
 
 export const correlationId = "00000000-0000-0000-0000-000000000000";
 
-export const T0 = tools.Timestamp.fromNumber(Date.UTC(2025, 0, 1, 0, 0, 0));
+export const T0 = tools.Timestamp.fromNumber(1700000000000);
 
 export const ip = { server: { requestIP: () => ({ address: "127.0.0.1", family: "foo", port: "123" }) } };
 

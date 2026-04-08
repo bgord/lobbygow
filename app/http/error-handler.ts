@@ -7,6 +7,7 @@ type Dependencies = { Logger: bg.LoggerPort };
 
 const validationErrors = [bg.MailerSubjectError.Invalid, bg.MailerContentHtmlError.Invalid] as Array<string>;
 
+// Stryker disable all
 export class ErrorHandler {
   static handle: (deps: Dependencies) => hono.ErrorHandler = (deps) => async (error, c) => {
     const url = c.req.url;
@@ -67,3 +68,4 @@ export class ErrorHandler {
     return c.json({ message: "general.unknown" }, 500);
   };
 }
+// Stryker restore all

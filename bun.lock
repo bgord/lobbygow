@@ -5,7 +5,7 @@
     "": {
       "name": "lobbygow",
       "dependencies": {
-        "@bgord/bun": "1.17.1",
+        "@bgord/bun": "1.17.2",
         "croner": "10.0.1",
         "nodemailer": "8.0.5",
       },
@@ -91,9 +91,9 @@
 
     "@babel/types": ["@babel/types@7.29.0", "", { "dependencies": { "@babel/helper-string-parser": "^7.27.1", "@babel/helper-validator-identifier": "^7.28.5" } }, "sha512-LwdZHpScM4Qz8Xw2iKSzS+cfglZzJGvofQICy7W7v4caru4EaAmyUuO6BGrbyQ2mYV11W0U8j5mBhd14dd3B0A=="],
 
-    "@bgord/bun": ["@bgord/bun@1.17.1", "", { "dependencies": { "@bgord/tools": "1.5.0", "emittery": "2.0.0", "hono": "4.12.12", "node-cache": "5.1.2" }, "peerDependencies": { "better-auth": "1.6.0", "croner": "10.0.1", "csv": "6.5.1", "nodemailer": "8.0.5", "resend": "6.10.0", "sharp": "0.34.5", "yazl": "3.3.1" }, "optionalPeers": ["better-auth", "croner", "csv", "nodemailer", "resend", "sharp", "yazl"] }, "sha512-hkIoWpDyEV4wHiGJMJGlnwl/3dLOo27FmVuDKF1xoCxTwPixr4yaslJLdFRhndtPbFjaN3KMz2a1gX0DRnKbJg=="],
+    "@bgord/bun": ["@bgord/bun@1.17.2", "", { "dependencies": { "@bgord/tools": "1.5.1", "emittery": "2.0.0", "hono": "4.12.12", "node-cache": "5.1.2" }, "peerDependencies": { "better-auth": "1.6.0", "croner": "10.0.1", "csv": "6.5.1", "nodemailer": "8.0.5", "resend": "6.10.0", "sharp": "0.34.5", "yazl": "3.3.1" }, "optionalPeers": ["better-auth", "croner", "csv", "nodemailer", "resend", "sharp", "yazl"] }, "sha512-78Zx+IvAGsdO12lSga8jnleqmIpwMoN0k3Mb5+6pk0hijjOqYLurmgsZ52o5GSVBFOkTzO7hGSd1/HQ5VW7h4Q=="],
 
-    "@bgord/tools": ["@bgord/tools@1.5.0", "", { "dependencies": { "temporal-polyfill": "0.3.2", "valibot": "1.3.1" } }, "sha512-sTVR9NR4Sxa+KjY7VVr9xNLobZH/jhbECXA4Ls90r3TMm0JqnkIbsHv3MfRJUw402SkniAfNKApwtEyI9Tzh4g=="],
+    "@bgord/tools": ["@bgord/tools@1.5.1", "", { "dependencies": { "temporal-polyfill": "0.3.2", "valibot": "1.3.1" } }, "sha512-B22JggJ8XpO7WfGHXoSC+W+mK9Wmod0ulHpHcsGExzt+/AODu9+Vd8vyxyUp2vKvx9TizWo6mtVOYkKpdShfow=="],
 
     "@biomejs/biome": ["@biomejs/biome@2.4.10", "", { "optionalDependencies": { "@biomejs/cli-darwin-arm64": "2.4.10", "@biomejs/cli-darwin-x64": "2.4.10", "@biomejs/cli-linux-arm64": "2.4.10", "@biomejs/cli-linux-arm64-musl": "2.4.10", "@biomejs/cli-linux-x64": "2.4.10", "@biomejs/cli-linux-x64-musl": "2.4.10", "@biomejs/cli-win32-arm64": "2.4.10", "@biomejs/cli-win32-x64": "2.4.10" }, "bin": { "biome": "bin/biome" } }, "sha512-xxA3AphFQ1geij4JTHXv4EeSTda1IFn22ye9LdyVPoJU19fNVl0uzfEuhsfQ4Yue/0FaLs2/ccVi4UDiE7R30w=="],
 
@@ -621,7 +621,7 @@
 
     "dunder-proto": ["dunder-proto@1.0.1", "", { "dependencies": { "call-bind-apply-helpers": "^1.0.1", "es-errors": "^1.3.0", "gopd": "^1.2.0" } }, "sha512-KIN/nDJBQRcXw0MLVhZE9iQHmG68qAVIBg9CqmUYjmQIhgij9U5MFvrqkUL5FbtyyzZuOeOt0zdeRe4UY7ct+A=="],
 
-    "electron-to-chromium": ["electron-to-chromium@1.5.333", "", {}, "sha512-skNh4FsE+IpCJV7xAQGbQ4eyOGvcEctVBAk7a5KPzxC3alES9rLrT+2IsPRPgeQr8LVxdJr8BHQ9481+TOr0xg=="],
+    "electron-to-chromium": ["electron-to-chromium@1.5.334", "", {}, "sha512-mgjZAz7Jyx1SRCwEpy9wefDS7GvNPazLthHg8eQMJ76wBdGQQDW33TCrUTvQ4wzpmOrv2zrFoD3oNufMdyMpog=="],
 
     "emittery": ["emittery@2.0.0", "", {}, "sha512-FLtgn/CGBXiX3ZtPAm5q4LWWepHChOt55J9u01WFu3dyap2U7IwptlrqoE1COR/kxwdy/DOxIBALSxIW449I1g=="],
 

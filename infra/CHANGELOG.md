@@ -1,10 +1,12 @@
 # Changelog
+- 2026-04-08 13:49 36efadc **step: bump bgord/scripts**
+## 2026-04-08 13:49 
 - 2026-04-08 13:48 7ae6e58 **step: update packages**
-## 2026-04-08 13:48 
 - 2026-04-08 12:43 96e244f **step: update packages**
 - 2026-04-08 12:43 8a322f6 **step: pin time zero**
 - 2026-04-08 11:54 a1fc3b4 **step: update packages**
 - 2026-04-08 11:54 3947a2d **step: bump bgord/scripts**
+- 2026-04-08 11:49 ed31c14 **docs: generate CHANGELOG**
 - 2026-04-08 10:47 6575829 **refactor: switch to temporal**
 - 2026-04-08 10:44 040e644 **docs: generate CHANGELOG**
 - 2026-04-08 10:42 c63669e **step: update packages**

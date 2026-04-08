@@ -5,7 +5,7 @@
     "": {
       "name": "lobbygow",
       "dependencies": {
-        "@bgord/bun": "1.17.2",
+        "@bgord/bun": "1.17.3",
         "croner": "10.0.1",
         "nodemailer": "8.0.5",
       },
@@ -91,9 +91,9 @@
 
     "@babel/types": ["@babel/types@7.29.0", "", { "dependencies": { "@babel/helper-string-parser": "^7.27.1", "@babel/helper-validator-identifier": "^7.28.5" } }, "sha512-LwdZHpScM4Qz8Xw2iKSzS+cfglZzJGvofQICy7W7v4caru4EaAmyUuO6BGrbyQ2mYV11W0U8j5mBhd14dd3B0A=="],
 
-    "@bgord/bun": ["@bgord/bun@1.17.2", "", { "dependencies": { "@bgord/tools": "1.5.1", "emittery": "2.0.0", "hono": "4.12.12", "node-cache": "5.1.2" }, "peerDependencies": { "better-auth": "1.6.0", "croner": "10.0.1", "csv": "6.5.1", "nodemailer": "8.0.5", "resend": "6.10.0", "sharp": "0.34.5", "yazl": "3.3.1" }, "optionalPeers": ["better-auth", "croner", "csv", "nodemailer", "resend", "sharp", "yazl"] }, "sha512-78Zx+IvAGsdO12lSga8jnleqmIpwMoN0k3Mb5+6pk0hijjOqYLurmgsZ52o5GSVBFOkTzO7hGSd1/HQ5VW7h4Q=="],
+    "@bgord/bun": ["@bgord/bun@1.17.3", "", { "dependencies": { "@bgord/tools": "1.5.2", "emittery": "2.0.0", "hono": "4.12.12", "node-cache": "5.1.2" }, "peerDependencies": { "better-auth": "1.6.0", "croner": "10.0.1", "csv": "6.5.1", "nodemailer": "8.0.5", "resend": "6.10.0", "sharp": "0.34.5", "yazl": "3.3.1" }, "optionalPeers": ["better-auth", "croner", "csv", "nodemailer", "resend", "sharp", "yazl"] }, "sha512-5N2U6OHlMxGEL7LGo85c6hK9VPmvdye1x+D5hohhm9XntaJpIor3EayP5Sg/NtjlkifsPZz/4xSY+5i07BcXjw=="],
 
-    "@bgord/tools": ["@bgord/tools@1.5.1", "", { "dependencies": { "temporal-polyfill": "0.3.2", "valibot": "1.3.1" } }, "sha512-B22JggJ8XpO7WfGHXoSC+W+mK9Wmod0ulHpHcsGExzt+/AODu9+Vd8vyxyUp2vKvx9TizWo6mtVOYkKpdShfow=="],
+    "@bgord/tools": ["@bgord/tools@1.5.2", "", { "dependencies": { "temporal-polyfill": "0.3.2", "valibot": "1.3.1" } }, "sha512-VsA8JMJh0UwcqNMxrLkLLdu3UZR5iETDgUOeo09KsNOlrhUVgaHupg2LdU2WEIQ9ccml9zdiTp4iTGS8NhcMSw=="],
 
     "@biomejs/biome": ["@biomejs/biome@2.4.10", "", { "optionalDependencies": { "@biomejs/cli-darwin-arm64": "2.4.10", "@biomejs/cli-darwin-x64": "2.4.10", "@biomejs/cli-linux-arm64": "2.4.10", "@biomejs/cli-linux-arm64-musl": "2.4.10", "@biomejs/cli-linux-x64": "2.4.10", "@biomejs/cli-linux-x64-musl": "2.4.10", "@biomejs/cli-win32-arm64": "2.4.10", "@biomejs/cli-win32-x64": "2.4.10" }, "bin": { "biome": "bin/biome" } }, "sha512-xxA3AphFQ1geij4JTHXv4EeSTda1IFn22ye9LdyVPoJU19fNVl0uzfEuhsfQ4Yue/0FaLs2/ccVi4UDiE7R30w=="],
 

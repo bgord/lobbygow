@@ -1,7 +1,10 @@
 # Changelog
+- 2026-04-08 11:54 a1fc3b4 **step: update packages**
+- 2026-04-08 11:54 3947a2d **step: bump bgord/scripts**
+## 2026-04-08 11:54 
 - 2026-04-08 10:47 6575829 **refactor: switch to temporal**
-## 2026-04-08 10:47 
 - 2026-04-08 10:42 c63669e **step: update packages**
+- 2026-04-08 08:53 dd3d218 **docs: generate CHANGELOG**
 - 2026-04-06 09:43 2d90ea1 **step: update packages**
 - 2026-04-03 18:30 3b42238 **step: update packages**
 - 2026-04-03 18:29 eaeb1be **step: add send email job handler test**

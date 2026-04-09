@@ -34,15 +34,7 @@ export async function createJobQueue(
   return {
     JobQueue: {
       [bg.NodeEnvironmentEnum.local]: JobQueue,
-      [bg.NodeEnvironmentEnum.test]: new bg.JobQueueAdapter<AcceptedJob>({
-        registry,
-        enqueuer: new bg.JobEnqueuerNoopAdapter(),
-        claimer: new bg.JobClaimerNoopAdapter(),
-        completer: new bg.JobCompleterNoopAdapter(),
-        failer: new bg.JobFailerNoopAdapter(),
-        requeuer: new bg.JobRequeuerNoopAdapter(),
-        serializer: new bg.PayloadSerializerJsonAdapter(),
-      }),
+      [bg.NodeEnvironmentEnum.test]: new bg.JobQueueAdapterNoop<AcceptedJob>({ registry }),
       [bg.NodeEnvironmentEnum.staging]: JobQueue,
       [bg.NodeEnvironmentEnum.production]: JobQueue,
     }[Env.type],

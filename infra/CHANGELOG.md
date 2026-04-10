@@ -1,6 +1,9 @@
 # Changelog
+- 2026-04-10 21:37 a57af15 **step: bump bgord/scripts**
+- 2026-04-10 21:37 9ed6cbe **step: update bun**
+## 2026-04-10 21:37 
 - 2026-04-10 13:12 43ab440 **step: update packages**
-## 2026-04-10 13:12 
+- 2026-04-10 11:12 56607ba **docs: generate CHANGELOG**
 - 2026-04-09 19:52 3018f35 **step: cleanup gitignore**
 - 2026-04-09 12:37 366642c **step: update packages**
 - 2026-04-09 12:24 fa26135 **refactor: use job queue adapter noop**

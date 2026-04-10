@@ -7,7 +7,7 @@ export async function createCronScheduler(
   Env: EnvironmentResultType,
   deps: Dependencies,
 ): Promise<bg.CronSchedulerPort> {
-  const CronScheduler = await bg.CronSchedulerCronerAdapter.build();
+  const CronScheduler = new bg.CronSchedulerAdapter();
 
   return {
     [bg.NodeEnvironmentEnum.local]: CronScheduler,

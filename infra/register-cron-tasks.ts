@@ -8,7 +8,7 @@ export function registerCronTasks({ Adapters, Tools }: BootstrapType) {
   const JobWorker = CronTaskHandler.handle(
     bg.JobWorker(
       { label: "Job queue", cron: bg.CronExpressionSchedules.EVERY_MINUTE, limit: tools.Int.positive(1) },
-      { queue: Tools.JobQueue },
+      { ...Tools },
     ),
   );
 

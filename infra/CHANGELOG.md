@@ -1,6 +1,8 @@
 # Changelog
+- 2026-04-12 21:52 0d4f5a0 **step: update packages**
+## 2026-04-12 21:52 
 - 2026-04-11 18:07 bc2c0c7 **step: update packages**
-## 2026-04-11 18:07 
+- 2026-04-11 16:07 196f548 **docs: generate CHANGELOG**
 - 2026-04-10 21:52 15b1946 **step: remove croner adapter**
 - 2026-04-10 21:49 6d7db55 **step: update packages**
 - 2026-04-10 21:37 a57af15 **step: bump bgord/scripts**

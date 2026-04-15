@@ -16,7 +16,10 @@ export async function createJobQueue(
   const registry = new bg.JobRegistryAdapter<AcceptedJob>({
     [Notifier.Jobs.SEND_EMAIL_JOB]: {
       schema: Notifier.Jobs.SendEmailJobSchema,
-      retry: new bg.JobRetryPolicyLimitStrategy(tools.Int.nonNegative(3)),
+      retry: new bg.JobRetryPolicyCompositeStrategy([
+        new bg.JobRetryPolicyLimitStrategy(tools.Int.nonNegative(3)),
+        new bg.JobRetryPolicyBackoffStrategy(new bg.RetryBackoffLinearStrategy(tools.Duration.Minutes(1))),
+      ]),
       handler: Notifier.JobHandlers.SendEmailJobHandler(deps),
     },
   });

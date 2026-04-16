@@ -5,7 +5,7 @@
     "": {
       "name": "lobbygow",
       "dependencies": {
-        "@bgord/bun": "1.17.8",
+        "@bgord/bun": "1.18.0",
         "nodemailer": "8.0.5",
       },
       "devDependencies": {
@@ -90,7 +90,7 @@
 
     "@babel/types": ["@babel/types@7.29.0", "", { "dependencies": { "@babel/helper-string-parser": "^7.27.1", "@babel/helper-validator-identifier": "^7.28.5" } }, "sha512-LwdZHpScM4Qz8Xw2iKSzS+cfglZzJGvofQICy7W7v4caru4EaAmyUuO6BGrbyQ2mYV11W0U8j5mBhd14dd3B0A=="],
 
-    "@bgord/bun": ["@bgord/bun@1.17.8", "", { "dependencies": { "@bgord/tools": "1.5.3", "emittery": "2.0.0", "hono": "4.12.12", "node-cache": "5.1.2" }, "peerDependencies": { "better-auth": "1.6.2", "croner": "10.0.1", "csv": "6.5.1", "nodemailer": "8.0.5", "resend": "6.11.0", "sharp": "0.34.5", "yazl": "3.3.1" }, "optionalPeers": ["better-auth", "croner", "csv", "nodemailer", "resend", "sharp", "yazl"] }, "sha512-xm0Bmf7XV/meQK4LyI33NL5dsBlQYb6VUAZagbKqzFGwjH+IRGY3PfUhOqVxyvbBsTZXNVGkNsO8KdhgrvznhQ=="],
+    "@bgord/bun": ["@bgord/bun@1.18.0", "", { "dependencies": { "@bgord/tools": "1.5.3", "emittery": "2.0.0", "hono": "4.12.14", "node-cache": "5.1.2" }, "peerDependencies": { "better-auth": "1.6.5", "croner": "10.0.1", "csv": "6.5.1", "nodemailer": "8.0.5", "resend": "6.12.0", "sharp": "0.34.5", "yazl": "3.3.1" }, "optionalPeers": ["better-auth", "croner", "csv", "nodemailer", "resend", "sharp", "yazl"] }, "sha512-SXDTSteMjNNLjB8jLzQOZYxpSV2Ds3bNmd5Vwqfr0kBWgIEzol9wfSMniO9Es4H7/g/gPg+TKJxuBSJ1qOvt6g=="],
 
     "@bgord/tools": ["@bgord/tools@1.5.3", "", { "dependencies": { "temporal-polyfill": "0.3.2", "valibot": "1.3.1" } }, "sha512-dVIlWkJz+UsZjudQyNhIvBtOQV0jYZd2W2JGg5u9gThjSNJUJGrYLS1goyTP0h0ly8DxALmPcKclRpbebvgHkw=="],
 
@@ -730,7 +730,7 @@
 
     "hasown": ["hasown@2.0.2", "", { "dependencies": { "function-bind": "^1.1.2" } }, "sha512-0hJU9SCPvmMzIBdZFqNPXWa6dqh7WdH0cII9y+CyS8rG3nL48Bclra9HmKhVVUHyPWNH5Y7xDwAB7bfgSjkUMQ=="],
 
-    "hono": ["hono@4.12.12", "", {}, "sha512-p1JfQMKaceuCbpJKAPKVqyqviZdS0eUxH9v82oWo1kb9xjQ5wA6iP3FNVAPDFlz5/p7d45lO+BpSk1tuSZMF4Q=="],
+    "hono": ["hono@4.12.14", "", {}, "sha512-am5zfg3yu6sqn5yjKBNqhnTX7Cv+m00ox+7jbaKkrLMRJ4rAdldd1xPd/JzbBWspqaQv6RSTrgFN95EsfhC+7w=="],
 
     "human-signals": ["human-signals@8.0.1", "", {}, "sha512-eKCa6bwnJhvxj14kZk5NCPc6Hb6BdsU9DZcOnmQKSnO1VKrfV0zCvtttPZUsBvjmNDn8rpcJfpwSYnHBjc95MQ=="],
 

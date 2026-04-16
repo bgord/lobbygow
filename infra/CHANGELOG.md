@@ -1,6 +1,10 @@
 # Changelog
+- 2026-04-16 11:27 cceeece **step: update packages**
+## 2026-04-16 11:27 
+- 2026-04-15 09:27 79ff23d **step: improve job retry policy**
+- 2026-04-15 09:27 23742f4 **step: update packages**
 - 2026-04-14 10:13 3e42672 **step: update packages**
-## 2026-04-14 10:13 
+- 2026-04-14 08:13 01d5c62 **docs: generate CHANGELOG**
 - 2026-04-12 21:54 7e6d5c1 **step: update packages**
 - 2026-04-12 21:52 0d4f5a0 **step: update packages**
 - 2026-04-12 19:54 df8f09c **docs: generate CHANGELOG**

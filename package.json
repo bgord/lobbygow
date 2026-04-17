@@ -22,10 +22,10 @@
     "lockfile-lint": "5.0.0",
     "only-allow": "1.2.2",
     "shellcheck": "4.1.0",
-    "typescript": "6.0.2"
+    "typescript": "6.0.3"
   },
   "dependencies": {
-    "@bgord/bun": "1.18.0",
+    "@bgord/bun": "1.18.1",
     "nodemailer": "8.0.5"
   }
 }

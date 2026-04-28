@@ -1,9 +1,11 @@
 # Changelog
+- 2026-04-28 12:11 cca83a6 **step: update packages**
+## 2026-04-28 12:11 
 - 2026-04-28 11:34 f16aa0a **step: update bun**
 - 2026-04-28 11:34 677dacd **step: bump bgord/scripts**
-## 2026-04-28 11:34 
 - 2026-04-28 11:30 24029cb **step: update packages**
 - 2026-04-28 10:05 a925a4e **step: update packages**
+- 2026-04-28 09:35 515b6ae **docs: generate CHANGELOG**
 - 2026-04-28 09:31 eac2148 **docs: generate CHANGELOG**
 - 2026-04-23 20:20 c62642b **step: update packages**
 - 2026-04-23 18:46 f04c17d **step: update packages**

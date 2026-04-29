@@ -53,10 +53,6 @@ bun run bgord-scripts/secrets-encrypt.ts --master-key /run/master-key.txt --inpu
 modules/
 ├── languages.ts
 └── notifier
-    ├── job-handlers
-    │   └── send-email-job.handler.ts
-    ├── jobs
-    │   ├── SEND_EMAIL_JOB.ts
     ├── services
     │   └── notification-composer.ts
     └── value-objects

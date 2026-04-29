@@ -1,7 +1,10 @@
 # Changelog
+- 2026-04-29 12:47 f8c1a18 **step: update packages**
+## 2026-04-29 12:47 
 - 2026-04-29 10:09 bb6adbc **step: use send email job from bgord/bun**
-## 2026-04-29 10:09 
 - 2026-04-29 10:07 f479171 **step: update packages**
+- 2026-04-29 08:10 894611e **docs: generate readme**
+- 2026-04-29 08:10 6b1bce1 **docs: generate CHANGELOG**
 - 2026-04-28 12:13 67b6fac **step: switch to tsgo**
 - 2026-04-28 12:13 35b5d6c **step: bump bgord/scripts**
 - 2026-04-28 12:11 cca83a6 **step: update packages**

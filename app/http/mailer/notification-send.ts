@@ -7,7 +7,7 @@ import type { EnvironmentResultType } from "+infra/env";
 type Dependencies = {
   IdProvider: bg.IdProviderPort;
   Clock: bg.ClockPort;
-  JobQueue: bg.JobQueuePort<Notifier.Jobs.SendEmailJobType>;
+  JobQueue: bg.JobQueuePort<bg.System.Jobs.SendEmailJobType>;
 };
 
 export const NotificationSend =
@@ -21,7 +21,7 @@ export const NotificationSend =
     const message = Notifier.Services.NotificationComposer[kind].compose(subject, content);
 
     const job = bg.job(
-      Notifier.Jobs.SendEmailJobSchema,
+      bg.System.Jobs.SendEmailJobSchema,
       { ...message, from: Env.EMAIL_FROM, to: Env.EMAIL_TO },
       deps,
     );

@@ -1,11 +1,10 @@
 import * as bg from "@bgord/bun";
 import * as tools from "@bgord/tools";
-import * as Notifier from "+notifier";
 import type { EnvironmentResultType } from "+infra/env";
 
 type Dependencies = { Clock: bg.ClockPort; Mailer: bg.MailerPort };
 
-type AcceptedJob = Notifier.Jobs.SendEmailJobType;
+type AcceptedJob = bg.System.Jobs.SendEmailJobType;
 
 export async function createJobQueue(
   Env: EnvironmentResultType,
@@ -14,13 +13,13 @@ export async function createJobQueue(
   const store = new bg.JobQueueSqliteStore({ database: ":memory:" });
 
   const registry = new bg.JobRegistryAdapter<AcceptedJob>({
-    [Notifier.Jobs.SEND_EMAIL_JOB]: {
-      schema: Notifier.Jobs.SendEmailJobSchema,
+    [bg.System.Jobs.SEND_EMAIL_JOB]: {
+      schema: bg.System.Jobs.SendEmailJobSchema,
       retry: new bg.JobRetryPolicyCompositeStrategy([
         new bg.JobRetryPolicyLimitStrategy(tools.Int.nonNegative(3)),
         new bg.JobRetryPolicyBackoffStrategy(new bg.RetryBackoffLinearStrategy(tools.Duration.Minutes(1))),
       ]),
-      handler: Notifier.JobHandlers.SendEmailJobHandler(deps),
+      handler: bg.System.JobHandlers.SendEmailJobHandler(deps),
     },
   });
 

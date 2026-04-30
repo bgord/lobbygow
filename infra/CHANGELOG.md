@@ -1,6 +1,8 @@
 # Changelog
+- 2026-04-30 11:03 b2b1c04 **step: update packages**
+## 2026-04-30 11:03 
 - 2026-04-29 12:47 f8c1a18 **step: update packages**
-## 2026-04-29 12:47 
+- 2026-04-29 10:48 dc5e235 **docs: generate CHANGELOG**
 - 2026-04-29 10:09 bb6adbc **step: use send email job from bgord/bun**
 - 2026-04-29 10:07 f479171 **step: update packages**
 - 2026-04-29 08:10 894611e **docs: generate readme**

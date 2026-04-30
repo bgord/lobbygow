@@ -1,6 +1,9 @@
 # Changelog
+- 2026-04-30 23:34 21630b4 **step: update packages**
+## 2026-04-30 23:34 
+- 2026-04-30 23:33 78b35e4 **step: switch to jobs.db instead of memory**
 - 2026-04-30 11:03 b2b1c04 **step: update packages**
-## 2026-04-30 11:03 
+- 2026-04-30 09:03 a9f5ce3 **docs: generate CHANGELOG**
 - 2026-04-29 12:47 f8c1a18 **step: update packages**
 - 2026-04-29 10:48 dc5e235 **docs: generate CHANGELOG**
 - 2026-04-29 10:09 bb6adbc **step: use send email job from bgord/bun**

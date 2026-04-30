@@ -12,3 +12,4 @@ infra/build-info.json
 meta.json
 tmp/
 output/
+jobs.db*

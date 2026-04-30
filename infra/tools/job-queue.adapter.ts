@@ -10,7 +10,7 @@ export async function createJobQueue(
   Env: EnvironmentResultType,
   deps: Dependencies,
 ): Promise<{ JobQueue: bg.JobQueuePort<AcceptedJob>; JobQueueStatsProvider: bg.JobQueueStatsProviderPort }> {
-  const store = new bg.JobQueueSqliteStore({ database: ":memory:" });
+  const store = new bg.JobQueueSqliteStore({ database: "jobs.db" });
 
   const registry = new bg.JobRegistryAdapter<AcceptedJob>({
     [bg.System.Jobs.SEND_EMAIL_JOB]: {

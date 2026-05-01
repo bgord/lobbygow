@@ -24,7 +24,7 @@ type Dependencies = {
 };
 
 export async function createTools(Env: EnvironmentResultType, deps: Dependencies) {
-  const { JobQueue, JobQueueStatsProvider } = await createJobQueue(Env, deps);
+  const { JobQueue, JobQueueStatsProvider, JobPruner } = await createJobQueue(Env, deps);
 
   return {
     BuildInfoConfig: createBuildInfoConfig(Env, deps),
@@ -37,5 +37,6 @@ export async function createTools(Env: EnvironmentResultType, deps: Dependencies
     ShieldRateLimit: createShieldRateLimit(Env, deps),
     ShieldSecurity: createShieldSecurity(Env, deps),
     ShieldTimeout,
+    JobPruner,
   };
 }

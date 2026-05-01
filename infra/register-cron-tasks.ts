@@ -17,7 +17,7 @@ export function registerCronTasks({ Adapters, Tools }: BootstrapType) {
   );
   Tools.CronScheduler.schedule(JobQueueWorker);
 
-  const JobPruner = CronTaskHandler.handle(
+  const JobPrunerWorker = CronTaskHandler.handle(
     bg.JobPrunerWorker(
       {
         label: "Job pruner worker",
@@ -27,5 +27,5 @@ export function registerCronTasks({ Adapters, Tools }: BootstrapType) {
       { ...Tools },
     ),
   );
-  Tools.CronScheduler.schedule(JobPruner);
+  Tools.CronScheduler.schedule(JobPrunerWorker);
 }

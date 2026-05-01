@@ -1,7 +1,10 @@
 # Changelog
+- 2026-05-01 10:58 92ee9f5 **step: update packages**
+## 2026-05-01 10:58 
+- 2026-04-30 23:52 e177db8 **step: setup depcruiser**
 - 2026-04-30 23:34 21630b4 **step: update packages**
-## 2026-04-30 23:34 
 - 2026-04-30 23:33 78b35e4 **step: switch to jobs.db instead of memory**
+- 2026-04-30 21:34 81e8a18 **docs: generate CHANGELOG**
 - 2026-04-30 11:03 b2b1c04 **step: update packages**
 - 2026-04-30 09:03 a9f5ce3 **docs: generate CHANGELOG**
 - 2026-04-29 12:47 f8c1a18 **step: update packages**

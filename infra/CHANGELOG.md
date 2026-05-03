@@ -1,9 +1,11 @@
 # Changelog
+- 2026-05-03 09:43 ed36d5e **step: update packages**
+## 2026-05-03 09:43 
 - 2026-05-01 11:15 0c60c74 **step: unify naming**
-## 2026-05-01 11:15 
 - 2026-05-01 11:11 cf0ab4f **step: setup pruner**
 - 2026-05-01 11:11 4aa02b6 **step: update packages**
 - 2026-05-01 10:58 92ee9f5 **step: update packages**
+- 2026-05-01 09:15 73710e9 **docs: generate CHANGELOG**
 - 2026-05-01 09:11 c1ed61e **docs: generate CHANGELOG**
 - 2026-05-01 08:59 7f1a384 **docs: generate readme**
 - 2026-05-01 08:59 30d8921 **docs: generate CHANGELOG**

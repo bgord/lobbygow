@@ -1,10 +1,13 @@
 # Changelog
+- 2026-05-13 22:33 b79be0a **step: update workflows**
+- 2026-05-13 22:33 5fffde6 **step: bump bgord/scripts**
+## 2026-05-13 22:33 
 - 2026-05-13 22:24 7b7763f **step: update workflows**
 - 2026-05-13 22:24 1bdcbdf **step: update bgord-scripts**
-## 2026-05-13 22:24 
 - 2026-05-13 22:18 e96a506 **step: update workflows**
 - 2026-05-13 22:18 37f52ab **step: bump bgord/scripts**
 - 2026-05-13 21:59 df706d5 **step: update packages**
+- 2026-05-13 20:25 35ee319 **docs: generate CHANGELOG**
 - 2026-05-13 20:24 3e7510c **docs: generate CHANGELOG**
 - 2026-05-13 14:51 01da600 **step: bump bgord/scripts**
 - 2026-05-13 14:47 03cf33d **step: bump bgord/scripts**

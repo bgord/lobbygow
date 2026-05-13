@@ -35,8 +35,10 @@ jobs:
         run: bun install --exact --frozen-lockfile --no-summary
 
       - name: Create .env.test file
+        env:
+          ENV_TEST: ${{ secrets.ENV_TEST }}
         if: ${{ !(github.event_name == 'workflow_dispatch' && inputs.fasttrack) }}
-        run: echo "${{ secrets.ENV_TEST }}" > .env.test
+        run: echo "${ENV_TEST}" > .env.test
 
       - name: Read Playwright version
         if: ${{ !(github.event_name == 'workflow_dispatch' && inputs.fasttrack) }}
@@ -102,11 +104,15 @@ jobs:
         run: ./scripts/production-server-build.sh
 
       - name: Generate build info
-        run: ./bgord-scripts/build-info-generate.sh "${{ github.sha }}"
+        env:
+          SHA: ${{ github.sha }}
+        run: ./bgord-scripts/build-info-generate.sh "${SHA}"
 
       - name: Inspect app size
+        env:
+          PROJECT_NAME: ${{ secrets.PROJECT_NAME }}
         if: ${{ !(github.event_name == 'workflow_dispatch' && inputs.fasttrack) }}
-        run: ./bgord-scripts/production-server-inspect.sh ${{ secrets.PROJECT_NAME }}
+        run: ./bgord-scripts/production-server-inspect.sh "${PROJECT_NAME}"
 
       - name: Configure SSH
         run: |
@@ -126,10 +132,14 @@ jobs:
           SSH_HOST: ${{ secrets.HOSTNAME }}
 
       - name: Clean public
-        run: ssh production "cd /var/www/${{ secrets.PROJECT_NAME }} && rm -rf public/"
+        env:
+          PROJECT_NAME: ${{ secrets.PROJECT_NAME }}
+        run: ssh production "cd /var/www/${PROJECT_NAME} && rm -rf public/"
 
       - name: Sync source code
-        run: rsync -azP output/ production:/var/www/${{ secrets.PROJECT_NAME }}
+        env:
+          PROJECT_NAME: ${{ secrets.PROJECT_NAME }}
+        run: rsync -azP output/ "production:/var/www/${PROJECT_NAME}"
 
       - name: Restart server
         env:

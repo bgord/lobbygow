@@ -1,6 +1,7 @@
 # Changelog
+- 2026-05-13 14:03 d5fe8cf **step: bump bgord/scripts**
+## 2026-05-13 14:03 
 - 2026-05-13 14:00 8c00a24 **step: bump bgord/scripts**
-## 2026-05-13 14:00 
 - 2026-05-13 13:57 c37f3e9 **step: update deploy server**
 - 2026-05-13 13:57 8a0449b **step: bump bgord/scripts**
 - 2026-05-13 13:49 2b130bd **step: update deploy server**
@@ -12,6 +13,7 @@
 - 2026-05-13 13:27 25e4798 **step: bump bgord/scripts**
 - 2026-05-13 13:25 7e9af5a **step: bump bgord/scripts**
 - 2026-05-13 13:19 f5dbbc8 **step: add zizmor prereq**
+- 2026-05-13 12:01 ce66f31 **docs: generate CHANGELOG**
 - 2026-05-13 11:57 5508101 **docs: generate CHANGELOG**
 - 2026-05-08 18:08 f8be7d8 **step: update packages**
 - 2026-05-08 16:09 697e7ab **docs: generate CHANGELOG**

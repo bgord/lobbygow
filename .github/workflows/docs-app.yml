@@ -43,9 +43,9 @@ jobs:
           file_pattern: infra/CHANGELOG.md
 
       - name: Generate a README
-        run: bgord-scripts/package-readme-generate.sh "${REPOSITORY_NAME}"
+        run: bgord-scripts/package-readme-generate.sh "${GITHUB_EVENT_REPOSITORY_NAME}"
         env:
-          REPOSITORY_NAME: ${{ github.event.repository.name }}
+          GITHUB_EVENT_REPOSITORY_NAME: ${{ github.event.repository.name }}
 
       - name: Print README
         run: cat readme.md

@@ -1,6 +1,5 @@
 # Changelog
 - 2026-05-13 14:20 04eb742 **step: bump bgord/scripts**
-## 2026-05-13 14:20 
 - 2026-05-13 14:18 b157180 **step: bump bgord/scripts**
 - 2026-05-13 14:10 ba22ac9 **step: bump bgord/scripts**
 - 2026-05-13 14:06 14af6bc **step: bump bgord/scripts**
@@ -19,6 +18,8 @@
 - 2026-05-13 13:27 25e4798 **step: bump bgord/scripts**
 - 2026-05-13 13:25 7e9af5a **step: bump bgord/scripts**
 - 2026-05-13 13:19 f5dbbc8 **step: add zizmor prereq**
+- 2026-05-13 12:21 45669aa **docs: generate CHANGELOG**
+## 2026-05-13 12:21 
 - 2026-05-13 12:18 f784828 **docs: generate CHANGELOG**
 - 2026-05-13 12:10 df768fa **docs: generate CHANGELOG**
 - 2026-05-13 12:06 0825ffa **docs: generate CHANGELOG**

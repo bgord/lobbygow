@@ -19,6 +19,7 @@ export function createPrerequisites(
   Env: EnvironmentResultType,
   deps: Dependencies,
 ): { healthcheck: Array<bg.Prerequisite>; readiness: Array<bg.Prerequisite> } {
+  const hostname = "lobbygow.bgord.dev";
   const production = Env.type === bg.NodeEnvironmentEnum.production;
   const local = Env.type === bg.NodeEnvironmentEnum.local;
 
@@ -83,11 +84,14 @@ export function createPrerequisites(
       new bg.Prerequisite(
         "ssl",
         new bg.PrerequisiteVerifierSSLCertificateExpiryAdapter(
-          { hostname: "lobbygow.bgord.dev", minimum: tools.Duration.Days(7) },
+          { hostname, minimum: tools.Duration.Days(7) },
           deps,
         ),
         { enabled: production, decorators: [withFailSafe, withRetry, withTimeout] },
       ),
+      new bg.Prerequisite("dns", new bg.PrerequisiteVerifierDnsAdapter({ hostname }), {
+        enabled: production,
+      }),
       new bg.Prerequisite(
         "clock-drift",
         new bg.PrerequisiteVerifierClockDriftAdapter({ skew: tools.Duration.Minutes(1) }, deps),

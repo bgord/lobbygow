@@ -90,7 +90,7 @@ export function createPrerequisites(
         { enabled: production, decorators: [withFailSafe, withRetry, withTimeout] },
       ),
       new bg.Prerequisite("dns", new bg.PrerequisiteVerifierDnsAdapter({ hostname }), {
-        enabled: production,
+        enabled: false, // TODO: reenable after DNS records are propagates
       }),
       new bg.Prerequisite(
         "clock-drift",

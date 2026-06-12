@@ -1,8 +1,10 @@
 import * as bg from "@bgord/bun";
+import type * as tools from "@bgord/tools";
 import type hono from "hono";
 import * as v from "valibot";
 import * as Notifier from "+notifier";
-import type { EnvironmentResultType } from "+infra/env";
+
+type Config = { EMAIL_FROM: tools.EmailType; EMAIL_TO: tools.EmailType };
 
 type Dependencies = {
   IdProvider: bg.IdProviderPort;
@@ -11,7 +13,7 @@ type Dependencies = {
 };
 
 export const NotificationSend =
-  (Env: EnvironmentResultType, deps: Dependencies) => async (c: hono.Context, _next: hono.Next) => {
+  (config: Config, deps: Dependencies) => async (c: hono.Context, _next: hono.Next) => {
     const body = await c.req.json();
 
     const subject = v.parse(bg.MailerSubject, body.subject);
@@ -22,7 +24,7 @@ export const NotificationSend =
 
     const job = bg.job(
       bg.System.Jobs.SendEmailJobSchema,
-      { ...message, from: Env.EMAIL_FROM, to: Env.EMAIL_TO },
+      { ...message, from: config.EMAIL_FROM, to: config.EMAIL_TO },
       deps,
     );
 

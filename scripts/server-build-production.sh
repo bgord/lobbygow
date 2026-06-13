@@ -9,7 +9,7 @@ info "Environment: production"
 export NODE_ENV="production"
 
 check_if_directory_exists node_modules
-check_if_file_exists scripts/production-server-start.sh
+check_if_file_exists scripts/server-start-production.sh
 
 step_start "Build cache clean"
 rm -rf $OUTPUT_DIRECTORY
@@ -24,7 +24,7 @@ bun install --production --no-save --exact
 step_end "Packages install"
 
 step_start "scripts/production-server-start.sh copy"
-cp scripts/production-server-start.sh $OUTPUT_DIRECTORY
+cp scripts/server-start-production.sh $OUTPUT_DIRECTORY
 step_end "scripts/production-server-start.sh copy"
 
 step_start "package.json copy"

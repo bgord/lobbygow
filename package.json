@@ -19,5 +19,15 @@
   "dependencies": {
     "@bgord/bun": "1.19.6",
     "nodemailer": "8.0.11"
+  },
+  "devEngines": {
+    "runtime": {
+      "name": "bun",
+      "onFail": "error"
+    },
+    "packageManager": {
+      "name": "bun",
+      "onFail": "error"
+    }
   }
 }

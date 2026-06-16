@@ -2,9 +2,6 @@
   "name": "lobbygow",
   "version": "2.0.0",
   "description": "",
-  "scripts": {
-    "preinstall": "bunx only-allow bun"
-  },
   "keywords": [],
   "author": "Bartosz Gordon",
   "license": "ISC",
@@ -18,7 +15,6 @@
     "fallow": "2.96.0",
     "lefthook": "2.1.9",
     "lockfile-lint": "5.0.0",
-    "only-allow": "1.2.2",
     "shellcheck": "4.1.0",
     "typescript": "6.0.3"
   },

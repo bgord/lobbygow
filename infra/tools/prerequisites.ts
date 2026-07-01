@@ -19,7 +19,7 @@ export function createPrerequisites(
   Env: EnvironmentResultType,
   deps: Dependencies,
 ): { healthcheck: Array<bg.Prerequisite>; readiness: Array<bg.Prerequisite> } {
-  const hostname = "lobbygow.bgord.space";
+  const hostname = v.parse(bg.Hostname, "lobbygow.bgord.space");
   const production = Env.type === bg.NodeEnvironmentEnum.production;
   const local = Env.type === bg.NodeEnvironmentEnum.local;
 

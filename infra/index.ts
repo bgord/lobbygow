@@ -4,5 +4,3 @@ import type { TimingVariables } from "hono/timing";
 export type Config = {
   Variables: TimingVariables & bg.TimeZoneOffsetVariables & bg.WeakETagVariables;
 };
-
-export * as config from "./config";

@@ -1,6 +1,7 @@
 import * as bg from "@bgord/bun";
 import * as tools from "@bgord/tools";
 import * as v from "valibot";
+import { hostname } from "+infra/config";
 import { type EnvironmentResultType, MasterKeyPath, SecretsPath } from "+infra/env";
 
 type Dependencies = {
@@ -19,7 +20,6 @@ export function createPrerequisites(
   Env: EnvironmentResultType,
   deps: Dependencies,
 ): { healthcheck: Array<bg.Prerequisite>; readiness: Array<bg.Prerequisite> } {
-  const hostname = v.parse(bg.Hostname, "lobbygow.bgord.space");
   const production = Env.type === bg.NodeEnvironmentEnum.production;
   const local = Env.type === bg.NodeEnvironmentEnum.local;
 

@@ -14,11 +14,12 @@ type Dependencies = {
 
 export const NotificationSend =
   (config: Config, deps: Dependencies) => async (c: hono.Context, _next: hono.Next) => {
-    const body = await c.req.json();
+    const context = new bg.RequestContextHonoAdapter(c);
+    const body = await context.request.json();
 
-    const subject = v.parse(bg.MailerSubject, body.subject);
-    const content = v.parse(bg.MailerContentHtml, body.content);
-    const kind = v.parse(Notifier.VO.NotificationKind, body.kind);
+    const subject = v.parse(bg.MailerSubject, body["subject"]);
+    const content = v.parse(bg.MailerContentHtml, body["content"]);
+    const kind = v.parse(Notifier.VO.NotificationKind, body["kind"]);
 
     const message = Notifier.Services.NotificationComposer[kind].compose(subject, content);
 

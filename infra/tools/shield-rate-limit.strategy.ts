@@ -21,7 +21,7 @@ export function createShieldRateLimit(Env: EnvironmentResultType, deps: Dependen
         ],
         { HashContent },
       ),
-      window: ttl,
+      interval: ttl,
     },
     { CacheResolver, ...deps },
   );

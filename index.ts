@@ -8,10 +8,11 @@ import { createServer } from "./server";
   const di = await bootstrap();
   const server = createServer(di);
 
-  await new bg.PrerequisiteRunnerStartup(di.Adapters.System).check(di.Tools.Prerequisites.healthcheck);
   bg.EventLoopLag.start();
 
   registerCronTasks(di);
+
+  await new bg.PrerequisiteRunnerStartup(di.Adapters.System).check(di.Tools.Prerequisites.healthcheck);
 
   const app = Bun.serve({
     port: di.Env.PORT,

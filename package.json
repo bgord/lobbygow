@@ -8,6 +8,7 @@
     "@stryker-mutator/core": "9.6.1",
     "@stryker-mutator/typescript-checker": "9.6.1",
     "@types/bun": "1.3.14",
+    "actions-up": "1.16.0",
     "cspell": "10.0.1",
     "fallow": "3.14.0",
     "lefthook": "2.1.10",

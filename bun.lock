@@ -5,7 +5,7 @@
     "": {
       "name": "lobbygow",
       "dependencies": {
-        "@bgord/bun": "1.21.3",
+        "@bgord/bun": "1.21.4",
         "nodemailer": "9.0.5",
       },
       "devDependencies": {
@@ -88,7 +88,7 @@
 
     "@babel/types": ["@babel/types@7.29.8", "", { "dependencies": { "@babel/helper-string-parser": "^7.29.7", "@babel/helper-validator-identifier": "^7.29.7" } }, "sha512-Vj1jF3cPfxg7OAfoI7QnVKLoILlm2JF9pnVHrX8qx7AHMiYWT+NDAA7jChlNgRS4WTLc/fD1lXLmPixluj+3Gg=="],
 
-    "@bgord/bun": ["@bgord/bun@1.21.3", "", { "dependencies": { "@bgord/tools": "1.6.4", "emittery": "2.0.0", "hono": "4.13.1", "node-cache": "5.1.2" }, "peerDependencies": { "better-auth": "1.6.26", "csv": "6.6.3", "nodemailer": "9.0.5", "yazl": "3.3.1" }, "optionalPeers": ["better-auth", "csv", "nodemailer", "yazl"] }, "sha512-9qV33XYH4iwamdcd+g8EgHEGTzmoNKVN44pa24psYDnzggpkivgxXXPwO54EcEihfYk6duPdg8A/hogY0mT35A=="],
+    "@bgord/bun": ["@bgord/bun@1.21.4", "", { "dependencies": { "@bgord/tools": "1.6.4", "emittery": "2.0.0", "hono": "4.13.1", "node-cache": "5.1.2" }, "peerDependencies": { "better-auth": "1.6.26", "csv": "6.6.3", "nodemailer": "9.0.5", "yazl": "3.3.1" }, "optionalPeers": ["better-auth", "csv", "nodemailer", "yazl"] }, "sha512-6nqqrW6i84bZjfpdPu7Odd3AGTBsv33N+rNsyhWqph3nhNK0pLfNiQYmbN7JLm00U1LAFAFCXqkRverdytOl2Q=="],
 
     "@bgord/tools": ["@bgord/tools@1.6.4", "", { "dependencies": { "temporal-polyfill": "1.0.3", "valibot": "1.4.2" } }, "sha512-B6FXHaAXBoSs0M+NregmMudWNJZBdudMuRt+NzUuH4GnfbPD0abVw4AWWFLZpLz1MnJJ8+xi+2I1fn/dH60oIg=="],
 

@@ -7,7 +7,7 @@ const expectAnyId = expect.stringMatching(
   /^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/,
 );
 
-const correlationId = "00000000-0000-0000-0000-000000000000";
+const correlationId = v.parse(bg.CorrelationId, "00000000-0000-0000-0000-000000000000");
 
 const T0 = tools.Timestamp.fromInstant(tools.Temporal.Instant.from("2025-01-01T00:00:00Z"));
 
@@ -20,7 +20,7 @@ export const notification = { subject, content };
 
 export const GenericSendEmailJobInfo = {
   id: expectAnyId,
-  correlationId: correlationId,
+  correlationId,
   createdAt: T0.ms,
   name: bg.System.Jobs.SEND_EMAIL_JOB,
   revision: 0,
@@ -34,7 +34,7 @@ export const GenericSendEmailJobInfo = {
 
 export const GenericSendEmailJobError = {
   id: expectAnyId,
-  correlationId: correlationId,
+  correlationId,
   createdAt: T0.ms,
   name: bg.System.Jobs.SEND_EMAIL_JOB,
   revision: 0,
@@ -48,7 +48,7 @@ export const GenericSendEmailJobError = {
 
 export const GenericSendEmailJobSuccess = {
   id: expectAnyId,
-  correlationId: correlationId,
+  correlationId,
   createdAt: T0.ms,
   name: bg.System.Jobs.SEND_EMAIL_JOB,
   revision: 0,

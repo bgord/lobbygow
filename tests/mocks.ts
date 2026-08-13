@@ -8,6 +8,7 @@ const expectAnyId = expect.stringMatching(
 );
 
 const correlationId = v.parse(bg.CorrelationId, "00000000-0000-0000-0000-000000000000");
+const revision = v.parse(tools.RevisionValue, 0);
 
 const T0 = tools.Timestamp.fromInstant(tools.Temporal.Instant.from("2025-01-01T00:00:00Z"));
 
@@ -23,7 +24,7 @@ export const GenericSendEmailJobInfo = {
   correlationId,
   createdAt: T0.ms,
   name: bg.System.Jobs.SEND_EMAIL_JOB,
-  revision: 0,
+  revision,
   payload: {
     subject: v.parse(bg.MailerSubject, `ℹ️  [INFO] ${subject}`),
     html: content,
@@ -37,7 +38,7 @@ export const GenericSendEmailJobError = {
   correlationId,
   createdAt: T0.ms,
   name: bg.System.Jobs.SEND_EMAIL_JOB,
-  revision: 0,
+  revision,
   payload: {
     subject: v.parse(bg.MailerSubject, `❌ [ERROR] ${subject}`),
     html: content,
@@ -51,7 +52,7 @@ export const GenericSendEmailJobSuccess = {
   correlationId,
   createdAt: T0.ms,
   name: bg.System.Jobs.SEND_EMAIL_JOB,
-  revision: 0,
+  revision,
   payload: {
     subject: v.parse(bg.MailerSubject, `✅ [SUCCESS] ${subject}`),
     html: content,

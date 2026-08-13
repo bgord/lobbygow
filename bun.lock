@@ -5,7 +5,7 @@
     "": {
       "name": "lobbygow",
       "dependencies": {
-        "@bgord/bun": "1.21.5",
+        "@bgord/bun": "1.21.6",
         "nodemailer": "9.0.5",
       },
       "devDependencies": {
@@ -88,9 +88,9 @@
 
     "@babel/types": ["@babel/types@7.29.8", "", { "dependencies": { "@babel/helper-string-parser": "^7.29.7", "@babel/helper-validator-identifier": "^7.29.7" } }, "sha512-Vj1jF3cPfxg7OAfoI7QnVKLoILlm2JF9pnVHrX8qx7AHMiYWT+NDAA7jChlNgRS4WTLc/fD1lXLmPixluj+3Gg=="],
 
-    "@bgord/bun": ["@bgord/bun@1.21.5", "", { "dependencies": { "@bgord/tools": "1.6.5", "emittery": "2.0.0", "hono": "4.13.1", "node-cache": "5.1.2" }, "peerDependencies": { "better-auth": "1.6.26", "csv": "6.6.3", "nodemailer": "9.0.5", "yazl": "3.3.1" }, "optionalPeers": ["better-auth", "csv", "nodemailer", "yazl"] }, "sha512-NewEAG3we7+72RDCkhAQdsHeErrYqY6hXj2nY4kuH9ip5Gntb1I1w0eD5VPaqNS3NkIF9c9vbwAoQInKMrOYhA=="],
+    "@bgord/bun": ["@bgord/bun@1.21.6", "", { "dependencies": { "@bgord/tools": "1.6.6", "emittery": "2.0.0", "hono": "4.13.1", "node-cache": "5.1.2" }, "peerDependencies": { "better-auth": "1.6.26", "csv": "6.6.3", "nodemailer": "9.0.5", "yazl": "3.3.1" }, "optionalPeers": ["better-auth", "csv", "nodemailer", "yazl"] }, "sha512-GDO5CNm0/Dr5k7TZojOmWR13SVwYloCE5MJGfWXP88QGDP0Hpy3Ny7u8syQc7tO1yHI2OT698/3tlERpd0sgYQ=="],
 
-    "@bgord/tools": ["@bgord/tools@1.6.5", "", { "dependencies": { "temporal-polyfill": "1.0.3", "valibot": "1.4.2" } }, "sha512-3qxJW208qZji0mkOyLMvmxXRJretTUIdqJs8rEFGwSoyd4o9x9ISt4CPi8pXLaYJlj+LmhULhegaWyeYA6WW7w=="],
+    "@bgord/tools": ["@bgord/tools@1.6.6", "", { "dependencies": { "temporal-polyfill": "1.0.3", "valibot": "1.4.2" } }, "sha512-gjb5Xjl2QhXC1ZWAeQ2MifWYqBaKM4dVVynX51JtWUwK3hIu8romorqrJipIrQEki/li7AtSnWdKCfMW94q+LA=="],
 
     "@biomejs/biome": ["@biomejs/biome@2.5.7", "", { "optionalDependencies": { "@biomejs/cli-darwin-arm64": "2.5.7", "@biomejs/cli-darwin-x64": "2.5.7", "@biomejs/cli-linux-arm64": "2.5.7", "@biomejs/cli-linux-arm64-musl": "2.5.7", "@biomejs/cli-linux-x64": "2.5.7", "@biomejs/cli-linux-x64-musl": "2.5.7", "@biomejs/cli-win32-arm64": "2.5.7", "@biomejs/cli-win32-x64": "2.5.7" }, "bin": { "biome": "bin/biome" } }, "sha512-zr8K/DcY5tYsQOQwqMJ0AWElo6QgmgNI7idXgXLhevVszlt8RGVpesEJPqx3ThazLaOwjJ5Y8fz3BtH5fGZNsw=="],
 

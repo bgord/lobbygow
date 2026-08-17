@@ -15,15 +15,21 @@ export class ErrorHandler {
 
     if (error instanceof HTTPException) {
       if (error.message === "request_timeout_error") {
-        return c.json({ message: "request_timeout_error", _known: true }, 408);
+        return Response.json({ message: "request_timeout_error", _known: true }, { status: 408 });
       }
 
       if (error.message === bg.ShieldApiKeyStrategyError.Rejected) {
-        return c.json({ message: bg.ShieldApiKeyStrategyError.Rejected, _known: true }, 403);
+        return Response.json(
+          { message: bg.ShieldApiKeyStrategyError.Rejected, _known: true },
+          { status: 403 },
+        );
       }
 
       if (error.message === bg.ShieldRateLimitStrategyError.Rejected) {
-        return c.json({ message: bg.ShieldRateLimitStrategyError.Rejected, _known: true }, 429);
+        return Response.json(
+          { message: bg.ShieldRateLimitStrategyError.Rejected, _known: true },
+          { status: 429 },
+        );
       }
 
       return error.getResponse();
@@ -42,7 +48,7 @@ export class ErrorHandler {
           error,
         });
 
-        return c.json({ message: validationError.message, _known: true }, 400);
+        return Response.json({ message: validationError.message, _known: true }, { status: 400 });
       }
 
       deps.Logger.error({
@@ -54,7 +60,7 @@ export class ErrorHandler {
         error,
       });
 
-      return c.json({ message: "payload.invalid.error", _known: true }, 400);
+      return Response.json({ message: "payload.invalid.error", _known: true }, { status: 400 });
     }
 
     deps.Logger.error({
@@ -65,7 +71,7 @@ export class ErrorHandler {
       error,
     });
 
-    return c.json({ message: "general.unknown" }, 500);
+    return Response.json({ message: "general.unknown" }, { status: 500 });
   };
 }
 // Stryker restore all

@@ -5,7 +5,7 @@ import * as v from "valibot";
 
 type Dependencies = { Logger: bg.LoggerPort };
 
-const validationErrors = [bg.MailerSubjectError.Invalid, bg.MailerContentHtmlError.Invalid] as Array<string>;
+const validationErrors = [bg.MailerSubjectError.Invalid, bg.MailerContentHtmlError.Invalid];
 
 // Stryker disable all
 export class ErrorHandler {

@@ -10,7 +10,7 @@ const expectAnyId = expect.stringMatching(
 const correlationId = v.parse(bg.CorrelationId, "00000000-0000-0000-0000-000000000000");
 const revision = v.parse(tools.RevisionValue, 0);
 
-const T0 = tools.Timestamp.fromInstant(tools.Temporal.Instant.from("2025-01-01T00:00:00Z"));
+const T0 = tools.Timestamp.fromInstant(Temporal.Instant.from("2025-01-01T00:00:00Z"));
 
 export const ip = { server: { requestIP: () => ({ address: "127.0.0.1", family: "foo", port: "123" }) } };
 

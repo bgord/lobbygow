@@ -8,7 +8,7 @@ import * as App from "./app";
 export function createServer(di: Awaited<ReturnType<typeof bootstrap>>) {
   const HashContent = new bg.HashContentSha256Strategy();
   const CacheRepository = new bg.CacheRepositoryNodeCacheAdapter({ type: "infinite" });
-  const CacheResolver = new bg.CacheResolverSimpleStrategy({ CacheRepository });
+  const CacheResolver = new bg.CacheResolverReadThroughStrategy({ CacheRepository });
 
   const server = new Hono<infra.Config>()
     .basePath("/api")

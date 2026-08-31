@@ -14,10 +14,6 @@ export class ErrorHandler {
     const correlationId = c.get("requestId");
 
     if (error instanceof HTTPException) {
-      if (error.message === "request_timeout_error") {
-        return Response.json({ message: "request_timeout_error", _known: true }, { status: 408 });
-      }
-
       if (error.message === bg.ShieldApiKeyStrategyError.Rejected) {
         return Response.json(
           { message: bg.ShieldApiKeyStrategyError.Rejected, _known: true },

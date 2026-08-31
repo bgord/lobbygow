@@ -16,7 +16,7 @@ const knownShieldErrors: ReadonlyArray<string> = [
 export class ErrorHandler {
   static handle: (deps: Dependencies) => hono.ErrorHandler = (deps) => async (error, c) => {
     const url = c.req.url;
-    const correlationId = c.get("requestId");
+    const correlationId = c.get("correlationId");
 
     if (error instanceof HTTPException) {
       if (knownShieldErrors.includes(error.message)) {

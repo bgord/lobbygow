@@ -12,7 +12,24 @@ describe(`POST ${url}`, async () => {
   const server = createServer(di);
   const headers = { [bg.ShieldApiKeyStrategy.HEADER_NAME]: di.Env.API_KEY, ...mocks.correlationIdHeaders };
 
+  test("shield - missing api key", async () => {
+    using loggerError = spyOn(di.Adapters.System.Logger, "error");
+
+    const response = await server.request(
+      url,
+      { method: "POST", body: JSON.stringify({}), headers: mocks.correlationIdHeaders },
+      mocks.ip,
+    );
+    const json = await response.json();
+
+    expect(response.status).toEqual(401);
+    expect(json).toEqual({ message: bg.ShieldApiKeyStrategyError.Rejected });
+    expect(loggerError).not.toHaveBeenCalledWith(expect.objectContaining({ message: "Classified error" }));
+  });
+
   test("validation - empty payload", async () => {
+    using loggerError = spyOn(di.Adapters.System.Logger, "error");
+
     const response = await server.request(
       url,
       { method: "POST", body: JSON.stringify({}), headers },
@@ -22,6 +39,14 @@ describe(`POST ${url}`, async () => {
 
     expect(response.status).toEqual(400);
     expect(json).toEqual({ message: "mailer.subject.invalid" });
+    expect(loggerError).toHaveBeenCalledWith({
+      message: "Classified error",
+      component: "http",
+      operation: "validation",
+      correlationId: mocks.correlationId,
+      metadata: { url: expect.stringContaining(url), status: 400 },
+      error: expect.anything(),
+    });
   });
 
   test("validation - missing subject", async () => {

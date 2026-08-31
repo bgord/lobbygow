@@ -7,7 +7,7 @@ const expectAnyId = expect.stringMatching(
   /^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/,
 );
 
-const correlationId = v.parse(bg.CorrelationId, "00000000-0000-0000-0000-000000000000");
+export const correlationId = v.parse(bg.CorrelationId, "00000000-0000-0000-0000-000000000000");
 const revision = v.parse(tools.RevisionValue, 0);
 
 const T0 = tools.Timestamp.fromInstant(Temporal.Instant.from("2025-01-01T00:00:00Z"));

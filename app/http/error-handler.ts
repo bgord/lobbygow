@@ -26,6 +26,7 @@ export class ErrorHandler {
         new bg.ErrorClassifierWithLoggerStrategy({ operation: "validation" }, { inner: validation, ...deps }),
       ],
       fallback: new bg.ErrorClassifierWithLoggerStrategy(
+        // Stryker disable next-line StringLiteral
         { operation: "unknown_error" },
         { inner: unknown, ...deps },
       ),

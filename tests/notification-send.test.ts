@@ -21,7 +21,7 @@ describe(`POST ${url}`, async () => {
     const json = await response.json();
 
     expect(response.status).toEqual(400);
-    expect(json).toEqual({ message: "mailer.subject.invalid", _known: true });
+    expect(json).toEqual({ message: "mailer.subject.invalid" });
   });
 
   test("validation - missing subject", async () => {
@@ -37,7 +37,7 @@ describe(`POST ${url}`, async () => {
     const json = await response.json();
 
     expect(response.status).toEqual(400);
-    expect(json).toEqual({ message: "mailer.subject.invalid", _known: true });
+    expect(json).toEqual({ message: "mailer.subject.invalid" });
   });
 
   test("validation - missing content", async () => {
@@ -53,7 +53,7 @@ describe(`POST ${url}`, async () => {
     const json = await response.json();
 
     expect(response.status).toEqual(400);
-    expect(json).toEqual({ message: "mailer.content.html.invalid", _known: true });
+    expect(json).toEqual({ message: "mailer.content.html.invalid" });
   });
 
   test("happy path - info", async () => {

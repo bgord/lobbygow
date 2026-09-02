@@ -10,6 +10,8 @@ export function createServer(di: Awaited<ReturnType<typeof bootstrap>>) {
   const CacheRepository = new bg.CacheRepositoryNodeCacheAdapter({ type: "infinite" });
   const CacheResolver = new bg.CacheResolverReadThroughStrategy({ CacheRepository });
 
+  const redactor = new bg.RedactorMask(bg.RedactorMask.DEFAULT_KEYS);
+
   const server = new Hono<infra.Config>()
     .basePath("/api")
     .use(
@@ -25,7 +27,7 @@ export function createServer(di: Awaited<ReturnType<typeof bootstrap>>) {
   server.get(
     "/readiness",
     di.Tools.ShieldTimeout.handle(),
-    ...new bg.ReadinessHonoHandler({ prerequisites: di.Tools.Prerequisites.readiness }).handle(),
+    ...new bg.ReadinessHonoHandler({ prerequisites: di.Tools.Prerequisites.readiness, redactor }).handle(),
   );
   server.get(
     "/healthcheck",
@@ -33,7 +35,7 @@ export function createServer(di: Awaited<ReturnType<typeof bootstrap>>) {
     di.Tools.ShieldTimeout.handle(),
     di.Tools.ShieldBasicAuth.handle(),
     ...new bg.HealthcheckHonoHandler(
-      { Env: di.Env.type, prerequisites: di.Tools.Prerequisites.healthcheck },
+      { Env: di.Env.type, prerequisites: di.Tools.Prerequisites.healthcheck, redactor },
       {
         ...di.Adapters.System,
         ...di.Tools,

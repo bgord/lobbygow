@@ -17,7 +17,7 @@
     "typescript": "7.0.2"
   },
   "dependencies": {
-    "@bgord/bun": "1.23.1",
+    "@bgord/bun": "1.23.2",
     "nodemailer": "9.0.6"
   },
   "devEngines": {

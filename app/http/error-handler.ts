@@ -4,8 +4,8 @@ import type hono from "hono";
 type Dependencies = { Logger: bg.LoggerPort };
 
 const validation = new bg.ErrorClassifierValidationStrategy([
-  bg.MailerSubjectError,
   bg.MailerContentHtmlError,
+  bg.MailerSubjectError,
 ]);
 
 export class ErrorHandler {

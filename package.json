@@ -18,7 +18,7 @@
   },
   "dependencies": {
     "@bgord/bun": "1.23.3",
-    "nodemailer": "9.0.6"
+    "nodemailer": "9.1.1"
   },
   "devEngines": {
     "runtime": {

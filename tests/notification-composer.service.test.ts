@@ -4,7 +4,7 @@ import * as v from "valibot";
 import * as Notifier from "+notifier";
 import * as mocks from "./mocks";
 
-describe("NotificationComposerChooser", () => {
+describe("NotificationComposer.compose", () => {
   test("kind - success", () => {
     const composer = Notifier.Services.NotificationComposer.success.compose(mocks.subject, mocks.content);
 

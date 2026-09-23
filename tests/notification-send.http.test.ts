@@ -4,6 +4,7 @@ import * as Notifier from "+notifier";
 import { bootstrap } from "+infra/bootstrap";
 import { createServer } from "../server";
 import * as mocks from "./mocks";
+import * as testcases from "./testcases";
 
 const url = "/api/notification-send";
 
@@ -20,10 +21,8 @@ describe(`POST ${url}`, async () => {
       { method: "POST", body: JSON.stringify({}), headers: mocks.correlationIdHeaders },
       mocks.ip,
     );
-    const json = await response.json();
 
-    expect(response.status).toEqual(401);
-    expect(json).toEqual({ message: bg.ShieldApiKeyStrategyError.Rejected });
+    await testcases.assertAuthResponse(response);
     expect(loggerError).not.toHaveBeenCalledWith(expect.objectContaining({ message: "Classified error" }));
   });
 
@@ -35,10 +34,8 @@ describe(`POST ${url}`, async () => {
       { method: "POST", body: JSON.stringify({}), headers },
       mocks.ip,
     );
-    const json = await response.json();
 
-    expect(response.status).toEqual(400);
-    expect(json).toEqual({ message: "mailer.subject.invalid" });
+    await testcases.assertErrorResponse(response, 400, "mailer.subject.invalid");
     expect(loggerError).toHaveBeenCalledWith({
       message: "Classified error",
       component: "http",
@@ -59,10 +56,8 @@ describe(`POST ${url}`, async () => {
       },
       mocks.ip,
     );
-    const json = await response.json();
 
-    expect(response.status).toEqual(400);
-    expect(json).toEqual({ message: "mailer.subject.invalid" });
+    await testcases.assertErrorResponse(response, 400, "mailer.subject.invalid");
   });
 
   test("validation - missing content", async () => {
@@ -75,10 +70,8 @@ describe(`POST ${url}`, async () => {
       },
       mocks.ip,
     );
-    const json = await response.json();
 
-    expect(response.status).toEqual(400);
-    expect(json).toEqual({ message: "mailer.content.html.invalid" });
+    await testcases.assertErrorResponse(response, 400, "mailer.content.html.invalid");
   });
 
   test("happy path - info", async () => {

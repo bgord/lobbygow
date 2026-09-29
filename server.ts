@@ -31,9 +31,9 @@ export function createServer(di: Awaited<ReturnType<typeof bootstrap>>) {
   );
   server.get(
     "/healthcheck",
+    di.Tools.ShieldBasicAuth.handle(),
     di.Tools.ShieldRateLimit.handle(),
     di.Tools.ShieldTimeout.handle(),
-    di.Tools.ShieldBasicAuth.handle(),
     ...new bg.HealthcheckHonoHandler(
       { Env: di.Env.type, prerequisites: di.Tools.Prerequisites.healthcheck, redactor },
       {

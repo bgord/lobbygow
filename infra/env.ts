@@ -44,14 +44,9 @@ export async function createEnvironmentLoader(): Promise<bg.EnvironmentLoaderPor
     FileWriter,
   });
 
-  const CacheRepository = new bg.CacheRepositoryNodeCacheAdapter({ type: "infinite" });
-  const CacheResolver = new bg.CacheResolverReadThroughStrategy({ CacheRepository });
-  const HashContent = new bg.HashContentSha256Strategy();
-
   const EnvironmentLoaderProcessSafe = new bg.EnvironmentLoaderProcessSafeAdapter<EnvironmentType>(
     process.env,
     config,
-    { CacheResolver, HashContent },
   );
 
   return {

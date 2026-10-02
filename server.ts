@@ -26,6 +26,7 @@ export function createServer(di: Awaited<ReturnType<typeof bootstrap>>) {
   server.get("/liveness", ...new bg.LivenessHonoHandler().handle());
   server.get(
     "/readiness",
+    di.Tools.ShieldRateLimit.handle(),
     di.Tools.ShieldTimeout.handle(),
     ...new bg.ReadinessHonoHandler({ prerequisites: di.Tools.Prerequisites.readiness, redactor }).handle(),
   );
@@ -40,6 +41,7 @@ export function createServer(di: Awaited<ReturnType<typeof bootstrap>>) {
         ...di.Adapters.System,
         ...di.Tools,
         LoggerStatsProvider: di.Adapters.System.Logger,
+        RuntimeStatsProvider: new bg.RuntimeStatsProviderSystemAdapter(di.Adapters.System),
         JobQueueStatsProvider: di.Tools.JobQueueStatsProvider,
       },
     ).handle(),

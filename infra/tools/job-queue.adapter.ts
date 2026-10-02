@@ -15,6 +15,7 @@ export async function createJobQueue(
   JobPruner: bg.JobPrunerPort;
 }> {
   const store = new bg.JobQueueSqliteStore({ database: "jobs.db" });
+  await new bg.JobRecovererSqliteAdapter({ db: store.db }).recover();
 
   const registry = new bg.JobRegistryAdapter<AcceptedJob>({
     [bg.System.Jobs.SEND_EMAIL_JOB]: {

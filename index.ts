@@ -8,8 +8,6 @@ void (async function main() {
   const di = await bootstrap();
   const server = createServer(di);
 
-  bg.EventLoopLag.start();
-
   registerCronTasks(di);
 
   await new bg.PrerequisiteRunnerStartup(di.Adapters.System).check(di.Tools.Prerequisites.healthcheck);

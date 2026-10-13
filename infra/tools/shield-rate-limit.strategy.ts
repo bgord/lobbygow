@@ -17,6 +17,7 @@ export function createShieldRateLimit(Env: EnvironmentResultType, deps: Dependen
           new bg.SubjectSegmentFixedStrategy("rate_limit"),
           new bg.SubjectSegmentPathStrategy(),
           new bg.SubjectSegmentUserStrategy(),
+          new bg.SubjectSegmentIpStrategy(),
         ],
         { HashContent },
       ),

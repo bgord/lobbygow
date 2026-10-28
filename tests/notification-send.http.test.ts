@@ -74,6 +74,16 @@ describe(`POST ${url}`, async () => {
     await testcases.assertErrorResponse(response, 400, "mailer.content.html.invalid");
   });
 
+  test("validation - invalid kind", async () => {
+    const response = await server.request(
+      url,
+      { method: "POST", body: JSON.stringify({ ...mocks.notification, kind: "unknown" }), headers },
+      mocks.ip,
+    );
+
+    await testcases.assertErrorResponse(response, 400, "payload.invalid.error");
+  });
+
   test("happy path - info", async () => {
     using enqueue = spyOn(di.Tools.JobQueue, "enqueue");
 

@@ -4,7 +4,7 @@
   "version": "2.0.0",
   "author": "Bartosz Gordon",
   "devDependencies": {
-    "@biomejs/biome": "2.6.3",
+    "@biomejs/biome": "2.6.4",
     "@stryker-mutator/core": "10.1.1",
     "@stryker-mutator/typescript-checker": "10.1.1",
     "@types/bun": "1.4.4",
@@ -17,7 +17,7 @@
     "typescript": "7.0.2"
   },
   "dependencies": {
-    "@bgord/bun": "1.24.15",
+    "@bgord/bun": "1.24.17",
     "nodemailer": "10.2.1"
   },
   "devEngines": {

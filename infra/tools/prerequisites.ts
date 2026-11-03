@@ -14,12 +14,17 @@ type Dependencies = {
   Sleeper: bg.SleeperPort;
   TimeoutRunner: bg.TimeoutRunnerPort;
   FileInspection: bg.FileInspectionPort;
+  JobQueueStatsProvider: bg.JobQueueStatsProviderPort;
 };
 
 export function createPrerequisites(
   Env: EnvironmentResultType,
   deps: Dependencies,
-): { healthcheck: Array<bg.Prerequisite>; readiness: Array<bg.Prerequisite> } {
+): {
+  healthcheck: Array<bg.Prerequisite>;
+  readiness: Array<bg.Prerequisite>;
+  runtime: Array<bg.Prerequisite>;
+} {
   const production = Env.type === bg.NodeEnvironmentEnum.production;
   const local = Env.type === bg.NodeEnvironmentEnum.local;
 
@@ -135,6 +140,12 @@ export function createPrerequisites(
         new bg.PrerequisiteVerifierMemoryAdapter({ maximum: tools.Size.fromMB(300) }),
       ),
       new bg.Prerequisite("ram", new bg.PrerequisiteVerifierRamAdapter({ minimum: tools.Size.fromMB(128) })),
+    ],
+    runtime: [
+      new bg.Prerequisite(
+        "job-queue-lag",
+        new bg.PrerequisiteVerifierJobQueueLagAdapter({ maximum: tools.Duration.Minutes(15) }, deps),
+      ),
     ],
   };
 }

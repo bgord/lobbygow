@@ -36,7 +36,11 @@ export function createServer(di: Awaited<ReturnType<typeof bootstrap>>) {
     di.Tools.ShieldRateLimit.handle(),
     di.Tools.ShieldTimeout.handle(),
     ...new bg.HealthcheckHonoHandler(
-      { Env: di.Env.type, prerequisites: di.Tools.Prerequisites.healthcheck, redactor },
+      {
+        Env: di.Env.type,
+        prerequisites: [...di.Tools.Prerequisites.healthcheck, ...di.Tools.Prerequisites.runtime],
+        redactor,
+      },
       {
         ...di.Adapters.System,
         ...di.Tools,

@@ -86,7 +86,9 @@ export function createPrerequisites(
       new bg.Prerequisite("user", new bg.PrerequisiteVerifierRunningUserAdapter({ username: "lobbygow" }), {
         enabled: production,
       }),
-      new bg.Prerequisite("dns", new bg.PrerequisiteVerifierDnsAdapter({ hostname })),
+      new bg.Prerequisite("dns", new bg.PrerequisiteVerifierDnsAdapter({ hostname }), {
+        enabled: production,
+      }),
       new bg.Prerequisite(
         "clock-drift",
         new bg.PrerequisiteVerifierClockDriftAdapter({ skew: tools.Duration.Minutes(1) }, deps),
@@ -131,7 +133,9 @@ export function createPrerequisites(
         "memory-consumption",
         new bg.PrerequisiteVerifierMemoryAdapter({ maximum: tools.Size.fromMB(300) }),
       ),
-      new bg.Prerequisite("ram", new bg.PrerequisiteVerifierRamAdapter({ minimum: tools.Size.fromMB(128) })),
+      new bg.Prerequisite("ram", new bg.PrerequisiteVerifierRamAdapter({ minimum: tools.Size.fromMB(128) }), {
+        enabled: production,
+      }),
     ],
     runtime: [
       new bg.Prerequisite(

@@ -28,7 +28,7 @@ export function createPrerequisites(
   const production = Env.type === bg.NodeEnvironmentEnum.production;
   const local = Env.type === bg.NodeEnvironmentEnum.local;
 
-  const withTimeout = bg.PrerequisiteDecorator.withTimeout(tools.Duration.Seconds(2), deps);
+  const withTimeout = bg.PrerequisiteDecorator.withTimeout(tools.Duration.Seconds(5), deps);
   const withFailSafe = bg.PrerequisiteDecorator.withFailSafe(
     (result) => result.outcome === bg.PrerequisiteVerificationOutcome.failure,
   );
@@ -86,14 +86,6 @@ export function createPrerequisites(
       new bg.Prerequisite("user", new bg.PrerequisiteVerifierRunningUserAdapter({ username: "lobbygow" }), {
         enabled: production,
       }),
-      new bg.Prerequisite(
-        "ssl",
-        new bg.PrerequisiteVerifierSSLCertificateExpiryAdapter(
-          { hostname, minimum: tools.Duration.Days(7) },
-          deps,
-        ),
-        { enabled: production, decorators: [withFailSafe, withRetry, withTimeout] },
-      ),
       new bg.Prerequisite("dns", new bg.PrerequisiteVerifierDnsAdapter({ hostname })),
       new bg.Prerequisite(
         "clock-drift",
@@ -145,6 +137,14 @@ export function createPrerequisites(
       new bg.Prerequisite(
         "job-queue-lag",
         new bg.PrerequisiteVerifierJobQueueLagAdapter({ maximum: tools.Duration.Minutes(15) }, deps),
+      ),
+      new bg.Prerequisite(
+        "ssl",
+        new bg.PrerequisiteVerifierSSLCertificateExpiryAdapter(
+          { hostname, minimum: tools.Duration.Days(7) },
+          deps,
+        ),
+        { enabled: production, decorators: [withRetry, withTimeout] },
       ),
     ],
   };

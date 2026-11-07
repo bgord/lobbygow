@@ -7,7 +7,7 @@ import * as App from "./app";
 
 export function createServer(di: Awaited<ReturnType<typeof bootstrap>>) {
   const HashContent = new bg.HashContentSha256Strategy();
-  const CacheRepository = new bg.CacheRepositoryNodeCacheAdapter({ type: "infinite" });
+  const CacheRepository = new bg.CacheRepositoryInMemoryAdapter({ type: "infinite" }, di.Adapters.System);
   const CacheResolver = new bg.CacheResolverReadThroughStrategy({ CacheRepository });
 
   const redactor = new bg.RedactorMask(bg.RedactorMask.DEFAULT_KEYS);

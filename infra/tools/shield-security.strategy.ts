@@ -2,14 +2,17 @@ import * as bg from "@bgord/bun";
 import * as tools from "@bgord/tools";
 import type { EnvironmentResultType } from "+infra/env";
 
-type Dependencies = { Sleeper: bg.SleeperPort; Logger: bg.LoggerPort };
+type Dependencies = { Clock: bg.ClockPort; Sleeper: bg.SleeperPort; Logger: bg.LoggerPort };
 
 export function createShieldSecurity(Env: EnvironmentResultType, deps: Dependencies): bg.MiddlewareHonoPort {
   const HashContent = new bg.HashContentSha256Strategy();
-  const CacheRepository = new bg.CacheRepositoryNodeCacheAdapter({
-    type: "finite",
-    ttl: tools.Duration.Minutes(5),
-  });
+  const CacheRepository = new bg.CacheRepositoryInMemoryAdapter(
+    {
+      type: "finite",
+      ttl: tools.Duration.Minutes(5),
+    },
+    deps,
+  );
 
   return {
     [bg.NodeEnvironmentEnum.local]: new bg.MiddlewareHonoNoopAdapter(),

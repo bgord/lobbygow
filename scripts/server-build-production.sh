@@ -22,10 +22,6 @@ step_start "Packages install"
 bun install --production --no-save --exact
 step_end "Packages install"
 
-step_start "package.json copy"
-cp package.json $OUTPUT_DIRECTORY
-step_end "package.json copy"
-
 step_start "Infra directory create"
 mkdir -p "$OUTPUT_DIRECTORY/infra"
 step_end "Infra directory create"

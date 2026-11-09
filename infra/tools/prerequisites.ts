@@ -58,13 +58,6 @@ export function createPrerequisites(
         { decorators: [withRetry] },
       ),
       new bg.Prerequisite(
-        "node",
-        new bg.PrerequisiteVerifierNodeAdapter({
-          version: tools.PackageVersion.fromString("24.1.0"),
-          current: process.version,
-        }),
-      ),
-      new bg.Prerequisite(
         "bun",
         new bg.PrerequisiteVerifierBunAdapter({
           version: tools.PackageVersion.fromString("1.4.4"),

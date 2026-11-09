@@ -5,8 +5,8 @@
     "": {
       "name": "lobbygow",
       "dependencies": {
-        "@bgord/bun": "1.24.26",
-        "nodemailer": "10.2.1",
+        "@bgord/bun": "1.24.27",
+        "nodemailer": "10.3.1",
       },
       "devDependencies": {
         "@biomejs/biome": "2.6.4",
@@ -97,7 +97,7 @@
 
     "@babel/types": ["@babel/types@8.1.0", "", { "dependencies": { "@babel/helper-string-parser": "^8.0.8", "@babel/helper-validator-identifier": "^8.0.6" } }, "sha512-8V8aSTDx012YPmDQF30vrokyxVFdRAU2YBS2VzrnfLAGkP8floVnjckwgFcD0Jrvf6GWMSRdCrYVsk3tyMwZRg=="],
 
-    "@bgord/bun": ["@bgord/bun@1.24.26", "", { "dependencies": { "@bgord/tools": "1.6.18", "hono": "4.13.16" }, "peerDependencies": { "better-auth": "1.7.18", "nodemailer": "10.3.1" }, "optionalPeers": ["better-auth", "nodemailer"] }, "sha512-4IT7CeYtDbh5ksmYIGdAjowLI1ll2jOeHwPTREf0+1BnbyKBWxBOdCtEf5O5Cw5ygMskxZ7WRaLECQfGAMQU6Q=="],
+    "@bgord/bun": ["@bgord/bun@1.24.27", "", { "dependencies": { "@bgord/tools": "1.6.18", "hono": "4.13.16" }, "peerDependencies": { "better-auth": "1.7.18", "nodemailer": "10.3.1" }, "optionalPeers": ["better-auth", "nodemailer"] }, "sha512-UROLJwPmF9WQEDm4XC+cBNvTO/kbTJ93zFYih9f9IQXJXOGDALL4RwcmKVwrMc52BX2REHx5hHZQRBk0Xf6EqQ=="],
 
     "@bgord/tools": ["@bgord/tools@1.6.18", "", { "dependencies": { "valibot": "1.5.0" } }, "sha512-vzDcxLkdBb+w0n9EWO/vNQVdc5UzO2SBpTmSbNDEzTRqOrPSEMWqOgfx6nLzs89eZhASnxMYoCI2LBy5BlRdEA=="],
 
@@ -635,7 +635,7 @@
 
     "node-releases": ["node-releases@2.0.63", "", {}, "sha512-6li2QanLsAXpIH2R6j77MzRyvOyrvdTqlKtO4CgBdHGNvN99ZZfyxszHc5o5+IZBWD5u6Hzwg83JoGXmqZNG9Q=="],
 
-    "nodemailer": ["nodemailer@10.2.1", "", {}, "sha512-ZrDNsPFoDMwefNs7sJwrYiEJ/CG4ClJWDZv05iNJsEBWa8GRDry1QJHTJxsuTAY9eDDKjX4k+q3SxslXJOao7w=="],
+    "nodemailer": ["nodemailer@10.3.1", "", {}, "sha512-uF0AFsJC07Y1vdW7p580DKAnh7rAO+4UPSSB3mDCPNDufoiaOebV6JmrzpxB14OjEEEiBsNdYoM2Y+fN8M7BBA=="],
 
     "npm-run-path": ["npm-run-path@6.0.0", "", { "dependencies": { "path-key": "^4.0.0", "unicorn-magic": "^0.3.0" } }, "sha512-9qny7Z9DsQU8Ou39ERsPU4OZQlSTP47ShQzuKZ6PRXpYLtIFgl/DEBYEXKlvcEa+9tHVcK8CF81Y2V72qaZhWA=="],
 

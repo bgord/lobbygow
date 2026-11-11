@@ -2,13 +2,11 @@ import * as bg from "@bgord/bun";
 import * as tools from "@bgord/tools";
 import type { EnvironmentResultType } from "+infra/env";
 
-type Dependencies = { Clock: bg.ClockPort };
+type Dependencies = { Clock: bg.ClockPort; HashContent: bg.HashContentStrategy };
 
 export function createShieldRateLimit(Env: EnvironmentResultType, deps: Dependencies): bg.MiddlewareHonoPort {
-  const ttl = tools.Duration.Seconds(30);
+  const ttl = tools.Duration.Seconds(10);
   const CacheRepository = new bg.CacheRepositoryInMemoryAdapter({ type: "finite", ttl }, deps);
-
-  const HashContent = new bg.HashContentSha256Strategy();
 
   const ShieldRateLimit = new bg.ShieldRateLimitHonoStrategy(
     {
@@ -19,7 +17,7 @@ export function createShieldRateLimit(Env: EnvironmentResultType, deps: Dependen
           new bg.SubjectSegmentUserStrategy(),
           new bg.SubjectSegmentIpStrategy(),
         ],
-        { HashContent },
+        deps,
       ),
       interval: ttl,
     },

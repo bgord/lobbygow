@@ -2,6 +2,7 @@ import type * as bg from "@bgord/bun";
 import type { EnvironmentResultType } from "+infra/env";
 import { createBuildInfoConfig } from "./build-info-config.adapter";
 import { createCronScheduler } from "./cron-scheduler.adapter";
+import { HashContent } from "./hash-content.strategy";
 import { createJobQueue } from "./job-queue.adapter";
 import { createShieldApiKey } from "./shield-api-key.strategy";
 import { createShieldBasicAuth } from "./shield-basic-auth.strategy";
@@ -27,9 +28,10 @@ export async function createTools(Env: EnvironmentResultType, deps: Dependencies
     JobQueueStatsProvider,
     ShieldApiKey: createShieldApiKey(Env),
     ShieldBasicAuth: createShieldBasicAuth(Env),
-    ShieldRateLimit: createShieldRateLimit(Env, deps),
-    ShieldSecurity: createShieldSecurity(Env, deps),
+    ShieldRateLimit: createShieldRateLimit(Env, { ...deps, HashContent }),
+    ShieldSecurity: createShieldSecurity(Env, { ...deps, HashContent }),
     ShieldTimeout,
+    HashContent,
     JobPruner,
   };
 }

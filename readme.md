@@ -101,6 +101,7 @@ infra/
 └── tools
     ├── build-info-config.adapter.ts
     ├── cron-scheduler.adapter.ts
+    ├── hash-content.strategy.ts
     ├── job-queue.adapter.ts
     ├── prerequisites.ts
     ├── shield-api-key.strategy.ts

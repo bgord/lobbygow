@@ -16,6 +16,7 @@ type Dependencies = {
   TimeoutRunner: bg.TimeoutRunnerPort;
   FileInspection: bg.FileInspectionPort;
   JobQueueStatsProvider: bg.JobQueueStatsProviderPort;
+  HashContent: bg.HashContentStrategy;
 };
 
 export function createPrerequisites(
@@ -40,7 +41,6 @@ export function createPrerequisites(
     },
     deps,
   );
-  const HashContent = new bg.HashContentSha256Strategy();
   const LongCacheResolver = new bg.CacheResolverReadThroughStrategy({
     CacheRepository: new bg.CacheRepositoryInMemoryAdapter(
       { type: "finite", ttl: tools.Duration.Minutes(10) },
@@ -85,7 +85,7 @@ export function createPrerequisites(
       new bg.Prerequisite("mailer", new bg.PrerequisiteVerifierMailerAdapter(deps), {
         enabled: production,
         decorators: [
-          bg.PrerequisiteDecorator.withCache("mailer", { CacheResolver: LongCacheResolver, HashContent }),
+          bg.PrerequisiteDecorator.withCache("mailer", { CacheResolver: LongCacheResolver, ...deps }),
           withRetry,
           withTimeout,
         ],
@@ -95,7 +95,7 @@ export function createPrerequisites(
         decorators: [
           bg.PrerequisiteDecorator.withCache("outside-connectivity", {
             CacheResolver: ShortCacheResolver,
-            HashContent,
+            ...deps,
           }),
           withFailSafe,
           withRetry,
@@ -108,7 +108,7 @@ export function createPrerequisites(
       new bg.Prerequisite("dns", new bg.PrerequisiteVerifierDnsAdapter({ hostname }), {
         enabled: production,
         decorators: [
-          bg.PrerequisiteDecorator.withCache("dns", { CacheResolver: ShortCacheResolver, HashContent }),
+          bg.PrerequisiteDecorator.withCache("dns", { CacheResolver: ShortCacheResolver, ...deps }),
         ],
       }),
       new bg.Prerequisite(
@@ -178,7 +178,7 @@ export function createPrerequisites(
         {
           enabled: production,
           decorators: [
-            bg.PrerequisiteDecorator.withCache("ssl", { CacheResolver: LongCacheResolver, HashContent }),
+            bg.PrerequisiteDecorator.withCache("ssl", { CacheResolver: LongCacheResolver, ...deps }),
             withRetry,
             withTimeout,
           ],

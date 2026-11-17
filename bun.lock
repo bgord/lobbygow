@@ -5,7 +5,7 @@
     "": {
       "name": "lobbygow",
       "dependencies": {
-        "@bgord/bun": "1.24.30",
+        "@bgord/bun": "1.24.31",
         "nodemailer": "10.5.0",
       },
       "devDependencies": {
@@ -97,7 +97,7 @@
 
     "@babel/types": ["@babel/types@8.1.2", "", { "dependencies": { "@babel/helper-string-parser": "^8.1.2", "@babel/helper-validator-identifier": "^8.0.6" } }, "sha512-uXt6qt2f5G61jZwNIzK1RKu7l5Xjt1VXtPPOGuVveha9fxbx0QM94U1kM4pFZKTRLjWK+X8vmwjwbIemJjiQTA=="],
 
-    "@bgord/bun": ["@bgord/bun@1.24.30", "", { "dependencies": { "@bgord/tools": "1.7.1", "@hono/bun": "1.0.1", "hono": "4.13.18" }, "peerDependencies": { "better-auth": "1.7.18", "nodemailer": "10.5.0" }, "optionalPeers": ["better-auth", "nodemailer"] }, "sha512-5XfG0c57t8frl4iqc2qDicz1PhKiRdZp+SNOI4WozycMhxdKyE2t8FqEaCHPQLHcM9CnZFws9yxsWjkPS3SmxQ=="],
+    "@bgord/bun": ["@bgord/bun@1.24.31", "", { "dependencies": { "@bgord/tools": "1.7.1", "@hono/bun": "1.0.1", "hono": "4.13.18" }, "peerDependencies": { "better-auth": "1.7.18", "nodemailer": "10.5.0" }, "optionalPeers": ["better-auth", "nodemailer"] }, "sha512-e/DT+QVmgjgGeR68gnl+AcDW4jGu1s5VS7woSN9h/hox9vLQSBqEOyU/VbBw1ZvOpe+IAsAEhBs7+NEifU3NoQ=="],
 
     "@bgord/tools": ["@bgord/tools@1.7.1", "", { "dependencies": { "valibot": "1.5.0" } }, "sha512-p/zvtIG3/dUPT4C5GEVGEhoSgL2lBGEC4OhBsJXDzYX9z8NFuj0DpUvWlfewOO+Xzu9R15aXl0tYGthZBgLEIw=="],
 
